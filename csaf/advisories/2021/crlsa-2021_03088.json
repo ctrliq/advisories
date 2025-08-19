@@ -1,0 +1,533 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "category": "vendor",
+      "name": "CIQ Inc",
+      "namespace": "https://ciq.com/csaf",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "CIQ Inc Security Team"
+    },
+    "title": "Important: kernel-rt security and bug fix update",
+    "tracking": {
+      "id": "CRLSA-2021:3088",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "date": "2021-08-10T12:10:45+00:00",
+          "number": "1",
+          "summary": "Initial release"
+        }
+      ],
+      "initial_release_date": "2021-08-10T12:10:45+00:00",
+      "current_release_date": "2021-08-10T12:10:45+00:00",
+      "generator": {
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        },
+        "date": "2025-08-19T21:37:16.846827+00:00"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for kernel-rt.\nThis update affects Rocky Linux 8 from CIQ.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The kernel-rt packages provide the Real Time Linux Kernel, which enables fine-tuning for systems with extremely high determinism requirements.\n\nSecurity Fix(es):\n\n* kernel: race condition in net/can/bcm.c leads to local privilege escalation (CVE-2021-3609)\n\n* kernel: Improper handling of VM_IO|VM_PFNMAP vmas in KVM can bypass RO checks (CVE-2021-22543)\n\n* kernel: out-of-bounds write in xt_compat_target_from_user() in net/netfilter/x_tables.c (CVE-2021-22555)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* kernel-rt: update RT source tree to the Rocky Linux-8.4.z source tree (BZ#1985050)\n\n* kernel-rt: Merge mm/memcg: Fix kmem_cache_alloc() performance regression (BZ#1987102)\n\nThis advisory is provided by CIQ Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "aggregate_severity": {
+      "text": "Important"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 1965461",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1965461"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1971651",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1971651"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1980101",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1980101"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2021:3088",
+        "url": "https://errata.build.resf.org/RLSA-2021:3088"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2021:3088",
+        "url": "https://access.redhat.com/errata/RHSA-2021:3088"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2021:3088",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2021/rhsa-2021_3088.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2021:3088",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2021/crlsa-2021_03088.json"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "vendor",
+        "name": "CIQ Inc",
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Rocky Linux 8 from CIQ",
+            "branches": [
+              {
+                "category": "architecture",
+                "name": "src",
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-1",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-0:4.18.0-305.12.1.rt7.84.el8_4 (src)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=src"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "category": "architecture",
+                "name": "x86_64",
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-2",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-core-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-3",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-core-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-core@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-debug-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-4",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-debug-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-debug@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-debug-core-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-5",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-debug-core-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-debug-core@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-debug-debuginfo-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-6",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-debug-debuginfo-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-debug-debuginfo@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-debug-devel-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-7",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-debug-devel-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-debug-devel@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-debug-modules-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-8",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-debug-modules-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-debug-modules@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-debug-modules-extra-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-9",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-debug-modules-extra-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-debug-modules-extra@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-debuginfo-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-10",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-debuginfo-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-debuginfo@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-debuginfo-common-x86_64-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-11",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-debuginfo-common-x86_64-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-debuginfo-common-x86_64@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-devel-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-12",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-devel-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-devel@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-modules-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-13",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-modules-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-modules@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "kernel-rt-modules-extra-0:4.18.0-305.12.1.rt7.84.el8_4",
+                    "product": {
+                      "product_id": "CRLSA-2021:3088-14",
+                      "name": "Rocky Linux 8 from CIQ kernel-rt-modules-extra-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+                      "product_identification_helper": {
+                        "purl": "pkg:rpm/ciq/kernel-rt-modules-extra@0%3A4.18.0-305.12.1.rt7.84.el8_4?arch=x86_64"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "full_product_names": [
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-0:4.18.0-305.12.1.rt7.84.el8_4 (src)",
+        "product_id": "CRLSA-2021:3088-1"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-2"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-core-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-3"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-debug-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-4"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-debug-core-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-5"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-debug-debuginfo-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-6"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-debug-devel-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-7"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-debug-modules-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-8"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-debug-modules-extra-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-9"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-debuginfo-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-10"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-debuginfo-common-x86_64-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-11"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-devel-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-12"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-modules-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-13"
+      },
+      {
+        "name": "Rocky Linux 8 from CIQ kernel-rt-modules-extra-0:4.18.0-305.12.1.rt7.84.el8_4 (x86_64)",
+        "product_id": "CRLSA-2021:3088-14"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-22543",
+      "title": "CVE-2021-22543 in CRLSA-2021:3088",
+      "notes": [],
+      "product_status": {
+        "fixed": [
+          "CRLSA-2021:3088-1",
+          "CRLSA-2021:3088-2",
+          "CRLSA-2021:3088-3",
+          "CRLSA-2021:3088-4",
+          "CRLSA-2021:3088-5",
+          "CRLSA-2021:3088-6",
+          "CRLSA-2021:3088-7",
+          "CRLSA-2021:3088-8",
+          "CRLSA-2021:3088-9",
+          "CRLSA-2021:3088-10",
+          "CRLSA-2021:3088-11",
+          "CRLSA-2021:3088-12",
+          "CRLSA-2021:3088-13",
+          "CRLSA-2021:3088-14"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "CVE record for CVE-2021-22543",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22543"
+        },
+        {
+          "category": "external",
+          "summary": "NVD entry for CVE-2021-22543",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-22543"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH"
+          }
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-22555",
+      "title": "CVE-2021-22555 in CRLSA-2021:3088",
+      "notes": [],
+      "product_status": {
+        "fixed": [
+          "CRLSA-2021:3088-1",
+          "CRLSA-2021:3088-2",
+          "CRLSA-2021:3088-3",
+          "CRLSA-2021:3088-4",
+          "CRLSA-2021:3088-5",
+          "CRLSA-2021:3088-6",
+          "CRLSA-2021:3088-7",
+          "CRLSA-2021:3088-8",
+          "CRLSA-2021:3088-9",
+          "CRLSA-2021:3088-10",
+          "CRLSA-2021:3088-11",
+          "CRLSA-2021:3088-12",
+          "CRLSA-2021:3088-13",
+          "CRLSA-2021:3088-14"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "CVE record for CVE-2021-22555",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22555"
+        },
+        {
+          "category": "external",
+          "summary": "NVD entry for CVE-2021-22555",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-22555"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH"
+          }
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3609",
+      "title": "CVE-2021-3609 in CRLSA-2021:3088",
+      "notes": [],
+      "product_status": {
+        "fixed": [
+          "CRLSA-2021:3088-1",
+          "CRLSA-2021:3088-2",
+          "CRLSA-2021:3088-3",
+          "CRLSA-2021:3088-4",
+          "CRLSA-2021:3088-5",
+          "CRLSA-2021:3088-6",
+          "CRLSA-2021:3088-7",
+          "CRLSA-2021:3088-8",
+          "CRLSA-2021:3088-9",
+          "CRLSA-2021:3088-10",
+          "CRLSA-2021:3088-11",
+          "CRLSA-2021:3088-12",
+          "CRLSA-2021:3088-13",
+          "CRLSA-2021:3088-14"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "CVE record for CVE-2021-3609",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3609"
+        },
+        {
+          "category": "external",
+          "summary": "NVD entry for CVE-2021-3609",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3609"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH"
+          }
+        }
+      ]
+    }
+  ],
+  "threats": [
+    {
+      "category": "impact",
+      "details": "Important",
+      "product_ids": [
+        "CRLSA-2021:3088-1",
+        "CRLSA-2021:3088-2",
+        "CRLSA-2021:3088-3",
+        "CRLSA-2021:3088-4",
+        "CRLSA-2021:3088-5",
+        "CRLSA-2021:3088-6",
+        "CRLSA-2021:3088-7",
+        "CRLSA-2021:3088-8",
+        "CRLSA-2021:3088-9",
+        "CRLSA-2021:3088-10",
+        "CRLSA-2021:3088-11",
+        "CRLSA-2021:3088-12",
+        "CRLSA-2021:3088-13",
+        "CRLSA-2021:3088-14"
+      ]
+    },
+    {
+      "category": "exploit_status",
+      "details": "High severity vulnerabilities detected: CVE-2021-22543, CVE-2021-22555, CVE-2021-3609. Monitor for potential exploits and apply patches promptly.",
+      "product_ids": [
+        "CRLSA-2021:3088-1",
+        "CRLSA-2021:3088-2",
+        "CRLSA-2021:3088-3",
+        "CRLSA-2021:3088-4",
+        "CRLSA-2021:3088-5",
+        "CRLSA-2021:3088-6",
+        "CRLSA-2021:3088-7",
+        "CRLSA-2021:3088-8",
+        "CRLSA-2021:3088-9",
+        "CRLSA-2021:3088-10",
+        "CRLSA-2021:3088-11",
+        "CRLSA-2021:3088-12",
+        "CRLSA-2021:3088-13",
+        "CRLSA-2021:3088-14"
+      ]
+    }
+  ],
+  "remediations": [
+    {
+      "category": "vendor_fix",
+      "date": "2021-08-10T12:10:45+00:00",
+      "details": "Apply the security update for CRLSA-2021:3088 by updating the affected packages using your Rocky Linux from CIQ package manager.\n\nFor Rocky Linux from CIQ systems, run:\nsudo dnf update\n\nOr update specific packages:\nsudo dnf update kernel-rt kernel-rt-core kernel-rt-debug kernel-rt-debug-core kernel-rt-debug-devel kernel-rt-debug-modules kernel-rt-debug-modules-extra kernel-rt-debuginfo-common-x86_64 kernel-rt-devel kernel-rt-modules kernel-rt-modules-extra\n\nAfter updating, verify the installed package versions are greater thanor equal to those specified in this advisory. ",
+      "product_ids": [
+        "CRLSA-2021:3088-1",
+        "CRLSA-2021:3088-2",
+        "CRLSA-2021:3088-3",
+        "CRLSA-2021:3088-4",
+        "CRLSA-2021:3088-5",
+        "CRLSA-2021:3088-6",
+        "CRLSA-2021:3088-7",
+        "CRLSA-2021:3088-8",
+        "CRLSA-2021:3088-9",
+        "CRLSA-2021:3088-10",
+        "CRLSA-2021:3088-11",
+        "CRLSA-2021:3088-12",
+        "CRLSA-2021:3088-13",
+        "CRLSA-2021:3088-14"
+      ],
+      "restart_required": {
+        "category": "system"
+      },
+      "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2021/crlsa-2021_03088.json"
+    }
+  ]
+}
