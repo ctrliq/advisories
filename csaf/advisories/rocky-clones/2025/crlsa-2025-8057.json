@@ -1,0 +1,186 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Important: kernel-rt security update",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The kernel-rt packages provide the Real Time Linux Kernel, which enables fine-tuning for systems with extremely high determinism requirements.\n\nSecurity Fix(es):\n\n* kernel: net/mlx5: Always stop health timer during driver removal (CVE-2024-40906)\n\n* kernel: net/mlx5e: SHAMPO, Fix invalid WQ linked list unlink (CVE-2024-44970)\n\n* kernel: vsock: Keep the binding until socket destruction (CVE-2025-21756)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2297490"
+      },
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2309801"
+      },
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2348609"
+      },
+      {
+        "category": "external",
+        "summary": "Advisory",
+        "url": "https://errata.rockylinux.org/RLSA-2025:8057"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2309801",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2309801"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2348609",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2348609"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2297490",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2297490"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2025:8057",
+        "url": "https://errata.build.resf.org/RLSA-2025:8057"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:8057",
+        "url": "https://access.redhat.com/errata/RHSA-2025:8057"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2025:8057",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_8057.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2025:8057",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2025/crlsa-2025_8057.json"
+      }
+    ],
+    "title": "Important: kernel-rt security update",
+    "tracking": {
+      "current_release_date": "2025-07-29T13:38:58.430013+00:00",
+      "generator": {
+        "date": "2025-10-21T18:42:30.857377+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2025:8057",
+      "initial_release_date": "2025-07-29T13:38:58.430013+00:00",
+      "revision_history": [
+        {
+          "date": "2025-07-29T13:38:58.430013+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "kernel-rt-0:4.18.0-553.53.1.rt7.394.el8_10",
+                    "product": {
+                      "name": "kernel-rt-0:4.18.0-553.53.1.rt7.394.el8_10",
+                      "product_id": "crlsa:kernel-rt-4.18.0-553.53.1.rt7.394.el8_10"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "el8_10"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-44970",
+      "product_status": {
+        "fixed": [
+          "crlsa:kernel-rt-4.18.0-553.53.1.rt7.394.el8_10"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:kernel-rt-4.18.0-553.53.1.rt7.394.el8_10"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-21756",
+      "product_status": {
+        "fixed": [
+          "crlsa:kernel-rt-4.18.0-553.53.1.rt7.394.el8_10"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:kernel-rt-4.18.0-553.53.1.rt7.394.el8_10"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-40906",
+      "product_status": {
+        "fixed": [
+          "crlsa:kernel-rt-4.18.0-553.53.1.rt7.394.el8_10"
+        ]
+      }
+    }
+  ]
+}

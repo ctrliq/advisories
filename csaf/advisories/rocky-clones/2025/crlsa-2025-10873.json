@@ -1,0 +1,191 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Important: java-21-openjdk security update",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The OpenJDK 21 packages provide the OpenJDK 21 Java Runtime Environment and the OpenJDK 21 Java Software Development Kit.\n\nSecurity Fix(es):\n\n* JDK: Better Glyph drawing (CVE-2025-30749)\n* JDK: Enhance TLS protocol support (CVE-2025-30754)\n* JDK: Improve HTTP client header handling (CVE-2025-50059)\n* JDK: Better Glyph drawing redux (CVE-2025-50106)\n\nBug Fix(es):\n\n* In Rocky Linux 9 and Rocky Linux 10 systems, the default graphical display system is Wayland. The use of Wayland in these systems causes a failure in the traditional X11 method that java.awt.Robot uses to take a screen capture, producing a blank image. With this update, the RPM now recommends installing the PipeWire package, which the JDK can use to take screen captures in Wayland systems (Rocky Linux-102683, Rocky Linux-102684, Rocky Linux-102685)\n* On NUMA systems, the operating system can choose to migrate a task from one NUMA node to another. In the G1 garbage collector, G1AllocRegion objects are associated with NUMA nodes. The G1Allocator code assumes that obtaining the G1AllocRegion object for the current thread is sufficient, but OS scheduling can lead to arbitrary changes in the NUMA-to-thread association. This can cause crashes when the G1AllocRegion being used changes mid-operation. This update resolves this issue by always using the same NUMA node and associated G1AllocRegion object throughout an operation. (Rocky Linux-90307, Rocky Linux-90308, Rocky Linux-90311)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2376783"
+      },
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2376784"
+      },
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2376785"
+      },
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2379031"
+      },
+      {
+        "category": "external",
+        "summary": "Advisory",
+        "url": "https://errata.rockylinux.org/RLSA-2025:10873"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2376783",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2376783"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2379031",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2379031"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2376784",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2376784"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2376785",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2376785"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2025:10873",
+        "url": "https://errata.build.resf.org/RLSA-2025:10873"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:10873",
+        "url": "https://access.redhat.com/errata/RHSA-2025:10873"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2025:10873",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_10873.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2025:10873",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2025/crlsa-2025_10873.json"
+      }
+    ],
+    "title": "Important: java-21-openjdk security update",
+    "tracking": {
+      "current_release_date": "2025-10-03T19:56:45.270310+00:00",
+      "generator": {
+        "date": "2025-10-21T18:42:27.585469+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2025:10873",
+      "initial_release_date": "2025-10-03T19:56:45.270310+00:00",
+      "revision_history": [
+        {
+          "date": "2025-10-03T19:56:45.270310+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "java-21-openjdk-1:21.0.8.0.9-1.el10",
+                    "product": {
+                      "name": "java-21-openjdk-1:21.0.8.0.9-1.el10",
+                      "product_id": "crlsa:java-21-openjdk-1:21.0.8.0.9-1.el10"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "el10"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-50059",
+      "product_status": {
+        "fixed": [
+          "crlsa:java-21-openjdk-1:21.0.8.0.9-1.el10"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:java-21-openjdk-1:21.0.8.0.9-1.el10"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-30749",
+      "product_status": {
+        "fixed": [
+          "crlsa:java-21-openjdk-1:21.0.8.0.9-1.el10"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2025-30754",
+      "product_status": {
+        "fixed": [
+          "crlsa:java-21-openjdk-1:21.0.8.0.9-1.el10"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2025-50106",
+      "product_status": {
+        "fixed": [
+          "crlsa:java-21-openjdk-1:21.0.8.0.9-1.el10"
+        ]
+      }
+    }
+  ]
+}

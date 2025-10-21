@@ -1,0 +1,124 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Moderate: pandoc security update",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this library. It can read several dialects of Markdown and (subsets of) HTML, reStructuredText, LaTeX, DocBook, JATS, MediaWiki markup, TWiki markup, TikiWiki markup, Creole 1.0, Haddock markup, OPML, Emacs Org-Mode, Emacs Muse, txt2tags, Vimwiki, Word Docx, ODT, and Textile, and it can write Markdown, reStructuredText, XHTML, HTML 5, LaTeX, ConTeXt, DocBook, JATS, OPML, TEI, OpenDocument, ODT, Word docx, RTF, MediaWiki, DokuWiki, ZimWiki, Textile, groff man, groff ms, plain text, Emacs Org-Mode, AsciiDoc, Haddock markup, EPUB (v2 and v3), FictionBook2, InDesign ICML, Muse, LaTeX beamer slides, PowerPoint, and several kinds of HTML/JavaScript slide shows (S5, Slidy, Slideous, DZSlides, reveal.js).  In contrast to most existing tools for converting Markdown to HTML, pandoc has a modular design: it consists of a set of readers, which parse text in a given format and produce a native representation of the document, and a set of writers, which convert this native representation into a target format. Thus, adding an input or output format requires only adding a reader or writer.  For pdf output please also install pandoc-pdf.\n\nSecurity Fix(es):\n\n* cmark-gfm: Quadratic complexity bugs may lead to a denial of service (CVE-2023-24824)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2210172"
+      },
+      {
+        "category": "external",
+        "summary": "Advisory",
+        "url": "https://errata.rockylinux.org/RLSA-2025:8427"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2210172",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2210172"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2025:8427",
+        "url": "https://errata.build.resf.org/RLSA-2025:8427"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:8427",
+        "url": "https://access.redhat.com/errata/RHSA-2025:8427"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2025:8427",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_8427.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2025:8427",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2025/crlsa-2025_8427.json"
+      }
+    ],
+    "title": "Moderate: pandoc security update",
+    "tracking": {
+      "current_release_date": "2025-07-29T13:39:03.816508+00:00",
+      "generator": {
+        "date": "2025-10-21T18:42:30.552579+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2025:8427",
+      "initial_release_date": "2025-07-29T13:39:03.816508+00:00",
+      "revision_history": [
+        {
+          "date": "2025-07-29T13:39:03.816508+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "pandoc-0:2.0.6-7.el8_10",
+                    "product": {
+                      "name": "pandoc-0:2.0.6-7.el8_10",
+                      "product_id": "crlsa:pandoc-2.0.6-7.el8_10"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "el8_10"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-24824",
+      "product_status": {
+        "fixed": [
+          "crlsa:pandoc-2.0.6-7.el8_10"
+        ]
+      }
+    }
+  ]
+}

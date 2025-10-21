@@ -1,0 +1,657 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for bpftool",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the bpftool SRPM in CIQ LTS. It addresses 20 CVEs: CVE-2021-47596, CVE-2022-49788, CVE-2022-50200, CVE-2023-40283, CVE-2023-51042, and 15 more.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-47596",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/CVE-2021-47596.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-49788",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/CVE-2022-49788.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-50200",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/CVE-2022-50200.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-40283",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/CVE-2023-40283.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-51042",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/CVE-2023-51042.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-52933",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/CVE-2023-52933.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-53047",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/CVE-2023-53047.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-35896",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/CVE-2024-35896.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-35962",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/CVE-2024-35962.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-36960",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/CVE-2024-36960.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-42284",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/CVE-2024-42284.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-22020",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/CVE-2025-22020.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-22104",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/CVE-2025-22104.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-23150",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/CVE-2025-23150.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-37738",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/CVE-2025-37738.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-37797",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/CVE-2025-37797.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-37890",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/CVE-2025-37890.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-38001",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/CVE-2025-38001.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-38086",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/CVE-2025-38086.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-38332",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/CVE-2025-38332.json"
+      }
+    ],
+    "title": "bpftool security update for CIQ LTS",
+    "tracking": {
+      "current_release_date": "2025-10-21T18:31:11.062248+00:00",
+      "generator": {
+        "date": "2025-10-21T18:31:11.062248+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CIQSA-LTS-9-2-2025:0008",
+      "initial_release_date": "2025-10-21T18:31:11.062248+00:00",
+      "revision_history": [
+        {
+          "date": "2025-10-21T18:31:11.062248+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 20 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+                    "product": {
+                      "name": "bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+                      "product_id": "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+                    "product": {
+                      "name": "bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+                      "product_id": "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              }
+            ],
+            "category": "product_name",
+            "name": "CIQ LTS"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-47596",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-49788",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-50200",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-40283",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-51042",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-52933",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-53047",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-35896",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-35962",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-36960",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-42284",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-22020",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-22104",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-23150",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-37738",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-37797",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-37890",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-38001",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-38086",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-38332",
+      "product_status": {
+        "fixed": [
+          "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+          "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "ciqsa:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64",
+            "ciqsa:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.10.1.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}

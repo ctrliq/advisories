@@ -1,0 +1,178 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Important: libsoup3 security update",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "Libsoup is an HTTP library implementation in C. It was originally part of a SOAP (Simple Object Access Protocol) implementation called Soup, but the SOAP and non-SOAP parts have now been split into separate packages.  libsoup uses the Glib main loop and is designed to work well with GTK applications. This enables GNOME applications to access HTTP servers on the network in a completely asynchronous fashion, very similar to the Gtk+ programming model (a synchronous operation mode is also supported for those who want it), but the SOAP parts were removed long ago.\n\nSecurity Fix(es):\n\n* libsoup: Denial of Service attack to websocket server (CVE-2025-32049)\n\n* libsoup: Denial of service in server when client requests a large amount of  overlapping ranges with Range header (CVE-2025-32907)\n\n* libsoup: Cookie domain validation bypass via uppercase characters in libsoup (CVE-2025-4035)\n\n* libsoup: Integer Underflow in soup_multipart_new_from_message() Leading to Denial of Service in libsoup (CVE-2025-4948)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2357066"
+      },
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2359342"
+      },
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2362651"
+      },
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2367183"
+      },
+      {
+        "category": "external",
+        "summary": "Advisory",
+        "url": "https://errata.rockylinux.org/RLSA-2025:8128"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2359342",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2359342"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2362651",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2362651"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2357066",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2357066"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2367183",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2367183"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2025:8128",
+        "url": "https://errata.build.resf.org/RLSA-2025:8128"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:8128",
+        "url": "https://access.redhat.com/errata/RHSA-2025:8128"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2025:8128",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_8128.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2025:8128",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2025/crlsa-2025_8128.json"
+      }
+    ],
+    "title": "Important: libsoup3 security update",
+    "tracking": {
+      "current_release_date": "2025-10-03T19:56:45.270310+00:00",
+      "generator": {
+        "date": "2025-10-21T18:42:27.358626+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2025:8128",
+      "initial_release_date": "2025-10-03T19:56:45.270310+00:00",
+      "revision_history": [
+        {
+          "date": "2025-10-03T19:56:45.270310+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "libsoup3-0:3.6.5-3.el10_0.6",
+                    "product": {
+                      "name": "libsoup3-0:3.6.5-3.el10_0.6",
+                      "product_id": "crlsa:libsoup3-3.6.5-3.el10_0.6"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "6"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux 10 from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-32049",
+      "product_status": {
+        "fixed": [
+          "crlsa:libsoup3-3.6.5-3.el10_0.6"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2025-4948",
+      "product_status": {
+        "fixed": [
+          "crlsa:libsoup3-3.6.5-3.el10_0.6"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2025-32907",
+      "product_status": {
+        "fixed": [
+          "crlsa:libsoup3-3.6.5-3.el10_0.6"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2025-4035",
+      "product_status": {
+        "fixed": [
+          "crlsa:libsoup3-3.6.5-3.el10_0.6"
+        ]
+      }
+    }
+  ]
+}

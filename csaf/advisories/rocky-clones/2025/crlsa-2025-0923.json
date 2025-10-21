@@ -1,0 +1,137 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Important: buildah security update",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The buildah package provides a tool for facilitating building OCI container images. Among other things, buildah enables you to: Create a working container, either from scratch or using an image as a starting point; Create an image, either from a working container or using the instructions in a Dockerfile; Build both Docker and OCI images. \n\nSecurity Fix(es):\n\n* podman: buildah: Container breakout by using --jobs=2 and a race condition when building a malicious Containerfile (CVE-2024-11218)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Report",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2326231"
+      },
+      {
+        "category": "external",
+        "summary": "Advisory",
+        "url": "https://errata.rockylinux.org/RLSA-2025:0923"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2326231",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2326231"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2025:0923",
+        "url": "https://errata.build.resf.org/RLSA-2025:0923"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:0923",
+        "url": "https://access.redhat.com/errata/RHSA-2025:0923"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2025:0923",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_0923.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2025:0923",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2025/crlsa-2025_0923.json"
+      }
+    ],
+    "title": "Important: buildah security update",
+    "tracking": {
+      "current_release_date": "2025-05-07T19:13:09.903227+00:00",
+      "generator": {
+        "date": "2025-10-21T18:42:33.492515+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2025:0923",
+      "initial_release_date": "2025-05-07T19:13:09.903227+00:00",
+      "revision_history": [
+        {
+          "date": "2025-05-07T19:13:09.903227+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "buildah-2:1.37.6-1.el9_5",
+                    "product": {
+                      "name": "buildah-2:1.37.6-1.el9_5",
+                      "product_id": "crlsa:buildah-2:1.37.6-1.el9_5"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "el9_5"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-11218",
+      "product_status": {
+        "fixed": [
+          "crlsa:buildah-2:1.37.6-1.el9_5"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:buildah-2:1.37.6-1.el9_5"
+          ]
+        }
+      ]
+    }
+  ]
+}
