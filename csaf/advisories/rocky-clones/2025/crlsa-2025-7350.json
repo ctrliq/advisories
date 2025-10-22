@@ -1,11 +1,14 @@
 {
   "document": {
+    "aggregate_severity": {
+      "text": "Moderate"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "notes": [
       {
         "category": "summary",
-        "text": "Moderate: perl-Module-ScanDeps security update",
+        "text": "An update is available for perl-Module-ScanDeps.\nThis update affects Rocky Linux 9.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -22,16 +25,6 @@
       "namespace": "https://ciq.com/csaf"
     },
     "references": [
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2327329"
-      },
-      {
-        "category": "external",
-        "summary": "Advisory",
-        "url": "https://errata.rockylinux.org/RLSA-2025:7350"
-      },
       {
         "category": "external",
         "summary": "Bug fix 2327329",
@@ -62,7 +55,7 @@
     "tracking": {
       "current_release_date": "2025-10-04T00:11:52.256858+00:00",
       "generator": {
-        "date": "2025-10-21T18:42:24.105011+00:00",
+        "date": "2025-10-22T20:16:12.043961+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -91,19 +84,33 @@
                 "branches": [
                   {
                     "category": "product_name",
-                    "name": "perl-Module-ScanDeps-0:1.30-6.el9",
+                    "name": "perl-Module-ScanDeps-0:1.30-6.el9.noarch",
                     "product": {
-                      "name": "perl-Module-ScanDeps-0:1.30-6.el9",
-                      "product_id": "crlsa:perl-Module-ScanDeps-1.30-6.el9"
+                      "name": "perl-Module-ScanDeps-0:1.30-6.el9.noarch",
+                      "product_id": "rocky-9:perl-Module-ScanDeps-1.30-6.el9.noarch"
                     }
                   }
                 ],
                 "category": "architecture",
-                "name": "el9"
+                "name": "noarch"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "perl-Module-ScanDeps-0:1.30-6.el9.src",
+                    "product": {
+                      "name": "perl-Module-ScanDeps-0:1.30-6.el9.src",
+                      "product_id": "rocky-9:perl-Module-ScanDeps-1.30-6.el9.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
               }
             ],
             "category": "product_name",
-            "name": "Rocky Linux from CIQ"
+            "name": "Rocky Linux 9 from CIQ"
           }
         ],
         "category": "vendor",
@@ -114,11 +121,30 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2024-10224",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:perl-Module-ScanDeps-1.30-6.el9"
+          "rocky-9:perl-Module-ScanDeps-1.30-6.el9.noarch",
+          "rocky-9:perl-Module-ScanDeps-1.30-6.el9.src"
         ]
-      }
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9:perl-Module-ScanDeps-1.30-6.el9.noarch",
+            "rocky-9:perl-Module-ScanDeps-1.30-6.el9.src"
+          ]
+        }
+      ]
     }
   ]
 }

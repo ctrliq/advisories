@@ -1,11 +1,14 @@
 {
   "document": {
+    "aggregate_severity": {
+      "text": "Moderate"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "notes": [
       {
         "category": "summary",
-        "text": "Moderate: microcode_ctl security update",
+        "text": "An update is available for microcode_ctl.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -24,53 +27,8 @@
     "references": [
       {
         "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366089"
-      },
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366114"
-      },
-      {
-        "category": "external",
-        "summary": "Report",
+        "summary": "Bug fix 2366125",
         "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366125"
-      },
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366133"
-      },
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366159"
-      },
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366162"
-      },
-      {
-        "category": "external",
-        "summary": "Advisory",
-        "url": "https://errata.rockylinux.org/RLSA-2025:10991"
-      },
-      {
-        "category": "external",
-        "summary": "Bug fix 2366114",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366114"
-      },
-      {
-        "category": "external",
-        "summary": "Bug fix 2366133",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366133"
-      },
-      {
-        "category": "external",
-        "summary": "Bug fix 2366089",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366089"
       },
       {
         "category": "external",
@@ -79,13 +37,23 @@
       },
       {
         "category": "external",
-        "summary": "Bug fix 2366125",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366125"
+        "summary": "Bug fix 2366114",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366114"
       },
       {
         "category": "external",
         "summary": "Bug fix 2366159",
         "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366159"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2366089",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366089"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2366133",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366133"
       },
       {
         "category": "external",
@@ -112,7 +80,7 @@
     "tracking": {
       "current_release_date": "2025-07-29T13:38:26.982620+00:00",
       "generator": {
-        "date": "2025-10-21T18:42:32.638312+00:00",
+        "date": "2025-10-22T20:16:29.158394+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -141,19 +109,33 @@
                 "branches": [
                   {
                     "category": "product_name",
-                    "name": "microcode_ctl-4:20250512-1.el8_10",
+                    "name": "microcode_ctl-4:20250512-1.el8_10.src",
                     "product": {
-                      "name": "microcode_ctl-4:20250512-1.el8_10",
-                      "product_id": "crlsa:microcode_ctl-4:20250512-1.el8_10"
+                      "name": "microcode_ctl-4:20250512-1.el8_10.src",
+                      "product_id": "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src"
                     }
                   }
                 ],
                 "category": "architecture",
-                "name": "el8_10"
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "microcode_ctl-4:20250512-1.el8_10.x86_64",
+                    "product": {
+                      "name": "microcode_ctl-4:20250512-1.el8_10.x86_64",
+                      "product_id": "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
               }
             ],
             "category": "product_name",
-            "name": "Rocky Linux from CIQ"
+            "name": "Rocky Linux 8.10 from CIQ"
           }
         ],
         "category": "vendor",
@@ -164,51 +146,165 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2024-28956",
+      "cwe": {
+        "id": "CWE-1421",
+        "name": "CWE-1421"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:microcode_ctl-4:20250512-1.el8_10"
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
         ]
-      }
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
+          ]
+        }
+      ]
     },
     {
       "cve": "CVE-2024-43420",
+      "cwe": {
+        "id": "CWE-1423",
+        "name": "CWE-1423"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:microcode_ctl-4:20250512-1.el8_10"
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
         ]
-      }
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
+          ]
+        }
+      ]
     },
     {
       "cve": "CVE-2024-45332",
+      "cwe": {
+        "id": "CWE-1423",
+        "name": "CWE-1423"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:microcode_ctl-4:20250512-1.el8_10"
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
         ]
-      }
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
+          ]
+        }
+      ]
     },
     {
       "cve": "CVE-2025-20012",
+      "cwe": {
+        "id": "CWE-696",
+        "name": "CWE-696"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:microcode_ctl-4:20250512-1.el8_10"
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
         ]
-      }
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
+          ]
+        }
+      ]
     },
     {
       "cve": "CVE-2025-20623",
+      "cwe": {
+        "id": "CWE-1423",
+        "name": "CWE-1423"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:microcode_ctl-4:20250512-1.el8_10"
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
         ]
-      }
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
+          ]
+        }
+      ]
     },
     {
       "cve": "CVE-2025-24495",
+      "cwe": {
+        "id": "CWE-1419",
+        "name": "CWE-1419"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:microcode_ctl-4:20250512-1.el8_10"
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+          "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
         ]
-      }
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.src",
+            "rocky-8.10:microcode_ctl-4:20250512-1.el8_10.x86_64"
+          ]
+        }
+      ]
     }
   ]
 }

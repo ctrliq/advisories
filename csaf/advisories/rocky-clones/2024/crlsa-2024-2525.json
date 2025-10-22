@@ -1,11 +1,14 @@
 {
   "document": {
+    "aggregate_severity": {
+      "text": "Moderate"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "notes": [
       {
         "category": "summary",
-        "text": "Moderate: mingw-pixman security update",
+        "text": "An update is available for mingw-pixman.\nThis update affects Rocky Linux 9.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -22,16 +25,6 @@
       "namespace": "https://ciq.com/csaf"
     },
     "references": [
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2139988"
-      },
-      {
-        "category": "external",
-        "summary": "Advisory",
-        "url": "https://errata.rockylinux.org/RLSA-2024:2525"
-      },
       {
         "category": "external",
         "summary": "Bug fix 2139988",
@@ -62,7 +55,7 @@
     "tracking": {
       "current_release_date": "2025-05-07T19:13:05.465265+00:00",
       "generator": {
-        "date": "2025-10-21T18:42:33.546089+00:00",
+        "date": "2025-10-22T20:16:32.741408+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -91,19 +84,41 @@
                 "branches": [
                   {
                     "category": "product_name",
-                    "name": "mingw-pixman-0:0.42.2-3.el9",
+                    "name": "mingw-pixman-0:0.42.2-3.el9.src",
                     "product": {
-                      "name": "mingw-pixman-0:0.42.2-3.el9",
-                      "product_id": "crlsa:mingw-pixman-0.42.2-3.el9"
+                      "name": "mingw-pixman-0:0.42.2-3.el9.src",
+                      "product_id": "rocky-9:mingw-pixman-0.42.2-3.el9.src"
                     }
                   }
                 ],
                 "category": "architecture",
-                "name": "el9"
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "mingw32-pixman-0:0.42.2-3.el9.noarch",
+                    "product": {
+                      "name": "mingw32-pixman-0:0.42.2-3.el9.noarch",
+                      "product_id": "rocky-9:mingw32-pixman-0.42.2-3.el9.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "mingw64-pixman-0:0.42.2-3.el9.noarch",
+                    "product": {
+                      "name": "mingw64-pixman-0:0.42.2-3.el9.noarch",
+                      "product_id": "rocky-9:mingw64-pixman-0.42.2-3.el9.noarch"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "noarch"
               }
             ],
             "category": "product_name",
-            "name": "Rocky Linux from CIQ"
+            "name": "Rocky Linux 9 from CIQ"
           }
         ],
         "category": "vendor",
@@ -114,9 +129,15 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-44638",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "CWE-787"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:mingw-pixman-0.42.2-3.el9"
+          "rocky-9:mingw-pixman-0.42.2-3.el9.src",
+          "rocky-9:mingw32-pixman-0.42.2-3.el9.noarch",
+          "rocky-9:mingw64-pixman-0.42.2-3.el9.noarch"
         ]
       },
       "scores": [
@@ -128,7 +149,9 @@
             "version": "3.1"
           },
           "products": [
-            "crlsa:mingw-pixman-0.42.2-3.el9"
+            "rocky-9:mingw-pixman-0.42.2-3.el9.src",
+            "rocky-9:mingw32-pixman-0.42.2-3.el9.noarch",
+            "rocky-9:mingw64-pixman-0.42.2-3.el9.noarch"
           ]
         }
       ]

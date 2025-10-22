@@ -1,11 +1,14 @@
 {
   "document": {
+    "aggregate_severity": {
+      "text": "Moderate"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "notes": [
       {
         "category": "summary",
-        "text": "Moderate: edk2:20220126gitbb1bba3d77 security update",
+        "text": "An update is available for edk2.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -22,16 +25,6 @@
       "namespace": "https://ciq.com/csaf"
     },
     "references": [
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2315390"
-      },
-      {
-        "category": "external",
-        "summary": "Advisory",
-        "url": "https://errata.rockylinux.org/RLSA-2024:11185"
-      },
       {
         "category": "external",
         "summary": "Bug fix 2315390",
@@ -62,7 +55,7 @@
     "tracking": {
       "current_release_date": "2025-06-24T17:18:45.931997+00:00",
       "generator": {
-        "date": "2025-10-21T18:42:33.233850+00:00",
+        "date": "2025-10-22T20:16:30.279721+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -91,19 +84,41 @@
                 "branches": [
                   {
                     "category": "product_name",
-                    "name": "edk2-0:20220126gitbb1bba3d77-13.el8_10.4",
+                    "name": "edk2-0:20220126gitbb1bba3d77-13.el8_10.4.src",
                     "product": {
-                      "name": "edk2-0:20220126gitbb1bba3d77-13.el8_10.4",
-                      "product_id": "crlsa:edk2-20220126gitbb1bba3d77-13.el8_10.4"
+                      "name": "edk2-0:20220126gitbb1bba3d77-13.el8_10.4.src",
+                      "product_id": "rocky-8.10:edk2-20220126gitbb1bba3d77-13.el8_10.4.src"
                     }
                   }
                 ],
                 "category": "architecture",
-                "name": "4"
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "edk2-aarch64-0:20220126gitbb1bba3d77-13.el8_10.4.noarch",
+                    "product": {
+                      "name": "edk2-aarch64-0:20220126gitbb1bba3d77-13.el8_10.4.noarch",
+                      "product_id": "rocky-8.10:edk2-aarch64-20220126gitbb1bba3d77-13.el8_10.4.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "edk2-ovmf-0:20220126gitbb1bba3d77-13.el8_10.4.noarch",
+                    "product": {
+                      "name": "edk2-ovmf-0:20220126gitbb1bba3d77-13.el8_10.4.noarch",
+                      "product_id": "rocky-8.10:edk2-ovmf-20220126gitbb1bba3d77-13.el8_10.4.noarch"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "noarch"
               }
             ],
             "category": "product_name",
-            "name": "Rocky Linux 8 from CIQ"
+            "name": "Rocky Linux 8.10 from CIQ"
           }
         ],
         "category": "vendor",
@@ -114,11 +129,32 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2024-38796",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "CWE-122"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:edk2-20220126gitbb1bba3d77-13.el8_10.4"
+          "rocky-8.10:edk2-20220126gitbb1bba3d77-13.el8_10.4.src",
+          "rocky-8.10:edk2-aarch64-20220126gitbb1bba3d77-13.el8_10.4.noarch",
+          "rocky-8.10:edk2-ovmf-20220126gitbb1bba3d77-13.el8_10.4.noarch"
         ]
-      }
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:edk2-20220126gitbb1bba3d77-13.el8_10.4.src",
+            "rocky-8.10:edk2-aarch64-20220126gitbb1bba3d77-13.el8_10.4.noarch",
+            "rocky-8.10:edk2-ovmf-20220126gitbb1bba3d77-13.el8_10.4.noarch"
+          ]
+        }
+      ]
     }
   ]
 }

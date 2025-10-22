@@ -1,11 +1,14 @@
 {
   "document": {
+    "aggregate_severity": {
+      "text": "Moderate"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "notes": [
       {
         "category": "summary",
-        "text": "Moderate: pcs security update",
+        "text": "An update is available for pcs.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -22,16 +25,6 @@
       "namespace": "https://ciq.com/csaf"
     },
     "references": [
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2322153"
-      },
-      {
-        "category": "external",
-        "summary": "Advisory",
-        "url": "https://errata.rockylinux.org/RLSA-2025:11047"
-      },
       {
         "category": "external",
         "summary": "Bug fix 2322153",
@@ -62,7 +55,7 @@
     "tracking": {
       "current_release_date": "2025-07-29T13:38:44.782224+00:00",
       "generator": {
-        "date": "2025-10-21T18:42:30.876117+00:00",
+        "date": "2025-10-22T20:16:25.407676+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -91,19 +84,63 @@
                 "branches": [
                   {
                     "category": "product_name",
-                    "name": "pcs-0:0.10.18-2.el8_10.6",
+                    "name": "pcs-0:0.10.18-2.el8_10.6.aarch64",
                     "product": {
-                      "name": "pcs-0:0.10.18-2.el8_10.6",
-                      "product_id": "crlsa:pcs-0.10.18-2.el8_10.6"
+                      "name": "pcs-0:0.10.18-2.el8_10.6.aarch64",
+                      "product_id": "rocky-8.10:pcs-0.10.18-2.el8_10.6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pcs-snmp-0:0.10.18-2.el8_10.6.aarch64",
+                    "product": {
+                      "name": "pcs-snmp-0:0.10.18-2.el8_10.6.aarch64",
+                      "product_id": "rocky-8.10:pcs-snmp-0.10.18-2.el8_10.6.aarch64"
                     }
                   }
                 ],
                 "category": "architecture",
-                "name": "6"
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "pcs-0:0.10.18-2.el8_10.6.src",
+                    "product": {
+                      "name": "pcs-0:0.10.18-2.el8_10.6.src",
+                      "product_id": "rocky-8.10:pcs-0.10.18-2.el8_10.6.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "pcs-0:0.10.18-2.el8_10.6.x86_64",
+                    "product": {
+                      "name": "pcs-0:0.10.18-2.el8_10.6.x86_64",
+                      "product_id": "rocky-8.10:pcs-0.10.18-2.el8_10.6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pcs-snmp-0:0.10.18-2.el8_10.6.x86_64",
+                    "product": {
+                      "name": "pcs-snmp-0:0.10.18-2.el8_10.6.x86_64",
+                      "product_id": "rocky-8.10:pcs-snmp-0.10.18-2.el8_10.6.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
               }
             ],
             "category": "product_name",
-            "name": "Rocky Linux 8 from CIQ"
+            "name": "Rocky Linux 8.10 from CIQ"
           }
         ],
         "category": "vendor",
@@ -114,9 +151,17 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2024-49761",
+      "cwe": {
+        "id": "CWE-1333",
+        "name": "CWE-1333"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:pcs-0.10.18-2.el8_10.6"
+          "rocky-8.10:pcs-0.10.18-2.el8_10.6.aarch64",
+          "rocky-8.10:pcs-0.10.18-2.el8_10.6.src",
+          "rocky-8.10:pcs-0.10.18-2.el8_10.6.x86_64",
+          "rocky-8.10:pcs-snmp-0.10.18-2.el8_10.6.aarch64",
+          "rocky-8.10:pcs-snmp-0.10.18-2.el8_10.6.x86_64"
         ]
       },
       "scores": [
@@ -128,7 +173,11 @@
             "version": "3.1"
           },
           "products": [
-            "crlsa:pcs-0.10.18-2.el8_10.6"
+            "rocky-8.10:pcs-0.10.18-2.el8_10.6.aarch64",
+            "rocky-8.10:pcs-0.10.18-2.el8_10.6.src",
+            "rocky-8.10:pcs-0.10.18-2.el8_10.6.x86_64",
+            "rocky-8.10:pcs-snmp-0.10.18-2.el8_10.6.aarch64",
+            "rocky-8.10:pcs-snmp-0.10.18-2.el8_10.6.x86_64"
           ]
         }
       ]

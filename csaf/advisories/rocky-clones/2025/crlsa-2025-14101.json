@@ -1,11 +1,14 @@
 {
   "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "notes": [
       {
         "category": "summary",
-        "text": "Important: mingw-sqlite security update",
+        "text": "An update is available for mingw-sqlite.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -22,16 +25,6 @@
       "namespace": "https://ciq.com/csaf"
     },
     "references": [
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2380149"
-      },
-      {
-        "category": "external",
-        "summary": "Advisory",
-        "url": "https://errata.rockylinux.org/RLSA-2025:14101"
-      },
       {
         "category": "external",
         "summary": "Bug fix 2380149",
@@ -62,7 +55,7 @@
     "tracking": {
       "current_release_date": "2025-09-08T14:19:39.025418+00:00",
       "generator": {
-        "date": "2025-10-21T18:42:29.009457+00:00",
+        "date": "2025-10-22T20:16:21.399844+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -91,19 +84,73 @@
                 "branches": [
                   {
                     "category": "product_name",
-                    "name": "mingw-sqlite-0:3.26.0.0-2.el8_10",
+                    "name": "mingw32-sqlite-0:3.26.0.0-2.el8_10.noarch",
                     "product": {
-                      "name": "mingw-sqlite-0:3.26.0.0-2.el8_10",
-                      "product_id": "crlsa:mingw-sqlite-3.26.0.0-2.el8_10"
+                      "name": "mingw32-sqlite-0:3.26.0.0-2.el8_10.noarch",
+                      "product_id": "rocky-8.10:mingw32-sqlite-3.26.0.0-2.el8_10.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "mingw32-sqlite-debuginfo-0:3.26.0.0-2.el8_10.noarch",
+                    "product": {
+                      "name": "mingw32-sqlite-debuginfo-0:3.26.0.0-2.el8_10.noarch",
+                      "product_id": "rocky-8.10:mingw32-sqlite-debuginfo-3.26.0.0-2.el8_10.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "mingw32-sqlite-static-0:3.26.0.0-2.el8_10.noarch",
+                    "product": {
+                      "name": "mingw32-sqlite-static-0:3.26.0.0-2.el8_10.noarch",
+                      "product_id": "rocky-8.10:mingw32-sqlite-static-3.26.0.0-2.el8_10.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "mingw64-sqlite-0:3.26.0.0-2.el8_10.noarch",
+                    "product": {
+                      "name": "mingw64-sqlite-0:3.26.0.0-2.el8_10.noarch",
+                      "product_id": "rocky-8.10:mingw64-sqlite-3.26.0.0-2.el8_10.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "mingw64-sqlite-debuginfo-0:3.26.0.0-2.el8_10.noarch",
+                    "product": {
+                      "name": "mingw64-sqlite-debuginfo-0:3.26.0.0-2.el8_10.noarch",
+                      "product_id": "rocky-8.10:mingw64-sqlite-debuginfo-3.26.0.0-2.el8_10.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "mingw64-sqlite-static-0:3.26.0.0-2.el8_10.noarch",
+                    "product": {
+                      "name": "mingw64-sqlite-static-0:3.26.0.0-2.el8_10.noarch",
+                      "product_id": "rocky-8.10:mingw64-sqlite-static-3.26.0.0-2.el8_10.noarch"
                     }
                   }
                 ],
                 "category": "architecture",
-                "name": "el8_10"
+                "name": "noarch"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "mingw-sqlite-0:3.26.0.0-2.el8_10.src",
+                    "product": {
+                      "name": "mingw-sqlite-0:3.26.0.0-2.el8_10.src",
+                      "product_id": "rocky-8.10:mingw-sqlite-3.26.0.0-2.el8_10.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
               }
             ],
             "category": "product_name",
-            "name": "Rocky Linux from CIQ"
+            "name": "Rocky Linux 8.10 from CIQ"
           }
         ],
         "category": "vendor",
@@ -114,9 +161,19 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2025-6965",
+      "cwe": {
+        "id": "CWE-197",
+        "name": "CWE-197"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:mingw-sqlite-3.26.0.0-2.el8_10"
+          "rocky-8.10:mingw32-sqlite-3.26.0.0-2.el8_10.noarch",
+          "rocky-8.10:mingw32-sqlite-debuginfo-3.26.0.0-2.el8_10.noarch",
+          "rocky-8.10:mingw32-sqlite-static-3.26.0.0-2.el8_10.noarch",
+          "rocky-8.10:mingw64-sqlite-3.26.0.0-2.el8_10.noarch",
+          "rocky-8.10:mingw64-sqlite-debuginfo-3.26.0.0-2.el8_10.noarch",
+          "rocky-8.10:mingw64-sqlite-static-3.26.0.0-2.el8_10.noarch",
+          "rocky-8.10:mingw-sqlite-3.26.0.0-2.el8_10.src"
         ]
       },
       "scores": [
@@ -128,7 +185,13 @@
             "version": "3.1"
           },
           "products": [
-            "crlsa:mingw-sqlite-3.26.0.0-2.el8_10"
+            "rocky-8.10:mingw32-sqlite-3.26.0.0-2.el8_10.noarch",
+            "rocky-8.10:mingw32-sqlite-debuginfo-3.26.0.0-2.el8_10.noarch",
+            "rocky-8.10:mingw32-sqlite-static-3.26.0.0-2.el8_10.noarch",
+            "rocky-8.10:mingw64-sqlite-3.26.0.0-2.el8_10.noarch",
+            "rocky-8.10:mingw64-sqlite-debuginfo-3.26.0.0-2.el8_10.noarch",
+            "rocky-8.10:mingw64-sqlite-static-3.26.0.0-2.el8_10.noarch",
+            "rocky-8.10:mingw-sqlite-3.26.0.0-2.el8_10.src"
           ]
         }
       ]

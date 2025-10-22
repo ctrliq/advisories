@@ -1,11 +1,14 @@
 {
   "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "notes": [
       {
         "category": "summary",
-        "text": "Important: perl-File-Find-Rule security update",
+        "text": "An update is available for perl-File-Find-Rule.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -22,16 +25,6 @@
       "namespace": "https://ciq.com/csaf"
     },
     "references": [
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2370424"
-      },
-      {
-        "category": "external",
-        "summary": "Advisory",
-        "url": "https://errata.rockylinux.org/RLSA-2025:9605"
-      },
       {
         "category": "external",
         "summary": "Bug fix 2370424",
@@ -62,7 +55,7 @@
     "tracking": {
       "current_release_date": "2025-07-29T13:39:03.816508+00:00",
       "generator": {
-        "date": "2025-10-21T18:42:30.580896+00:00",
+        "date": "2025-10-22T20:16:25.098353+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -91,19 +84,33 @@
                 "branches": [
                   {
                     "category": "product_name",
-                    "name": "perl-File-Find-Rule-0:0.34-9.el8_10",
+                    "name": "perl-File-Find-Rule-0:0.34-9.el8_10.noarch",
                     "product": {
-                      "name": "perl-File-Find-Rule-0:0.34-9.el8_10",
-                      "product_id": "crlsa:perl-File-Find-Rule-0.34-9.el8_10"
+                      "name": "perl-File-Find-Rule-0:0.34-9.el8_10.noarch",
+                      "product_id": "rocky-8.10:perl-File-Find-Rule-0.34-9.el8_10.noarch"
                     }
                   }
                 ],
                 "category": "architecture",
-                "name": "el8_10"
+                "name": "noarch"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "perl-File-Find-Rule-0:0.34-9.el8_10.src",
+                    "product": {
+                      "name": "perl-File-Find-Rule-0:0.34-9.el8_10.src",
+                      "product_id": "rocky-8.10:perl-File-Find-Rule-0.34-9.el8_10.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
               }
             ],
             "category": "product_name",
-            "name": "Rocky Linux from CIQ"
+            "name": "Rocky Linux 8.10 from CIQ"
           }
         ],
         "category": "vendor",
@@ -114,11 +121,30 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2011-10007",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "CWE-78"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:perl-File-Find-Rule-0.34-9.el8_10"
+          "rocky-8.10:perl-File-Find-Rule-0.34-9.el8_10.noarch",
+          "rocky-8.10:perl-File-Find-Rule-0.34-9.el8_10.src"
         ]
-      }
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:perl-File-Find-Rule-0.34-9.el8_10.noarch",
+            "rocky-8.10:perl-File-Find-Rule-0.34-9.el8_10.src"
+          ]
+        }
+      ]
     }
   ]
 }

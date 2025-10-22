@@ -1,11 +1,14 @@
 {
   "document": {
+    "aggregate_severity": {
+      "text": "Moderate"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "notes": [
       {
         "category": "summary",
-        "text": "Moderate: python3.12-setuptools security update",
+        "text": "An update is available for python3.12-setuptools.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -22,16 +25,6 @@
       "namespace": "https://ciq.com/csaf"
     },
     "references": [
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366982"
-      },
-      {
-        "category": "external",
-        "summary": "Advisory",
-        "url": "https://errata.rockylinux.org/RLSA-2025:11044"
-      },
       {
         "category": "external",
         "summary": "Bug fix 2366982",
@@ -62,7 +55,7 @@
     "tracking": {
       "current_release_date": "2025-07-29T13:38:41.630147+00:00",
       "generator": {
-        "date": "2025-10-21T18:42:32.416015+00:00",
+        "date": "2025-10-22T20:16:25.618696+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -91,19 +84,41 @@
                 "branches": [
                   {
                     "category": "product_name",
-                    "name": "python3.12-setuptools-0:68.2.2-5.el8_10",
+                    "name": "python3.12-setuptools-wheel-0:68.2.2-5.el8_10.noarch",
                     "product": {
-                      "name": "python3.12-setuptools-0:68.2.2-5.el8_10",
-                      "product_id": "crlsa:python3.12-setuptools-68.2.2-5.el8_10"
+                      "name": "python3.12-setuptools-wheel-0:68.2.2-5.el8_10.noarch",
+                      "product_id": "rocky-8.10:python3.12-setuptools-wheel-68.2.2-5.el8_10.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3.12-setuptools-0:68.2.2-5.el8_10.noarch",
+                    "product": {
+                      "name": "python3.12-setuptools-0:68.2.2-5.el8_10.noarch",
+                      "product_id": "rocky-8.10:python3.12-setuptools-68.2.2-5.el8_10.noarch"
                     }
                   }
                 ],
                 "category": "architecture",
-                "name": "el8_10"
+                "name": "noarch"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "python3.12-setuptools-0:68.2.2-5.el8_10.src",
+                    "product": {
+                      "name": "python3.12-setuptools-0:68.2.2-5.el8_10.src",
+                      "product_id": "rocky-8.10:python3.12-setuptools-68.2.2-5.el8_10.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
               }
             ],
             "category": "product_name",
-            "name": "Rocky Linux from CIQ"
+            "name": "Rocky Linux 8.10 from CIQ"
           }
         ],
         "category": "vendor",
@@ -114,11 +129,32 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2025-47273",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "CWE-22"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:python3.12-setuptools-68.2.2-5.el8_10"
+          "rocky-8.10:python3.12-setuptools-wheel-68.2.2-5.el8_10.noarch",
+          "rocky-8.10:python3.12-setuptools-68.2.2-5.el8_10.noarch",
+          "rocky-8.10:python3.12-setuptools-68.2.2-5.el8_10.src"
         ]
-      }
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:python3.12-setuptools-wheel-68.2.2-5.el8_10.noarch",
+            "rocky-8.10:python3.12-setuptools-68.2.2-5.el8_10.noarch",
+            "rocky-8.10:python3.12-setuptools-68.2.2-5.el8_10.src"
+          ]
+        }
+      ]
     }
   ]
 }

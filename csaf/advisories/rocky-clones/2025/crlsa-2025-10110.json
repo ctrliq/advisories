@@ -1,11 +1,14 @@
 {
   "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "notes": [
       {
         "category": "summary",
-        "text": "Important: sudo security update",
+        "text": "An update is available for sudo.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -22,16 +25,6 @@
       "namespace": "https://ciq.com/csaf"
     },
     "references": [
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2374692"
-      },
-      {
-        "category": "external",
-        "summary": "Advisory",
-        "url": "https://errata.rockylinux.org/RLSA-2025:10110"
-      },
       {
         "category": "external",
         "summary": "Bug fix 2374692",
@@ -62,7 +55,7 @@
     "tracking": {
       "current_release_date": "2025-07-29T13:38:26.982620+00:00",
       "generator": {
-        "date": "2025-10-21T18:42:32.529690+00:00",
+        "date": "2025-10-22T20:16:29.616758+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -91,19 +84,79 @@
                 "branches": [
                   {
                     "category": "product_name",
-                    "name": "sudo-0:1.9.5p2-1.el8_10.1",
+                    "name": "sudo-0:1.9.5p2-1.el8_10.1.aarch64",
                     "product": {
-                      "name": "sudo-0:1.9.5p2-1.el8_10.1",
-                      "product_id": "crlsa:sudo-1.9.5p2-1.el8_10.1"
+                      "name": "sudo-0:1.9.5p2-1.el8_10.1.aarch64",
+                      "product_id": "rocky-8.10:sudo-1.9.5p2-1.el8_10.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "sudo-debuginfo-0:1.9.5p2-1.el8_10.1.aarch64",
+                    "product": {
+                      "name": "sudo-debuginfo-0:1.9.5p2-1.el8_10.1.aarch64",
+                      "product_id": "rocky-8.10:sudo-debuginfo-1.9.5p2-1.el8_10.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "sudo-debugsource-0:1.9.5p2-1.el8_10.1.aarch64",
+                    "product": {
+                      "name": "sudo-debugsource-0:1.9.5p2-1.el8_10.1.aarch64",
+                      "product_id": "rocky-8.10:sudo-debugsource-1.9.5p2-1.el8_10.1.aarch64"
                     }
                   }
                 ],
                 "category": "architecture",
-                "name": "1"
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "sudo-0:1.9.5p2-1.el8_10.1.src",
+                    "product": {
+                      "name": "sudo-0:1.9.5p2-1.el8_10.1.src",
+                      "product_id": "rocky-8.10:sudo-1.9.5p2-1.el8_10.1.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "sudo-0:1.9.5p2-1.el8_10.1.x86_64",
+                    "product": {
+                      "name": "sudo-0:1.9.5p2-1.el8_10.1.x86_64",
+                      "product_id": "rocky-8.10:sudo-1.9.5p2-1.el8_10.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "sudo-debuginfo-0:1.9.5p2-1.el8_10.1.x86_64",
+                    "product": {
+                      "name": "sudo-debuginfo-0:1.9.5p2-1.el8_10.1.x86_64",
+                      "product_id": "rocky-8.10:sudo-debuginfo-1.9.5p2-1.el8_10.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "sudo-debugsource-0:1.9.5p2-1.el8_10.1.x86_64",
+                    "product": {
+                      "name": "sudo-debugsource-0:1.9.5p2-1.el8_10.1.x86_64",
+                      "product_id": "rocky-8.10:sudo-debugsource-1.9.5p2-1.el8_10.1.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
               }
             ],
             "category": "product_name",
-            "name": "Rocky Linux 8 from CIQ"
+            "name": "Rocky Linux 8.10 from CIQ"
           }
         ],
         "category": "vendor",
@@ -114,9 +167,19 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2025-32462",
+      "cwe": {
+        "id": "CWE-863",
+        "name": "CWE-863"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:sudo-1.9.5p2-1.el8_10.1"
+          "rocky-8.10:sudo-1.9.5p2-1.el8_10.1.aarch64",
+          "rocky-8.10:sudo-1.9.5p2-1.el8_10.1.src",
+          "rocky-8.10:sudo-1.9.5p2-1.el8_10.1.x86_64",
+          "rocky-8.10:sudo-debuginfo-1.9.5p2-1.el8_10.1.aarch64",
+          "rocky-8.10:sudo-debuginfo-1.9.5p2-1.el8_10.1.x86_64",
+          "rocky-8.10:sudo-debugsource-1.9.5p2-1.el8_10.1.aarch64",
+          "rocky-8.10:sudo-debugsource-1.9.5p2-1.el8_10.1.x86_64"
         ]
       },
       "scores": [
@@ -128,7 +191,13 @@
             "version": "3.1"
           },
           "products": [
-            "crlsa:sudo-1.9.5p2-1.el8_10.1"
+            "rocky-8.10:sudo-1.9.5p2-1.el8_10.1.aarch64",
+            "rocky-8.10:sudo-1.9.5p2-1.el8_10.1.src",
+            "rocky-8.10:sudo-1.9.5p2-1.el8_10.1.x86_64",
+            "rocky-8.10:sudo-debuginfo-1.9.5p2-1.el8_10.1.aarch64",
+            "rocky-8.10:sudo-debuginfo-1.9.5p2-1.el8_10.1.x86_64",
+            "rocky-8.10:sudo-debugsource-1.9.5p2-1.el8_10.1.aarch64",
+            "rocky-8.10:sudo-debugsource-1.9.5p2-1.el8_10.1.x86_64"
           ]
         }
       ]

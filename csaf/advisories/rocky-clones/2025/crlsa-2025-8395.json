@@ -1,11 +1,14 @@
 {
   "document": {
+    "aggregate_severity": {
+      "text": "Low"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "notes": [
       {
         "category": "summary",
-        "text": "Low: rsync security update",
+        "text": "An update is available for rsync.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -22,16 +25,6 @@
       "namespace": "https://ciq.com/csaf"
     },
     "references": [
-      {
-        "category": "external",
-        "summary": "Report",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1402345"
-      },
-      {
-        "category": "external",
-        "summary": "Advisory",
-        "url": "https://errata.rockylinux.org/RLSA-2025:8395"
-      },
       {
         "category": "external",
         "summary": "Bug fix 1402345",
@@ -62,7 +55,7 @@
     "tracking": {
       "current_release_date": "2025-07-29T13:38:26.982620+00:00",
       "generator": {
-        "date": "2025-10-21T18:42:32.913100+00:00",
+        "date": "2025-10-22T20:16:29.641782+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -91,19 +84,93 @@
                 "branches": [
                   {
                     "category": "product_name",
-                    "name": "rsync-0:3.1.3-23.el8_10",
+                    "name": "rsync-0:3.1.3-23.el8_10.aarch64",
                     "product": {
-                      "name": "rsync-0:3.1.3-23.el8_10",
-                      "product_id": "crlsa:rsync-3.1.3-23.el8_10"
+                      "name": "rsync-0:3.1.3-23.el8_10.aarch64",
+                      "product_id": "rocky-8.10:rsync-3.1.3-23.el8_10.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "rsync-debuginfo-0:3.1.3-23.el8_10.aarch64",
+                    "product": {
+                      "name": "rsync-debuginfo-0:3.1.3-23.el8_10.aarch64",
+                      "product_id": "rocky-8.10:rsync-debuginfo-3.1.3-23.el8_10.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "rsync-debugsource-0:3.1.3-23.el8_10.aarch64",
+                    "product": {
+                      "name": "rsync-debugsource-0:3.1.3-23.el8_10.aarch64",
+                      "product_id": "rocky-8.10:rsync-debugsource-3.1.3-23.el8_10.aarch64"
                     }
                   }
                 ],
                 "category": "architecture",
-                "name": "el8_10"
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "rsync-0:3.1.3-23.el8_10.src",
+                    "product": {
+                      "name": "rsync-0:3.1.3-23.el8_10.src",
+                      "product_id": "rocky-8.10:rsync-3.1.3-23.el8_10.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "rsync-0:3.1.3-23.el8_10.x86_64",
+                    "product": {
+                      "name": "rsync-0:3.1.3-23.el8_10.x86_64",
+                      "product_id": "rocky-8.10:rsync-3.1.3-23.el8_10.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "rsync-debuginfo-0:3.1.3-23.el8_10.x86_64",
+                    "product": {
+                      "name": "rsync-debuginfo-0:3.1.3-23.el8_10.x86_64",
+                      "product_id": "rocky-8.10:rsync-debuginfo-3.1.3-23.el8_10.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "rsync-debugsource-0:3.1.3-23.el8_10.x86_64",
+                    "product": {
+                      "name": "rsync-debugsource-0:3.1.3-23.el8_10.x86_64",
+                      "product_id": "rocky-8.10:rsync-debugsource-3.1.3-23.el8_10.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "rsync-daemon-0:3.1.3-23.el8_10.noarch",
+                    "product": {
+                      "name": "rsync-daemon-0:3.1.3-23.el8_10.noarch",
+                      "product_id": "rocky-8.10:rsync-daemon-3.1.3-23.el8_10.noarch"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "noarch"
               }
             ],
             "category": "product_name",
-            "name": "Rocky Linux from CIQ"
+            "name": "Rocky Linux 8.10 from CIQ"
           }
         ],
         "category": "vendor",
@@ -114,9 +181,20 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2016-9840",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "CWE-125"
+      },
       "product_status": {
         "fixed": [
-          "crlsa:rsync-3.1.3-23.el8_10"
+          "rocky-8.10:rsync-3.1.3-23.el8_10.aarch64",
+          "rocky-8.10:rsync-3.1.3-23.el8_10.src",
+          "rocky-8.10:rsync-3.1.3-23.el8_10.x86_64",
+          "rocky-8.10:rsync-daemon-3.1.3-23.el8_10.noarch",
+          "rocky-8.10:rsync-debuginfo-3.1.3-23.el8_10.aarch64",
+          "rocky-8.10:rsync-debuginfo-3.1.3-23.el8_10.x86_64",
+          "rocky-8.10:rsync-debugsource-3.1.3-23.el8_10.aarch64",
+          "rocky-8.10:rsync-debugsource-3.1.3-23.el8_10.x86_64"
         ]
       },
       "scores": [
@@ -128,7 +206,32 @@
             "version": "3.1"
           },
           "products": [
-            "crlsa:rsync-3.1.3-23.el8_10"
+            "rocky-8.10:rsync-3.1.3-23.el8_10.aarch64",
+            "rocky-8.10:rsync-3.1.3-23.el8_10.src",
+            "rocky-8.10:rsync-3.1.3-23.el8_10.x86_64",
+            "rocky-8.10:rsync-daemon-3.1.3-23.el8_10.noarch",
+            "rocky-8.10:rsync-debuginfo-3.1.3-23.el8_10.aarch64",
+            "rocky-8.10:rsync-debuginfo-3.1.3-23.el8_10.x86_64",
+            "rocky-8.10:rsync-debugsource-3.1.3-23.el8_10.aarch64",
+            "rocky-8.10:rsync-debugsource-3.1.3-23.el8_10.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:rsync-3.1.3-23.el8_10.aarch64",
+            "rocky-8.10:rsync-3.1.3-23.el8_10.src",
+            "rocky-8.10:rsync-3.1.3-23.el8_10.x86_64",
+            "rocky-8.10:rsync-daemon-3.1.3-23.el8_10.noarch",
+            "rocky-8.10:rsync-debuginfo-3.1.3-23.el8_10.aarch64",
+            "rocky-8.10:rsync-debuginfo-3.1.3-23.el8_10.x86_64",
+            "rocky-8.10:rsync-debugsource-3.1.3-23.el8_10.aarch64",
+            "rocky-8.10:rsync-debugsource-3.1.3-23.el8_10.x86_64"
           ]
         }
       ]
