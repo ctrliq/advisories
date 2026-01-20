@@ -1,0 +1,1380 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for postgresql",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the postgresql SRPM in CIQ LTS for Rocky Linux 8.6. It addresses 11 CVEs: CVE-2023-2454, CVE-2023-2455, CVE-2022-41862, CVE-2023-39417, CVE-2023-5868, and 6 more.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-2454",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-2454.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-2455",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-2455.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-41862",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-41862.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-39417",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-39417.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-5868",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5868.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-5869",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5869.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-5870",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5870.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-0985",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-0985.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-10976",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-10976.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-10978",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-10978.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-10979",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-10979.json"
+      }
+    ],
+    "title": "postgresql security update for CIQ LTS for Rocky Linux 8.6",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:42:24.703928+00:00",
+      "generator": {
+        "date": "2026-01-16T00:42:24.703928+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CIQSA-LTS-8-6-2026:0151",
+      "initial_release_date": "2026-01-16T00:42:24.703928+00:00",
+      "revision_history": [
+        {
+          "date": "2026-01-16T00:42:24.703928+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 11 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-docs-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-docs-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-docs-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-plpython3-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-plpython3-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-plpython3-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-server-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-server-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-server-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-static-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-static-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-static-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-upgrade-devel-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-upgrade-devel-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-upgrade-devel-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-contrib-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-contrib-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-contrib-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-plperl-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-plperl-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-plperl-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-pltcl-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-pltcl-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-pltcl-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-server-devel-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-server-devel-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-server-devel-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-test-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-test-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-test-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-upgrade-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                    "product": {
+                      "name": "postgresql-upgrade-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+                      "product_id": "lts-8.6:postgresql-upgrade-0:12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-test-rpm-macros-0:12.22-1.module+el8.6.0+6018+6f921382.noarch",
+                    "product": {
+                      "name": "postgresql-test-rpm-macros-0:12.22-1.module+el8.6.0+6018+6f921382.noarch",
+                      "product_id": "lts-8.6:postgresql-test-rpm-macros-0:12.22-1.module+el8.6.0+6018+6f921382.noarch"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "noarch"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-contrib-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-contrib-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-contrib-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-plperl-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-plperl-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-plperl-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-pltcl-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-pltcl-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-pltcl-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-server-devel-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-server-devel-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-server-devel-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-test-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-test-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-test-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-upgrade-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-upgrade-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-upgrade-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-docs-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-docs-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-docs-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-plpython3-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-plpython3-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-plpython3-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-server-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-server-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-server-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-static-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-static-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-static-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "postgresql-upgrade-devel-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                    "product": {
+                      "name": "postgresql-upgrade-devel-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+                      "product_id": "lts-8.6:postgresql-upgrade-devel-0:12.22-1.module+el8.6.0+6018+6f921382.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              }
+            ],
+            "category": "product_name",
+            "name": "CIQ LTS for Rocky Linux 8.6"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-2454",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-2455",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 4.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-41862",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "CWE-200"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-39417",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5868",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5869",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5870",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 2.2,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-0985",
+      "cwe": {
+        "id": "CWE-271",
+        "name": "CWE-271"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 8.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-10976",
+      "cwe": {
+        "id": "CWE-1250",
+        "name": "CWE-1250"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 4.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-10978",
+      "cwe": {
+        "id": "CWE-266",
+        "name": "CWE-266"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 4.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-10979",
+      "cwe": {
+        "id": "CWE-15",
+        "name": "CWE-15"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+          "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+          "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+          "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-docs-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-plpython3-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-server-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-static-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-test-rpm-macros-12.22-1.module+el8.6.0+6018+6f921382.noarch",
+            "lts-8.6:postgresql-upgrade-devel-12.22-1.module+el8.6.0+6018+6f921382.x86_64",
+            "lts-8.6:postgresql-contrib-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-plperl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-pltcl-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-server-devel-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-test-12.22-1.module+el8.6.0+6018+6f921382.aarch64",
+            "lts-8.6:postgresql-upgrade-12.22-1.module+el8.6.0+6018+6f921382.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}

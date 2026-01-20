@@ -1,0 +1,1940 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Moderate"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for module.criu, module.libslirp, libslirp, criu.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The container-tools module contains tools for working with containers, notably podman, buildah, skopeo, and runc.\n\nSecurity Fix(es):\n\n* golang: net/http: improper sanitization of Transfer-Encoding header (CVE-2022-1705)\n\n* golang: go/parser: stack exhaustion in all Parse* functions (CVE-2022-1962)\n\n* golang: net/http: handle server errors after sending GOAWAY (CVE-2022-27664)\n\n* golang: encoding/xml: stack exhaustion in Decoder.Skip (CVE-2022-28131)\n\n* golang: io/fs: stack exhaustion in Glob (CVE-2022-30630)\n\n* golang: compress/gzip: stack exhaustion in Reader.Read (CVE-2022-30631)\n\n* golang: path/filepath: stack exhaustion in Glob (CVE-2022-30632)\n\n* golang: encoding/xml: stack exhaustion in Unmarshal (CVE-2022-30633)\n\n* golang: encoding/gob: stack exhaustion in Decoder.Decode (CVE-2022-30635)\n\n* golang: net/http/httputil: NewSingleHostReverseProxy - omit X-Forwarded-For not working (CVE-2022-32148)\n\n* golang: net/http: excessive memory growth in a Go server accepting HTTP/2 requests (CVE-2022-41717)\n\n* podman: symlink exchange attack in podman export volume (CVE-2023-0778)\n\n* golang: crypto/tls: session tickets lack random ticket_age_add (CVE-2022-30629)\n\n* golang: math/big: decoding big.Float and big.Rat types can panic if the encoded message is too short, potentially allowing a denial of service (CVE-2022-32189)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Rocky Linux 8.8 Release Notes linked from the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2107376",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2107376"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2107388",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2107388"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2113814",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2113814"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2168256",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2168256"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2092793",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2092793"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2107342",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2107342"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2107371",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2107371"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2107383",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2107383"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2107390",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2107390"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2124669",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2124669"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2107374",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2107374"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2107386",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2107386"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2107392",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2107392"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2161274",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2161274"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2023:2758",
+        "url": "https://errata.build.resf.org/RLSA-2023:2758"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:2758",
+        "url": "https://access.redhat.com/errata/RHSA-2023:2758"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2023:2758",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2023_2758.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2023:2758",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2023/crlsa-2023_2758.json"
+      }
+    ],
+    "title": "Moderate: container-tools:rhel8 security, bug fix, and enhancement update",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:10:46.506320+00:00",
+      "generator": {
+        "date": "2026-01-16T00:10:46.506320+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2023:2758",
+      "initial_release_date": "2025-11-28T09:04:16.963841+00:00",
+      "revision_history": [
+        {
+          "date": "2025-11-28T09:04:16.963841+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "crit-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "crit-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "criu-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-debuginfo-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "criu-debuginfo-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-debugsource-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "criu-debugsource-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-devel-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "criu-devel-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-libs-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "criu-libs-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-libs-debuginfo-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "criu-libs-debuginfo-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libslirp-0:4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "libslirp-0:4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libslirp-debuginfo-0:4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "libslirp-debuginfo-0:4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libslirp-debugsource-0:4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "libslirp-debugsource-0:4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libslirp-devel-0:4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "libslirp-devel-0:4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-criu-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                    "product": {
+                      "name": "python3-criu-0:3.15-3.module+el8.9.0+1445+07728297.aarch64",
+                      "product_id": "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "crit-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "crit-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "criu-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-debuginfo-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "criu-debuginfo-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-debugsource-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "criu-debugsource-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-devel-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "criu-devel-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-libs-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "criu-libs-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "criu-libs-debuginfo-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "criu-libs-debuginfo-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libslirp-0:4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "libslirp-0:4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libslirp-debuginfo-0:4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "libslirp-debuginfo-0:4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libslirp-debugsource-0:4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "libslirp-debugsource-0:4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libslirp-devel-0:4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "libslirp-devel-0:4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-criu-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                    "product": {
+                      "name": "python3-criu-0:3.15-3.module+el8.9.0+1445+07728297.x86_64",
+                      "product_id": "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "criu-0:3.15-3.module+el8.9.0+1445+07728297.src",
+                    "product": {
+                      "name": "criu-0:3.15-3.module+el8.9.0+1445+07728297.src",
+                      "product_id": "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libslirp-0:4.4.0-1.module+el8.9.0+1445+07728297.src",
+                    "product": {
+                      "name": "libslirp-0:4.4.0-1.module+el8.9.0+1445+07728297.src",
+                      "product_id": "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-1705",
+      "cwe": {
+        "id": "CWE-444",
+        "name": "CWE-444"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-1962",
+      "cwe": {
+        "id": "CWE-1325",
+        "name": "CWE-1325"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-27664",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "CWE-400"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-28131",
+      "cwe": {
+        "id": "CWE-1325",
+        "name": "CWE-1325"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-30629",
+      "cwe": {
+        "id": "CWE-331",
+        "name": "CWE-331"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.1,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 3.1,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-30630",
+      "cwe": {
+        "id": "CWE-1325",
+        "name": "CWE-1325"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-30631",
+      "cwe": {
+        "id": "CWE-1325",
+        "name": "CWE-1325"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-30632",
+      "cwe": {
+        "id": "CWE-1325",
+        "name": "CWE-1325"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-30633",
+      "cwe": {
+        "id": "CWE-1325",
+        "name": "CWE-1325"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-30635",
+      "cwe": {
+        "id": "CWE-1325",
+        "name": "CWE-1325"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-32148",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "CWE-200"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-32189",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "CWE-400"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-41717",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "CWE-770"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0778",
+      "cwe": {
+        "id": "CWE-367",
+        "name": "CWE-367"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+          "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+          "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+          "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 6.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:crit-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.src",
+            "crlsa:criu-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-debugsource-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-devel-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:criu-libs-debuginfo-3.15-3.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.src",
+            "crlsa:libslirp-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debuginfo-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-debugsource-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:libslirp-devel-4.4.0-1.module+el8.9.0+1445+07728297.x86_64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.aarch64",
+            "crlsa:python3-criu-3.15-3.module+el8.9.0+1445+07728297.x86_64"
+          ]
+        }
+      ]
+    }
+  ]
+}

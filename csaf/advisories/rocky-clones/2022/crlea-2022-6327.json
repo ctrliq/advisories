@@ -1,0 +1,673 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Unknown"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for java-17-openjdk.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The java-17-openjdk packages provide the OpenJDK 17 Java Runtime\nEnvironment and the OpenJDK 17 Java Software Development Kit.\n\nEnhancements:\n\n* FIPS mode has been enhanced to enable the export of secret (CKO_SECRET_KEY) keys in plain from the NSS software token. This is a requirement for TLS v1.3 key derivation while in FIPS mode (RHBZ#2123561)\n* FIPS mode has been enhanced to enable the support of PKCS#12 keystores by providing Password-Based Encryption (PBE) algorithms in the PKCS#11 provider (RHBZ#2123568)\n* TLSv1.3 has been enabled on both the client and server sides when the system is running in FIPS mode. This is now possible due to the export enhancement listed above (RHBZ#2123572)\n\nBug Fix(es):\n\n* A change to the HotSpot C2 compiler, JDK-8279219, was introduced in the 17.0.4 release of OpenJDK, causing the JDK to crash unpredictably under certain workloads. This release, 17.0.4.1, reverts that change. (RHBZ#2120059)\n* The enhancement to export secret keys in FIPS mode (see above) initially considered all keys as exportable. However, NSS does not support the wrapping and unwrapping of Diffie-Hellman private keys (CKK_DH), causing an error to be thrown. We now no longer attempt to export such keys (RHBZ#2123564)\n* In FIPS mode, a number of algorithms and providers are disabled. This caused P11Key.getEncoded to fail for Diffie-Hellman (DH) keys, as the key factory in the SunJCE provider was disabled. This does not contain cryptographic code and so is safe to enable. (RHBZ#2123566)\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "* FIPS mode has been enhanced to enable the export of secret (CKO_SECRET_KEY) keys in plain from the NSS software token. This is a requirement for TLS v1.3 key derivation while in FIPS mode (RHBZ#2123561)",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2123561"
+      },
+      {
+        "category": "external",
+        "summary": "* A change to the HotSpot C2 compiler, JDK-8279219, was introduced in the 17.0.4 release of OpenJDK, causing the JDK to crash unpredictably under certain workloads. This release, 17.0.4.1, reverts that change. (RHBZ#2120059)",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2120059"
+      },
+      {
+        "category": "external",
+        "summary": "* The enhancement to export secret keys in FIPS mode (see above) initially considered all keys as exportable. However, NSS does not support the wrapping and unwrapping of Diffie-Hellman private keys (CKK_DH), causing an error to be thrown. We now no longer attempt to export such keys (RHBZ#2123564)",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2123564"
+      },
+      {
+        "category": "external",
+        "summary": "* FIPS mode has been enhanced to enable the support of PKCS#12 keystores by providing Password-Based Encryption (PBE) algorithms in the PKCS#11 provider (RHBZ#2123568)",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2123568"
+      },
+      {
+        "category": "external",
+        "summary": "* In FIPS mode, a number of algorithms and providers are disabled. This caused P11Key.getEncoded to fail for Diffie-Hellman (DH) keys, as the key factory in the SunJCE provider was disabled. This does not contain cryptographic code and so is safe to enable. (RHBZ#2123566)",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2123566"
+      },
+      {
+        "category": "external",
+        "summary": "* TLSv1.3 has been enabled on both the client and server sides when the system is running in FIPS mode. This is now possible due to the export enhancement listed above (RHBZ#2123572)",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2123572"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLEA-2022:6327",
+        "url": "https://errata.build.resf.org/RLEA-2022:6327"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RLEA-2022:6327",
+        "url": "https://access.redhat.com/errata/RLEA-2022:6327"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RLEA-2022:6327",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rlea-2022_6327.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLEA-2022:6327",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2022/crlea-2022_6327.json"
+      }
+    ],
+    "title": "java-17-openjdk bug fix update",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:26:51.527903+00:00",
+      "generator": {
+        "date": "2026-01-16T00:26:51.527903+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLEA-2022:6327",
+      "initial_release_date": "2022-09-13T07:37:02.000000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-09-13T07:37:02.000000+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-debugsource-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-debugsource-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-debugsource-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-demo-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-demo-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-demo-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-demo-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-demo-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-demo-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-demo-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-demo-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-demo-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-javadoc-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-javadoc-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-javadoc-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-javadoc-zip-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-javadoc-zip-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-javadoc-zip-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-jmods-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-jmods-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-jmods-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-jmods-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-jmods-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-jmods-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-jmods-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-jmods-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-jmods-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-src-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-src-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-src-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-src-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-src-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-src-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-src-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-src-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-src-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-static-libs-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-static-libs-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-static-libs-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-static-libs-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-static-libs-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-static-libs-fastdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-static-libs-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                    "product": {
+                      "name": "java-17-openjdk-static-libs-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64",
+                      "product_id": "rocky-8.6:java-17-openjdk-static-libs-slowdebug-1:17.0.4.1.1-2.el8_6.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-1:17.0.4.1.1-2.el8_6.src",
+                    "product": {
+                      "name": "java-17-openjdk-1:17.0.4.1.1-2.el8_6.src",
+                      "product_id": "rocky-8.6:java-17-openjdk-1:17.0.4.1.1-2.el8_6.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-debugsource-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-debugsource-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-debugsource-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-demo-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-demo-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-demo-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-demo-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-demo-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-demo-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-demo-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-demo-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-demo-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-devel-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-devel-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-devel-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-fastdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-headless-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-headless-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-headless-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-javadoc-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-javadoc-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-javadoc-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-javadoc-zip-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-javadoc-zip-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-javadoc-zip-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-jmods-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-jmods-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-jmods-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-jmods-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-jmods-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-jmods-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-jmods-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-jmods-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-jmods-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-slowdebug-debuginfo-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-src-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-src-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-src-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-src-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-src-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-src-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-src-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-src-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-src-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-static-libs-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-static-libs-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-static-libs-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-static-libs-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-static-libs-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-static-libs-fastdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-17-openjdk-static-libs-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                    "product": {
+                      "name": "java-17-openjdk-static-libs-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64",
+                      "product_id": "rocky-8.6:java-17-openjdk-static-libs-slowdebug-1:17.0.4.1.1-2.el8_6.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux 8.6 from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": []
+}

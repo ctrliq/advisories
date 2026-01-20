@@ -1,0 +1,827 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Unknown"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for eclipse-emf, eclipse-ecf, apache-commons-compress, hamcrest, opentest4j, xz-java, google-gson, glassfish-el, icu4j, xmlgraphics-commons, jsch, felix-scr, apiguardian, junit, glassfish-jsp, lucene, jetty, junit5, apache-commons-jxpath, eclipse, univocity-parsers, xml-commons-apis, felix-gogo-command, sat4j, batik, felix-gogo-shell, glassfish-annotation-api, jzlib, glassfish-jsp-api, objectweb-asm, felix-gogo-runtime, glassfish-servlet-api.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "Eclipse is an integrated development environment (IDE).\n\nThe metadata for the eclipse:Rocky Linux8 module has been updated to remove the following unused profiles:\n    c\n    everything\n\nTo check whether you have the obsolete profiles installed, run:\n\n  # yum module list eclipse\n\nThe installed profiles have the [i] indicator next to their names.\n\nTo ensure the eclipse:Rocky Linux8 module contains the correct metadata, remove the unused profiles and reinstall the module with the java profile:\n\n  # yum module remove -y eclipse\n  # yum module reset -y eclipse\n  # yum clean all\n  # yum module -y install eclipse:Rocky Linux8/java\n\nTo install the eclipse:Rocky Linux8 module from scratch, use the java profile: \n\n  # yum module -y install eclipse:Rocky Linux8/java\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLBA-2020:5097",
+        "url": "https://errata.build.resf.org/RLBA-2020:5097"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RLBA-2020:5097",
+        "url": "https://access.redhat.com/errata/RLBA-2020:5097"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RLBA-2020:5097",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rlba-2020_5097.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLBA-2020:5097",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2020/crlba-2020_5097.json"
+      }
+    ],
+    "title": "eclipse:rhel8 bug fix update",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:37:36.321067+00:00",
+      "generator": {
+        "date": "2026-01-16T00:37:36.321067+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLBA-2020:5097",
+      "initial_release_date": "2020-11-12T09:17:37.000000+00:00",
+      "revision_history": [
+        {
+          "date": "2020-11-12T09:17:37.000000+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-ecf-runtime-0:3.14.8-1.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "eclipse-ecf-runtime-0:3.14.8-1.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:eclipse-ecf-runtime-3.14.8-1.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "apache-commons-compress-0:1.20-3.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "apache-commons-compress-0:1.20-3.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:apache-commons-compress-1.20-3.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "apache-commons-jxpath-0:1.3-36.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "apache-commons-jxpath-0:1.3-36.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:apache-commons-jxpath-1.3-36.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "apiguardian-0:1.1.0-4.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "apiguardian-0:1.1.0-4.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:apiguardian-1.1.0-4.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "batik-css-0:1.11-6.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "batik-css-0:1.11-6.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:batik-css-1.11-6.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "batik-util-0:1.11-6.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "batik-util-0:1.11-6.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:batik-util-1.11-6.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-ecf-core-0:3.14.8-1.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "eclipse-ecf-core-0:3.14.8-1.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:eclipse-ecf-core-3.14.8-1.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-emf-core-1:2.22.0-1.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "eclipse-emf-core-1:2.22.0-1.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:eclipse-emf-core-1:2.22.0-1.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-emf-runtime-1:2.22.0-1.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "eclipse-emf-runtime-1:2.22.0-1.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:eclipse-emf-runtime-1:2.22.0-1.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-emf-xsd-1:2.22.0-1.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "eclipse-emf-xsd-1:2.22.0-1.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:eclipse-emf-xsd-1:2.22.0-1.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-jdt-1:4.16-7.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "eclipse-jdt-1:4.16-7.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:eclipse-jdt-1:4.16-7.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-p2-discovery-1:4.16-7.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "eclipse-p2-discovery-1:4.16-7.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:eclipse-p2-discovery-1:4.16-7.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "felix-gogo-command-0:1.0.2-11.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "felix-gogo-command-0:1.0.2-11.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:felix-gogo-command-1.0.2-11.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "felix-gogo-runtime-0:1.1.0-7.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "felix-gogo-runtime-0:1.1.0-7.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:felix-gogo-runtime-1.1.0-7.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "felix-gogo-shell-0:1.1.0-5.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "felix-gogo-shell-0:1.1.0-5.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:felix-gogo-shell-1.1.0-5.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "felix-scr-0:2.1.16-6.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "felix-scr-0:2.1.16-6.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:felix-scr-2.1.16-6.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-annotation-api-0:1.3.2-3.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "glassfish-annotation-api-0:1.3.2-3.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:glassfish-annotation-api-1.3.2-3.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-el-0:3.0.1-0.14.b08.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "glassfish-el-0:3.0.1-0.14.b08.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:glassfish-el-3.0.1-0.14.b08.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-el-api-0:3.0.1-0.14.b08.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "glassfish-el-api-0:3.0.1-0.14.b08.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:glassfish-el-api-3.0.1-0.14.b08.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-jsp-0:2.3.4-6.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "glassfish-jsp-0:2.3.4-6.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:glassfish-jsp-2.3.4-6.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-jsp-api-0:2.3.3-3.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "glassfish-jsp-api-0:2.3.3-3.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:glassfish-jsp-api-2.3.3-3.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-servlet-api-0:3.1.0-19.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "glassfish-servlet-api-0:3.1.0-19.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:glassfish-servlet-api-3.1.0-19.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "google-gson-0:2.8.6-5.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "google-gson-0:2.8.6-5.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:google-gson-2.8.6-5.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "hamcrest-0:1.3-29.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "hamcrest-0:1.3-29.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:hamcrest-1.3-29.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "hamcrest-core-0:1.3-29.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "hamcrest-core-0:1.3-29.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:hamcrest-core-1.3-29.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "icu4j-1:65.1-3.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "icu4j-1:65.1-3.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:icu4j-1:65.1-3.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jetty-continuation-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "jetty-continuation-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:jetty-continuation-9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jetty-http-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "jetty-http-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:jetty-http-9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jetty-io-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "jetty-io-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:jetty-io-9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jetty-security-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "jetty-security-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:jetty-security-9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jetty-server-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "jetty-server-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:jetty-server-9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jetty-servlet-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "jetty-servlet-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:jetty-servlet-9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jetty-util-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "jetty-util-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:jetty-util-9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jsch-0:0.1.54-12.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "jsch-0:0.1.54-12.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:jsch-0.1.54-12.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "junit-1:4.12-14.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "junit-1:4.12-14.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:junit-1:4.12-14.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "junit5-0:5.6.2-2.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "junit5-0:5.6.2-2.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:junit5-5.6.2-2.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jzlib-0:1.1.3-14.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "jzlib-0:1.1.3-14.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:jzlib-1.1.3-14.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "lucene-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "lucene-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:lucene-8.4.1-5.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "lucene-analysis-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "lucene-analysis-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:lucene-analysis-8.4.1-5.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "lucene-analyzers-smartcn-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "lucene-analyzers-smartcn-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:lucene-analyzers-smartcn-8.4.1-5.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "lucene-queries-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "lucene-queries-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:lucene-queries-8.4.1-5.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "lucene-queryparser-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "lucene-queryparser-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:lucene-queryparser-8.4.1-5.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "lucene-sandbox-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "lucene-sandbox-0:8.4.1-5.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:lucene-sandbox-8.4.1-5.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "objectweb-asm-0:7.3.1-3.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "objectweb-asm-0:7.3.1-3.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:objectweb-asm-7.3.1-3.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "opentest4j-0:1.2.0-2.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "opentest4j-0:1.2.0-2.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:opentest4j-1.2.0-2.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "sat4j-0:2.3.5-19.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "sat4j-0:2.3.5-19.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:sat4j-2.3.5-19.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "univocity-parsers-0:2.8.4-3.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "univocity-parsers-0:2.8.4-3.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:univocity-parsers-2.8.4-3.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "xml-commons-apis-0:1.4.01-31.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "xml-commons-apis-0:1.4.01-31.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:xml-commons-apis-1.4.01-31.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "xmlgraphics-commons-0:2.3-4.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "xmlgraphics-commons-0:2.3-4.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:xmlgraphics-commons-2.3-4.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "xz-java-0:1.8-8.module+el8.6.0+852+cc16a686.noarch",
+                    "product": {
+                      "name": "xz-java-0:1.8-8.module+el8.6.0+852+cc16a686.noarch",
+                      "product_id": "crlsa:xz-java-1.8-8.module+el8.6.0+852+cc16a686.noarch"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "noarch"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "apache-commons-compress-0:1.20-3.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "apache-commons-compress-0:1.20-3.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:apache-commons-compress-1.20-3.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "apache-commons-jxpath-0:1.3-36.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "apache-commons-jxpath-0:1.3-36.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:apache-commons-jxpath-1.3-36.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "apiguardian-0:1.1.0-4.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "apiguardian-0:1.1.0-4.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:apiguardian-1.1.0-4.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "batik-0:1.11-6.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "batik-0:1.11-6.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:batik-1.11-6.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-1:4.16-7.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "eclipse-1:4.16-7.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:eclipse-1:4.16-7.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-ecf-0:3.14.8-1.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "eclipse-ecf-0:3.14.8-1.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:eclipse-ecf-3.14.8-1.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-emf-1:2.22.0-1.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "eclipse-emf-1:2.22.0-1.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:eclipse-emf-1:2.22.0-1.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "felix-gogo-command-0:1.0.2-11.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "felix-gogo-command-0:1.0.2-11.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:felix-gogo-command-1.0.2-11.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "felix-gogo-runtime-0:1.1.0-7.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "felix-gogo-runtime-0:1.1.0-7.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:felix-gogo-runtime-1.1.0-7.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "felix-gogo-shell-0:1.1.0-5.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "felix-gogo-shell-0:1.1.0-5.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:felix-gogo-shell-1.1.0-5.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "felix-scr-0:2.1.16-6.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "felix-scr-0:2.1.16-6.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:felix-scr-2.1.16-6.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-annotation-api-0:1.3.2-3.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "glassfish-annotation-api-0:1.3.2-3.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:glassfish-annotation-api-1.3.2-3.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-el-0:3.0.1-0.14.b08.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "glassfish-el-0:3.0.1-0.14.b08.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:glassfish-el-3.0.1-0.14.b08.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-jsp-0:2.3.4-6.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "glassfish-jsp-0:2.3.4-6.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:glassfish-jsp-2.3.4-6.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-jsp-api-0:2.3.3-3.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "glassfish-jsp-api-0:2.3.3-3.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:glassfish-jsp-api-2.3.3-3.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "glassfish-servlet-api-0:3.1.0-19.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "glassfish-servlet-api-0:3.1.0-19.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:glassfish-servlet-api-3.1.0-19.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "google-gson-0:2.8.6-5.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "google-gson-0:2.8.6-5.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:google-gson-2.8.6-5.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "hamcrest-0:1.3-29.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "hamcrest-0:1.3-29.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:hamcrest-1.3-29.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "icu4j-1:65.1-3.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "icu4j-1:65.1-3.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:icu4j-1:65.1-3.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jetty-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "jetty-0:9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:jetty-9.4.30-2.v20200611.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jsch-0:0.1.54-12.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "jsch-0:0.1.54-12.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:jsch-0.1.54-12.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "junit-1:4.12-14.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "junit-1:4.12-14.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:junit-1:4.12-14.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "junit5-0:5.6.2-2.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "junit5-0:5.6.2-2.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:junit5-5.6.2-2.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jzlib-0:1.1.3-14.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "jzlib-0:1.1.3-14.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:jzlib-1.1.3-14.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "lucene-0:8.4.1-5.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "lucene-0:8.4.1-5.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:lucene-8.4.1-5.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "objectweb-asm-0:7.3.1-3.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "objectweb-asm-0:7.3.1-3.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:objectweb-asm-7.3.1-3.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "opentest4j-0:1.2.0-2.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "opentest4j-0:1.2.0-2.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:opentest4j-1.2.0-2.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "sat4j-0:2.3.5-19.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "sat4j-0:2.3.5-19.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:sat4j-2.3.5-19.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "univocity-parsers-0:2.8.4-3.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "univocity-parsers-0:2.8.4-3.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:univocity-parsers-2.8.4-3.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "xml-commons-apis-0:1.4.01-31.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "xml-commons-apis-0:1.4.01-31.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:xml-commons-apis-1.4.01-31.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "xmlgraphics-commons-0:2.3-4.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "xmlgraphics-commons-0:2.3-4.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:xmlgraphics-commons-2.3-4.module+el8.6.0+852+cc16a686.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "xz-java-0:1.8-8.module+el8.6.0+852+cc16a686.src",
+                    "product": {
+                      "name": "xz-java-0:1.8-8.module+el8.6.0+852+cc16a686.src",
+                      "product_id": "crlsa:xz-java-1.8-8.module+el8.6.0+852+cc16a686.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-debuginfo-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                    "product": {
+                      "name": "eclipse-debuginfo-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                      "product_id": "crlsa:eclipse-debuginfo-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-debugsource-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                    "product": {
+                      "name": "eclipse-debugsource-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                      "product_id": "crlsa:eclipse-debugsource-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-equinox-osgi-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                    "product": {
+                      "name": "eclipse-equinox-osgi-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                      "product_id": "crlsa:eclipse-equinox-osgi-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-pde-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                    "product": {
+                      "name": "eclipse-pde-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                      "product_id": "crlsa:eclipse-pde-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-platform-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                    "product": {
+                      "name": "eclipse-platform-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                      "product_id": "crlsa:eclipse-platform-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-platform-debuginfo-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                    "product": {
+                      "name": "eclipse-platform-debuginfo-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                      "product_id": "crlsa:eclipse-platform-debuginfo-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-swt-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                    "product": {
+                      "name": "eclipse-swt-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                      "product_id": "crlsa:eclipse-swt-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "eclipse-swt-debuginfo-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                    "product": {
+                      "name": "eclipse-swt-debuginfo-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64",
+                      "product_id": "crlsa:eclipse-swt-debuginfo-1:4.16-7.module+el8.6.0+852+cc16a686.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": []
+}

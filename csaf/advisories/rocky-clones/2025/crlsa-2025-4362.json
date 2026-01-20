@@ -27,8 +27,13 @@
     "references": [
       {
         "category": "external",
-        "summary": "Bug fix 2253365",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2253365"
+        "summary": "Bug fix 2247179",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2247179"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2325041",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2325041"
       },
       {
         "category": "external",
@@ -37,23 +42,18 @@
       },
       {
         "category": "external",
-        "summary": "Bug fix 2247179",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2247179"
-      },
-      {
-        "category": "external",
-        "summary": "Bug fix 2325043",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2325043"
-      },
-      {
-        "category": "external",
         "summary": "Bug fix 2325047",
         "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2325047"
       },
       {
         "category": "external",
-        "summary": "Bug fix 2325041",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2325041"
+        "summary": "Bug fix 2253365",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2253365"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2325043",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2325043"
       },
       {
         "category": "external",
@@ -83,9 +83,9 @@
     ],
     "title": "Moderate: ghostscript security update",
     "tracking": {
-      "current_release_date": "2025-07-29T13:38:41.630147+00:00",
+      "current_release_date": "2026-01-16T00:13:57.284319+00:00",
       "generator": {
-        "date": "2025-11-20T00:32:26.588768+00:00",
+        "date": "2026-01-16T00:13:57.284319+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -384,6 +384,606 @@
   },
   "vulnerabilities": [
     {
+      "cve": "CVE-2024-46951",
+      "cwe": {
+        "id": "CWE-824",
+        "name": "CWE-824"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-46952",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "CWE-120"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-46953",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "CWE-190"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-46954",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "CWE-22"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-46956",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "CWE-125"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+          "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+          "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
+            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
+            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
+            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2020-27792",
       "cwe": {
         "id": "CWE-119",
@@ -509,411 +1109,6 @@
             "baseScore": 7.5,
             "baseSeverity": "HIGH",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
-            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-46951",
-      "cwe": {
-        "id": "CWE-824",
-        "name": "CWE-824"
-      },
-      "product_status": {
-        "fixed": [
-          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.src",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
-          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
-        ]
-      },
-      "scores": [
-        {
-          "cvss_v3": {
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
-            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-46952",
-      "cwe": {
-        "id": "CWE-120",
-        "name": "CWE-120"
-      },
-      "product_status": {
-        "fixed": [
-          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.src",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
-          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
-        ]
-      },
-      "scores": [
-        {
-          "cvss_v3": {
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
-            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-46953",
-      "cwe": {
-        "id": "CWE-190",
-        "name": "CWE-190"
-      },
-      "product_status": {
-        "fixed": [
-          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.src",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
-          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
-        ]
-      },
-      "scores": [
-        {
-          "cvss_v3": {
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
-            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-46954",
-      "cwe": {
-        "id": "CWE-22",
-        "name": "CWE-22"
-      },
-      "product_status": {
-        "fixed": [
-          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.src",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
-          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
-        ]
-      },
-      "scores": [
-        {
-          "cvss_v3": {
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.src",
-            "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
-            "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
-            "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
-            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
-            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
-            "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-46956",
-      "cwe": {
-        "id": "CWE-125",
-        "name": "CWE-125"
-      },
-      "product_status": {
-        "fixed": [
-          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.src",
-          "rocky-8.10:ghostscript-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.i686",
-          "rocky-8.10:ghostscript-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.i686",
-          "rocky-8.10:ghostscript-debugsource-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-doc-9.27-16.el8_10.noarch",
-          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-dvipdf-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-fonts-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-tools-printing-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-x11-9.27-16.el8_10.x86_64",
-          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:ghostscript-x11-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-debuginfo-9.27-16.el8_10.x86_64",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.aarch64",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.i686",
-          "rocky-8.10:libgs-devel-9.27-16.el8_10.x86_64"
-        ]
-      },
-      "scores": [
-        {
-          "cvss_v3": {
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [

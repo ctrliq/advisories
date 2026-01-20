@@ -1,0 +1,482 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for tomcatjss, jss, pki-core, ldapjdk.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The Public Key Infrastructure (PKI) Core contains fundamental packages required by Rocky Enterprise Software Foundation Certificate System.\n\nSecurity Fix(es):\n\n* pki-server: Dogtag installer \"pkispawn\" logs admin credentials into a world-readable log file (CVE-2021-3551)\n\nThe PKI installer \"pkispawn\" logs admin credentials into a\nworld-readable log file. It also looks like the installer is passing the\npassword as an insecure command line argument. The credentials are the\n389-DS LDAP server's Directory Manager credentials. The Directory\nManager is 389-DS' equivalent of unrestricted root account. The user\nbypasses permission checks and grants full access to data. In an IdM /\nFreeIPA installation the DM user is able to read and manipulate Kerberos\nKDC master password, Kerberos keytabs, hashed user passwords, and more.\nAny and all IdM and FreeIPA installations with PKI 10.10 should be\nconsidered compromised.\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 1959971",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1959971"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2021:2235",
+        "url": "https://errata.build.resf.org/RLSA-2021:2235"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2021:2235",
+        "url": "https://access.redhat.com/errata/RHSA-2021:2235"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2021:2235",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2021_2235.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2021:2235",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2021/crlsa-2021_2235.json"
+      }
+    ],
+    "title": "Important: pki-core:10.6 security update",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:36:02.943408+00:00",
+      "generator": {
+        "date": "2026-01-16T00:36:02.943408+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2021:2235",
+      "initial_release_date": "2021-06-03T07:53:39.000000+00:00",
+      "revision_history": [
+        {
+          "date": "2021-06-03T07:53:39.000000+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "jss-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+                    "product": {
+                      "name": "jss-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+                      "product_id": "crlsa:jss-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jss-debuginfo-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+                    "product": {
+                      "name": "jss-debuginfo-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+                      "product_id": "crlsa:jss-debuginfo-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jss-debugsource-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+                    "product": {
+                      "name": "jss-debugsource-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+                      "product_id": "crlsa:jss-debugsource-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jss-javadoc-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+                    "product": {
+                      "name": "jss-javadoc-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+                      "product_id": "crlsa:jss-javadoc-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-core-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                    "product": {
+                      "name": "pki-core-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                      "product_id": "crlsa:pki-core-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-core-debugsource-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                    "product": {
+                      "name": "pki-core-debugsource-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                      "product_id": "crlsa:pki-core-debugsource-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-symkey-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                    "product": {
+                      "name": "pki-symkey-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                      "product_id": "crlsa:pki-symkey-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-symkey-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                    "product": {
+                      "name": "pki-symkey-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                      "product_id": "crlsa:pki-symkey-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-tools-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                    "product": {
+                      "name": "pki-tools-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                      "product_id": "crlsa:pki-tools-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-tools-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                    "product": {
+                      "name": "pki-tools-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+                      "product_id": "crlsa:pki-tools-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "jss-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.src",
+                    "product": {
+                      "name": "jss-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.src",
+                      "product_id": "crlsa:jss-4.8.1-2.module+el8.4.0+418+b7ae1d4a.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "ldapjdk-0:4.22.0-1.module+el8.4.0+418+b7ae1d4a.src",
+                    "product": {
+                      "name": "ldapjdk-0:4.22.0-1.module+el8.4.0+418+b7ae1d4a.src",
+                      "product_id": "crlsa:ldapjdk-4.22.0-1.module+el8.4.0+418+b7ae1d4a.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-core-0:10.10.5-3.module+el8.4.0+554+92b527a1.src",
+                    "product": {
+                      "name": "pki-core-0:10.10.5-3.module+el8.4.0+554+92b527a1.src",
+                      "product_id": "crlsa:pki-core-10.10.5-3.module+el8.4.0+554+92b527a1.src"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "tomcatjss-0:7.6.1-1.module+el8.4.0+418+b7ae1d4a.src",
+                    "product": {
+                      "name": "tomcatjss-0:7.6.1-1.module+el8.4.0+418+b7ae1d4a.src",
+                      "product_id": "crlsa:tomcatjss-7.6.1-1.module+el8.4.0+418+b7ae1d4a.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "jss-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+                    "product": {
+                      "name": "jss-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+                      "product_id": "crlsa:jss-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jss-debuginfo-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+                    "product": {
+                      "name": "jss-debuginfo-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+                      "product_id": "crlsa:jss-debuginfo-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jss-debugsource-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+                    "product": {
+                      "name": "jss-debugsource-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+                      "product_id": "crlsa:jss-debugsource-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "jss-javadoc-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+                    "product": {
+                      "name": "jss-javadoc-0:4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+                      "product_id": "crlsa:jss-javadoc-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-core-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                    "product": {
+                      "name": "pki-core-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                      "product_id": "crlsa:pki-core-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-core-debugsource-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                    "product": {
+                      "name": "pki-core-debugsource-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                      "product_id": "crlsa:pki-core-debugsource-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-symkey-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                    "product": {
+                      "name": "pki-symkey-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                      "product_id": "crlsa:pki-symkey-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-symkey-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                    "product": {
+                      "name": "pki-symkey-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                      "product_id": "crlsa:pki-symkey-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-tools-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                    "product": {
+                      "name": "pki-tools-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                      "product_id": "crlsa:pki-tools-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-tools-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                    "product": {
+                      "name": "pki-tools-debuginfo-0:10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+                      "product_id": "crlsa:pki-tools-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "ldapjdk-0:4.22.0-1.module+el8.4.0+418+b7ae1d4a.noarch",
+                    "product": {
+                      "name": "ldapjdk-0:4.22.0-1.module+el8.4.0+418+b7ae1d4a.noarch",
+                      "product_id": "crlsa:ldapjdk-4.22.0-1.module+el8.4.0+418+b7ae1d4a.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "ldapjdk-javadoc-0:4.22.0-1.module+el8.4.0+418+b7ae1d4a.noarch",
+                    "product": {
+                      "name": "ldapjdk-javadoc-0:4.22.0-1.module+el8.4.0+418+b7ae1d4a.noarch",
+                      "product_id": "crlsa:ldapjdk-javadoc-4.22.0-1.module+el8.4.0+418+b7ae1d4a.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-acme-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                    "product": {
+                      "name": "pki-acme-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                      "product_id": "crlsa:pki-acme-10.10.5-3.module+el8.4.0+554+92b527a1.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-base-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                    "product": {
+                      "name": "pki-base-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                      "product_id": "crlsa:pki-base-10.10.5-3.module+el8.4.0+554+92b527a1.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-base-java-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                    "product": {
+                      "name": "pki-base-java-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                      "product_id": "crlsa:pki-base-java-10.10.5-3.module+el8.4.0+554+92b527a1.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-ca-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                    "product": {
+                      "name": "pki-ca-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                      "product_id": "crlsa:pki-ca-10.10.5-3.module+el8.4.0+554+92b527a1.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-kra-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                    "product": {
+                      "name": "pki-kra-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                      "product_id": "crlsa:pki-kra-10.10.5-3.module+el8.4.0+554+92b527a1.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "pki-server-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                    "product": {
+                      "name": "pki-server-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                      "product_id": "crlsa:pki-server-10.10.5-3.module+el8.4.0+554+92b527a1.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-pki-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                    "product": {
+                      "name": "python3-pki-0:10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+                      "product_id": "crlsa:python3-pki-10.10.5-3.module+el8.4.0+554+92b527a1.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "tomcatjss-0:7.6.1-1.module+el8.4.0+418+b7ae1d4a.noarch",
+                    "product": {
+                      "name": "tomcatjss-0:7.6.1-1.module+el8.4.0+418+b7ae1d4a.noarch",
+                      "product_id": "crlsa:tomcatjss-7.6.1-1.module+el8.4.0+418+b7ae1d4a.noarch"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "noarch"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-3551",
+      "cwe": {
+        "id": "CWE-312",
+        "name": "CWE-312"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:jss-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+          "crlsa:jss-4.8.1-2.module+el8.4.0+418+b7ae1d4a.src",
+          "crlsa:jss-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+          "crlsa:jss-debuginfo-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+          "crlsa:jss-debuginfo-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+          "crlsa:jss-debugsource-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+          "crlsa:jss-debugsource-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+          "crlsa:jss-javadoc-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+          "crlsa:jss-javadoc-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+          "crlsa:ldapjdk-4.22.0-1.module+el8.4.0+418+b7ae1d4a.noarch",
+          "crlsa:ldapjdk-4.22.0-1.module+el8.4.0+418+b7ae1d4a.src",
+          "crlsa:ldapjdk-javadoc-4.22.0-1.module+el8.4.0+418+b7ae1d4a.noarch",
+          "crlsa:pki-acme-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+          "crlsa:pki-base-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+          "crlsa:pki-base-java-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+          "crlsa:pki-ca-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+          "crlsa:pki-core-10.10.5-3.module+el8.4.0+554+92b527a1.src",
+          "crlsa:pki-core-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+          "crlsa:pki-core-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+          "crlsa:pki-core-debugsource-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+          "crlsa:pki-core-debugsource-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+          "crlsa:pki-kra-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+          "crlsa:pki-server-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+          "crlsa:pki-symkey-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+          "crlsa:pki-symkey-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+          "crlsa:pki-symkey-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+          "crlsa:pki-symkey-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+          "crlsa:pki-tools-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+          "crlsa:pki-tools-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+          "crlsa:pki-tools-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+          "crlsa:pki-tools-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+          "crlsa:python3-pki-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+          "crlsa:tomcatjss-7.6.1-1.module+el8.4.0+418+b7ae1d4a.noarch",
+          "crlsa:tomcatjss-7.6.1-1.module+el8.4.0+418+b7ae1d4a.src"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:jss-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+            "crlsa:jss-4.8.1-2.module+el8.4.0+418+b7ae1d4a.src",
+            "crlsa:jss-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+            "crlsa:jss-debuginfo-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+            "crlsa:jss-debuginfo-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+            "crlsa:jss-debugsource-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+            "crlsa:jss-debugsource-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+            "crlsa:jss-javadoc-4.8.1-2.module+el8.4.0+418+b7ae1d4a.aarch64",
+            "crlsa:jss-javadoc-4.8.1-2.module+el8.4.0+418+b7ae1d4a.x86_64",
+            "crlsa:ldapjdk-4.22.0-1.module+el8.4.0+418+b7ae1d4a.noarch",
+            "crlsa:ldapjdk-4.22.0-1.module+el8.4.0+418+b7ae1d4a.src",
+            "crlsa:ldapjdk-javadoc-4.22.0-1.module+el8.4.0+418+b7ae1d4a.noarch",
+            "crlsa:pki-acme-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+            "crlsa:pki-base-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+            "crlsa:pki-base-java-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+            "crlsa:pki-ca-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+            "crlsa:pki-core-10.10.5-3.module+el8.4.0+554+92b527a1.src",
+            "crlsa:pki-core-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+            "crlsa:pki-core-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+            "crlsa:pki-core-debugsource-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+            "crlsa:pki-core-debugsource-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+            "crlsa:pki-kra-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+            "crlsa:pki-server-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+            "crlsa:pki-symkey-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+            "crlsa:pki-symkey-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+            "crlsa:pki-symkey-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+            "crlsa:pki-symkey-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+            "crlsa:pki-tools-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+            "crlsa:pki-tools-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+            "crlsa:pki-tools-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.aarch64",
+            "crlsa:pki-tools-debuginfo-10.10.5-3.module+el8.4.0+554+92b527a1.x86_64",
+            "crlsa:python3-pki-10.10.5-3.module+el8.4.0+554+92b527a1.noarch",
+            "crlsa:tomcatjss-7.6.1-1.module+el8.4.0+418+b7ae1d4a.noarch",
+            "crlsa:tomcatjss-7.6.1-1.module+el8.4.0+418+b7ae1d4a.src"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3118 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Moderate"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for libdb.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "Rocky Enterprise Software Foundation Satellite is a systems management tool for Linux-based\ninfrastructure. It allows for provisioning, remote management, and\nmonitoring of multiple Linux deployments with a single centralized tool.\n\nSecurity Fix(es):\n\n* libsolv: Heap-based buffer overflow in testcase_read() in src/testcase.c (CVE-2021-3200) \n* satellite: foreman: Authenticate remote code execution through Sendmail configuration (CVE-2021-3584)\n* candlepin: Allow unintended SCA certificate to authenticate Candlepin (CVE-2021-4142)\n* candlepin: netty: Information disclosure via the local system temporary directory (CVE-2021-21290)\n* candlepin: netty: Possible request smuggling in HTTP/2 due missing validation (CVE-2021-21295)\n* candlepin: netty: Request smuggling via content-length header (CVE-2021-21409)\n* tfm-rubygem-sidekiq: XSS via the queue name of the live-poll feature (CVE-2021-30151)\n* python-sqlparse: ReDoS via regular expression in StripComments filter (CVE-2021-32839)\n* libsolv: various flaws (CVE-2021-33928 CVE-2021-33929 CVE-2021-33930 CVE-2021-33938)\n* tfm-rubygem-puma: Inconsistent Interpretation of HTTP Requests in puma (CVE-2021-41136)\n* logback-classic: Remote code execution through JNDI call from within its configuration file (CVE-2021-42550)\n* candlepin: netty: Control chars in header names may lead to HTTP request smuggling (CVE-2021-43797)\n* python-lxml: HTML Cleaner allows crafted and SVG embedded scripts to pass through (CVE-2021-43818)\n* python3-django: Potential bypass of an upstream access control based on URL paths (CVE-2021-44420)  \n* libsolv: Heap overflow (CVE-2021-44568)\n* python3-django: Various flaws (CVE-2021-45115 CVE-2021-45116 CVE-2021-45452 CVE-2022-22818)\n* tfm-rubygem-actionpack: Information leak between requests (CVE-2022-23633)\n* tfm-rubygem-puma: rubygem-rails: Information leak between requests (CVE-2022-23634)\n* python3-django: Denial-of-service possibility in file uploads (CVE-2022-23833)\n* tfm-rubygem-sidekiq: WebUI Denial of Service caused by number of days on graph (CVE-2022-23837)\n* python3-django: Various flaws (CVE-2022-28346 CVE-2022-28347)\n\nFor more details about the security issue(s), including the impact, a CVSS\nscore, acknowledgments, and other related information, refer to the CVE\npage(s) listed in the References section.\n\nAdditional Changes:\n\n* New repo layout for Satellite, Utils, Maintenance, and Client repos.\n* Support for Rocky Linux 9 clients\n* Module-based installation on Rocky Linux 8\n* Upgrading Satellite Server and Capsule Server installations from Rocky Linux 7 to Rocky Linux 8\n* Connected and Disconnected servers supported on Rocky Linux 7 and Rocky Linux 8\n* Inter-Server Synchronization improvements\n* Puppet integration optional and disabled by default\n* Pulp 3 updated to Python 3.8\n* Change to Capsule certificate archive\n* New default port for communication with Rocky Enterprise Software Foundation Subscription Management * (RHSM) API on Capsule servers\n* New Content Views Page (Content Publication workflow simplification)\n* New Hosts Page (Technology Preview)\n* Registration and preview templates\n* Simplified host content source changing\n* Improved behavior for configuring and running remote jobs\n* Provisioning improvements\n* New error signaling unsupported options in TASK-Filter\n* Virt-who configuration enhanced to support Nutanix AHV\n* Cloud Connector configuration updated\n* Improved Insights adoption\n\nThe items above are not a complete list of changes. This update also fixes\nseveral bugs and adds various enhancements. Documentation for these changes\nis available from the Release Notes document linked to in the References\nsection.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 1473263",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1473263"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1596004",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1596004"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1659649",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1659649"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1685708",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1685708"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1694659",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1694659"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1723632",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1723632"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1735540",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1735540"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1761421",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1761421"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1771724",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1771724"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1784254",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1784254"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1807258",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1807258"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1809769",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1809769"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1813624",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1813624"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1825761",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1825761"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1844848",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1844848"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1847825",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1847825"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1852897",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1852897"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1867193",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1867193"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1872688",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1872688"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1877283",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1877283"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1881668",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1881668"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1883816",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1883816"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1893059",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1893059"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1898656",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1898656"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1902047",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1902047"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1906023",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1906023"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1910433",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1910433"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1914803",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1914803"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1919146",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1919146"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1922872",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1922872"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1924625",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1924625"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1927532",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1927532"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1937364",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1937364"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1940308",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1940308"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1944802",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1944802"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1951626",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1951626"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1957070",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1957070"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1958664",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1958664"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1960228",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1960228"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1962410",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1962410"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1964394",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1964394"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1967319",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1967319"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1969748",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1969748"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1970482",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1970482"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1973146",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1973146"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1975321",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1975321"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1978689",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1978689"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1979907",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1979907"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1459231",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1459231"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1545000",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1545000"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1609543",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1609543"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1662924",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1662924"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1693733",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1693733"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1713401",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1713401"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1723751",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1723751"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1744521",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1744521"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1770075",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1770075"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1777820",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1777820"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1805028",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1805028"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1807536",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1807536"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1811166",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1811166"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1819309",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1819309"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1832858",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1832858"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1845471",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1845471"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1851808",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1851808"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1862140",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1862140"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1869351",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1869351"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1873241",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1873241"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1878049",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1878049"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1883612",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1883612"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1886780",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1886780"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1896628",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1896628"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1899481",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1899481"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1902314",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1902314"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1907795",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1907795"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1911545",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1911545"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1915394",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1915394"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1920579",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1920579"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1923766",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1923766"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1927028",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1927028"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1931489",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1931489"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1937470",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1937470"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1942806",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1942806"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1944888",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1944888"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1955385",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1955385"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1957288",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1957288"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1959691",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1959691"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1962307",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1962307"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1962847",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1962847"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1965968",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1965968"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1968439",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1968439"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1969992",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1969992"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1972501",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1972501"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1974225",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1974225"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1978323",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1978323"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1979092",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1979092"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1980023",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1980023"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1982970",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1982970"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1992570",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1992570"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1992698",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1992698"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1994237",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1994237"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1994679",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1994679"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1997575",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1997575"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1998172",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1998172"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2000699",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2000699"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2000705",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2000705"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2000769",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2000769"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2004016",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2004016"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2004234",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2004234"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2005072",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2005072"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2008809",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2008809"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2009398",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2009398"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2011062",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2011062"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2013503",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2013503"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2014037",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2014037"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2014251",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2014251"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2020329",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2020329"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2021352",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2021352"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2021985",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2021985"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2023809",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2023809"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2024553",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2024553"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2024894",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2024894"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2024978",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2024978"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2025049",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2025049"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2025494",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2025494"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2025760",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2025760"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2026239",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2026239"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2026415",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2026415"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2026718",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2026718"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2027052",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2027052"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2028178",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2028178"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2028273",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2028273"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2028446",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2028446"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2029192",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2029192"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2029385",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2029385"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2029760",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2029760"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2029828",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2029828"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2029914",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2029914"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2030273",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2030273"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2030460",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2030460"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2031154",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2031154"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2032098",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2032098"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2032569",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2032569"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2032928",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2032928"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2033174",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2033174"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2033217",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2033217"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2033560",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2033560"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2033847",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2033847"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2033940",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2033940"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2034346",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2034346"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2034552",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2034552"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2034643",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2034643"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2034659",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2034659"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2035204",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2035204"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2035907",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2035907"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2036187",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2036187"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2036628",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2036628"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037024",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037024"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037028",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037028"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037275",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037275"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037518",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037518"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037648",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037648"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1980166",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1980166"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1988370",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1988370"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1992624",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1992624"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1994212",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1994212"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1994397",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1994397"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1996803",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1996803"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1997818",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1997818"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1999604",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1999604"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2000703",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2000703"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2000707",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2000707"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2002995",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2002995"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2004158",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2004158"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2004335",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2004335"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2007655",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2007655"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2009049",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2009049"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2010138",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2010138"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2013495",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2013495"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2013837",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2013837"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2014244",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2014244"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2018263",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2018263"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2021255",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2021255"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2021406",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2021406"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2022648",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2022648"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2024269",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2024269"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2024889",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2024889"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2024963",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2024963"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2024986",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2024986"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2025437",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2025437"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2025523",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2025523"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2025811",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2025811"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2026277",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2026277"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2026658",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2026658"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2026873",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2026873"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2027968",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2027968"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2028205",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2028205"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2028377",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2028377"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2028733",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2028733"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2029375",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2029375"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2029548",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2029548"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2029807",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2029807"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2029829",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2029829"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2030101",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2030101"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2030434",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2030434"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2030715",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2030715"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2031958",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2031958"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2032400",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2032400"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2032602",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2032602"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2032956",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2032956"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2033201",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2033201"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2033336",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2033336"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2033593",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2033593"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2033853",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2033853"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2034317",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2034317"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2034461",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2034461"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2034635",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2034635"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2034649",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2034649"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2035195",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2035195"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2035480",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2035480"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2036054",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2036054"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2036381",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2036381"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2036721",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2036721"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037025",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037025"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037180",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037180"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037508",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037508"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037520",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037520"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037706",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037706"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2037773",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2037773"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2038042",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2038042"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2038192",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2038192"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2038241",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2038241"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2038388",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2038388"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2038849",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2038849"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2039696",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2039696"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2040447",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2040447"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2040596",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2040596"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2040773",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2040773"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2040870",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2040870"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2041497",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2041497"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2041551",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2041551"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2041701",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2041701"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2042480",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2042480"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2042861",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2042861"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2043097",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2043097"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2043248",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2043248"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2043609",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2043609"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2044581",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2044581"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2044631",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2044631"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2045504",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2045504"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2046281",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2046281"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2046322",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2046322"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2046337",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2046337"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2046573",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2046573"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2047443",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2047443"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2047485",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2047485"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2047675",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2047675"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2048470",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2048470"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2048560",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2048560"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2048778",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2048778"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2048927",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2048927"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2049143",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2049143"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2049799",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2049799"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2050100",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2050100"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2050323",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2050323"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2051374",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2051374"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2051468",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2051468"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2051543",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2051543"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2052048",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2052048"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2052420",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2052420"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2052506",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2052506"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2052815",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2052815"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053329",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053329"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053478",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053478"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053839",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053839"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053872",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053872"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053884",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053884"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053928",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053928"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053970",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053970"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053997",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053997"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054121",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054121"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054165",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054165"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054182",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054182"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054340",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054340"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054849",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054849"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2055159",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2055159"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2055329",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2055329"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2055513",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2055513"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2055808",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2055808"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056167",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056167"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056172",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056172"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056177",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056177"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056183",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056183"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056189",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056189"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056202",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056202"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056469",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056469"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056966",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056966"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2057309",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2057309"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2057605",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2057605"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2057658",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2057658"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2057848",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2057848"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2058532",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2058532"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2038432",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2038432"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2039289",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2039289"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2040406",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2040406"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2040453",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2040453"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2040650",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2040650"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2040796",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2040796"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2041457",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2041457"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2041508",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2041508"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2041588",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2041588"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2042416",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2042416"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2042848",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2042848"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2043081",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2043081"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2043144",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2043144"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2043501",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2043501"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2043726",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2043726"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2044606",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2044606"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2044839",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2044839"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2045854",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2045854"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2046307",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2046307"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2046328",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2046328"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2046484",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2046484"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2047285",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2047285"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2047451",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2047451"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2047649",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2047649"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2047683",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2047683"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2048517",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2048517"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2048775",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2048775"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2048913",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2048913"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2048986",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2048986"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2049304",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2049304"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2049913",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2049913"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2050297",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2050297"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2050440",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2050440"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2051408",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2051408"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2051522",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2051522"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2051912",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2051912"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2052088",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2052088"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2052493",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2052493"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2052524",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2052524"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2052958",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2052958"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053395",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053395"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053601",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053601"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053843",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053843"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053876",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053876"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053923",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053923"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053956",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053956"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2053996",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2053996"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054008",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054008"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054123",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054123"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054174",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054174"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054211",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054211"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054758",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054758"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2054971",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2054971"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2055312",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2055312"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2055495",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2055495"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2055570",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2055570"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2055951",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2055951"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056171",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056171"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056173",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056173"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056178",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056178"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056186",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056186"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056198",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056198"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056237",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056237"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2056657",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2056657"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2057178",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2057178"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2057416",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2057416"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2057632",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2057632"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2057782",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2057782"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2058397",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2058397"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2058649",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2058649"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2058711",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2058711"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2058863",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2058863"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2058894",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2058894"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2058984",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2058984"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2059985",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2059985"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2060396",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2060396"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2060546",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2060546"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2061688",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2061688"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2061773",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2061773"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2062189",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2062189"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2063149",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2063149"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2063575",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2063575"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2064400",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2064400"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2064434",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2064434"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2064707",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2064707"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2065015",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2065015"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2065391",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2065391"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2065450",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2065450"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2066899",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2066899"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2067331",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2067331"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2069248",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2069248"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2069456",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2069456"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2069640",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2069640"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2070177",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2070177"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2070272",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2070272"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2072447",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2072447"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2072530",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2072530"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2073124",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2073124"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2073307",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2073307"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2073421",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2073421"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2073469",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2073469"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2075434",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2075434"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2075528",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2075528"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2076684",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2076684"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2077850",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2077850"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2079357",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2079357"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2081280",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2081280"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2082076",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2082076"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2082505",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2082505"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2083532",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2083532"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2084624",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2084624"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2085528",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2085528"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2086683",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2086683"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2087727",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2087727"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2089794",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2089794"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2089812",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2089812"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2090740",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2090740"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2093679",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2093679"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2094280",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2094280"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2095598",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2095598"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2096198",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2096198"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2058844",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2058844"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2058867",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2058867"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2058905",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2058905"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2059576",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2059576"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2060097",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2060097"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2060512",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2060512"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2060885",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2060885"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2061749",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2061749"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2061970",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2061970"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2062476",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2062476"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2063190",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2063190"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2063910",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2063910"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2064410",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2064410"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2064583",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2064583"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2064793",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2064793"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2065027",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2065027"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2065448",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2065448"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2066408",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2066408"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2067301",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2067301"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2069135",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2069135"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2069381",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2069381"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2069459",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2069459"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2070176",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2070176"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2070242",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2070242"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2070620",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2070620"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2072459",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2072459"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2073039",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2073039"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2073194",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2073194"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2073313",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2073313"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2073468",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2073468"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2073470",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2073470"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2075519",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2075519"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2076372",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2076372"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2076987",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2076987"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2078983",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2078983"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2080909",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2080909"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2081459",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2081459"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2082241",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2082241"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2082560",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2082560"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2084106",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2084106"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2085446",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2085446"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2086101",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2086101"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2086948",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2086948"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2089361",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2089361"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2089796",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2089796"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2089928",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2089928"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2090820",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2090820"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2094255",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2094255"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2094454",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2094454"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2095599",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2095599"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2096921",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2096921"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2022:5498",
+        "url": "https://errata.build.resf.org/RLSA-2022:5498"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:5498",
+        "url": "https://access.redhat.com/errata/RHSA-2022:5498"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2022:5498",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2022_5498.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2022:5498",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2022/crlsa-2022_5498.json"
+      }
+    ],
+    "title": "Moderate: Satellite 6.11 Release",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:27:25.059999+00:00",
+      "generator": {
+        "date": "2026-01-16T00:27:25.059999+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2022:5498",
+      "initial_release_date": "2022-07-05T13:55:16.000000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-07-05T13:55:16.000000+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "libdb-cxx-0:5.3.28-42.el8_4.x86_64",
+                    "product": {
+                      "name": "libdb-cxx-0:5.3.28-42.el8_4.x86_64",
+                      "product_id": "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libdb-cxx-debuginfo-0:5.3.28-42.el8_4.x86_64",
+                    "product": {
+                      "name": "libdb-cxx-debuginfo-0:5.3.28-42.el8_4.x86_64",
+                      "product_id": "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libdb-debuginfo-0:5.3.28-42.el8_4.x86_64",
+                    "product": {
+                      "name": "libdb-debuginfo-0:5.3.28-42.el8_4.x86_64",
+                      "product_id": "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libdb-debugsource-0:5.3.28-42.el8_4.x86_64",
+                    "product": {
+                      "name": "libdb-debugsource-0:5.3.28-42.el8_4.x86_64",
+                      "product_id": "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libdb-sql-debuginfo-0:5.3.28-42.el8_4.x86_64",
+                    "product": {
+                      "name": "libdb-sql-debuginfo-0:5.3.28-42.el8_4.x86_64",
+                      "product_id": "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libdb-sql-devel-debuginfo-0:5.3.28-42.el8_4.x86_64",
+                    "product": {
+                      "name": "libdb-sql-devel-debuginfo-0:5.3.28-42.el8_4.x86_64",
+                      "product_id": "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "libdb-utils-debuginfo-0:5.3.28-42.el8_4.x86_64",
+                    "product": {
+                      "name": "libdb-utils-debuginfo-0:5.3.28-42.el8_4.x86_64",
+                      "product_id": "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "libdb-0:5.3.28-42.el8_4.src",
+                    "product": {
+                      "name": "libdb-0:5.3.28-42.el8_4.src",
+                      "product_id": "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux 8.4 from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-43818",
+      "cwe": {
+        "id": "(CWE-77|CWE-79)",
+        "name": "(CWE-77|CWE-79)"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-22818",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-21290",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-21295",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-21409",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-30151",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-3200",
+      "cwe": {
+        "id": "CWE-20->CWE-125",
+        "name": "CWE-20->CWE-125"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-32839",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-33928",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "CWE-119"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-33929",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "CWE-119"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-33930",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "CWE-119"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-33938",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "CWE-119"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+            "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3584",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-41136",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-4142",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-42550",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-43797",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-44420",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-44568",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-45115",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-45116",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2021-45452",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2022-23633",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2022-23634",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2022-23833",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2022-23837",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2022-28346",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2022-28347",
+      "product_status": {
+        "fixed": [
+          "rocky-8.4:libdb-cxx-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-cxx-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-debugsource-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-sql-devel-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-utils-debuginfo-5.3.28-42.el8_4.x86_64",
+          "rocky-8.4:libdb-5.3.28-42.el8_4.src"
+        ]
+      }
+    }
+  ]
+}

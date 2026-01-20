@@ -1,0 +1,859 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for microcode_ctl",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the microcode_ctl SRPM in CIQ LTS for Rocky Linux 8.6. It addresses 30 CVEs: CVE-2023-22655, CVE-2023-23583, CVE-2023-28746, CVE-2023-34440, CVE-2023-38575, and 25 more.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-22655",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-22655.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-23583",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-23583.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-28746",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-28746.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-34440",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-34440.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-38575",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-38575.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-39368",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-39368.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-42667",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-42667.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-28047",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-28047.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-31157",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-31157.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-39279",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-39279.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-43490",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-43490.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-43758",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-43758.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-45733",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45733.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-46103",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-46103.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-49141",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-49141.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-21820",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-21820.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-21853",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-21853.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-23918",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-23918.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-23984",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-23984.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-24582",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-24582.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-24853",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-24853.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-24968",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-24968.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-24980",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-24980.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-25939",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-25939.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-28127",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-28127.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-29214",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-29214.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-31068",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-31068.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-36293",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-36293.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-37020",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-37020.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-39355",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-39355.json"
+      }
+    ],
+    "title": "microcode_ctl security update for CIQ LTS for Rocky Linux 8.6",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:42:19.497256+00:00",
+      "generator": {
+        "date": "2026-01-16T00:42:19.497256+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CIQSA-LTS-8-6-2026:0106",
+      "initial_release_date": "2026-01-16T00:42:19.497256+00:00",
+      "revision_history": [
+        {
+          "date": "2026-01-16T00:42:19.497256+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 30 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "microcode_ctl-4:20250211-1.el8_6.86ciq_lts.x86_64",
+                    "product": {
+                      "name": "microcode_ctl-4:20250211-1.el8_6.86ciq_lts.x86_64",
+                      "product_id": "lts-8.6:microcode_ctl-4:20250211-1.el8_6.86ciq_lts.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              }
+            ],
+            "category": "product_name",
+            "name": "CIQ LTS for Rocky Linux 8.6"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-22655",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:L/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-23583",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-28746",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-34440",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-38575",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-39368",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-42667",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2024-28047",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-31157",
+      "cwe": {
+        "id": "CWE-665",
+        "name": "CWE-665"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-39279",
+      "cwe": {
+        "id": "CWE-1220",
+        "name": "CWE-1220"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-43490",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-43758",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-45733",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 2.8,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-46103",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-49141",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2024-21820",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2024-21853",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-23918",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2024-23984",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2024-24582",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-24853",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2024-24968",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-24980",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2024-25939",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2024-28127",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-29214",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-31068",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-36293",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-37020",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      }
+    },
+    {
+      "cve": "CVE-2024-39355",
+      "product_status": {
+        "fixed": [
+          "lts-8.6:microcode_ctl-20250211-1.el8_6.86ciq_lts.x86_64"
+        ]
+      }
+    }
+  ]
+}

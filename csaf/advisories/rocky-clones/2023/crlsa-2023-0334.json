@@ -1,0 +1,2900 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for kernel.\nThis update affects Rocky Linux 9.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The kernel packages contain the Linux kernel, the core of any Linux operating system.\n\nSecurity Fix(es):\n\n* kernel: watch queue race condition can lead to privilege escalation (CVE-2022-2959)\n\n* kernel: memory corruption in AX88179_178A based USB ethernet device. (CVE-2022-2964)\n\n* kernel: i915: Incorrect GPU TLB flush can lead to random memory access (CVE-2022-4139)\n\n* kernel: nfsd buffer overflow by RPC message over TCP with garbage data (CVE-2022-43945)\n\n* kernel: i2c: unbounded length leads to buffer overflow in ismt_access() (CVE-2022-3077)\n\n* kernel: Unprivileged users may use PTRACE_SEIZE to set PTRACE_O_SUSPEND_SECCOMP option (CVE-2022-30594)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* Intel 9.2: Important iavf bug fixes (BZ#2127884)\n\n* vfio zero page mappings fail after 2M instances (BZ#2128514)\n\n* nvme-tcp automatic reconnect fails intermittently during EMC powerstore NDU operation (BZ#2131359)\n\n* ice: Driver Update to 5.19 (BZ#2132070)\n\n* WARNING: CPU: 116 PID: 3440 at arch/x86/mm/extable.c:105 ex_handler_fprestore+0x3f/0x50 (BZ#2134588)\n\n* drm: duplicated call of drm_privacy_screen_register_notifier() in drm_connector_register() (BZ#2134619)\n\n* updating the appid field through sysfs is returning an -EINVAL error (BZ#2136914)\n\n* DELL EMC: System is not booting into RT Kernel with perc12. (BZ#2139213)\n\n* No signal showed in the VGA monitor when installing Rocky Linux9 in the legacy bios mode (BZ#2140153)\n\n* Practically limit \"Dummy wait\" workaround to old Intel systems (BZ#2142168)\n\n* ppc64le: unexpected oom panic when there's enough memory left in zswap test (BZ#2143976)\n\n* fatal error: error in backend: Branch target out of insn range (BZ#2144902)\n\n* AMdCLIENT: The kernel command line parameter \"nomodeset\" not working properly (BZ#2145217)\n\n* Azure: PCI: hv: Do not set PCI_COMMAND_MEMORY to reduce VM boot time (BZ#2150910)\n\n* Azure z-stream: Sometimes newly deployed VMs are not getting accelerated network during provisioning (BZ#2151605)\n\n* DELL 9.0 RT - On PE R760 system, call traces are observed dmesg when system is running stress (BZ#2154407)\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2067482",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2067482"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2103681",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2103681"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2141752",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2141752"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2085300",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2085300"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2123309",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2123309"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2147572",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2147572"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2023:0334",
+        "url": "https://errata.build.resf.org/RLSA-2023:0334"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0334",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0334"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2023:0334",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2023_0334.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2023:0334",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2023/crlsa-2023_0334.json"
+      }
+    ],
+    "title": "Important: kernel security and bug fix update",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:22:51.785488+00:00",
+      "generator": {
+        "date": "2026-01-16T00:22:51.785488+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2023:0334",
+      "initial_release_date": "2023-01-23T14:30:23.000000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-01-23T14:30:23.000000+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "bpftool-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "bpftool-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-core-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-core-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-cross-headers-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-cross-headers-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-debug-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-core-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-debug-core-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-debug-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-debug-devel-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-debug-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-debug-modules-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-debug-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-devel-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-headers-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-headers-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-modules-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-tools-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-tools-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-tools-libs-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-devel-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "kernel-tools-libs-devel-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "perf-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "python3-perf-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                    "product": {
+                      "name": "python3-perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.aarch64",
+                      "product_id": "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "bpftool-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "bpftool-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-core-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-core-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-cross-headers-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-cross-headers-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-debug-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-core-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-debug-core-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-debug-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-debug-devel-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-debug-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-debug-modules-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-debug-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-devel-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-headers-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-headers-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-modules-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-tools-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-tools-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-tools-libs-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-devel-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "kernel-tools-libs-devel-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "perf-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "python3-perf-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                    "product": {
+                      "name": "python3-perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.ppc64le",
+                      "product_id": "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "ppc64le"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "bpftool-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "bpftool-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-core-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-core-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-cross-headers-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-cross-headers-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-debug-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-core-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-debug-core-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-debug-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-debug-devel-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-debug-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-debug-modules-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-debug-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-devel-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-headers-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-headers-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-modules-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-tools-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-tools-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-zfcpdump-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-zfcpdump-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-zfcpdump-core-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-zfcpdump-core-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-zfcpdump-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-zfcpdump-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-zfcpdump-devel-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-zfcpdump-devel-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-zfcpdump-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-zfcpdump-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-zfcpdump-modules-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-zfcpdump-modules-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-zfcpdump-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "kernel-zfcpdump-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "perf-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "python3-perf-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                    "product": {
+                      "name": "python3-perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.s390x",
+                      "product_id": "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "s390x"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "bpftool-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "bpftool-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-core-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-core-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-cross-headers-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-cross-headers-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-debug-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-core-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-debug-core-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-debug-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-debug-devel-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-debug-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-debug-modules-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-debug-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-devel-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-devel-matched-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-headers-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-headers-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-modules-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-modules-extra-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-tools-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-tools-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-tools-libs-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-devel-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "kernel-tools-libs-devel-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "perf-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "python3-perf-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                    "product": {
+                      "name": "python3-perf-debuginfo-0:5.14.0-162.12.1.el9_1.0.2.x86_64",
+                      "product_id": "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:5.14.0-162.12.1.el9_1.0.2.src",
+                    "product": {
+                      "name": "kernel-0:5.14.0-162.12.1.el9_1.0.2.src",
+                      "product_id": "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "kernel-abi-stablelists-0:5.14.0-162.12.1.el9_1.0.2.noarch",
+                    "product": {
+                      "name": "kernel-abi-stablelists-0:5.14.0-162.12.1.el9_1.0.2.noarch",
+                      "product_id": "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-doc-0:5.14.0-162.12.1.el9_1.0.2.noarch",
+                    "product": {
+                      "name": "kernel-doc-0:5.14.0-162.12.1.el9_1.0.2.noarch",
+                      "product_id": "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "noarch"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux 9.1 from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-2964",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "CWE-119"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-30594",
+      "cwe": {
+        "id": "CWE-276",
+        "name": "CWE-276"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-4139",
+      "cwe": {
+        "id": "CWE-281",
+        "name": "CWE-281"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-43945",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "CWE-770"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2959",
+      "cwe": {
+        "id": "CWE-667->CWE-416",
+        "name": "CWE-667->CWE-416"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-3077",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "CWE-120"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+          "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+          "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:bpftool-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.src",
+            "rocky-9.1:kernel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-abi-stablelists-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-cross-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-core-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-debug-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-devel-matched-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-doc-5.14.0-162.12.1.el9_1.0.2.noarch",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-headers-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-modules-extra-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-tools-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:kernel-tools-libs-devel-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:kernel-zfcpdump-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-core-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-devel-matched-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:kernel-zfcpdump-modules-extra-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-5.14.0-162.12.1.el9_1.0.2.x86_64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.aarch64",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.ppc64le",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.s390x",
+            "rocky-9.1:python3-perf-debuginfo-5.14.0-162.12.1.el9_1.0.2.x86_64"
+          ]
+        }
+      ]
+    }
+  ]
+}

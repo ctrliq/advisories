@@ -1,0 +1,694 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for module.redis, redis.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "Redis is an advanced key-value store. It is often referred to as a data-structure server since keys can contain strings, hashes, lists, sets, and sorted sets. For performance, Redis works with an in-memory data set. You can persist it either by dumping the data set to disk every once in a while, or by appending each command to a log.\n\nSecurity Fix(es):\n\n* redis: Integer overflow in the Redis HRANDFIELD and ZRANDMEMBER commands may lead to denial-of-service (CVE-2023-22458)\n\n* redis: Integer overflow in the Redis SETRANGE and SORT/SORT_RO commands may result with false OOM panic (CVE-2022-35977)\n\n* redis: Specially crafted SRANDMEMBER, ZRANDMEMBER, and HRANDFIELD commands can trigger an integer overflow (CVE-2022-36021)\n\n* redis: String matching commands (like SCAN or KEYS) with a specially crafted pattern to trigger a denial-of-service attack (CVE-2023-25155)\n\n* redis: Insufficient validation of HINCRBYFLOAT command (CVE-2023-28856)\n\n* redis: heap overflow in the lua cjson and cmsgpack libraries (CVE-2022-24834)\n\n* redis: possible bypass of Unix socket permissions on startup (CVE-2023-45145)\n\n* redis: Lua library commands may lead to stack overflow and RCE in Redis (CVE-2024-31449)\n\n* redis: Denial-of-service due to unbounded pattern matching in Redis (CVE-2024-31228)\n\n* redis: Redis' Lua library commands may lead to remote code execution (CVE-2024-46981)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2163132",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2163132"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2163133",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2163133"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2174305",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2174305"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2174306",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2174306"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2221662",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2221662"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2317056",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2317056"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2336004",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2336004"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2187525",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2187525"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2244940",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2244940"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2317058",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2317058"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2025:0595",
+        "url": "https://errata.build.resf.org/RLSA-2025:0595"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:0595",
+        "url": "https://access.redhat.com/errata/RHSA-2025:0595"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2025:0595",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_0595.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2025:0595",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2025/crlsa-2025_0595.json"
+      }
+    ],
+    "title": "Important: redis:6 security update",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:17:15.368894+00:00",
+      "generator": {
+        "date": "2026-01-16T00:17:15.368894+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2025:0595",
+      "initial_release_date": "2025-02-13T20:34:26.141542+00:00",
+      "revision_history": [
+        {
+          "date": "2025-02-13T20:34:26.141542+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "redis-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+                    "product": {
+                      "name": "redis-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+                      "product_id": "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "redis-debuginfo-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+                    "product": {
+                      "name": "redis-debuginfo-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+                      "product_id": "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "redis-debugsource-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+                    "product": {
+                      "name": "redis-debugsource-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+                      "product_id": "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "redis-devel-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+                    "product": {
+                      "name": "redis-devel-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+                      "product_id": "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "redis-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+                    "product": {
+                      "name": "redis-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+                      "product_id": "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "redis-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+                    "product": {
+                      "name": "redis-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+                      "product_id": "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "redis-debuginfo-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+                    "product": {
+                      "name": "redis-debuginfo-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+                      "product_id": "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "redis-debugsource-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+                    "product": {
+                      "name": "redis-debugsource-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+                      "product_id": "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "redis-devel-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+                    "product": {
+                      "name": "redis-devel-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+                      "product_id": "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "redis-doc-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch",
+                    "product": {
+                      "name": "redis-doc-0:6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch",
+                      "product_id": "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "noarch"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-46981",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "CWE-416"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-24834",
+      "cwe": {
+        "id": "CWE-680",
+        "name": "CWE-680"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-45145",
+      "cwe": {
+        "id": "CWE-269",
+        "name": "CWE-269"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.6,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-31228",
+      "cwe": {
+        "id": "CWE-674",
+        "name": "CWE-674"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-31449",
+      "cwe": {
+        "id": "(CWE-121|CWE-20)",
+        "name": "(CWE-121|CWE-20)"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-35977",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "CWE-190"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-36021",
+      "cwe": {
+        "id": "CWE-190->CWE-407",
+        "name": "CWE-190->CWE-407"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-22458",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "CWE-190"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-25155",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "CWE-190"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-28856",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+          "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+          "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+          "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.src",
+            "crlsa:redis-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debuginfo-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-debugsource-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.aarch64",
+            "crlsa:redis-devel-6.2.17-1.module+el8.10.0+1923+5b85c6a7.x86_64",
+            "crlsa:redis-doc-6.2.17-1.module+el8.10.0+1923+5b85c6a7.noarch"
+          ]
+        }
+      ]
+    }
+  ]
+}

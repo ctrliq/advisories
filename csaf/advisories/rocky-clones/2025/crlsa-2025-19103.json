@@ -27,6 +27,16 @@
     "references": [
       {
         "category": "external",
+        "summary": "Bug fix 2395681",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2395681"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2395805",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2395805"
+      },
+      {
+        "category": "external",
         "summary": "Bug fix 2396419",
         "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2396419"
       },
@@ -44,16 +54,6 @@
         "category": "external",
         "summary": "Bug fix 2396944",
         "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2396944"
-      },
-      {
-        "category": "external",
-        "summary": "Bug fix 2395681",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2395681"
-      },
-      {
-        "category": "external",
-        "summary": "Bug fix 2395805",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2395805"
       },
       {
         "category": "external",
@@ -78,9 +78,9 @@
     ],
     "title": "Moderate: kernel-rt security update",
     "tracking": {
-      "current_release_date": "2025-11-02T09:01:04.954179+00:00",
+      "current_release_date": "2026-01-16T00:11:06.847277+00:00",
       "generator": {
-        "date": "2025-11-20T00:32:19.202987+00:00",
+        "date": "2026-01-16T00:11:06.847277+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -257,6 +257,83 @@
   },
   "vulnerabilities": [
     {
+      "cve": "CVE-2022-50386",
+      "product_status": {
+        "fixed": [
+          "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.src",
+          "rocky-8.10:kernel-rt-debug-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-debuginfo-common-x86_64-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-debug-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-debug-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-debug-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-debug-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-debug-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-debug-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+          "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.src",
+            "rocky-8.10:kernel-rt-debug-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-common-x86_64-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.src",
+            "rocky-8.10:kernel-rt-debug-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-common-x86_64-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2025-39849",
       "cwe": {
         "id": "CWE-787",
@@ -308,37 +385,12 @@
             "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
             "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
           ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2022-50386",
-      "product_status": {
-        "fixed": [
-          "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.src",
-          "rocky-8.10:kernel-rt-debug-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-debuginfo-common-x86_64-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-debug-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-debug-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-debug-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-debug-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-debug-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-debug-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
-          "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
-        ]
-      },
-      "scores": [
+        },
         {
           "cvss_v3": {
-            "baseScore": 7.6,
+            "baseScore": 7.5,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -389,6 +441,32 @@
         ]
       },
       "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.src",
+            "rocky-8.10:kernel-rt-debug-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-common-x86_64-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
+          ]
+        },
         {
           "cvss_v3": {
             "baseScore": 7.0,
@@ -469,6 +547,32 @@
             "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
             "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
           ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.src",
+            "rocky-8.10:kernel-rt-debug-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-common-x86_64-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
+          ]
         }
       ]
     },
@@ -524,6 +628,32 @@
             "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
             "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
           ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.src",
+            "rocky-8.10:kernel-rt-debug-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-common-x86_64-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
+          ]
         }
       ]
     },
@@ -554,6 +684,32 @@
         ]
       },
       "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.src",
+            "rocky-8.10:kernel-rt-debug-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debuginfo-common-x86_64-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-core-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-debug-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-devel-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-kvm-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-4.18.0-553.81.1.rt7.422.el8_10.x86_64",
+            "rocky-8.10:kernel-rt-modules-extra-4.18.0-553.81.1.rt7.422.el8_10.x86_64"
+          ]
+        },
         {
           "cvss_v3": {
             "baseScore": 7.0,

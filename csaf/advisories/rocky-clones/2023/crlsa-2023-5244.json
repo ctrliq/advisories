@@ -1,0 +1,1308 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for kernel.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The kernel packages contain the Linux kernel, the core of any Linux operating system.\n\nSecurity Fix(es):\n\n* kernel: ipvlan: out-of-bounds write caused by unclear skb->cb (CVE-2023-3090)\n\n* kernel: UAF in nftables when nft_set_lookup_global triggered after handling named and anonymous sets in batch requests (CVE-2023-3390)\n\n* kernel: net/sched: cls_fw component can be exploited as result of failure in tcf_change_indev function (CVE-2023-3776)\n\n* kernel: netfilter: use-after-free due to improper element removal in nft_pipapo_remove() (CVE-2023-4004)\n\n* kernel: nf_tables: stack-out-of-bounds-read in nft_byteorder_eval() (CVE-2023-35001)\n\n* kernel: cls_flower: out-of-bounds write in fl_set_geneve_opt() (CVE-2023-35788)\n\n* kernel: bluetooth: Unauthorized management command execution (CVE-2023-2002)\n\n* hw: amd: Cross-Process Information Leak (CVE-2023-20593)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* low memory deadlock with md devices and external (imsm) metadata handling - requires a kernfs notification backport (BZ#2208540)\n\n* Intel 8.9 BUG, SPR EMR FHF ACPI: Fix system hang during S3 wakeup (BZ#2218025)\n\n* OCS 4.8, cephfs kernel crash:  mds_dispatch ceph_handle_snap unable to handle kernel NULL (BZ#2218271)\n\n* st_gmac: tx-checksum offload on vlan is not consistent with st_gmac interface (BZ#2219907)\n\n* refcount_t overflow often happens in mem_cgroup_id_get_online() (BZ#2221010)\n\n* avoid unnecessary page fault retires on shared memory types (BZ#2221100)\n\n* enable conntrack clash resolution for GRE (BZ#2223542)\n\n* ice: avoid bonding causing auxiliary plug/unplug under RTNL lock (BZ#2224515)\n\n* libceph: harden msgr2.1 frame segment length checks [8.x] (BZ#2227073)\n\n* Important iavf bug fixes July 2023 (BZ#2228161)\n\n* i40e error: Cannot set interface MAC/vlanid to 1e:b7:e2:02:b1:aa/0 for ifname ens4f0 vf 0: Resource temporarily unavailable (BZ#2228163)\n\n* oops on cifs_mount due to null tcon (BZ#2229128)\n\n* iptables argument \"--suppl-groups\" in extension \"owner\" does not work in Rocky Linux8 (BZ#2229715)\n\n* Hyper-V Rocky Linux 8: incomplete fc_transport implementation in storvsc causes null dereference in fc_timed_out() (BZ#2230743)\n\n* Withdrawal: GFS2: could not freeze filesystem: -16 (BZ#2231825)\n\n* Rocky Linux 8 Hyper-V: Excessive hv_storvsc driver logging with srb_status  SRB_STATUS_INTERNAL_ERROR  (0x30) (BZ#2231988)\n\n* Rocky Linux-8: crypto: rng - Fix lock imbalance in crypto_del_rng (BZ#2232215)\n\n* Intel 8.9 iavf: Driver Update (BZ#2232399)\n\n* Hyper-V Rocky Linux-8 hv_storvsc driver logging excessive storvsc_log events for storvsc_on_io_completion() function (BZ#2233227)\n\nEnhancement(s):\n\n* Intel 8.9 FEAT, EMR perf: Add EMR CPU PMU support (BZ#2230152)\n\n* Intel 8.9 FEAT, SPR EMR power: Add uncore frequency control driver (BZ#2230158)\n\n* Intel 8.9 FEAT EMR perf: RAPL PMU support on EMR (BZ#2230162)\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2187308",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2187308"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2215768",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2215768"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2218672",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2218672"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2225097",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2225097"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2213260",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2213260"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2217845",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2217845"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2220892",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2220892"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2225275",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2225275"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2023:5244",
+        "url": "https://errata.build.resf.org/RLSA-2023:5244"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:5244",
+        "url": "https://access.redhat.com/errata/RHSA-2023:5244"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2023:5244",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2023_5244.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2023:5244",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2023/crlsa-2023_5244.json"
+      }
+    ],
+    "title": "Important: kernel security, bug fix, and enhancement update",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:21:12.737198+00:00",
+      "generator": {
+        "date": "2026-01-16T00:21:12.737198+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2023:5244",
+      "initial_release_date": "2023-09-26T13:26:05.857255+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-26T13:26:05.857255+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "bpftool-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "bpftool-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-core-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-core-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-cross-headers-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-cross-headers-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-debug-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-core-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-debug-core-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-debug-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-debug-devel-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debuginfo-common-aarch64-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-debuginfo-common-aarch64-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-debug-modules-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-extra-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-debug-modules-extra-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-devel-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-headers-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-headers-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-modules-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-extra-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-modules-extra-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-tools-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-tools-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-tools-libs-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-devel-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "kernel-tools-libs-devel-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "perf-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "perf-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "python3-perf-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                    "product": {
+                      "name": "python3-perf-debuginfo-0:4.18.0-477.27.1.el8_8.aarch64",
+                      "product_id": "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:4.18.0-477.27.1.el8_8.src",
+                    "product": {
+                      "name": "kernel-0:4.18.0-477.27.1.el8_8.src",
+                      "product_id": "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "kernel-abi-stablelists-0:4.18.0-477.27.1.el8_8.noarch",
+                    "product": {
+                      "name": "kernel-abi-stablelists-0:4.18.0-477.27.1.el8_8.noarch",
+                      "product_id": "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-doc-0:4.18.0-477.27.1.el8_8.noarch",
+                    "product": {
+                      "name": "kernel-doc-0:4.18.0-477.27.1.el8_8.noarch",
+                      "product_id": "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "noarch"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux 8.8 from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-2002",
+      "cwe": {
+        "id": "CWE-250",
+        "name": "CWE-250"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+          "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 6.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-20593",
+      "cwe": {
+        "id": "CWE-1239",
+        "name": "CWE-1239"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+          "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-3090",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "CWE-787"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+          "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-3390",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "CWE-416"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+          "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-35001",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "CWE-125"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+          "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-35788",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "CWE-787"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+          "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-3776",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "CWE-416"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+          "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4004",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "CWE-416"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+          "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+          "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+          "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:bpftool-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:bpftool-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-4.18.0-477.27.1.el8_8.src",
+            "rocky-8.8:kernel-abi-stablelists-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-cross-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-core-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debuginfo-common-aarch64-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-debug-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-doc-4.18.0-477.27.1.el8_8.noarch",
+            "rocky-8.8:kernel-headers-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-modules-extra-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:kernel-tools-libs-devel-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-4.18.0-477.27.1.el8_8.aarch64",
+            "rocky-8.8:python3-perf-debuginfo-4.18.0-477.27.1.el8_8.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}

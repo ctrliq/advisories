@@ -1,0 +1,1313 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for openssl.\nThis update affects Rocky Linux 9.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "OpenSSL is a toolkit that implements the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols, as well as a full-strength general-purpose cryptography library.\n\nSecurity Fix(es):\n\n* openssl: X.400 address type confusion in X.509 GeneralName (CVE-2023-0286)\n\n* openssl: read buffer overflow in X.509 certificate verification (CVE-2022-4203)\n\n* openssl: timing attack in RSA Decryption implementation (CVE-2022-4304)\n\n* openssl: double free after calling PEM_read_bio_ex (CVE-2022-4450)\n\n* openssl: use-after-free following BIO_new_NDEF (CVE-2023-0215)\n\n* openssl: invalid pointer dereference in d2i_PKCS7 functions (CVE-2023-0216)\n\n* openssl: NULL dereference validating DSA public key (CVE-2023-0217)\n\n* openssl: NULL dereference during PKCS7 data verification (CVE-2023-0401)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* HMAC generation should reject key lengths < 112 bits or provide an indicator in FIPS mode (BZ#2144000)\n\n* In FIPS mode, openssl should set a minimum length for passwords in PBKDF2 (BZ#2144003)\n\n* stunnel consumes high amount of memory when pestered with TCP connections without a TLS handshake (BZ#2144008)\n\n* In FIPS mode, openssl should reject SHAKE as digest for RSA-OAEP or provide an indicator (BZ#2144010)\n\n* In FIPS mode, openssl should reject RSASSA-PSS salt lengths larger than the output size of the hash function used, or provide an indicator (BZ#2144012)\n\n* In FIPS mode, openssl should reject RSA signatures with X9.31 padding, or provide an indicator (BZ#2144015)\n\n* In FIPS mode, openssl should reject SHA-224, SHA-384, SHA-512-224, and SHA-512-256 as hashes for hash-based DRBGs, or provide an indicator after 2023-05-16 (BZ#2144017)\n\n* In FIPS mode, openssl should reject KDF input and output key lengths < 112 bits or provide an indicator (BZ#2144019)\n\n* In FIPS mode, openssl should reject RSA keys < 2048 bits when using EVP_PKEY_decapsulate, or provide an indicator (BZ#2145170)\n\n* Rocky Linux9.1 Nightly[0912] - error:03000093:digital envelope routines::command not supported when git clone is run with configured ibmca engine backed by libica.so.4 (OpenSSL 3.0) (BZ#2149010)\n\n* OpenSSL FIPS checksum code needs update (BZ#2158412)\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "* HMAC generation should reject key lengths < 112 bits or provide an indicator in FIPS mode",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2144000"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2144006",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2144006"
+      },
+      {
+        "category": "external",
+        "summary": "* In FIPS mode, openssl should reject SHAKE as digest for RSA-OAEP or provide an indicator",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2144010"
+      },
+      {
+        "category": "external",
+        "summary": "* In FIPS mode, openssl should reject RSA signatures with X9.31 padding, or provide an indicator",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2144015"
+      },
+      {
+        "category": "external",
+        "summary": "* In FIPS mode, openssl should reject KDF input and output key lengths < 112 bits or provide an indicator",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2144019"
+      },
+      {
+        "category": "external",
+        "summary": "* OpenSSL FIPS checksum code needs update",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2158412"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2164487",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2164487"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2164492",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2164492"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2164497",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2164497"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2164500",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2164500"
+      },
+      {
+        "category": "external",
+        "summary": "* In FIPS mode, openssl should set a minimum length for passwords in PBKDF2",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2144003"
+      },
+      {
+        "category": "external",
+        "summary": "* stunnel consumes high amount of memory when pestered with TCP connections without a TLS handshake",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2144008"
+      },
+      {
+        "category": "external",
+        "summary": "* In FIPS mode, openssl should reject RSASSA-PSS salt lengths larger than the output size of the hash function used, or provide an indicator",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2144012"
+      },
+      {
+        "category": "external",
+        "summary": "* In FIPS mode, openssl should reject SHA-224, SHA-384, SHA-512-224, and SHA-512-256 as hashes for hash-based DRBGs, or provide an indicator after 2023-05-16",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2144017"
+      },
+      {
+        "category": "external",
+        "summary": "* In FIPS mode, openssl should reject RSA keys < 2048 bits when using EVP_PKEY_decapsulate, or provide an indicator",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2145170"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2164440",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2164440"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2164488",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2164488"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2164494",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2164494"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2164499",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2164499"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2023:0946",
+        "url": "https://errata.build.resf.org/RLSA-2023:0946"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0946",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0946"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2023:0946",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2023_0946.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2023:0946",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2023/crlsa-2023_0946.json"
+      }
+    ],
+    "title": "Important: openssl security and bug fix update",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:22:27.570967+00:00",
+      "generator": {
+        "date": "2026-01-16T00:22:27.570967+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2023:0946",
+      "initial_release_date": "2023-03-29T16:47:51.524711+00:00",
+      "revision_history": [
+        {
+          "date": "2023-03-29T16:47:51.524711+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "openssl-1:3.0.1-47.el9_1.aarch64",
+                    "product": {
+                      "name": "openssl-1:3.0.1-47.el9_1.aarch64",
+                      "product_id": "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+                    "product": {
+                      "name": "openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+                      "product_id": "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+                    "product": {
+                      "name": "openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+                      "product_id": "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-devel-1:3.0.1-47.el9_1.aarch64",
+                    "product": {
+                      "name": "openssl-devel-1:3.0.1-47.el9_1.aarch64",
+                      "product_id": "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-libs-1:3.0.1-47.el9_1.aarch64",
+                    "product": {
+                      "name": "openssl-libs-1:3.0.1-47.el9_1.aarch64",
+                      "product_id": "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+                    "product": {
+                      "name": "openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+                      "product_id": "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-perl-1:3.0.1-47.el9_1.aarch64",
+                    "product": {
+                      "name": "openssl-perl-1:3.0.1-47.el9_1.aarch64",
+                      "product_id": "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "openssl-1:3.0.1-47.el9_1.ppc64le",
+                    "product": {
+                      "name": "openssl-1:3.0.1-47.el9_1.ppc64le",
+                      "product_id": "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+                    "product": {
+                      "name": "openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+                      "product_id": "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+                    "product": {
+                      "name": "openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+                      "product_id": "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+                    "product": {
+                      "name": "openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+                      "product_id": "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+                    "product": {
+                      "name": "openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+                      "product_id": "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+                    "product": {
+                      "name": "openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+                      "product_id": "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+                    "product": {
+                      "name": "openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+                      "product_id": "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "ppc64le"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "openssl-1:3.0.1-47.el9_1.s390x",
+                    "product": {
+                      "name": "openssl-1:3.0.1-47.el9_1.s390x",
+                      "product_id": "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+                    "product": {
+                      "name": "openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+                      "product_id": "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+                    "product": {
+                      "name": "openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+                      "product_id": "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-devel-1:3.0.1-47.el9_1.s390x",
+                    "product": {
+                      "name": "openssl-devel-1:3.0.1-47.el9_1.s390x",
+                      "product_id": "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-libs-1:3.0.1-47.el9_1.s390x",
+                    "product": {
+                      "name": "openssl-libs-1:3.0.1-47.el9_1.s390x",
+                      "product_id": "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+                    "product": {
+                      "name": "openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+                      "product_id": "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-perl-1:3.0.1-47.el9_1.s390x",
+                    "product": {
+                      "name": "openssl-perl-1:3.0.1-47.el9_1.s390x",
+                      "product_id": "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "s390x"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "openssl-1:3.0.1-47.el9_1.src",
+                    "product": {
+                      "name": "openssl-1:3.0.1-47.el9_1.src",
+                      "product_id": "rocky-9.1:openssl-1:3.0.1-47.el9_1.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "openssl-1:3.0.1-47.el9_1.x86_64",
+                    "product": {
+                      "name": "openssl-1:3.0.1-47.el9_1.x86_64",
+                      "product_id": "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+                    "product": {
+                      "name": "openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+                      "product_id": "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+                    "product": {
+                      "name": "openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+                      "product_id": "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-devel-1:3.0.1-47.el9_1.x86_64",
+                    "product": {
+                      "name": "openssl-devel-1:3.0.1-47.el9_1.x86_64",
+                      "product_id": "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-libs-1:3.0.1-47.el9_1.x86_64",
+                    "product": {
+                      "name": "openssl-libs-1:3.0.1-47.el9_1.x86_64",
+                      "product_id": "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+                    "product": {
+                      "name": "openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+                      "product_id": "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-perl-1:3.0.1-47.el9_1.x86_64",
+                    "product": {
+                      "name": "openssl-perl-1:3.0.1-47.el9_1.x86_64",
+                      "product_id": "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "openssl-devel-1:3.0.1-47.el9_1.i686",
+                    "product": {
+                      "name": "openssl-devel-1:3.0.1-47.el9_1.i686",
+                      "product_id": "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "openssl-libs-1:3.0.1-47.el9_1.i686",
+                    "product": {
+                      "name": "openssl-libs-1:3.0.1-47.el9_1.i686",
+                      "product_id": "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "i686"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux 9.1 from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-4304",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-4450",
+      "cwe": {
+        "id": "CWE-415",
+        "name": "CWE-415"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0215",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "CWE-416"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0286",
+      "cwe": {
+        "id": "CWE-704",
+        "name": "CWE-704"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-4203",
+      "cwe": {
+        "id": "(CWE-119|CWE-125)",
+        "name": "(CWE-119|CWE-125)"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0216",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0217",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0401",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+          "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+          "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.src",
+            "rocky-9.1:openssl-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-debugsource-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-devel-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.i686",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-libs-debuginfo-1:3.0.1-47.el9_1.x86_64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.aarch64",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.ppc64le",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.s390x",
+            "rocky-9.1:openssl-perl-1:3.0.1-47.el9_1.x86_64"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,888 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for Judy.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "MariaDB is a multi-user, multi-threaded SQL database server that is binary compatible with MySQL. \n\nThe following packages have been upgraded to a later upstream version: mariadb (10.3.27), galera (25.3.31). (BZ#1899082, BZ#1899086)\n\nSecurity Fix(es):\n\n* mariadb: Insufficient SST method name check leading to code injection in mysql-wsrep (CVE-2020-15180)\n\n* mysql: InnoDB unspecified vulnerability (CPU Oct 2019) (CVE-2019-2938)\n\n* mysql: Server: Optimizer unspecified vulnerability (CPU Oct 2019) (CVE-2019-2974)\n\n* mysql: C API unspecified vulnerability (CPU Apr 2020) (CVE-2020-2752)\n\n* mysql: InnoDB unspecified vulnerability (CPU Apr 2020) (CVE-2020-2760)\n\n* mysql: Server: DML unspecified vulnerability (CPU Apr 2020) (CVE-2020-2780)\n\n* mysql: Server: Stored Procedure unspecified vulnerability (CPU Apr 2020) (CVE-2020-2812)\n\n* mysql: InnoDB unspecified vulnerability (CPU Apr 2020) (CVE-2020-2814)\n\n* mariadb-connector-c: Improper validation of content in a OK packet received from server (CVE-2020-13249)\n\n* mysql: Server: FTS unspecified vulnerability (CPU Oct 2020) (CVE-2020-14765)\n\n* mysql: InnoDB unspecified vulnerability (CPU Oct 2020) (CVE-2020-14776)\n\n* mysql: Server: FTS unspecified vulnerability (CPU Oct 2020) (CVE-2020-14789)\n\n* mysql: Server: Locking unspecified vulnerability (CPU Oct 2020) (CVE-2020-14812)\n\n* mysql: C API unspecified vulnerability (CPU Jan 2020) (CVE-2020-2574)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* FTBFS: -D_GLIBCXX_ASSERTIONS (BZ#1899009)\n\n* Queries with entity_id IN ('1', '2', …, '70000') run much slower in MariaDB 10.3 than on MariaDB 10.1 (BZ#1899017)\n\n* Cleanup race with wsrep_rsync_sst_tunnel may prevent full galera cluster bootstrap (BZ#1899021)\n\n* There are undeclared file conflicts in several mariadb and mysql packages (BZ#1899077)\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 1764680",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1764680"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1764691",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1764691"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1798587",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1798587"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1830056",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1830056"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1830059",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1830059"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1830060",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1830060"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1830082",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1830082"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1835849",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1835849"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1839827",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1839827"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1890738",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1890738"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1890743",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1890743"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1890747",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1890747"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1890756",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1890756"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1894919",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1894919"
+      },
+      {
+        "category": "external",
+        "summary": "* FTBFS: -D_GLIBCXX_ASSERTIONS",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1899009"
+      },
+      {
+        "category": "external",
+        "summary": "* Queries with entity_id IN ('1', '2', …, '70000') run much slower in MariaDB 10.3 than on MariaDB 10.1",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1899017"
+      },
+      {
+        "category": "external",
+        "summary": "* Cleanup race with wsrep_rsync_sst_tunnel may prevent full galera cluster bootstrap",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1899021"
+      },
+      {
+        "category": "external",
+        "summary": "The following packages have been upgraded to a later upstream version: mariadb (10.3.27), galera (25.3.31). (BZ#1899082, BZ#1899086)",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1899082"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 1899086",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1899086"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2020:5500",
+        "url": "https://errata.build.resf.org/RLSA-2020:5500"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:5500",
+        "url": "https://access.redhat.com/errata/RHSA-2020:5500"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2020:5500",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2020_5500.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2020:5500",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/2020/crlsa-2020_5500.json"
+      }
+    ],
+    "title": "Important: mariadb:10.3 security, bug fix, and enhancement update",
+    "tracking": {
+      "current_release_date": "2026-01-16T00:37:32.156129+00:00",
+      "generator": {
+        "date": "2026-01-16T00:37:32.156129+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2020:5500",
+      "initial_release_date": "2020-12-15T16:03:43.000000+00:00",
+      "revision_history": [
+        {
+          "date": "2020-12-15T16:03:43.000000+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "Judy-0:1.0.5-18.module+el8.4.0+427+adf35707.src",
+                    "product": {
+                      "name": "Judy-0:1.0.5-18.module+el8.4.0+427+adf35707.src",
+                      "product_id": "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "Judy-0:1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+                    "product": {
+                      "name": "Judy-0:1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+                      "product_id": "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "Judy-debuginfo-0:1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+                    "product": {
+                      "name": "Judy-debuginfo-0:1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+                      "product_id": "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "Judy-debugsource-0:1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+                    "product": {
+                      "name": "Judy-debugsource-0:1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+                      "product_id": "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "Judy-0:1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+                    "product": {
+                      "name": "Judy-0:1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+                      "product_id": "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "Judy-debuginfo-0:1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+                    "product": {
+                      "name": "Judy-debuginfo-0:1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+                      "product_id": "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "Judy-debugsource-0:1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+                    "product": {
+                      "name": "Judy-debugsource-0:1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+                      "product_id": "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-14765",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-14776",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-14789",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-14812",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-2022",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-2194",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-13249",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-2574",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "CWE-400"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-2752",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-2938",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-2974",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-15180",
+      "cwe": {
+        "id": "CWE-20->CWE-96",
+        "name": "CWE-20->CWE-96"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.0,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-2760",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-2780",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-2812",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-2814",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-2144",
+      "cwe": {
+        "id": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      "product_status": {
+        "fixed": [
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+          "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.src",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debuginfo-1.0.5-18.module+el8.4.0+427+adf35707.x86_64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.aarch64",
+            "crlsa:Judy-debugsource-1.0.5-18.module+el8.4.0+427+adf35707.x86_64"
+          ]
+        }
+      ]
+    }
+  ]
+}
