@@ -1,0 +1,514 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Moderate"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for java-11-openjdk.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The java-11-openjdk packages provide the OpenJDK 11 Java Runtime Environment and the OpenJDK 11 Java Software Development Kit.\n\nSecurity Fix(es):\n\n* OpenJDK: certificate path validation issue during client authentication (8309966) (CVE-2023-22081)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* Additional validity checks in the handling of Zip64 files, JDK-8302483, were introduced in the 11.0.20 release of OpenJDK, causing the use of some valid zip files to now fail with an error. This release, 11.0.20.1, allows for zero-length headers and additional padding produced by some Zip64 creation tools. With both releases, the checks can be disabled using -Djdk.util.zip.disableZip64ExtraFieldValidation=true. (RHBZ#2237170)\n\n* A maximum signature file size property, jdk.jar.maxSignatureFileSize, was introduced in the 11.0.20 release of OpenJDK by JDK-8300596, with a default of 8 MB. This default proved to be too small for some JAR files. This release, 11.0.20.1, increases it to 16 MB.\n\n* The serviceability agent would print an exception when encountering null addresses while producing thread dumps. These null values are now handled appropriately. (JDK-8243210, Rocky Linux-2763)\n\n* The /usr/bin/jfr alternative is now owned by the java-11-openjdk package (Rocky Linux-13559)\n\n* The jcmd tool is now provided by the java-11-openjdk-headless package, rather than java-11-openjdk-devel, to make it more accessible (Rocky Linux-13566)\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "* Additional validity checks in the handling of Zip64 files, JDK-8302483, were introduced in the 11.0.20 release of OpenJDK, causing the use of some valid zip files to now fail with an error. This release, 11.0.20.1, allows for zero-length headers and additional padding produced by some Zip64 creation tools. With both releases, the checks can be disabled using -Djdk.util.zip.disableZip64ExtraFieldValidation=true. (RHBZ#2237170)",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2237170"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2243627",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2243627"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2023:5742",
+        "url": "https://errata.build.resf.org/RLSA-2023:5742"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:5742",
+        "url": "https://access.redhat.com/errata/RHSA-2023:5742"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2023:5742",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2023_5742.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2023:5742",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/rocky/2023/crlsa-2023_5742.json"
+      }
+    ],
+    "title": "Moderate: java-11-openjdk security and bug fix update",
+    "tracking": {
+      "current_release_date": "2026-01-29T02:11:10.361994+00:00",
+      "generator": {
+        "date": "2026-01-29T02:11:10.361994+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2023:5742",
+      "initial_release_date": "2023-10-24T18:36:24.764830+00:00",
+      "revision_history": [
+        {
+          "date": "2023-10-24T18:36:24.764830+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-debugsource-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-debugsource-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-debugsource-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-demo-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-demo-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-demo-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-demo-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-demo-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-demo-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-demo-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-demo-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-demo-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-devel-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-devel-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-devel-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-devel-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-devel-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-devel-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-devel-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-devel-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-devel-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-devel-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-devel-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-devel-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-devel-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-devel-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-devel-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-devel-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-devel-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-devel-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-headless-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-headless-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-headless-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-headless-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-headless-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-headless-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-headless-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-headless-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-headless-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-headless-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-headless-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-headless-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-headless-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-headless-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-headless-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-headless-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-headless-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-headless-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-javadoc-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-javadoc-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-javadoc-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-javadoc-zip-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-javadoc-zip-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-javadoc-zip-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-jmods-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-jmods-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-jmods-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-jmods-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-jmods-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-jmods-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-jmods-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-jmods-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-jmods-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-src-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-src-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-src-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-src-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-src-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-src-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-src-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-src-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-src-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-static-libs-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-static-libs-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-static-libs-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-static-libs-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-static-libs-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-static-libs-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-static-libs-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                    "product": {
+                      "name": "java-11-openjdk-static-libs-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+                      "product_id": "rocky-8.8:java-11-openjdk-static-libs-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "java-11-openjdk-1:11.0.21.0.9-2.el8_8.src",
+                    "product": {
+                      "name": "java-11-openjdk-1:11.0.21.0.9-2.el8_8.src",
+                      "product_id": "rocky-8.8:java-11-openjdk-1:11.0.21.0.9-2.el8_8.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux 8.8 from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-22081",
+      "product_status": {
+        "fixed": [
+          "rocky-8.8:java-11-openjdk-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-1:11.0.21.0.9-2.el8_8.src",
+          "rocky-8.8:java-11-openjdk-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-debugsource-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-demo-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-demo-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-demo-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-devel-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-devel-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-devel-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-devel-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-devel-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-devel-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-headless-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-headless-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-headless-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-headless-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-headless-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-headless-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-javadoc-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-javadoc-zip-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-jmods-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-jmods-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-jmods-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-src-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-src-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-src-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-static-libs-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-static-libs-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+          "rocky-8.8:java-11-openjdk-static-libs-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to java-11-openjdk-1:11.0.21.0.9-2.el8_8.aarch64, java-11-openjdk-demo-1:11.0.21.0.9-2.el8_8.aarch64, java-11-openjdk-demo-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64 and 20 more packages",
+          "product_ids": [
+            "rocky-8.8:java-11-openjdk-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-1:11.0.21.0.9-2.el8_8.src",
+            "rocky-8.8:java-11-openjdk-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-debugsource-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-demo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-demo-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-demo-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-javadoc-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-javadoc-zip-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-jmods-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-jmods-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-jmods-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-src-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-src-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-src-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-static-libs-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-static-libs-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-static-libs-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.8:java-11-openjdk-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-1:11.0.21.0.9-2.el8_8.src",
+            "rocky-8.8:java-11-openjdk-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-debugsource-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-demo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-demo-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-demo-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-devel-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-fastdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-headless-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-javadoc-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-javadoc-zip-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-jmods-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-jmods-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-jmods-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-slowdebug-debuginfo-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-src-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-src-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-src-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-static-libs-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-static-libs-fastdebug-1:11.0.21.0.9-2.el8_8.aarch64",
+            "rocky-8.8:java-11-openjdk-static-libs-slowdebug-1:11.0.21.0.9-2.el8_8.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}
