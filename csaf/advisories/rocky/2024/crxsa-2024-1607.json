@@ -1,0 +1,1761 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for kernel.\nThis update affects Rocky Linux SIG Cloud 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The kernel packages contain the Linux kernel, the core of any Linux operating system.\n\nSecurity Fix(es):\n\n* kernel: vmwgfx: NULL pointer dereference in vmw_cmd_dx_define_query (CVE-2022-38096)\n\n* kernel: Out of boundary write in perf_read_group() as result of overflow a perf_event's read_size (CVE-2023-6931)\n\n* kernel: GSM multiplexing race condition leads to privilege escalation (CVE-2023-6546,ZDI-CAN-20527)\n\n* kernel: CIFS Filesystem Decryption Improper Input Validation Remote Code Execution Vulnerability in function receive_encrypted_standard of client (CVE-2024-0565)\n\n* kernel: use-after-free in amdgpu_cs_wait_all_fences in drivers/gpu/drm/amd/amdgpu/amdgpu_cs.c (CVE-2023-51042)\n\n* kernel: ext4: kernel bug in ext4_write_inline_data_end() (CVE-2021-33631)\n\n* kernel: nf_tables: use-after-free vulnerability in the nft_verdict_init() function (CVE-2024-1086)\n\nBug Fix(es):\n\n* OCP 4.12 crashed due to use-after-free in libceph in rhel8 (JIRA:Rocky Linux SIG Cloud-21394)\n\n* kernel: nf_tables: use-after-free vulnerability in the nft_verdict_init() function (JIRA:Rocky Linux SIG Cloud-24010)\n\n* Screen floods with random colour suggesting something not initialised (JIRA:Rocky Linux SIG Cloud-21055)\n\n* kernel: vmxgfx: NULL pointer dereference in vmw_cmd_dx_define_query (JIRA:Rocky Linux SIG Cloud-22766)\n\n* tx-checksumming required for accessing port in OpenShift for Rocky Linux SIG Cloud 8.6 (JIRA:Rocky Linux SIG Cloud-20822)\n\n* kernel: CIFS Filesystem Decryption Improper Input Validation Remote Code Execution Vulnerability in function receive_encrypted_standard of client (JIRA:Rocky Linux SIG Cloud-22077)\n\n* kernel: Out of boundary write in perf_read_group() as result of overflow a perf_event's read_size (JIRA:Rocky Linux SIG Cloud-22930)\n\n* rbd: don't move requests to the running list on errors [8.x] (JIRA:Rocky Linux SIG Cloud-24204)\n\n* kernel: use-after-free in amdgpu_cs_wait_all_fences in drivers/gpu/drm/amd/amdgpu/amdgpu_cs.c (JIRA:Rocky Linux SIG Cloud-24479)\n\n* ceph: several cap and snap fixes (JIRA:Rocky Linux SIG Cloud-20909)\n\n* [RHVH] Migration hangs between RHVH release bellow 4.5.1 and RHVH over or equal 4.5.2 release (JIRA:Rocky Linux SIG Cloud-23063)\n\n* unable to access smsc95xx based interface unless you start outgoing traffic.  (JIRA:Rocky Linux SIG Cloud-25719)\n\n* [Rocky Linux SIG Cloud8] ] BUG bio-696 (Not tainted): Poison overwritten  (JIRA:Rocky Linux SIG Cloud-26101)\n\n* kernel: GSM multiplexing race condition leads to privilege escalation (JIRA:Rocky Linux SIG Cloud-19954)\n\n* backport smartpqi: fix disable_managed_interrupts (JIRA:Rocky Linux SIG Cloud-26139)\n\n* kernel: ext4: kernel bug in ext4_write_inline_data_end() (JIRA:Rocky Linux SIG Cloud-26331)\n\n* ceph: always check dir caps asynchronously (JIRA:Rocky Linux SIG Cloud-27496)\n\nEnhancement(s):\n\n* [IBM 8.10 FEAT] Upgrade the qeth driver to latest from upstream, e.g. kernel 6.4 (JIRA:Rocky Linux SIG Cloud-25811)\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2255498",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2255498"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2258518",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2258518"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2259866",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2259866"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2252731",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2252731"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2133452",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2133452"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2262126",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2262126"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2261976",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2261976"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RXSA-2024:1607",
+        "url": "https://errata.build.resf.org/RXSA-2024:1607"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RXSA-2024:1607",
+        "url": "https://access.redhat.com/errata/RXSA-2024:1607"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RXSA-2024:1607",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rxsa-2024_1607.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRXSA-2024:1607",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/rocky/2024/crxsa-2024_1607.json"
+      }
+    ],
+    "title": "Important: kernel security, bug fix, and enhancement update",
+    "tracking": {
+      "current_release_date": "2026-01-29T02:10:40.150109+00:00",
+      "generator": {
+        "date": "2026-01-29T02:10:40.150109+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRXSA-2024:1607",
+      "initial_release_date": "2024-05-06T13:07:04.761719+00:00",
+      "revision_history": [
+        {
+          "date": "2024-05-06T13:07:04.761719+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "bpftool-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-core-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-core-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-cross-headers-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-cross-headers-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-debug-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-core-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-debug-core-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-debug-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-debug-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-debug-modules-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-extra-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-debug-modules-extra-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-headers-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-headers-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-modules-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-extra-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-modules-extra-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-tools-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-tools-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-tools-libs-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "kernel-tools-libs-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "perf-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "perf-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "python3-perf-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                    "product": {
+                      "name": "python3-perf-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+                      "product_id": "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "aarch64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "bpftool-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "bpftool-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-core-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-core-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-cross-headers-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-cross-headers-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-debug-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-core-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-debug-core-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-debug-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-debug-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-debug-modules-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-debug-modules-extra-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-debug-modules-extra-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-headers-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-headers-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-modules-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-modules-extra-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-modules-extra-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-tools-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-tools-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-tools-libs-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-tools-libs-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "kernel-tools-libs-devel-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "perf-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "perf-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "perf-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "python3-perf-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "python3-perf-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                    "product": {
+                      "name": "python3-perf-debuginfo-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+                      "product_id": "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "x86_64"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.src",
+                    "product": {
+                      "name": "kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.src",
+                      "product_id": "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "kernel-abi-stablelists-0:4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+                    "product": {
+                      "name": "kernel-abi-stablelists-0:4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+                      "product_id": "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch"
+                    }
+                  },
+                  {
+                    "category": "product_name",
+                    "name": "kernel-doc-0:4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+                    "product": {
+                      "name": "kernel-doc-0:4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+                      "product_id": "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "noarch"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux 8.9 from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-33631",
+      "product_status": {
+        "fixed": [
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64, bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64, kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64 and 35 more packages",
+          "product_ids": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-51042",
+      "product_status": {
+        "fixed": [
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64, bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64, kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64 and 35 more packages",
+          "product_ids": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-6546",
+      "product_status": {
+        "fixed": [
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64, bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64, kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64 and 35 more packages",
+          "product_ids": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-6931",
+      "product_status": {
+        "fixed": [
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64, bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64, kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64 and 35 more packages",
+          "product_ids": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-0565",
+      "product_status": {
+        "fixed": [
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64, bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64, kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64 and 35 more packages",
+          "product_ids": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-1086",
+      "product_status": {
+        "fixed": [
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64, bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64, kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64 and 35 more packages",
+          "product_ids": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-38096",
+      "product_status": {
+        "fixed": [
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+          "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+          "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64, bpftool-0:4.18.0-513.24.1.el8_9.cloud.0.1.x86_64, kernel-0:4.18.0-513.24.1.el8_9.cloud.0.1.aarch64 and 35 more packages",
+          "product_ids": [
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:bpftool-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.src",
+            "rocky-8.9:kernel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-abi-stablelists-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-cross-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-core-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-debug-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-doc-4.18.0-513.24.1.el8_9.cloud.0.1.noarch",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-headers-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-modules-extra-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:kernel-tools-libs-devel-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.aarch64",
+            "rocky-8.9:python3-perf-debuginfo-4.18.0-513.24.1.el8_9.cloud.0.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    }
+  ]
+}
