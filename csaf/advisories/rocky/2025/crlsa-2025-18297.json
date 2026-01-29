@@ -1,0 +1,224 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Moderate"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for kernel.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The kernel packages contain the Linux kernel, the core of any Linux operating system.\n\nSecurity Fix(es):\n\n* kernel: ALSA: usb-audio: Validate UAC3 cluster segment descriptors (CVE-2025-39757)\n\n* kernel: ALSA: hda/ca0132: Fix buffer overflow in add_tuning_control (CVE-2025-39751)\n\n* kernel: crypto: seqiv - Handle EBUSY correctly (CVE-2023-53373)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2394615",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2394615"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2394624",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2394624"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2396379",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2396379"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2025:18297",
+        "url": "https://errata.build.resf.org/RLSA-2025:18297"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:18297",
+        "url": "https://access.redhat.com/errata/RHSA-2025:18297"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2025:18297",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_18297.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2025:18297",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/rocky/2025/crlsa-2025_18297.json"
+      }
+    ],
+    "title": "Moderate: kernel security update",
+    "tracking": {
+      "current_release_date": "2026-01-29T02:02:45.793900+00:00",
+      "generator": {
+        "date": "2026-01-29T02:02:45.793900+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2025:18297",
+      "initial_release_date": "2025-10-26T08:00:27.841282+00:00",
+      "revision_history": [
+        {
+          "date": "2025-10-26T08:00:27.841282+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_name",
+                    "name": "kernel-0:4.18.0-553.80.1.el8_10.src",
+                    "product": {
+                      "name": "kernel-0:4.18.0-553.80.1.el8_10.src",
+                      "product_id": "rocky-8.10:kernel-4.18.0-553.80.1.el8_10.src"
+                    }
+                  }
+                ],
+                "category": "architecture",
+                "name": "src"
+              }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux 8.10 from CIQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ctrl IQ, Inc"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-39751",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "CWE-120"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.10:kernel-4.18.0-553.80.1.el8_10.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update affected packages from Rocky Linux repositories",
+          "product_ids": [
+            "rocky-8.10:kernel-4.18.0-553.80.1.el8_10.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:kernel-4.18.0-553.80.1.el8_10.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-53373",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "CWE-416"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.10:kernel-4.18.0-553.80.1.el8_10.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update affected packages from Rocky Linux repositories",
+          "product_ids": [
+            "rocky-8.10:kernel-4.18.0-553.80.1.el8_10.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:kernel-4.18.0-553.80.1.el8_10.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-39757",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "CWE-20"
+      },
+      "product_status": {
+        "fixed": [
+          "rocky-8.10:kernel-4.18.0-553.80.1.el8_10.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update affected packages from Rocky Linux repositories",
+          "product_ids": [
+            "rocky-8.10:kernel-4.18.0-553.80.1.el8_10.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-8.10:kernel-4.18.0-553.80.1.el8_10.src"
+          ]
+        }
+      ]
+    }
+  ]
+}
