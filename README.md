@@ -14,5 +14,18 @@ VEX json documents meet the requirements of the [CSAF VEX document profile](http
 
 CSAF `product_id` fields for CIQ products should be in the format:
 ```
-{mountain product key}:{package name}-{package version}-{release}.{distro}.{arch}
+{ciq product key}:{package name}-{package version}-{release}.{distro}.{arch}
 ```
+
+### Security Advisories
+Security advisories are stored under the `csaf/advisories/` folder with a path like:
+
+```
+csaf/advisories/{publisher}/{year}/{advisory-id}.json
+```
+
+Security advisory CSAF documents meet the requirements of the [CSAF Security Advisory profile](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#41-profile-1-csaf-base) with document category `csaf_security_advisory`. These advisories aggregate security fixes for specific packages or SRPMs and may address one or more CVEs.
+
+Advisory naming conventions:
+- CIQ advisories: `ciqsa-{product}-{version}-{year}-{sequence}.json` (e.g., `ciqsa-cbr-7-9-2026-0001.json`)
+- Rocky Linux advisories follow similar patterns organized by publisher and year
