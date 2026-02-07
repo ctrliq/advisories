@@ -1,0 +1,1382 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for kernel-rt",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the kernel-rt SRPM in CIQ LTS for Rocky Linux 8.8. It addresses 12 CVEs: CVE-2022-42896, CVE-2023-2163, CVE-2023-4206, CVE-2023-4207, CVE-2023-4208, and 7 more.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-42896",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-42896.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-2163",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-2163.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4206",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4206.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4207",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4207.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4208",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4208.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4623",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4623.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4921",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4921.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-5178",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5178.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-0562",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-0562.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-36971",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-36971.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-41090",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-41090.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-53104",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-53104.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-lts-8-8-2026-0041.json"
+      }
+    ],
+    "title": "kernel-rt security update for CIQ LTS for Rocky Linux 8.8",
+    "tracking": {
+      "current_release_date": "2026-02-06T16:05:51.590639+00:00",
+      "generator": {
+        "date": "2026-02-06T16:05:51.590639+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CIQSA-LTS-8-8-2026:0041",
+      "initial_release_date": "2026-02-06T16:05:51.590639+00:00",
+      "revision_history": [
+        {
+          "date": "2026-02-06T16:05:51.590639+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 12 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS for Rocky Linux 8.8",
+                "product": {
+                  "name": "CIQ LTS for Rocky Linux 8.8",
+                  "product_id": "lts-8.8",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq_lts:8.8:*:*:*:*:*:*:*"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                "product": {
+                  "name": "kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+                  "product_id": "kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        },
+        "product_reference": "kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-42896",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-42896",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-2163",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-2163",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4206",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4206",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4207",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4207",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4208",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4208",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4623",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4623",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4921",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4921",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5178",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-5178",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-0562",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-0562",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-36971",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-36971",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-41090",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-41090",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-53104",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-53104",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+          "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel-rt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:kernel-rt-selftests-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-internal-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-extra-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-modules-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-kvm-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-devel-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-debug-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-core-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64",
+            "lts-8.8:kernel-rt-0:4.18.0-477.27.1.rt7.290.el8_8.88ciq_lts.2.1.x86_64"
+          ]
+        }
+      ]
+    }
+  ]
+}
