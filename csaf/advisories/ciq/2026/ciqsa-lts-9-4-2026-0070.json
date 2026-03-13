@@ -43,9 +43,9 @@
     ],
     "title": "sqlite security update (CVE-2025-6965)",
     "tracking": {
-      "current_release_date": "2026-02-06T16:06:14.071588+00:00",
+      "current_release_date": "2026-03-12T07:56:40.925487+00:00",
       "generator": {
-        "date": "2026-02-06T16:06:14.071588+00:00",
+        "date": "2026-03-12T07:56:40.925487+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "1.0.0"
@@ -58,10 +58,15 @@
           "date": "2026-02-06T16:06:14.071588+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 1 CVE fixed"
+        },
+        {
+          "date": "2026-03-12T07:56:40.929142+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -89,6 +94,14 @@
             "branches": [
               {
                 "category": "product_version",
+                "name": "sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
+                "product": {
+                  "name": "sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
+                  "product_id": "sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
                 "name": "sqlite-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
                 "product": {
                   "name": "sqlite-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
@@ -101,14 +114,6 @@
                 "product": {
                   "name": "sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
                   "product_id": "sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
-                "product": {
-                  "name": "sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
-                  "product_id": "sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
                 }
               }
             ],
@@ -184,6 +189,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64 as a component of CIQ LTS for Rocky Linux 9.4",
+          "product_id": "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
+        },
+        "product_reference": "sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
+        "relates_to_product_reference": "lts-9.4"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "sqlite-0:3.34.1-8.el9_4.94ciq_lts.i686 as a component of CIQ LTS for Rocky Linux 9.4",
           "product_id": "lts-9.4:sqlite-0:3.34.1-8.el9_4.94ciq_lts.i686"
         },
@@ -252,15 +266,6 @@
         },
         "product_reference": "sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
         "relates_to_product_reference": "lts-9.4"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64 as a component of CIQ LTS for Rocky Linux 9.4",
-          "product_id": "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
-        },
-        "product_reference": "sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
-        "relates_to_product_reference": "lts-9.4"
       }
     ]
   },
@@ -280,6 +285,7 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
           "lts-9.4:sqlite-0:3.34.1-8.el9_4.94ciq_lts.i686",
           "lts-9.4:sqlite-0:3.34.1-8.el9_4.94ciq_lts.x86_64",
           "lts-9.4:sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.x86_64",
@@ -287,8 +293,7 @@
           "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.x86_64",
           "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.i686",
           "lts-9.4:sqlite-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
-          "lts-9.4:sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
-          "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
+          "lts-9.4:sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
         ]
       },
       "remediations": [
@@ -296,6 +301,7 @@
           "category": "vendor_fix",
           "details": "Update sqlite to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
             "lts-9.4:sqlite-0:3.34.1-8.el9_4.94ciq_lts.i686",
             "lts-9.4:sqlite-0:3.34.1-8.el9_4.94ciq_lts.x86_64",
             "lts-9.4:sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.x86_64",
@@ -303,8 +309,7 @@
             "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.x86_64",
             "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.i686",
             "lts-9.4:sqlite-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
+            "lts-9.4:sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -318,6 +323,7 @@
             "version": "3.1"
           },
           "products": [
+            "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
             "lts-9.4:sqlite-0:3.34.1-8.el9_4.94ciq_lts.i686",
             "lts-9.4:sqlite-0:3.34.1-8.el9_4.94ciq_lts.x86_64",
             "lts-9.4:sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.x86_64",
@@ -325,8 +331,7 @@
             "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.x86_64",
             "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.i686",
             "lts-9.4:sqlite-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:sqlite-libs-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
+            "lts-9.4:sqlite-devel-0:3.34.1-8.el9_4.94ciq_lts.aarch64"
           ]
         }
       ]
