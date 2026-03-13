@@ -1,0 +1,1537 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for bind9.16",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the bind9.16 SRPM in CIQ LTS for Rocky Linux 8.6. It addresses 13 CVEs: CVE-2021-25220, CVE-2022-2795, CVE-2022-3094, CVE-2022-3736, CVE-2022-3924, and 8 more.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-25220",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-25220.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2795",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2795.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-3094",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-3094.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-3736",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-3736.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-3924",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-3924.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-2828",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-2828.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-3341",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-3341.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4408",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4408.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-50387",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-50387.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-50868",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-50868.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-5517",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5517.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-5679",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5679.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-6516",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-6516.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-lts-8-6-2026-0324.json"
+      }
+    ],
+    "title": "bind9.16 security update for CIQ LTS for Rocky Linux 8.6",
+    "tracking": {
+      "current_release_date": "2026-03-13T07:02:20.395360+00:00",
+      "generator": {
+        "date": "2026-03-13T07:02:20.395360+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CIQSA-LTS-8-6-2026:0324",
+      "initial_release_date": "2026-03-13T07:02:20.395360+00:00",
+      "revision_history": [
+        {
+          "date": "2026-03-13T07:02:20.395360+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 13 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS for Rocky Linux 8.6",
+                "product": {
+                  "name": "CIQ LTS for Rocky Linux 8.6",
+                  "product_id": "lts-8.6",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq_lts:8.6:*:*:*:*:*:*:*"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                "product": {
+                  "name": "bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                  "product_id": "bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                "product": {
+                  "name": "bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                  "product_id": "bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                "product": {
+                  "name": "bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                  "product_id": "bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                "product": {
+                  "name": "bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                  "product_id": "bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                "product": {
+                  "name": "bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                  "product_id": "bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                "product": {
+                  "name": "bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+                  "product_id": "bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+                "product": {
+                  "name": "bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+                  "product_id": "bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+                "product": {
+                  "name": "bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+                  "product_id": "bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+                "product": {
+                  "name": "python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+                  "product_id": "python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+                "product": {
+                  "name": "bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+                  "product_id": "bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                "product": {
+                  "name": "bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                  "product_id": "bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                "product": {
+                  "name": "bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                  "product_id": "bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                "product": {
+                  "name": "bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                  "product_id": "bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                "product": {
+                  "name": "bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                  "product_id": "bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                "product": {
+                  "name": "bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                  "product_id": "bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                "product": {
+                  "name": "bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+                  "product_id": "bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src"
+        },
+        "product_reference": "bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch"
+        },
+        "product_reference": "bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+        },
+        "product_reference": "bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+        },
+        "product_reference": "bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        },
+        "product_reference": "bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        },
+        "product_reference": "bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        },
+        "product_reference": "bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch"
+        },
+        "product_reference": "bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch"
+        },
+        "product_reference": "python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+        },
+        "product_reference": "bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+        },
+        "product_reference": "bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+        },
+        "product_reference": "bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64"
+        },
+        "product_reference": "bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        },
+        "product_reference": "bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        },
+        "product_reference": "bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64 as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        },
+        "product_reference": "bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-25220",
+      "cwe": {
+        "id": "CWE-444",
+        "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-25220",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2795",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2795",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-3094",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-3094",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-3736",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-3736",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-3924",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-3924",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-2828",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-2828",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-3341",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-3341",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4408",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4408",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-50387",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-50387",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-50868",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-50868",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5517",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-5517",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5679",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-5679",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-6516",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-6516",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+          "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+          "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind9.16 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.src",
+            "lts-8.6:bind9.16-doc-0:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-libs-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-devel-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-chroot-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-license-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:python3-bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.noarch",
+            "lts-8.6:bind9.16-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-dnssec-utils-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-devel-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-chroot-0:9.16.23-0.16.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:bind9.16-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-libs-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:bind9.16-utils-32:9.16.23-0.16.el8_6.86ciq_lts.2.x86_64"
+          ]
+        }
+      ]
+    }
+  ]
+}
