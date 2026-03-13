@@ -48,9 +48,9 @@
     ],
     "title": "nginx security update for CIQ LTS for Rocky Linux 9.2",
     "tracking": {
-      "current_release_date": "2026-02-06T16:06:00.361325+00:00",
+      "current_release_date": "2026-03-12T07:56:31.498623+00:00",
       "generator": {
-        "date": "2026-02-06T16:06:00.361325+00:00",
+        "date": "2026-03-12T07:56:31.498623+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "1.0.0"
@@ -63,10 +63,15 @@
           "date": "2026-02-06T16:06:00.361325+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 2 CVEs fixed"
+        },
+        {
+          "date": "2026-03-12T07:56:31.502464+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -270,28 +275,10 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch as a component of CIQ LTS for Rocky Linux 9.2",
-          "product_id": "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch"
-        },
-        "product_reference": "nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "nginx-core-2:1.20.1-22.el9_2_ciq.3.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
           "product_id": "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.x86_64"
         },
         "product_reference": "nginx-core-2:1.20.1-22.el9_2_ciq.3.x86_64",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch as a component of CIQ LTS for Rocky Linux 9.2",
-          "product_id": "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch"
-        },
-        "product_reference": "nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
         "relates_to_product_reference": "lts-9.2"
       },
       {
@@ -346,6 +333,24 @@
           "product_id": "lts-9.2:nginx-mod-stream-2:1.20.1-22.el9_2_ciq.3.x86_64"
         },
         "product_reference": "nginx-mod-stream-2:1.20.1-22.el9_2_ciq.3.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch"
+        },
+        "product_reference": "nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch"
+        },
+        "product_reference": "nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
         "relates_to_product_reference": "lts-9.2"
       },
       {
@@ -425,6 +430,10 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-41741",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
       "notes": [
         {
           "category": "description",
@@ -435,15 +444,15 @@
       "product_status": {
         "fixed": [
           "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.x86_64",
-          "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
           "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.x86_64",
-          "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
           "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.x86_64",
           "lts-9.2:nginx-mod-http-image-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
           "lts-9.2:nginx-mod-http-perl-2:1.20.1-22.el9_2_ciq.3.x86_64",
           "lts-9.2:nginx-mod-http-xslt-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
           "lts-9.2:nginx-mod-mail-2:1.20.1-22.el9_2_ciq.3.x86_64",
           "lts-9.2:nginx-mod-stream-2:1.20.1-22.el9_2_ciq.3.x86_64",
+          "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
+          "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
           "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.aarch64",
           "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.aarch64",
           "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.aarch64",
@@ -460,15 +469,15 @@
           "details": "Update nginx to the latest version from CIQ repositories",
           "product_ids": [
             "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.x86_64",
-            "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.x86_64",
-            "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-image-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-perl-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-xslt-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-mail-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-stream-2:1.20.1-22.el9_2_ciq.3.x86_64",
+            "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
+            "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.aarch64",
             "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.aarch64",
             "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.aarch64",
@@ -491,15 +500,15 @@
           },
           "products": [
             "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.x86_64",
-            "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.x86_64",
-            "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-image-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-perl-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-xslt-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-mail-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-stream-2:1.20.1-22.el9_2_ciq.3.x86_64",
+            "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
+            "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.aarch64",
             "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.aarch64",
             "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.aarch64",
@@ -514,6 +523,10 @@
     },
     {
       "cve": "CVE-2022-41742",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
       "notes": [
         {
           "category": "description",
@@ -524,15 +537,15 @@
       "product_status": {
         "fixed": [
           "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.x86_64",
-          "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
           "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.x86_64",
-          "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
           "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.x86_64",
           "lts-9.2:nginx-mod-http-image-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
           "lts-9.2:nginx-mod-http-perl-2:1.20.1-22.el9_2_ciq.3.x86_64",
           "lts-9.2:nginx-mod-http-xslt-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
           "lts-9.2:nginx-mod-mail-2:1.20.1-22.el9_2_ciq.3.x86_64",
           "lts-9.2:nginx-mod-stream-2:1.20.1-22.el9_2_ciq.3.x86_64",
+          "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
+          "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
           "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.aarch64",
           "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.aarch64",
           "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.aarch64",
@@ -549,15 +562,15 @@
           "details": "Update nginx to the latest version from CIQ repositories",
           "product_ids": [
             "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.x86_64",
-            "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.x86_64",
-            "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-image-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-perl-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-xslt-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-mail-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-stream-2:1.20.1-22.el9_2_ciq.3.x86_64",
+            "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
+            "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.aarch64",
             "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.aarch64",
             "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.aarch64",
@@ -580,15 +593,15 @@
           },
           "products": [
             "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.x86_64",
-            "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.x86_64",
-            "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-image-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-perl-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-http-xslt-filter-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-mail-2:1.20.1-22.el9_2_ciq.3.x86_64",
             "lts-9.2:nginx-mod-stream-2:1.20.1-22.el9_2_ciq.3.x86_64",
+            "lts-9.2:nginx-all-modules-2:1.20.1-22.el9_2_ciq.3.noarch",
+            "lts-9.2:nginx-filesystem-2:1.20.1-22.el9_2_ciq.3.noarch",
             "lts-9.2:nginx-2:1.20.1-22.el9_2_ciq.3.aarch64",
             "lts-9.2:nginx-core-2:1.20.1-22.el9_2_ciq.3.aarch64",
             "lts-9.2:nginx-mod-devel-2:1.20.1-22.el9_2_ciq.3.aarch64",
