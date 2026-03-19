@@ -1,0 +1,2840 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for qemu-kvm",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the qemu-kvm SRPM in CIQ LTS for Rocky Linux 9.2. It addresses 6 CVEs: CVE-2023-3019, CVE-2023-3255, CVE-2023-42467, CVE-2023-5088, CVE-2023-6683, and 1 more.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-3019",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-3019.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-3255",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-3255.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-42467",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-42467.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-5088",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5088.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-6683",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-6683.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-4467",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-4467.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-lts-9-2-2026-0141.json"
+      }
+    ],
+    "title": "qemu-kvm security update for CIQ LTS for Rocky Linux 9.2",
+    "tracking": {
+      "current_release_date": "2026-03-19T20:34:26.262712+00:00",
+      "generator": {
+        "date": "2026-03-19T20:34:26.262712+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CIQSA-LTS-9-2-2026:0141",
+      "initial_release_date": "2026-03-19T20:34:26.262712+00:00",
+      "revision_history": [
+        {
+          "date": "2026-03-19T20:34:26.262712+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 6 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS for Rocky Linux 9.2",
+                "product": {
+                  "name": "CIQ LTS for Rocky Linux 9.2",
+                  "product_id": "lts-9.2",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq_lts:9.2:*:*:*:*:*:*:*"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                "product": {
+                  "name": "qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+                  "product_id": "qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+                "product": {
+                  "name": "qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+                  "product_id": "qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                "product": {
+                  "name": "qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+                  "product_id": "qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src"
+        },
+        "product_reference": "qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64"
+        },
+        "product_reference": "qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64 as a component of CIQ LTS for Rocky Linux 9.2",
+          "product_id": "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        },
+        "product_reference": "qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-3019",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-3019",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update qemu-kvm to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.0,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-3255",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-3255",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update qemu-kvm to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-42467",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-42467",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update qemu-kvm to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 2.3,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5088",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-5088",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update qemu-kvm to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-6683",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-6683",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update qemu-kvm to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-4467",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-4467",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+          "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+          "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update qemu-kvm to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-0:8.2.0-11.el9_2.92ciq_lts.4.src",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-vga-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-egl-headless-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-ui-opengl-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-img-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-core-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-debugsource-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-redirect-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-docs-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-guest-agent-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-pr-helper-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-guest-agent-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-blkio-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-block-rbd-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-common-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-tools-17:8.2.0-11.el9_2.92ciq_lts.4.x86_64",
+            "lts-9.2:qemu-kvm-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-audio-pa-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-curl-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-block-rbd-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-display-virtio-gpu-pci-debuginfo-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64",
+            "lts-9.2:qemu-kvm-device-usb-host-17:8.2.0-11.el9_2.92ciq_lts.4.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}
