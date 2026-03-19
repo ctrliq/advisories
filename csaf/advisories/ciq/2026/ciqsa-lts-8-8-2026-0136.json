@@ -1,0 +1,815 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for pgaudit",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the pgaudit SRPM in CIQ LTS for Rocky Linux 8.8. It addresses 9 CVEs: CVE-2023-39417, CVE-2023-5868, CVE-2023-5869, CVE-2023-5870, CVE-2022-2625, and 4 more.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-39417",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-39417.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-5868",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5868.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-5869",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5869.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-5870",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5870.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2625",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2625.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-2454",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-2454.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-2455",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-2455.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-41862",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-41862.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-0985",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-0985.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-lts-8-8-2026-0136.json"
+      }
+    ],
+    "title": "pgaudit security update for CIQ LTS for Rocky Linux 8.8",
+    "tracking": {
+      "current_release_date": "2026-03-19T20:34:02.216364+00:00",
+      "generator": {
+        "date": "2026-03-19T20:34:02.216364+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CIQSA-LTS-8-8-2026:0136",
+      "initial_release_date": "2026-03-19T20:34:02.216364+00:00",
+      "revision_history": [
+        {
+          "date": "2026-03-19T20:34:02.216364+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 9 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS for Rocky Linux 8.8",
+                "product": {
+                  "name": "CIQ LTS for Rocky Linux 8.8",
+                  "product_id": "lts-8.8",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq_lts:8.8:*:*:*:*:*:*:*"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+                "product": {
+                  "name": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+                  "product_id": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+                "product": {
+                  "name": "pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+                  "product_id": "pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+                "product": {
+                  "name": "pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+                  "product_id": "pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src",
+                "product": {
+                  "name": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src",
+                  "product_id": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+                "product": {
+                  "name": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+                  "product_id": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+                "product": {
+                  "name": "pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+                  "product_id": "pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+                "product": {
+                  "name": "pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+                  "product_id": "pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64"
+        },
+        "product_reference": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64"
+        },
+        "product_reference": "pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64"
+        },
+        "product_reference": "pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64"
+        },
+        "product_reference": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64"
+        },
+        "product_reference": "pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64 as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64"
+        },
+        "product_reference": "pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src as a component of CIQ LTS for Rocky Linux 8.8",
+          "product_id": "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+        },
+        "product_reference": "pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src",
+        "relates_to_product_reference": "lts-8.8"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-39417",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-39417",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update pgaudit to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5868",
+      "cwe": {
+        "id": "CWE-686",
+        "name": "Function Call With Incorrect Argument Type"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-5868",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update pgaudit to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5869",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-5869",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update pgaudit to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5870",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-5870",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update pgaudit to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 2.2,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2625",
+      "cwe": {
+        "id": "CWE-1321",
+        "name": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2625",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update pgaudit to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-2454",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-2454",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update pgaudit to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-2455",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-2455",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update pgaudit to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-41862",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-41862",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update pgaudit to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-0985",
+      "cwe": {
+        "id": "CWE-271",
+        "name": "Privilege Dropping / Lowering Errors"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-0985",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+          "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update pgaudit to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.x86_64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debugsource-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-debuginfo-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.aarch64",
+            "lts-8.8:pgaudit-0:1.4.0-7.module+el8.8.0+3460+2d548ee4.src"
+          ]
+        }
+      ]
+    }
+  ]
+}
