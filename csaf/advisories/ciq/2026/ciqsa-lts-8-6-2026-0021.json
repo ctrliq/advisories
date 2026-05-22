@@ -43,9 +43,9 @@
     ],
     "title": "cloud-init security update (CVE-2024-6174)",
     "tracking": {
-      "current_release_date": "2026-02-06T16:05:36.571399+00:00",
+      "current_release_date": "2026-05-22T07:02:22.914793+00:00",
       "generator": {
-        "date": "2026-02-06T16:05:36.571399+00:00",
+        "date": "2026-05-22T07:02:22.914793+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "1.0.0"
@@ -58,10 +58,15 @@
           "date": "2026-02-06T16:05:36.571399+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 1 CVE fixed"
+        },
+        {
+          "date": "2026-05-22T07:02:22.924505+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -98,6 +103,20 @@
             ],
             "category": "architecture",
             "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "cloud-init-0:21.1-16.el8_6.86ciq_lts.3.src",
+                "product": {
+                  "name": "cloud-init-0:21.1-16.el8_6.86ciq_lts.3.src",
+                  "product_id": "cloud-init-0:21.1-16.el8_6.86ciq_lts.3.src"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
           }
         ],
         "category": "vendor",
@@ -105,6 +124,15 @@
       }
     ],
     "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "cloud-init-0:21.1-16.el8_6.86ciq_lts.3.src as a component of CIQ LTS for Rocky Linux 8.6",
+          "product_id": "lts-8.6:cloud-init-0:21.1-16.el8_6.86ciq_lts.3.src"
+        },
+        "product_reference": "cloud-init-0:21.1-16.el8_6.86ciq_lts.3.src",
+        "relates_to_product_reference": "lts-8.6"
+      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -119,6 +147,10 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2024-6174",
+      "cwe": {
+        "id": "CWE-276",
+        "name": "Incorrect Default Permissions"
+      },
       "notes": [
         {
           "category": "description",
@@ -128,6 +160,7 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-8.6:cloud-init-0:21.1-16.el8_6.86ciq_lts.3.src",
           "lts-8.6:cloud-init-0:21.1-16.el8_6.86ciq_lts.3.noarch"
         ]
       },
@@ -136,6 +169,7 @@
           "category": "vendor_fix",
           "details": "Update cloud-init to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-8.6:cloud-init-0:21.1-16.el8_6.86ciq_lts.3.src",
             "lts-8.6:cloud-init-0:21.1-16.el8_6.86ciq_lts.3.noarch"
           ],
           "url": "https://github.com/ctrliq/advisories"
@@ -150,6 +184,7 @@
             "version": "3.1"
           },
           "products": [
+            "lts-8.6:cloud-init-0:21.1-16.el8_6.86ciq_lts.3.src",
             "lts-8.6:cloud-init-0:21.1-16.el8_6.86ciq_lts.3.noarch"
           ]
         }
