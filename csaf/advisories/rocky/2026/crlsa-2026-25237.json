@@ -1,0 +1,2588 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for openssl.\nThis update affects Rocky Linux 10.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "OpenSSL is a toolkit that implements the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols, as well as a full-strength general-purpose cryptography library.\n\nSecurity Fix(es):\n\n* openssl: OpenSSL: Heap buffer overflow due to signed integer overflow in Unicode output sizing (CVE-2026-7383)\n\n* openssl: OpenSSL: Denial of Service due to heap out-of-bounds read in CMS password-based decryption (CVE-2026-9076)\n\n* openssl: OpenSSL: Heap buffer over-read in ASN.1 decoding can lead to denial of service or information disclosure. (CVE-2026-34180)\n\n* openssl: PKCS#12 Files with PBMAC1 Are Accepted with Short HMAC Keys (CVE-2026-34181)\n\n* openssl: CMS AuthEnvelopedData Processing May Accept Forged Messages (CVE-2026-34182)\n\n* openssl: Unbounded Memory Growth in the QUIC PATH_CHALLENGE Handler (CVE-2026-34183)\n\n* openssl: NULL pointer dereference in QUIC server initial packet handling (CVE-2026-42764)\n\n* openssl: Possible NULL Dereference in Password-Based CMS Decryption (CVE-2026-42766)\n\n* openssl: NULL Pointer Dereference in CRMF EncryptedValue Decryption (CVE-2026-42767)\n\n* openssl: Multi-RecipientInfo Bleichenbacher Oracle in CMS_decrypt() and PKCS7_decrypt() (CVE-2026-42768)\n\n* openssl: Trust-Anchor Substitution via cert/issuer Typo in CMP rootCaKeyUpdate (CVE-2026-42769)\n\n* openssl: FFC-DH Peer Validation Uses Attacker-Supplied q (CVE-2026-42770)\n\n* openssl: AES-OCB IV Ignored on EVP_Cipher() Path (CVE-2026-45445)\n\n* openssl: Incorrect Tag Processing for Empty Messages in AES-GCM-SIV and AES-SIV modes (CVE-2026-45446)\n\n* openssl: Heap Use-After-Free in OpenSSL PKCS7_verify() (CVE-2026-45447)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "https://ciq.com/security-contact",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://ciq.com/csaf"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2481897",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481897"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481890",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481890"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481892",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481892"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481880",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481880"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481882",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481882"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481891",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481891"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481881",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481881"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481879",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481879"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481884",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481884"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481894",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481894"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481885",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481885"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481898",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481898"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481896",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481896"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481893",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481893"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2481887",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2481887"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:25237",
+        "url": "https://errata.build.resf.org/RLSA-2026:25237"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:25237",
+        "url": "https://access.redhat.com/errata/RHSA-2026:25237"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2026:25237",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2026_25237.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2026:25237",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/rocky/2026/crlsa-2026_25237.json"
+      }
+    ],
+    "title": "Important: openssl security update",
+    "tracking": {
+      "current_release_date": "2026-06-13T07:01:49.941778+00:00",
+      "generator": {
+        "date": "2026-06-13T07:01:49.941778+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.0"
+        }
+      },
+      "id": "CRLSA-2026:25237",
+      "initial_release_date": "2026-06-13T00:05:06.020189+00:00",
+      "revision_history": [
+        {
+          "date": "2026-06-13T00:05:06.020189+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Rocky Linux 10.2 from CIQ",
+                "product": {
+                  "name": "Rocky Linux 10.2 from CIQ",
+                  "product_id": "rlc-10.2"
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Rocky Linux from CIQ"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+                "product": {
+                  "name": "openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+                  "product_id": "openssl-debuginfo-1:3.5.5-4.el10_2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-perl-1:3.5.5-4.el10_2.aarch64",
+                "product": {
+                  "name": "openssl-perl-1:3.5.5-4.el10_2.aarch64",
+                  "product_id": "openssl-perl-1:3.5.5-4.el10_2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-1:3.5.5-4.el10_2.aarch64",
+                "product": {
+                  "name": "openssl-1:3.5.5-4.el10_2.aarch64",
+                  "product_id": "openssl-1:3.5.5-4.el10_2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+                "product": {
+                  "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+                  "product_id": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-devel-1:3.5.5-4.el10_2.aarch64",
+                "product": {
+                  "name": "openssl-devel-1:3.5.5-4.el10_2.aarch64",
+                  "product_id": "openssl-devel-1:3.5.5-4.el10_2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+                "product": {
+                  "name": "openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+                  "product_id": "openssl-debugsource-1:3.5.5-4.el10_2.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-libs-1:3.5.5-4.el10_2.aarch64",
+                "product": {
+                  "name": "openssl-libs-1:3.5.5-4.el10_2.aarch64",
+                  "product_id": "openssl-libs-1:3.5.5-4.el10_2.aarch64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+                "product": {
+                  "name": "openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+                  "product_id": "openssl-libs-1:3.5.5-4.el10_2.ppc64le"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+                "product": {
+                  "name": "openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+                  "product_id": "openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+                "product": {
+                  "name": "openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+                  "product_id": "openssl-debugsource-1:3.5.5-4.el10_2.ppc64le"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+                "product": {
+                  "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+                  "product_id": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-1:3.5.5-4.el10_2.ppc64le",
+                "product": {
+                  "name": "openssl-1:3.5.5-4.el10_2.ppc64le",
+                  "product_id": "openssl-1:3.5.5-4.el10_2.ppc64le"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+                "product": {
+                  "name": "openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+                  "product_id": "openssl-perl-1:3.5.5-4.el10_2.ppc64le"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+                "product": {
+                  "name": "openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+                  "product_id": "openssl-devel-1:3.5.5-4.el10_2.ppc64le"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "ppc64le"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+                "product": {
+                  "name": "openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+                  "product_id": "openssl-debuginfo-1:3.5.5-4.el10_2.s390x"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+                "product": {
+                  "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+                  "product_id": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-devel-1:3.5.5-4.el10_2.s390x",
+                "product": {
+                  "name": "openssl-devel-1:3.5.5-4.el10_2.s390x",
+                  "product_id": "openssl-devel-1:3.5.5-4.el10_2.s390x"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-libs-1:3.5.5-4.el10_2.s390x",
+                "product": {
+                  "name": "openssl-libs-1:3.5.5-4.el10_2.s390x",
+                  "product_id": "openssl-libs-1:3.5.5-4.el10_2.s390x"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-perl-1:3.5.5-4.el10_2.s390x",
+                "product": {
+                  "name": "openssl-perl-1:3.5.5-4.el10_2.s390x",
+                  "product_id": "openssl-perl-1:3.5.5-4.el10_2.s390x"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+                "product": {
+                  "name": "openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+                  "product_id": "openssl-debugsource-1:3.5.5-4.el10_2.s390x"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-1:3.5.5-4.el10_2.s390x",
+                "product": {
+                  "name": "openssl-1:3.5.5-4.el10_2.s390x",
+                  "product_id": "openssl-1:3.5.5-4.el10_2.s390x"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "s390x"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "openssl-1:3.5.5-4.el10_2.src",
+                "product": {
+                  "name": "openssl-1:3.5.5-4.el10_2.src",
+                  "product_id": "openssl-1:3.5.5-4.el10_2.src"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+                "product": {
+                  "name": "openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+                  "product_id": "openssl-debugsource-1:3.5.5-4.el10_2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+                "product": {
+                  "name": "openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+                  "product_id": "openssl-debuginfo-1:3.5.5-4.el10_2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-perl-1:3.5.5-4.el10_2.x86_64",
+                "product": {
+                  "name": "openssl-perl-1:3.5.5-4.el10_2.x86_64",
+                  "product_id": "openssl-perl-1:3.5.5-4.el10_2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+                "product": {
+                  "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+                  "product_id": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-1:3.5.5-4.el10_2.x86_64",
+                "product": {
+                  "name": "openssl-1:3.5.5-4.el10_2.x86_64",
+                  "product_id": "openssl-1:3.5.5-4.el10_2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-devel-1:3.5.5-4.el10_2.x86_64",
+                "product": {
+                  "name": "openssl-devel-1:3.5.5-4.el10_2.x86_64",
+                  "product_id": "openssl-devel-1:3.5.5-4.el10_2.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "openssl-libs-1:3.5.5-4.el10_2.x86_64",
+                "product": {
+                  "name": "openssl-libs-1:3.5.5-4.el10_2.x86_64",
+                  "product_id": "openssl-libs-1:3.5.5-4.el10_2.x86_64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-libs-1:3.5.5-4.el10_2.ppc64le as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le"
+        },
+        "product_reference": "openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-debuginfo-1:3.5.5-4.el10_2.s390x as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x"
+        },
+        "product_reference": "openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-debugsource-1:3.5.5-4.el10_2.x86_64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64"
+        },
+        "product_reference": "openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x"
+        },
+        "product_reference": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-devel-1:3.5.5-4.el10_2.s390x as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x"
+        },
+        "product_reference": "openssl-devel-1:3.5.5-4.el10_2.s390x",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-debuginfo-1:3.5.5-4.el10_2.x86_64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64"
+        },
+        "product_reference": "openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le"
+        },
+        "product_reference": "openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-perl-1:3.5.5-4.el10_2.x86_64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64"
+        },
+        "product_reference": "openssl-perl-1:3.5.5-4.el10_2.x86_64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-debugsource-1:3.5.5-4.el10_2.ppc64le as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le"
+        },
+        "product_reference": "openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le"
+        },
+        "product_reference": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-debuginfo-1:3.5.5-4.el10_2.aarch64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64"
+        },
+        "product_reference": "openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-1:3.5.5-4.el10_2.ppc64le as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le"
+        },
+        "product_reference": "openssl-1:3.5.5-4.el10_2.ppc64le",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-libs-1:3.5.5-4.el10_2.s390x as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x"
+        },
+        "product_reference": "openssl-libs-1:3.5.5-4.el10_2.s390x",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-1:3.5.5-4.el10_2.src as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-1:3.5.5-4.el10_2.src"
+        },
+        "product_reference": "openssl-1:3.5.5-4.el10_2.src",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-perl-1:3.5.5-4.el10_2.s390x as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x"
+        },
+        "product_reference": "openssl-perl-1:3.5.5-4.el10_2.s390x",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-perl-1:3.5.5-4.el10_2.ppc64le as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le"
+        },
+        "product_reference": "openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-perl-1:3.5.5-4.el10_2.aarch64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64"
+        },
+        "product_reference": "openssl-perl-1:3.5.5-4.el10_2.aarch64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-debugsource-1:3.5.5-4.el10_2.s390x as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x"
+        },
+        "product_reference": "openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64"
+        },
+        "product_reference": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-1:3.5.5-4.el10_2.aarch64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64"
+        },
+        "product_reference": "openssl-1:3.5.5-4.el10_2.aarch64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64"
+        },
+        "product_reference": "openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-devel-1:3.5.5-4.el10_2.ppc64le as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le"
+        },
+        "product_reference": "openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-1:3.5.5-4.el10_2.s390x as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x"
+        },
+        "product_reference": "openssl-1:3.5.5-4.el10_2.s390x",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-devel-1:3.5.5-4.el10_2.aarch64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64"
+        },
+        "product_reference": "openssl-devel-1:3.5.5-4.el10_2.aarch64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-1:3.5.5-4.el10_2.x86_64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64"
+        },
+        "product_reference": "openssl-1:3.5.5-4.el10_2.x86_64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-devel-1:3.5.5-4.el10_2.x86_64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64"
+        },
+        "product_reference": "openssl-devel-1:3.5.5-4.el10_2.x86_64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-debugsource-1:3.5.5-4.el10_2.aarch64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64"
+        },
+        "product_reference": "openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-libs-1:3.5.5-4.el10_2.x86_64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64"
+        },
+        "product_reference": "openssl-libs-1:3.5.5-4.el10_2.x86_64",
+        "relates_to_product_reference": "rlc-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "openssl-libs-1:3.5.5-4.el10_2.aarch64 as a component of Rocky Linux 10.2 from CIQ",
+          "product_id": "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        },
+        "product_reference": "openssl-libs-1:3.5.5-4.el10_2.aarch64",
+        "relates_to_product_reference": "rlc-10.2"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-34180",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-34180",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.0,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-34181",
+      "cwe": {
+        "id": "CWE-347",
+        "name": "Improper Verification of Cryptographic Signature"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-34181",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-34182",
+      "cwe": {
+        "id": "CWE-130",
+        "name": "Improper Handling of Length Parameter Inconsistency"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-34182",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-34183",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-34183",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42764",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-42764",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42766",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-42766",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42767",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-42767",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42768",
+      "cwe": {
+        "id": "CWE-205",
+        "name": "Observable Behavioral Discrepancy"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-42768",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42769",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-42769",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42770",
+      "cwe": {
+        "id": "CWE-354",
+        "name": "Improper Validation of Integrity Check Value"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-42770",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-45445",
+      "cwe": {
+        "id": "CWE-1204",
+        "name": "Generation of Weak Initialization Vector (IV)"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-45445",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.1,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-45446",
+      "cwe": {
+        "id": "CWE-347",
+        "name": "Improper Verification of Cryptographic Signature"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-45446",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-45447",
+      "cwe": {
+        "id": "CWE-825",
+        "name": "Expired Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-45447",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-7383",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-7383",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-9076",
+      "cwe": {
+        "id": "CWE-131",
+        "name": "Incorrect Calculation of Buffer Size"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-9076",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+          "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to openssl-1:3.5.5-4.el10_2.aarch64, openssl-1:3.5.5-4.el10_2.ppc64le, openssl-1:3.5.5-4.el10_2.s390x and 13 more packages",
+          "product_ids": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.src",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-perl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-debuginfo-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.ppc64le",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.s390x",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-devel-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-debugsource-1:3.5.5-4.el10_2.aarch64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.x86_64",
+            "rlc-10.2:openssl-libs-1:3.5.5-4.el10_2.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}
