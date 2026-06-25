@@ -5,6 +5,13 @@
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
     "notes": [
       {
         "category": "summary",
@@ -15,6 +22,11 @@
         "category": "description",
         "text": "This advisory aggregates security fixes for the nginx SRPM in CIQ LTS for Rocky Linux 9.6. It addresses 2 CVEs: CVE-2026-42945, CVE-2026-9256.",
         "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
       }
     ],
     "publisher": {
@@ -47,9 +59,9 @@
     ],
     "title": "nginx security update for CIQ LTS for Rocky Linux 9.6",
     "tracking": {
-      "current_release_date": "2026-06-13T07:03:30.089138+00:00",
+      "current_release_date": "2026-06-25T07:02:39.830991+00:00",
       "generator": {
-        "date": "2026-06-13T07:03:30.089138+00:00",
+        "date": "2026-06-25T07:02:39.830991+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "1.0.0"
@@ -62,10 +74,15 @@
           "date": "2026-06-13T07:03:30.089138+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 2 CVEs fixed"
+        },
+        {
+          "date": "2026-06-25T07:02:39.843196+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -1126,8 +1143,16 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
             "baseScore": 8.1,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
@@ -1189,6 +1214,10 @@
     },
     {
       "cve": "CVE-2026-9256",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
       "notes": [
         {
           "category": "description",
@@ -1309,6 +1338,77 @@
             "lts-9.6:nginx-mod-devel-2:1.20.1-22.1.el9_6_ciq.3.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:nginx-mod-mail-debuginfo-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-stream-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-http-perl-debuginfo-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-mail-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-debuginfo-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-http-xslt-filter-debuginfo-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-http-image-filter-debuginfo-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-http-perl-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-http-xslt-filter-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-http-image-filter-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-debugsource-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-devel-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-filesystem-2:1.20.1-22.1.el9_6_ciq.3.noarch",
+            "lts-9.6:nginx-all-modules-2:1.20.1-22.1.el9_6_ciq.3.noarch",
+            "lts-9.6:nginx-mod-http-xslt-filter-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-mod-http-perl-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-0:1.20.1-22.1.el9_6_ciq.3.src",
+            "lts-9.6:nginx-core-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-stream-debuginfo-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-core-debuginfo-0:1.20.1-22.1.el9_6_ciq.3.i686",
+            "lts-9.6:nginx-mod-http-image-filter-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-mod-stream-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-mod-http-image-filter-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-mod-http-perl-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-mod-mail-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-mod-http-xslt-filter-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-mod-mail-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-mod-stream-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-core-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-core-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-debugsource-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-mod-devel-2:1.20.1-22.1.el9_6_ciq.3.aarch64",
+            "lts-9.6:nginx-mod-http-image-filter-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-mod-http-xslt-filter-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-mod-http-perl-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-mod-http-image-filter-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-mod-mail-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-mod-stream-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-mod-http-xslt-filter-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-mod-http-perl-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-mod-mail-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-mod-stream-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-core-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-core-debuginfo-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-debugsource-2:1.20.1-22.1.el9_6_ciq.3.x86_64",
+            "lts-9.6:nginx-mod-devel-2:1.20.1-22.1.el9_6_ciq.3.x86_64"
+          ]
         }
       ]
     }
