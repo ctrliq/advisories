@@ -5,6 +5,13 @@
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
     "notes": [
       {
         "category": "summary",
@@ -15,14 +22,18 @@
         "category": "description",
         "text": "This advisory aggregates security fixes for the samba SRPM in CIQ LTS for Rocky Linux 9.2. It addresses 1 CVE: CVE-2023-34966.",
         "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
       }
     ],
     "publisher": {
       "category": "vendor",
-      "contact_details": "https://ciq.com/security-contact",
       "issuing_authority": "Ctrl IQ, Inc Security Team",
       "name": "Ctrl IQ, Inc",
-      "namespace": "https://ciq.com/csaf"
+      "namespace": "https://www.ciq.com"
     },
     "references": [
       {
@@ -43,12 +54,12 @@
     ],
     "title": "samba security update (CVE-2023-34966)",
     "tracking": {
-      "current_release_date": "2026-03-19T20:34:31.337779+00:00",
+      "current_release_date": "2026-06-26T07:02:27.776274+00:00",
       "generator": {
-        "date": "2026-03-19T20:34:31.337779+00:00",
+        "date": "2026-06-26T07:02:27.776274+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "1.0.0"
+          "version": "1.0.1"
         }
       },
       "id": "CIQSA-LTS-9-2-2026:0145",
@@ -58,10 +69,15 @@
           "date": "2026-03-19T20:34:31.337779+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 1 CVE fixed"
+        },
+        {
+          "date": "2026-06-26T07:02:27.955789+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -1809,6 +1825,10 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-34966",
+      "cwe": {
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+      },
       "notes": [
         {
           "category": "description",
@@ -2030,8 +2050,16 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
             "baseScore": 7.5,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
