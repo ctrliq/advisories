@@ -5,6 +5,13 @@
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
     "notes": [
       {
         "category": "summary",
@@ -15,14 +22,18 @@
         "category": "description",
         "text": "This advisory aggregates security fixes for the emacs SRPM in CIQ LTS for Rocky Linux 8.6. It addresses 7 CVEs: CVE-2022-45939, CVE-2022-48337, CVE-2022-48339, CVE-2023-2491, CVE-2024-30203, and 2 more.",
         "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
       }
     ],
     "publisher": {
       "category": "vendor",
-      "contact_details": "https://ciq.com/security-contact",
       "issuing_authority": "Ctrl IQ, Inc Security Team",
       "name": "Ctrl IQ, Inc",
-      "namespace": "https://ciq.com/csaf"
+      "namespace": "https://www.ciq.com"
     },
     "references": [
       {
@@ -73,12 +84,12 @@
     ],
     "title": "emacs security update for CIQ LTS for Rocky Linux 8.6",
     "tracking": {
-      "current_release_date": "2026-03-19T20:34:13.837343+00:00",
+      "current_release_date": "2026-06-26T07:02:26.811094+00:00",
       "generator": {
-        "date": "2026-03-19T20:34:13.837343+00:00",
+        "date": "2026-06-26T07:02:26.811094+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "1.0.0"
+          "version": "1.0.1"
         }
       },
       "id": "CIQSA-LTS-8-6-2026:0430",
@@ -88,10 +99,15 @@
           "date": "2026-03-19T20:34:13.837343+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 7 CVEs fixed"
+        },
+        {
+          "date": "2026-06-26T07:02:27.040342+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -666,6 +682,10 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-45939",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
       "notes": [
         {
           "category": "description",
@@ -749,8 +769,16 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
             "baseScore": 7.8,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
@@ -791,6 +819,10 @@
     },
     {
       "cve": "CVE-2022-48337",
+      "cwe": {
+        "id": "CWE-77",
+        "name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      },
       "notes": [
         {
           "category": "description",
@@ -874,8 +906,16 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
             "baseScore": 7.3,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
@@ -916,6 +956,10 @@
     },
     {
       "cve": "CVE-2022-48339",
+      "cwe": {
+        "id": "CWE-77",
+        "name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      },
       "notes": [
         {
           "category": "description",
@@ -999,8 +1043,16 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
             "baseScore": 7.8,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
@@ -1041,6 +1093,10 @@
     },
     {
       "cve": "CVE-2023-2491",
+      "cwe": {
+        "id": "CWE-77",
+        "name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      },
       "notes": [
         {
           "category": "description",
@@ -1124,8 +1180,16 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
             "baseScore": 7.8,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
@@ -1253,8 +1317,16 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
             "baseScore": 5.5,
             "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
@@ -1382,8 +1454,16 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
             "baseScore": 7.8,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
@@ -1511,8 +1591,16 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
             "baseScore": 7.8,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
