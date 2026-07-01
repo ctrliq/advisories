@@ -1,0 +1,3574 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Critical"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for golang",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the golang SRPM in CIQ LTS for Rocky Linux 9.6. It addresses 37 CVEs: CVE-2025-61729, CVE-2025-58183, CVE-2021-3115, CVE-2025-61726, CVE-2025-61728, and 32 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61729",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61729.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-58183",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-58183.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3115",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3115.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61726",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61726.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61728",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61728.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61732",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61732.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-68121",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-68121.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-25679",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-25679.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61731",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61731.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-27137",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-27137.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-32282",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-32282.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-32283",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-32283.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-27140",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-27140.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-27143",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-27143.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-27144",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-27144.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-32280",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-32280.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-32281",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-32281.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-33810",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-33810.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-39323",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-39323.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-22870",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-22870.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-22873",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-22873.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-47910",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-47910.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-47912",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-47912.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-58185",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-58185.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-58188",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-58188.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-58189",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-58189.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61723",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61723.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61724",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61724.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61725",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61725.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61727",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61727.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61730",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61730.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-68119",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-68119.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-27138",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-27138.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-27139",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-27139.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-27142",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-27142.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-32288",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-32288.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-32289",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-32289.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-lts-9-6-2026-0046.json"
+      }
+    ],
+    "title": "golang security update for CIQ LTS for Rocky Linux 9.6",
+    "tracking": {
+      "current_release_date": "2026-07-01T07:02:13.798411+00:00",
+      "generator": {
+        "date": "2026-07-01T07:02:13.798411+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "1.0.1"
+        }
+      },
+      "id": "CIQSA-LTS-9-6-2026:0046",
+      "initial_release_date": "2026-07-01T07:02:13.798411+00:00",
+      "revision_history": [
+        {
+          "date": "2026-07-01T07:02:13.798411+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 37 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS for Rocky Linux 9.6",
+                "product": {
+                  "name": "CIQ LTS for Rocky Linux 9.6",
+                  "product_id": "lts-9.6",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq_lts:9.6:*:*:*:*:*:*:*"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "golang-0:1.25.9-1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "golang-0:1.25.9-1.el9_6_ciq.aarch64",
+                  "product_id": "golang-0:1.25.9-1.el9_6_ciq.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+                  "product_id": "golang-bin-0:1.25.9-1.el9_6_ciq.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+                  "product_id": "golang-race-0:1.25.9-1.el9_6_ciq.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+                  "product_id": "go-toolset-0:1.25.9-1.el9_6_ciq.aarch64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+                "product": {
+                  "name": "golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+                  "product_id": "golang-tests-0:1.25.9-1.el9_6_ciq.noarch"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+                "product": {
+                  "name": "golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+                  "product_id": "golang-docs-0:1.25.9-1.el9_6_ciq.noarch"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+                "product": {
+                  "name": "golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+                  "product_id": "golang-misc-0:1.25.9-1.el9_6_ciq.noarch"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "golang-src-0:1.25.9-1.el9_6_ciq.noarch",
+                "product": {
+                  "name": "golang-src-0:1.25.9-1.el9_6_ciq.noarch",
+                  "product_id": "golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+                  "product_id": "go-toolset-0:1.25.9-1.el9_6_ciq.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "golang-0:1.25.9-1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "golang-0:1.25.9-1.el9_6_ciq.x86_64",
+                  "product_id": "golang-0:1.25.9-1.el9_6_ciq.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+                  "product_id": "golang-bin-0:1.25.9-1.el9_6_ciq.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+                  "product_id": "golang-race-0:1.25.9-1.el9_6_ciq.x86_64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "golang-0:1.25.9-1.el9_6_ciq.aarch64 as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "golang-0:1.25.9-1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "golang-bin-0:1.25.9-1.el9_6_ciq.aarch64 as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "golang-race-0:1.25.9-1.el9_6_ciq.aarch64 as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "go-toolset-0:1.25.9-1.el9_6_ciq.aarch64 as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "golang-tests-0:1.25.9-1.el9_6_ciq.noarch as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch"
+        },
+        "product_reference": "golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "go-toolset-0:1.25.9-1.el9_6_ciq.x86_64 as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "golang-0:1.25.9-1.el9_6_ciq.x86_64 as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "golang-0:1.25.9-1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "golang-bin-0:1.25.9-1.el9_6_ciq.x86_64 as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "golang-docs-0:1.25.9-1.el9_6_ciq.noarch as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch"
+        },
+        "product_reference": "golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "golang-misc-0:1.25.9-1.el9_6_ciq.noarch as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch"
+        },
+        "product_reference": "golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "golang-race-0:1.25.9-1.el9_6_ciq.x86_64 as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "golang-src-0:1.25.9-1.el9_6_ciq.noarch as a component of CIQ LTS for Rocky Linux 9.6",
+          "product_id": "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        },
+        "product_reference": "golang-src-0:1.25.9-1.el9_6_ciq.noarch",
+        "relates_to_product_reference": "lts-9.6"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-61729",
+      "cwe": {
+        "id": "CWE-1050",
+        "name": "Excessive Platform Resource Consumption within a Loop"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61729",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-58183",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-58183",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3115",
+      "cwe": {
+        "id": "CWE-94",
+        "name": "Improper Control of Generation of Code ('Code Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3115",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-61726",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61726",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-61728",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61728",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-61732",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61732",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-68121",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-68121",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-25679",
+      "cwe": {
+        "id": "CWE-1286",
+        "name": "Improper Validation of Syntactic Correctness of Input"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-25679",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-61731",
+      "cwe": {
+        "id": "CWE-88",
+        "name": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61731",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27137",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-27137",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-32282",
+      "cwe": {
+        "id": "CWE-367",
+        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-32282",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-32283",
+      "cwe": {
+        "id": "CWE-764",
+        "name": "Multiple Locks of a Critical Resource"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-32283",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27140",
+      "cwe": {
+        "id": "CWE-641",
+        "name": "Improper Restriction of Names for Files and Other Resources"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-27140",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.0,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27143",
+      "cwe": {
+        "id": "CWE-733",
+        "name": "Compiler Optimization Removal or Modification of Security-critical Code"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-27143",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27144",
+      "cwe": {
+        "id": "CWE-440",
+        "name": "Expected Behavior Violation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-27144",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-32280",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-32280",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-32281",
+      "cwe": {
+        "id": "CWE-1050",
+        "name": "Excessive Platform Resource Consumption within a Loop"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-32281",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-33810",
+      "cwe": {
+        "id": "CWE-1289",
+        "name": "Improper Validation of Unsafe Equivalence in Input"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-33810",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-39323",
+      "cwe": {
+        "id": "CWE-94",
+        "name": "Improper Control of Generation of Code ('Code Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-39323",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-22870",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-22870",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 4.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-22873",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-22873",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-47910",
+      "cwe": {
+        "id": "CWE-440",
+        "name": "Expected Behavior Violation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-47910",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-47912",
+      "cwe": {
+        "id": "CWE-1286",
+        "name": "Improper Validation of Syntactic Correctness of Input"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-47912",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-58185",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-58185",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-58188",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-58188",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-58189",
+      "cwe": {
+        "id": "CWE-117",
+        "name": "Improper Output Neutralization for Logs"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-58189",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-61723",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61723",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-61724",
+      "cwe": {
+        "id": "CWE-1046",
+        "name": "Creation of Immutable Text Using String Concatenation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61724",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-61725",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61725",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-61727",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61727",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-61730",
+      "cwe": {
+        "id": "CWE-325",
+        "name": "Missing Cryptographic Step"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61730",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-68119",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-68119",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27138",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-27138",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27139",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-27139",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
+            "baseScore": 2.5,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27142",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-27142",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-32288",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-32288",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-32289",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-32289",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+          "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+          "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+          "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.aarch64",
+            "lts-9.6:golang-tests-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:go-toolset-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-bin-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-docs-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-misc-0:1.25.9-1.el9_6_ciq.noarch",
+            "lts-9.6:golang-race-0:1.25.9-1.el9_6_ciq.x86_64",
+            "lts-9.6:golang-src-0:1.25.9-1.el9_6_ciq.noarch"
+          ]
+        }
+      ]
+    }
+  ]
+}
