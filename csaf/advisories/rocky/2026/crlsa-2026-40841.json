@@ -15,7 +15,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "An update is available for module.maven, module.apache-commons-lang3, apache-commons-io, slf4j, apache-commons-codec, jsr-305, module.cdi-api, plexus-containers, guava, httpcomponents-client, cdi-api, module.sisu, module.plexus-classworlds, plexus-interpolation, module.httpcomponents-core, module.apache-commons-io, atinject, google-guice, module.plexus-cipher, plexus-sec-dispatcher, module.guava, module.jsr-305, module.maven-shared-utils, jakarta-annotations, module.plexus-interpolation, plexus-classworlds, maven-wagon, apache-commons-cli, apache-commons-lang3, module.jansi, module.apache-commons-codec, module.plexus-containers, jansi, maven, module.plexus-utils, sisu, module.atinject, maven-shared-utils, module.google-guice, module.maven-resolver, module.apache-commons-cli, module.slf4j, httpcomponents-core, module.httpcomponents-client, maven-resolver, module.maven-wagon, plexus-cipher, plexus-utils, module.plexus-sec-dispatcher, module.jakarta-annotations.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "text": "An update is available for module.slf4j, module.cdi-api, atinject, maven-resolver, module.maven, module.maven-wagon, slf4j, module.apache-commons-cli, plexus-utils, module.sisu, module.plexus-classworlds, apache-commons-io, module.plexus-sec-dispatcher, module.apache-commons-lang3, module.plexus-utils, jsr-305, maven, module.maven-resolver, plexus-cipher, apache-commons-cli, module.httpcomponents-client, module.jansi, httpcomponents-client, google-guice, plexus-interpolation, apache-commons-codec, httpcomponents-core, maven-shared-utils, module.guava, apache-commons-lang3, module.apache-commons-io, module.httpcomponents-core, module.google-guice, module.maven-shared-utils, module.jakarta-annotations, plexus-classworlds, jansi, plexus-containers, jakarta-annotations, sisu, plexus-sec-dispatcher, module.plexus-interpolation, cdi-api, module.plexus-cipher, guava, module.plexus-containers, module.jsr-305, module.atinject, module.apache-commons-codec, maven-wagon.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -36,6 +36,11 @@
       "namespace": "https://www.ciq.com"
     },
     "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2451409",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2451409"
+      },
       {
         "category": "external",
         "summary": "Bug fix 2451409",
@@ -64,9 +69,9 @@
     ],
     "title": "Important: maven:3.8 security update",
     "tracking": {
-      "current_release_date": "2026-07-17T07:01:49.976372+00:00",
+      "current_release_date": "2026-07-23T07:01:42.312616+00:00",
       "generator": {
-        "date": "2026-07-17T07:01:49.976372+00:00",
+        "date": "2026-07-23T07:01:42.312616+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -79,10 +84,15 @@
           "date": "2026-07-16T12:03:21.348182+00:00",
           "number": "1.0.0",
           "summary": "Initial release"
+        },
+        {
+          "date": "2026-07-23T07:01:42.326456+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -377,6 +387,14 @@
                   "name": "slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.noarch",
                   "product_id": "slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.noarch"
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.noarch",
+                "product": {
+                  "name": "plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.noarch",
+                  "product_id": "plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.noarch"
+                }
               }
             ],
             "category": "architecture",
@@ -582,6 +600,14 @@
                 "product": {
                   "name": "slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.src",
                   "product_id": "slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.src"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.src",
+                "product": {
+                  "name": "plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.src",
+                  "product_id": "plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.src"
                 }
               }
             ],
@@ -1172,6 +1198,24 @@
         },
         "product_reference": "slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.src",
         "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.noarch as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.noarch"
+        },
+        "product_reference": "plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.noarch",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.src as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.src"
+        },
+        "product_reference": "plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.src",
+        "relates_to_product_reference": "rlc-8.10"
       }
     ]
   },
@@ -1251,13 +1295,15 @@
           "rlc-8.10:sisu-1:0.3.5-3.module+el8.10.0+1811+d28a527b.noarch",
           "rlc-8.10:sisu-1:0.3.5-3.module+el8.10.0+1811+d28a527b.src",
           "rlc-8.10:slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.noarch",
-          "rlc-8.10:slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.src"
+          "rlc-8.10:slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.src",
+          "rlc-8.10:plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.noarch",
+          "rlc-8.10:plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.src"
         ]
       },
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Update to apache-commons-cli-0:1.5.0-5.module+el8.10.0+1811+d28a527b.noarch, apache-commons-codec-0:1.15-8.module+el8.10.0+1811+d28a527b.noarch, apache-commons-io-1:2.11.0-3.module+el8.10.0+1811+d28a527b.noarch and 29 more packages",
+          "details": "Update to apache-commons-cli-0:1.5.0-5.module+el8.10.0+1811+d28a527b.noarch, apache-commons-codec-0:1.15-8.module+el8.10.0+1811+d28a527b.noarch, apache-commons-io-1:2.11.0-3.module+el8.10.0+1811+d28a527b.noarch and 30 more packages",
           "product_ids": [
             "rlc-8.10:apache-commons-cli-0:1.5.0-5.module+el8.10.0+1811+d28a527b.noarch",
             "rlc-8.10:apache-commons-cli-0:1.5.0-5.module+el8.10.0+1811+d28a527b.src",
@@ -1319,7 +1365,9 @@
             "rlc-8.10:sisu-1:0.3.5-3.module+el8.10.0+1811+d28a527b.noarch",
             "rlc-8.10:sisu-1:0.3.5-3.module+el8.10.0+1811+d28a527b.src",
             "rlc-8.10:slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.noarch",
-            "rlc-8.10:slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.src"
+            "rlc-8.10:slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.src",
+            "rlc-8.10:plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.noarch",
+            "rlc-8.10:plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.src"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -1393,7 +1441,9 @@
             "rlc-8.10:sisu-1:0.3.5-3.module+el8.10.0+1811+d28a527b.noarch",
             "rlc-8.10:sisu-1:0.3.5-3.module+el8.10.0+1811+d28a527b.src",
             "rlc-8.10:slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.noarch",
-            "rlc-8.10:slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.src"
+            "rlc-8.10:slf4j-0:1.7.32-5.module+el8.10.0+1811+d28a527b.src",
+            "rlc-8.10:plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.noarch",
+            "rlc-8.10:plexus-utils-0:3.3.0-11.module+el8.10.0+40255+2a5f26bf.1.src"
           ]
         }
       ]
