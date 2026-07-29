@@ -15,7 +15,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "An update is available for module.slf4j, velocity, xml-commons-resolver, javassist, relaxngDatatype, module.glassfish-jaxb-api, slf4j, module.apache-commons-lang, xsom, module.bea-stax, module.apache-commons-collections, module.xalan-j2, glassfish-jaxb, xerces-j2, module.glassfish-fastinfoset, module.pki-servlet-engine, glassfish-jaxb-api, xalan-j2, pki-servlet-engine, module.xml-commons-apis, apache-commons-collections, xml-commons-apis, module.stax-ex, module.xml-commons-resolver, module.jakarta-commons-httpclient, stax-ex, xmlstreambuffer, module.velocity, module.relaxngDatatype, module.xerces-j2, glassfish-fastinfoset, bea-stax, module.javassist, module.xmlstreambuffer, jakarta-commons-httpclient, module.xsom, module.glassfish-jaxb, module.apache-commons-net, apache-commons-lang, apache-commons-net.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "text": "An update is available for module.slf4j, velocity, xml-commons-resolver, jackson-annotations, javassist, relaxngDatatype, module.glassfish-jaxb-api, slf4j, module.apache-commons-lang, module.jackson-jaxrs-providers, xsom, module.bea-stax, module.apache-commons-collections, jackson-modules-base, glassfish-jaxb, module.xalan-j2, module.glassfish-fastinfoset, xerces-j2, module.pki-servlet-engine, glassfish-jaxb-api, xalan-j2, jackson-jaxrs-providers, pki-servlet-engine, module.jackson-core, jackson-databind, module.xml-commons-apis, apache-commons-collections, xml-commons-apis, module.stax-ex, module.xml-commons-resolver, module.jakarta-commons-httpclient, stax-ex, xmlstreambuffer, module.velocity, module.relaxngDatatype, module.xerces-j2, glassfish-fastinfoset, bea-stax, module.javassist, module.xmlstreambuffer, jakarta-commons-httpclient, jackson-core, module.xsom, module.glassfish-jaxb, module.jackson-annotations, module.apache-commons-net, apache-commons-lang, module.jackson-modules-base, apache-commons-net, module.jackson-databind.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
         "title": "Topic"
       },
       {
@@ -36,6 +36,11 @@
       "namespace": "https://www.ciq.com"
     },
     "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2492010",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2492010"
+      },
       {
         "category": "external",
         "summary": "Bug fix 2492010",
@@ -64,9 +69,9 @@
     ],
     "title": "Important: pki-deps:10.6 security update",
     "tracking": {
-      "current_release_date": "2026-07-23T07:01:33.667580+00:00",
+      "current_release_date": "2026-07-29T07:01:21.266346+00:00",
       "generator": {
-        "date": "2026-07-23T07:01:33.667580+00:00",
+        "date": "2026-07-29T07:01:21.266346+00:00",
         "engine": {
           "name": "CIQSA Conversion Tool",
           "version": "1.0.0"
@@ -79,10 +84,15 @@
           "date": "2026-07-22T12:01:08.158663+00:00",
           "number": "1.0.0",
           "summary": "Initial release"
+        },
+        {
+          "date": "2026-07-29T07:01:21.426133+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -619,6 +629,54 @@
                   "name": "xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.noarch",
                   "product_id": "xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.noarch"
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.noarch",
+                "product": {
+                  "name": "jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.noarch",
+                  "product_id": "jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.noarch"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+                "product": {
+                  "name": "jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+                  "product_id": "jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+                "product": {
+                  "name": "jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+                  "product_id": "jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-jaxrs-json-provider-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+                "product": {
+                  "name": "jackson-jaxrs-json-provider-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+                  "product_id": "jackson-jaxrs-json-provider-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+                "product": {
+                  "name": "jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+                  "product_id": "jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-module-jaxb-annotations-0:2.21.4-2.module+el8.10.0+40260+021059e6.noarch",
+                "product": {
+                  "name": "jackson-module-jaxb-annotations-0:2.21.4-2.module+el8.10.0+40260+021059e6.noarch",
+                  "product_id": "jackson-module-jaxb-annotations-0:2.21.4-2.module+el8.10.0+40260+021059e6.noarch"
+                }
               }
             ],
             "category": "architecture",
@@ -1048,6 +1106,46 @@
                 "product": {
                   "name": "xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.src",
                   "product_id": "xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.src"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.src",
+                "product": {
+                  "name": "jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.src",
+                  "product_id": "jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.src"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+                "product": {
+                  "name": "jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+                  "product_id": "jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.src"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+                "product": {
+                  "name": "jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+                  "product_id": "jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.src"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+                "product": {
+                  "name": "jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+                  "product_id": "jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.src"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jackson-modules-base-0:2.21.4-2.module+el8.10.0+40260+021059e6.src",
+                "product": {
+                  "name": "jackson-modules-base-0:2.21.4-2.module+el8.10.0+40260+021059e6.src",
+                  "product_id": "jackson-modules-base-0:2.21.4-2.module+el8.10.0+40260+021059e6.src"
                 }
               }
             ],
@@ -2112,6 +2210,105 @@
         },
         "product_reference": "xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.src",
         "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.noarch as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.noarch"
+        },
+        "product_reference": "jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.noarch",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.src as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.src"
+        },
+        "product_reference": "jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.src",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch"
+        },
+        "product_reference": "jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.src as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.src"
+        },
+        "product_reference": "jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch"
+        },
+        "product_reference": "jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.src as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.src"
+        },
+        "product_reference": "jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-jaxrs-json-provider-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-jaxrs-json-provider-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch"
+        },
+        "product_reference": "jackson-jaxrs-json-provider-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch"
+        },
+        "product_reference": "jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.src as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.src"
+        },
+        "product_reference": "jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-module-jaxb-annotations-0:2.21.4-2.module+el8.10.0+40260+021059e6.noarch as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-module-jaxb-annotations-0:2.21.4-2.module+el8.10.0+40260+021059e6.noarch"
+        },
+        "product_reference": "jackson-module-jaxb-annotations-0:2.21.4-2.module+el8.10.0+40260+021059e6.noarch",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jackson-modules-base-0:2.21.4-2.module+el8.10.0+40260+021059e6.src as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:jackson-modules-base-0:2.21.4-2.module+el8.10.0+40260+021059e6.src"
+        },
+        "product_reference": "jackson-modules-base-0:2.21.4-2.module+el8.10.0+40260+021059e6.src",
+        "relates_to_product_reference": "rlc-8.10"
       }
     ]
   },
@@ -2247,13 +2444,24 @@
           "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+1763+c7c02164.noarch",
           "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.noarch",
           "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+1763+c7c02164.src",
-          "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.src"
+          "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.src",
+          "rlc-8.10:jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.noarch",
+          "rlc-8.10:jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.src",
+          "rlc-8.10:jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+          "rlc-8.10:jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+          "rlc-8.10:jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+          "rlc-8.10:jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+          "rlc-8.10:jackson-jaxrs-json-provider-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+          "rlc-8.10:jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+          "rlc-8.10:jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+          "rlc-8.10:jackson-module-jaxb-annotations-0:2.21.4-2.module+el8.10.0+40260+021059e6.noarch",
+          "rlc-8.10:jackson-modules-base-0:2.21.4-2.module+el8.10.0+40260+021059e6.src"
         ]
       },
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Update to apache-commons-collections-0:3.2.2-10.module+el8.10.0+1763+c7c02164.noarch, apache-commons-collections-0:3.2.2-10.module+el8.10.0+2052+1b0fb438.noarch, apache-commons-collections-0:3.2.2-10.module+el8.3.0+74+855e3f5d.noarch and 61 more packages",
+          "details": "Update to apache-commons-collections-0:3.2.2-10.module+el8.10.0+1763+c7c02164.noarch, apache-commons-collections-0:3.2.2-10.module+el8.10.0+2052+1b0fb438.noarch, apache-commons-collections-0:3.2.2-10.module+el8.3.0+74+855e3f5d.noarch and 67 more packages",
           "product_ids": [
             "rlc-8.10:apache-commons-collections-0:3.2.2-10.module+el8.10.0+2052+1b0fb438.noarch",
             "rlc-8.10:apache-commons-collections-0:3.2.2-10.module+el8.10.0+1763+c7c02164.noarch",
@@ -2371,7 +2579,18 @@
             "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+1763+c7c02164.noarch",
             "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.noarch",
             "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+1763+c7c02164.src",
-            "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.src"
+            "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.src",
+            "rlc-8.10:jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.src",
+            "rlc-8.10:jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+            "rlc-8.10:jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+            "rlc-8.10:jackson-jaxrs-json-provider-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+            "rlc-8.10:jackson-module-jaxb-annotations-0:2.21.4-2.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-modules-base-0:2.21.4-2.module+el8.10.0+40260+021059e6.src"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -2501,7 +2720,18 @@
             "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+1763+c7c02164.noarch",
             "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.noarch",
             "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+1763+c7c02164.src",
-            "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.src"
+            "rlc-8.10:xsom-0:0-19.20110809svn.module+el8.10.0+2052+1b0fb438.src",
+            "rlc-8.10:jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-annotations-0:2.21-1.module+el8.10.0+40260+021059e6.src",
+            "rlc-8.10:jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-core-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+            "rlc-8.10:jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-databind-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+            "rlc-8.10:jackson-jaxrs-json-provider-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-jaxrs-providers-0:2.21.4-1.module+el8.10.0+40260+021059e6.src",
+            "rlc-8.10:jackson-module-jaxb-annotations-0:2.21.4-2.module+el8.10.0+40260+021059e6.noarch",
+            "rlc-8.10:jackson-modules-base-0:2.21.4-2.module+el8.10.0+40260+021059e6.src"
           ]
         }
       ]
