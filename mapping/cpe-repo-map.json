@@ -1,0 +1,116 @@
+{
+  "warning": "SAMPLE DATA \u2014 NOT AUTHORITATIVE. Part of a hand-crafted sample branch for Tenable plugin modelling. The structure is the point; the data is not guaranteed to be correct, real or accurate and must not be used to assess the security posture of any system. The system CPEs and repository sets here were measured on booted hosts, but only three products are represented and advisories may reference channels belonging to products absent from this map.",
+  "version": "1.0",
+  "generated_at": "2026-07-31T02:56:32Z",
+  "description": "Maps a CIQ host system CPE (verbatim CPE_NAME from /etc/os-release) to the channel-level CPE 2.3 identifiers of the repositories that product enables by default.",
+  "key_matching": "Keys are the verbatim CPE_NAME string from the host and are matched by exact string equality. They carry 6 colon-fields and are therefore NOT valid CPE 2.3. This is interim: the target state is well-formed CPE 2.3 keys matched with NISTIR 7696 superset semantics, and the key VALUE will change too, not only its length. Treat a key as an opaque identifier versioned with this file.",
+  "value_matching": "Values are well-formed 13-field CPE 2.3 and are intended for CPE matching semantics. target_hw is always \"*\": a channel spans all architectures, and applicability is decided by the package NEVRA's own arch (noarch applies to every host; src is not installable).",
+  "scoping": "Values list only the repositories a product enables BY DEFAULT. A host that manually enables another defined channel (crb, security, a -debug repo, ...) needs that channel CPE added, or applicable errata will be missed. See coverage.defined_but_disabled_channels.",
+  "mappings": {
+    "cpe:2.3:o:ciq:rocky_linux_from_ciq_lts:9.6": [
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:baseos",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:appstream",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:extras",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:rlc_lts",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:rlc_lts_supplemental"
+    ],
+    "cpe:2.3:o:ciq:rocky_linux_from_ciq_plus:9.8": [
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:baseos",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:appstream",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:extras",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:rlc_core",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:rlc_supplemental"
+    ],
+    "cpe:2.3:o:ciq:rocky_linux_from_ciq_pro:9.8": [
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:baseos",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:appstream",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:extras",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:rlc_core",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:rlc_supplemental",
+      "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.8:*:*:*:*:*:*:rlc_pro"
+    ]
+  },
+  "coverage": {
+    "lts-9.6": {
+      "label": "Rocky Linux from CIQ - LTS 9.6",
+      "system_cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq_lts:9.6",
+      "enabled_channels": 5,
+      "channels_with_sample_advisory": [
+        "rlc_lts-9.6"
+      ],
+      "channels_without_sample_advisory": [
+        "appstream-9.6",
+        "baseos-9.6",
+        "extras-9.6",
+        "rlc_lts_supplemental-9.6"
+      ],
+      "defined_but_disabled_channels": [
+        "crb",
+        "devel",
+        "plus",
+        "highavailability",
+        "nfv",
+        "rt",
+        "resilientstorage",
+        "sap",
+        "saphana",
+        "and each channel's -debug"
+      ]
+    },
+    "rlc-plus-9.8": {
+      "label": "Rocky Linux from CIQ Plus 9.8",
+      "system_cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq_plus:9.8",
+      "enabled_channels": 5,
+      "channels_with_sample_advisory": [
+        "appstream-9.8",
+        "rlc_core-9.8"
+      ],
+      "channels_without_sample_advisory": [
+        "baseos-9.8",
+        "extras-9.8",
+        "rlc_supplemental-9.8"
+      ],
+      "defined_but_disabled_channels": [
+        "crb",
+        "security",
+        "devel",
+        "plus",
+        "highavailability",
+        "nfv",
+        "rt",
+        "resilientstorage",
+        "sap",
+        "saphana",
+        "and each channel's -debug"
+      ]
+    },
+    "rlc-pro-9.8": {
+      "label": "Rocky Linux from CIQ Pro 9.8",
+      "system_cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq_pro:9.8",
+      "enabled_channels": 6,
+      "channels_with_sample_advisory": [
+        "appstream-9.8",
+        "rlc_core-9.8"
+      ],
+      "channels_without_sample_advisory": [
+        "baseos-9.8",
+        "extras-9.8",
+        "rlc_pro-9.8",
+        "rlc_supplemental-9.8"
+      ],
+      "defined_but_disabled_channels": [
+        "crb",
+        "security",
+        "devel",
+        "plus",
+        "highavailability",
+        "nfv",
+        "rt",
+        "resilientstorage",
+        "sap",
+        "saphana",
+        "and each channel's -debug"
+      ]
+    }
+  }
+}

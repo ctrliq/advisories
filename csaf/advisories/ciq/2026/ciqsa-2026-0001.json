@@ -1,0 +1,2529 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "general",
+        "title": "SAMPLE DATA \u2014 NOT AUTHORITATIVE",
+        "text": "SAMPLE DATA \u2014 NOT AUTHORITATIVE. This document is part of a hand-crafted sample branch produced so Tenable can begin modelling a CIQ scanning plugin. Its purpose is to demonstrate document STRUCTURE. The data is not guaranteed to be correct, real or accurate and must not be used to assess the security posture of any system. In particular, the association between a CVE and a specific build may be constructed rather than real. Package NEVRAs and repository membership were taken from live CIQ depot metadata and CVE metadata from CIQ Errata Management, but no claim is made that any given advisory reflects a real published erratum. Authoritative advisories are published at https://github.com/ctrliq/advisories."
+      },
+      {
+        "category": "summary",
+        "text": "CIQ security update for curl",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the curl source package. It addresses 23 CVEs: CVE-2023-28322, CVE-2023-46218, CVE-2024-11053, CVE-2024-2398, CVE-2024-8096, and 18 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com",
+      "issuing_authority": "Ctrl IQ, Inc Security Team"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-28322",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-28322.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-46218",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-46218.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-11053",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-11053.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-2398",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-2398.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-8096",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-8096.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-9681",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-9681.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-0167",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-0167.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-0725",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-0725.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-10966",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-10966.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-14017",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-14017.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-14524",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-14524.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-15079",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-15079.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-15224",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-15224.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-1965",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-1965.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-3783",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-3783.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-3784",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-3784.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-4873",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-4873.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-5545",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-5545.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-5773",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-5773.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-6253",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-6253.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-6276",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-6276.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-6429",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-6429.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-7168",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-7168.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026-0001.json"
+      }
+    ],
+    "title": "curl security update",
+    "tracking": {
+      "id": "CIQSA-2026:0001",
+      "status": "final",
+      "version": "1.0.0",
+      "revision_history": [
+        {
+          "date": "2026-07-31T02:56:30.912595+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 23 CVEs fixed"
+        }
+      ],
+      "initial_release_date": "2026-07-31T02:56:30.912595+00:00",
+      "current_release_date": "2026-07-31T02:56:30.912595+00:00",
+      "generator": {
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator (repo-CPE preview)",
+          "version": "2.0.0-preview.1"
+        },
+        "date": "2026-07-31T02:56:30.912595+00:00"
+      }
+    },
+    "aggregate_severity": {
+      "text": "High"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "vendor",
+        "name": "CIQ",
+        "branches": [
+          {
+            "category": "product_family",
+            "name": "CIQ Repositories",
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Rocky Linux from CIQ 9.6 (rlc_lts)",
+                "product": {
+                  "product_id": "rlc_lts-9.6",
+                  "name": "Rocky Linux from CIQ 9.6 (rlc_lts)",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:rlc_lts"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "category": "architecture",
+            "name": "aarch64",
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+                "product": {
+                  "product_id": "curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+                  "name": "curl-0:8.20.0-1.el9_6_ciq.1.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+                "product": {
+                  "product_id": "curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+                  "name": "curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+                "product": {
+                  "product_id": "libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+                  "name": "libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+                "product": {
+                  "product_id": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+                  "name": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+                "product": {
+                  "product_id": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+                  "name": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64"
+                }
+              }
+            ]
+          },
+          {
+            "category": "architecture",
+            "name": "i686",
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+                "product": {
+                  "product_id": "libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+                  "name": "libcurl-0:8.20.0-1.el9_6_ciq.1.i686"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+                "product": {
+                  "product_id": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+                  "name": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+                "product": {
+                  "product_id": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+                  "name": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686"
+                }
+              }
+            ]
+          },
+          {
+            "category": "architecture",
+            "name": "src",
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "curl-0:8.20.0-1.el9_6_ciq.1.src",
+                "product": {
+                  "product_id": "curl-0:8.20.0-1.el9_6_ciq.1.src",
+                  "name": "curl-0:8.20.0-1.el9_6_ciq.1.src"
+                }
+              }
+            ]
+          },
+          {
+            "category": "architecture",
+            "name": "x86_64",
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+                "product": {
+                  "product_id": "curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+                  "name": "curl-0:8.20.0-1.el9_6_ciq.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+                "product": {
+                  "product_id": "curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+                  "name": "curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+                "product": {
+                  "product_id": "libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+                  "name": "libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+                "product": {
+                  "product_id": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+                  "name": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+                "product": {
+                  "product_id": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+                  "name": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "product_reference": "curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "curl-0:8.20.0-1.el9_6_ciq.1.aarch64 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64"
+        }
+      },
+      {
+        "product_reference": "curl-0:8.20.0-1.el9_6_ciq.1.src",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "curl-0:8.20.0-1.el9_6_ciq.1.src as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src"
+        }
+      },
+      {
+        "product_reference": "curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "curl-0:8.20.0-1.el9_6_ciq.1.x86_64 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        }
+      },
+      {
+        "product_reference": "curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64"
+        }
+      },
+      {
+        "product_reference": "curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        }
+      },
+      {
+        "product_reference": "libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64"
+        }
+      },
+      {
+        "product_reference": "libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libcurl-0:8.20.0-1.el9_6_ciq.1.i686 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686"
+        }
+      },
+      {
+        "product_reference": "libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        }
+      },
+      {
+        "product_reference": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64"
+        }
+      },
+      {
+        "product_reference": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686"
+        }
+      },
+      {
+        "product_reference": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        }
+      },
+      {
+        "product_reference": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64"
+        }
+      },
+      {
+        "product_reference": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686"
+        }
+      },
+      {
+        "product_reference": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+        "relates_to_product_reference": "rlc_lts-9.6",
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64 as a component of Rocky Linux from CIQ 9.6 (rlc_lts)",
+          "product_id": "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        }
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-28322",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "A use-after-free flaw was found in the Curl package. This issue may lead to unintended information disclosure by the application.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-440",
+        "name": "Expected Behavior Violation"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-46218",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "A flaw was found in curl that verifies a given cookie domain against the Public Suffix List. This issue could allow a malicious HTTP server to set \"super cookies\" in curl that are passed back to more origins than what is otherwise allowed or possible.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-201",
+        "name": "Insertion of Sensitive Information Into Sent Data"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-11053",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "A flaw was found in curl. A logic error when processing credentials from the .netrc file while performing redirects allows the transfer of credentials from the original host to the followed-to host under certain circumstances, leaking the credentials to the followed-to host.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-2398",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "A flaw was found in curl. When an application configures libcurl to use HTTP/2 server push and the amount of received headers for the push surpasses the maximum allowed limit, libcurl aborts the server push. When aborting, libcurl does not free all the previously allocated headers, resulting in a memory leak.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-772",
+        "name": "Missing Release of Resource after Effective Lifetime"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-8096",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "When curl is told to use the Certificate Status Request TLS extension, often referred to as OCSP stapling, to verify that the server certificate is valid, it might fail to detect some OCSP problems and instead wrongly consider the response as fine.  If the returned status reports another error than 'revoked' (like for example 'unauthorized') it is not treated as a bad certficate.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-9681",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "When curl is asked to use HSTS, the expiry time for a subdomain might\noverwrite a parent domain's cache entry, making it end sooner or later than\notherwise intended.\nThis affects curl using applications that enable HSTS and use URLs with the\ninsecure `HTTP://` scheme and perform transfers with hosts like\n`x.example.com` as well as `example.com` where the first host is a subdomain\nof the second host.\n(The HSTS cache either needs to have been populated manually or there needs to\nhave been previous HTTPS accesses done as the cache needs to have entries for\nthe domains involved to trigger this problem.)\nWhen `x.example.com` responds with `Strict-Transport-Security:` headers, this\nbug can make the subdomain's expiry timeout *bleed over* and get set for the\nparent domain `example.com` in curl's HSTS cache.\nThe result of a triggered bug is that HTTP accesses to `example.com` get\nconverted to HTTPS for a different period of time than what was asked for by\nthe origin server. If `example.com` for example stops supporting HTTPS at its\nexpiry time, curl might then fail to access `http://example.com` until the\n(wrongly set) timeout expires. This bug can also expire the parent's entry\n*earlier*, thus making curl inadvertently switch back to insecure HTTP earlier\nthan otherwise intended.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.9,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:L",
+            "attackVector": "LOCAL",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "REQUIRED",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "LOW"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-1025",
+        "name": "Comparison Using Wrong Factors"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-0167",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "When asked to use a `.netrc` file for credentials **and** to follow HTTP\nredirects, curl could leak the password used for the first host to the\nfollowed-to host under certain circumstances.\n\nThis flaw only manifests itself if the netrc file has a `default` entry that\nomits both login and password. A rare circumstance.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.4,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "NONE",
+            "userInteraction": "REQUIRED",
+            "scope": "CHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-0725",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "When libcurl is asked to perform automatic gzip decompression of\ncontent-encoded HTTP responses with the `CURLOPT_ACCEPT_ENCODING` option,\n**using zlib 1.2.0.3 or older**, an attacker-controlled integer overflow would\nmake libcurl perform a buffer overflow.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 4.0,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "attackVector": "LOCAL",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "LOW"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-680",
+        "name": "Integer Overflow to Buffer Overflow"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-10966",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "curl's code for managing SSH connections when SFTP was done using the wolfSSH\npowered backend was flawed and missed host verification mechanisms.\nThis prevents curl from detecting MITM attackers and more.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-322",
+        "name": "Key Exchange without Entity Authentication"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-14017",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "When doing multi-threaded LDAPS transfers (LDAP over TLS) with libcurl,\nchanging TLS options in one thread would inadvertently change them globally\nand therefore possibly also affect other concurrently setup transfers.\nDisabling certificate verification for a specific transfer could\nunintentionally disable the feature for other threads as well.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 4.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-1058",
+        "name": "Invokable Control Element in Multi-Thread Context with non-Final Static Storable or Member Element"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-14524",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "When an OAuth2 bearer token is used for an HTTP(S) transfer, and that transfer\nperforms a cross-protocol redirect to a second URL that uses an IMAP, LDAP,\nPOP3 or SMTP scheme, curl might wrongly pass on the bearer token to the new\ntarget host.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "REQUIRED",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-201",
+        "name": "Insertion of Sensitive Information Into Sent Data"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-15079",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "When doing SSH-based transfers using either SCP or SFTP, and setting the\nknown_hosts file, libcurl could still mistakenly accept connecting to hosts\n*not present* in the specified file if they were added as recognized in the\nlibssh *global* known_hosts file.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-358",
+        "name": "Improperly Implemented Security Check for Standard"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-15224",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "When doing SSH-based transfers using either SCP or SFTP, and asked to do\npublic key authentication, curl would wrongly still ask and authenticate using\na locally running SSH agent.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 4.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "attackVector": "LOCAL",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-305",
+        "name": "Authentication Bypass by Primary Weakness"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-1965",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "libcurl can in some circumstances reuse the wrong connection when asked to do\nan Negotiate-authenticated HTTP or HTTPS request.\nlibcurl features a pool of recent connections so that subsequent requests can\nreuse an existing connection to avoid overhead.\nWhen reusing a connection a range of criterion must first be met. Due to a\nlogical error in the code, a request that was issued by an application could\nwrongfully reuse an existing connection to the same server that was\nauthenticated using different credentials. One underlying reason being that\nNegotiate sometimes authenticates *connections* and not *requests*, contrary\nto how HTTP is designed to work.\nAn application that allows Negotiate authentication to a server (that responds\nwanting Negotiate) with `user1:password1` and then does another operation to\nthe same server also using Negotiate but with `user2:password2` (while the\nprevious connection is still alive) - the second request wrongly reused the\nsame connection and since it then sees that the Negotiate negotiation is\nalready made, it just sends the request over that connection thinking it uses\nthe user2 credentials when it is in fact still using the connection\nauthenticated for user1...\nThe set of authentication methods to use is set with  `CURLOPT_HTTPAUTH`.\nApplications can disable libcurl's reuse of connections and thus mitigate this\nproblem, by using one of the following libcurl options to alter how\nconnections are or are not reused: `CURLOPT_FRESH_CONNECT`,\n`CURLOPT_MAXCONNECTS` and `CURLMOPT_MAX_HOST_CONNECTIONS` (if using the\ncurl_multi API).",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-303",
+        "name": "Incorrect Implementation of Authentication Algorithm"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-3783",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "When an OAuth2 bearer token is used for an HTTP(S) transfer, and that transfer\nperforms a redirect to a second URL, curl could leak that token to the second\nhostname under some circumstances.\nIf the hostname that the first request is redirected to has information in the\nused .netrc file, with either of the `machine` or `default` keywords, curl\nwould pass on the bearer token set for the first host also to the second one.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "REQUIRED",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-201",
+        "name": "Insertion of Sensitive Information Into Sent Data"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-3784",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "curl would wrongly reuse an existing HTTP proxy connection doing CONNECT to a\nserver, even if the new request uses different credentials for the HTTP proxy.\nThe proper behavior is to create or use a separate connection.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-305",
+        "name": "Authentication Bypass by Primary Weakness"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-4873",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "A vulnerability exists where a connection requiring TLS incorrectly reuses an\nexisting unencrypted connection from the same connection pool. If an initial\ntransfer is made in clear-text (via IMAP, SMTP, or POP3), a subsequent request\nto that same host bypasses the TLS requirement and instead transmit data\nunencrypted.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "NONE",
+            "userInteraction": "REQUIRED",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-319",
+        "name": "Cleartext Transmission of Sensitive Information"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-5545",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "libcurl might in some circumstances reuse the wrong connection when asked to\ndo an authenticated HTTP(S) request after a Negotiate-authenticated one, when\nboth use the same host.\nlibcurl features a pool of recent connections so that subsequent requests can\nreuse an existing connection to avoid overhead.\nWhen reusing a connection a range of criteria must be met. Due to a logical\nerror in the code, a request that was issued by an application could\nwrongfully reuse an existing connection to the same server that was\nauthenticated using different credentials.\nAn application that first uses Negotiate authentication to a server with\n`user1:password1` and then does another operation to the same server asking\nfor any authentication method but for `user2:password2` (while the previous\nconnection is still alive) - the second request gets confused and wrongly\nreuses the same connection and sends the new request over that connection\nthinking it uses a mix of user1's and user2's credentials when it is in fact\nstill using the connection authenticated for user1...",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-488",
+        "name": "Exposure of Data Element to Wrong Session"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-5773",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "libcurl might in some circumstances reuse the wrong connection for SMB(S)\ntransfers.\nlibcurl features a pool of recent connections so that subsequent requests can\nreuse an existing connection to avoid overhead.\nWhen reusing a connection a range of criteria must be met. Due to a logical\nerror in the code, a network transfer operation that was requested by an\napplication could wrongfully reuse an existing SMB connection to the same\nserver that was using a different 'share' than the new subsequent transfer\nshould.\nThis could in unlucky situations lead to the download of the wrong file or the\nupload of a file to the wrong place. When this happens, the same credentials\nare used and the server name is the same.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-1025",
+        "name": "Comparison Using Wrong Factors"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-6253",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "curl might erroneously pass on credentials for a first proxy to a second\nproxy.\nThis can happen when the following conditions are true:\n1. curl is setup to use specific different proxies for different URL schemes\n2. the first proxy needs credentials\n3. the second proxy uses no credentials\n4. while using the first proxy (using say `http://`), curl is asked to follow\na redirect to a URL using another scheme (say `https://`), accessed using a\nsecond, different, proxy",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "NONE",
+            "userInteraction": "REQUIRED",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-201",
+        "name": "Insertion of Sensitive Information Into Sent Data"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-6276",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Using libcurl, when a custom `Host:` header is first set for an HTTP request\nand a second request is subsequently done using the same *easy handle* but\nwithout the custom `Host:` header set, the second request would use stale\ninformation and pass on cookies meant for the first host in the second\nrequest. Leak them.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-346",
+        "name": "Origin Validation Error"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-6429",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "When asked to both use a `.netrc` file for credentials and to follow HTTP\nredirects, libcurl could leak the password used for the first host to the\nfollowed-to host under certain circumstances.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "REQUIRED",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-201",
+        "name": "Insertion of Sensitive Information Into Sent Data"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-7168",
+      "product_status": {
+        "fixed": [
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+          "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+          "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+        ]
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Successfully using libcurl to do a transfer over a specific HTTP proxy\n(`proxyA`) with **Digest** authentication and then changing the proxy host to\na second one (`proxyB`) for a second transfer, reusing the same handle, makes\nlibcurl wrongly pass on the `Proxy-Authorization:` header field meant for\n`proxyA`, to `proxyB`.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "scores": [
+        {
+          "products": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          }
+        }
+      ],
+      "cwe": {
+        "id": "CWE-201",
+        "name": "Insertion of Sensitive Information Into Sent Data"
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.src",
+            "rlc_lts-9.6:curl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:curl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-devel-0:8.20.0-1.el9_6_ciq.1.x86_64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.aarch64",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.i686",
+            "rlc_lts-9.6:libcurl-minimal-0:8.20.0-1.el9_6_ciq.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    }
+  ]
+}
