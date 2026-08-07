@@ -5,6 +5,13 @@
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
     "notes": [
       {
         "category": "summary",
@@ -15,14 +22,18 @@
         "category": "description",
         "text": "This advisory aggregates security fixes for the microcode_ctl SRPM in CIQ Bridge for CentOS 7.9. It addresses 7 CVEs: CVE-2022-21216, CVE-2022-33196, CVE-2022-33972, CVE-2022-38090, CVE-2022-40982, and 2 more.",
         "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
       }
     ],
     "publisher": {
       "category": "vendor",
-      "contact_details": "https://ciq.com/security-contact",
       "issuing_authority": "Ctrl IQ, Inc Security Team",
       "name": "Ctrl IQ, Inc",
-      "namespace": "https://ciq.com/csaf"
+      "namespace": "https://www.ciq.com"
     },
     "references": [
       {
@@ -73,12 +84,12 @@
     ],
     "title": "microcode_ctl security update for CIQ Bridge for CentOS 7.9",
     "tracking": {
-      "current_release_date": "2026-03-12T07:56:29.559298+00:00",
+      "current_release_date": "2026-08-07T07:01:29.262227+00:00",
       "generator": {
-        "date": "2026-03-12T07:56:29.559298+00:00",
+        "date": "2026-08-07T07:01:29.262227+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "1.0.0"
+          "version": "1.0.1"
         }
       },
       "id": "CIQSA-CBR-7-9-2026:0071",
@@ -93,10 +104,15 @@
           "date": "2026-03-12T07:56:29.562745+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-08-07T07:01:29.327154+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -138,6 +154,20 @@
             "branches": [
               {
                 "category": "product_version",
+                "name": "microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
+                "product": {
+                  "name": "microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
+                  "product_id": "microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
                 "name": "microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
                 "product": {
                   "name": "microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
@@ -154,6 +184,15 @@
       }
     ],
     "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src as a component of CIQ Bridge for CentOS 7.9",
+          "product_id": "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src"
+        },
+        "product_reference": "microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
+        "relates_to_product_reference": "cbr-7.9"
+      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -186,6 +225,7 @@
       ],
       "product_status": {
         "fixed": [
+          "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
         ]
@@ -195,6 +235,7 @@
           "category": "vendor_fix",
           "details": "Update microcode_ctl to the latest version from CIQ repositories",
           "product_ids": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ],
@@ -204,12 +245,21 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "ADJACENT_NETWORK",
+            "availabilityImpact": "LOW",
             "baseScore": 7.5,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:L",
             "version": "3.1"
           },
           "products": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ]
@@ -227,6 +277,7 @@
       ],
       "product_status": {
         "fixed": [
+          "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
         ]
@@ -236,6 +287,7 @@
           "category": "vendor_fix",
           "details": "Update microcode_ctl to the latest version from CIQ repositories",
           "product_ids": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ],
@@ -245,12 +297,21 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
             "baseScore": 7.2,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:N",
             "version": "3.1"
           },
           "products": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ]
@@ -268,6 +329,7 @@
       ],
       "product_status": {
         "fixed": [
+          "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
         ]
@@ -277,6 +339,7 @@
           "category": "vendor_fix",
           "details": "Update microcode_ctl to the latest version from CIQ repositories",
           "product_ids": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ],
@@ -286,12 +349,21 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
             "baseScore": 6.1,
             "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:L/A:N",
             "version": "3.1"
           },
           "products": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ]
@@ -309,6 +381,7 @@
       ],
       "product_status": {
         "fixed": [
+          "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
         ]
@@ -318,6 +391,7 @@
           "category": "vendor_fix",
           "details": "Update microcode_ctl to the latest version from CIQ repositories",
           "product_ids": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ],
@@ -327,12 +401,21 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
             "baseScore": 6.0,
             "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N",
             "version": "3.1"
           },
           "products": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ]
@@ -341,6 +424,10 @@
     },
     {
       "cve": "CVE-2022-40982",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
       "notes": [
         {
           "category": "description",
@@ -350,6 +437,7 @@
       ],
       "product_status": {
         "fixed": [
+          "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
         ]
@@ -359,6 +447,7 @@
           "category": "vendor_fix",
           "details": "Update microcode_ctl to the latest version from CIQ repositories",
           "product_ids": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ],
@@ -368,12 +457,21 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
             "baseScore": 6.5,
             "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
             "version": "3.1"
           },
           "products": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ]
@@ -382,6 +480,10 @@
     },
     {
       "cve": "CVE-2022-41804",
+      "cwe": {
+        "id": "CWE-1334",
+        "name": "Unauthorized Error Injection Can Degrade Hardware Redundancy"
+      },
       "notes": [
         {
           "category": "description",
@@ -391,6 +493,7 @@
       ],
       "product_status": {
         "fixed": [
+          "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
         ]
@@ -400,6 +503,7 @@
           "category": "vendor_fix",
           "details": "Update microcode_ctl to the latest version from CIQ repositories",
           "product_ids": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ],
@@ -409,12 +513,21 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
             "baseScore": 7.2,
             "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "REQUIRED",
             "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:L/I:H/A:H",
             "version": "3.1"
           },
           "products": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ]
@@ -423,6 +536,10 @@
     },
     {
       "cve": "CVE-2023-23908",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
       "notes": [
         {
           "category": "description",
@@ -432,6 +549,7 @@
       ],
       "product_status": {
         "fixed": [
+          "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
           "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
         ]
@@ -441,6 +559,7 @@
           "category": "vendor_fix",
           "details": "Update microcode_ctl to the latest version from CIQ repositories",
           "product_ids": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ],
@@ -450,12 +569,21 @@
       "scores": [
         {
           "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
             "baseScore": 6.0,
             "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N",
             "version": "3.1"
           },
           "products": [
+            "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.src",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.x86_64",
             "cbr-7.9:microcode_ctl-4:20230808-2.20231009.1.el7_9.ciqcbr.1.i686"
           ]
