@@ -1,0 +1,1318 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Important"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for kernel-rt.\nThis update affects Rocky Linux 8.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "The kernel-rt packages provide the Real Time Linux Kernel, which enables fine-tuning for systems with extremely high determinism requirements.\n\nSecurity Fix(es):\n\n* kernel: mm/slub: avoid accessing metadata when pointer is invalid in object_err() (CVE-2025-39902)\n\n* kernel: drm/amdkfd: Fix out-of-bounds write in kfd_event_page_set() (CVE-2026-43206)\n\n* kernel: crypto: ccp - copy IV using skcipher ivsize (CVE-2026-53016)\n\n* kernel: drm/amd/display: Clamp VBIOS HDMI retimer register count to array size (CVE-2026-53136)\n\n* kernel: drm/amd/display: Use krealloc_array() in dal_vector_reserve() (CVE-2026-53329)\n\n* kernel: drm/amdgpu: zero-initialize GART table on allocation (CVE-2026-53374)\n\n* kernel: drm/i915: Fix potential UAF in TTM object purge (CVE-2026-63884)\n\n* kernel: drm/amdgpu: fix amdgpu_hmm_range_get_pages (CVE-2026-63879)\n\n* kernel: drm/amd/display: Validate payload length and link_index in dc_process_dmub_aux_transfer_async (CVE-2026-64219)\n\n* kernel: can:bcm: arbitrary kernel code execution leading to escalate privileges (CVE-2026-17523)\n\nBug Fix(es) and Enhancement(s):\n\n* Backport \"sched/deadline: Fix bandwidth reclaim equation in GRUB\" to Rocky Linux 8.10 (JIRA:Rocky Linux-189997)\n\n* vhost: reset the vring metadata cache on vring reconfiguration [rhel-8.10.z] (JIRA:Rocky Linux-224556)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2400594",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2400594"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2467156",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2467156"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2492269",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2492269"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2492768",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2492768"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2495941",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2495941"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2502188",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2502188"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2502321",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2502321"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2502463",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2502463"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2506790",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2506790"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2507407",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2507407"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:55765",
+        "url": "https://errata.build.resf.org/RLSA-2026:55765"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:55765",
+        "url": "https://access.redhat.com/errata/RHSA-2026:55765"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2026:55765",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2026_55765.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2026:55765",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/rocky/2026/crlsa-2026_55765.json"
+      }
+    ],
+    "title": "Important: kernel-rt security, bug fix, and enhancement update",
+    "tracking": {
+      "current_release_date": "2026-08-19T07:01:00.868272+00:00",
+      "generator": {
+        "date": "2026-08-19T07:01:00.868272+00:00",
+        "engine": {
+          "name": "CIQSA Conversion Tool",
+          "version": "1.0.1"
+        }
+      },
+      "id": "CRLSA-2026:55765",
+      "initial_release_date": "2026-08-18T06:01:58.911169+00:00",
+      "revision_history": [
+        {
+          "date": "2026-08-18T06:01:58.911169+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Rocky Linux from CIQ 8.10",
+                "product": {
+                  "name": "Rocky Linux from CIQ 8.10",
+                  "product_id": "rlc-8.10",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.10:*:*:*:*:*:*:*"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Rocky Linux from CIQ"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+                "product": {
+                  "name": "kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+                  "product_id": "kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                "product": {
+                  "name": "kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+                  "product_id": "kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src"
+        },
+        "product_reference": "kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 as a component of Rocky Linux from CIQ 8.10",
+          "product_id": "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        },
+        "product_reference": "kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+        "relates_to_product_reference": "rlc-8.10"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-53016",
+      "cwe": {
+        "id": "CWE-805",
+        "name": "Buffer Access with Incorrect Length Value"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-53016",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 and 9 more packages",
+          "product_ids": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-39902",
+      "cwe": {
+        "id": "CWE-824",
+        "name": "Access of Uninitialized Pointer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-39902",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 and 9 more packages",
+          "product_ids": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-17523",
+      "cwe": {
+        "id": "CWE-825",
+        "name": "Expired Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-17523",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 and 9 more packages",
+          "product_ids": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-43206",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-43206",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 and 9 more packages",
+          "product_ids": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-53136",
+      "cwe": {
+        "id": "CWE-1284",
+        "name": "Improper Validation of Specified Quantity in Input"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-53136",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 and 9 more packages",
+          "product_ids": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-53329",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-53329",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 and 9 more packages",
+          "product_ids": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-53374",
+      "cwe": {
+        "id": "CWE-824",
+        "name": "Access of Uninitialized Pointer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-53374",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 and 9 more packages",
+          "product_ids": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63879",
+      "cwe": {
+        "id": "CWE-824",
+        "name": "Access of Uninitialized Pointer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-63879",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 and 9 more packages",
+          "product_ids": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63884",
+      "cwe": {
+        "id": "CWE-825",
+        "name": "Expired Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-63884",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 and 9 more packages",
+          "product_ids": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-64219",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-64219",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+          "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+          "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64, kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64 and 9 more packages",
+          "product_ids": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.src",
+            "rlc-8.10:kernel-rt-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-core-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debuginfo-common-x86_64-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-debug-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-devel-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-kvm-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64",
+            "rlc-8.10:kernel-rt-modules-extra-0:4.18.0-553.156.1.rt7.497.el8_10.x86_64"
+          ]
+        }
+      ]
+    }
+  ]
+}
