@@ -1,0 +1,829 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for swtpm",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the swtpm SRPM in CIQ LTS 8.6. It addresses 3 CVEs: CVE-2024-3446, CVE-2024-7383, CVE-2024-7409.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-3446",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-3446.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-7383",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-7383.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-7409",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-7409.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0265.json"
+      }
+    ],
+    "title": "swtpm security update for CIQ LTS 8.6",
+    "tracking": {
+      "current_release_date": "2026-09-01T23:53:33.568012+00:00",
+      "generator": {
+        "date": "2026-09-01T23:53:33.568012+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.1"
+        }
+      },
+      "id": "CIQSA-2026:0265",
+      "initial_release_date": "2026-09-01T23:53:33.568012+00:00",
+      "revision_history": [
+        {
+          "date": "2026-09-01T23:53:33.568012+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 3 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS 8.6",
+                "product": {
+                  "name": "CIQ LTS 8.6",
+                  "product_id": "lts-8.6",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                "product": {
+                  "name": "swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_id": "swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-tools-pkcs11@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                "product": {
+                  "name": "swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_id": "swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-tools@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                "product": {
+                  "name": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_id": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                "product": {
+                  "name": "swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_id": "swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-libs@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                "product": {
+                  "name": "swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_id": "swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-devel@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                "product": {
+                  "name": "swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_id": "swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-debugsource@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                "product": {
+                  "name": "swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_id": "swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-debuginfo@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                "product": {
+                  "name": "swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_id": "swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-libs-debuginfo@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                "product": {
+                  "name": "swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_id": "swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-tools-debuginfo@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=aarch64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+                "product": {
+                  "name": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+                  "product_id": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=src"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                "product": {
+                  "name": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_id": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                "product": {
+                  "name": "swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_id": "swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-libs@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                "product": {
+                  "name": "swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_id": "swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-devel@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                "product": {
+                  "name": "swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_id": "swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-tools@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                "product": {
+                  "name": "swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_id": "swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-tools-pkcs11@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                "product": {
+                  "name": "swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_id": "swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-debugsource@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                "product": {
+                  "name": "swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_id": "swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-debuginfo@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                "product": {
+                  "name": "swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_id": "swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-libs-debuginfo@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                "product": {
+                  "name": "swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_id": "swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/swtpm-tools-debuginfo@0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332?arch=x86_64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64"
+        },
+        "product_reference": "swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64"
+        },
+        "product_reference": "swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src"
+        },
+        "product_reference": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64"
+        },
+        "product_reference": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64"
+        },
+        "product_reference": "swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64"
+        },
+        "product_reference": "swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        },
+        "product_reference": "swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        },
+        "product_reference": "swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        },
+        "product_reference": "swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64"
+        },
+        "product_reference": "swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64"
+        },
+        "product_reference": "swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64"
+        },
+        "product_reference": "swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64"
+        },
+        "product_reference": "swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        },
+        "product_reference": "swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        },
+        "product_reference": "swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        },
+        "product_reference": "swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        },
+        "product_reference": "swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        },
+        "product_reference": "swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        },
+        "product_reference": "swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-3446",
+      "cwe": {
+        "id": "CWE-415",
+        "name": "Double Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-3446",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+          "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update swtpm to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-7383",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-7383",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+          "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update swtpm to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-7409",
+      "cwe": {
+        "id": "CWE-662",
+        "name": "Improper Synchronization"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-7409",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+          "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+          "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+          "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update swtpm to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.src",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-devel-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.aarch64",
+            "lts-8.6:swtpm-tools-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-pkcs11-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debugsource-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-libs-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64",
+            "lts-8.6:swtpm-tools-debuginfo-0:0.7.0-4.20211109gitb79fd91.module+el8.6.0+7105+f31cb332.x86_64"
+          ]
+        }
+      ]
+    }
+  ]
+}
