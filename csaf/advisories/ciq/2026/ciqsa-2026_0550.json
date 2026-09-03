@@ -1,0 +1,974 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for microcode_ctl",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the microcode_ctl SRPM in CIQ LTS 9.4. It addresses 16 CVEs: CVE-2024-28047, CVE-2024-37020, CVE-2024-31157, CVE-2024-39279, CVE-2024-36293, and 11 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-28047",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-28047.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-37020",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-37020.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-31157",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-31157.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-39279",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-39279.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-36293",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-36293.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-39355",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-39355.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-34440",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-34440.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-21820",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-21820.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-28127",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-28127.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-21853",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-21853.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-24582",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-24582.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-29214",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-29214.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-31068",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-31068.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-23918",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-23918.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-43758",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-43758.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-23984",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-23984.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0550.json"
+      }
+    ],
+    "title": "microcode_ctl security update for CIQ LTS 9.4",
+    "tracking": {
+      "current_release_date": "2026-09-01T23:57:01.440504+00:00",
+      "generator": {
+        "date": "2026-09-01T23:57:01.440504+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.1"
+        }
+      },
+      "id": "CIQSA-2026:0550",
+      "initial_release_date": "2026-09-01T23:57:01.440504+00:00",
+      "revision_history": [
+        {
+          "date": "2026-09-01T23:57:01.440504+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 16 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS 9.4",
+                "product": {
+                  "name": "CIQ LTS 9.4",
+                  "product_id": "lts-9.4",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.4:*:*:*:*:*:noarch:lts"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch",
+                "product": {
+                  "name": "microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch",
+                  "product_id": "microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/microcode_ctl@20240910-1.20250211.1.el9_4.94ciq_lts?arch=noarch&epoch=4"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+                "product": {
+                  "name": "microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+                  "product_id": "microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/microcode_ctl@20240910-1.20250211.1.el9_4.94ciq_lts?arch=src"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src as a component of CIQ LTS 9.4",
+          "product_id": "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src"
+        },
+        "product_reference": "microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+        "relates_to_product_reference": "lts-9.4"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch as a component of CIQ LTS 9.4",
+          "product_id": "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        },
+        "product_reference": "microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch",
+        "relates_to_product_reference": "lts-9.4"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-28047",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-28047",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-37020",
+      "cwe": {
+        "id": "CWE-1281",
+        "name": "Sequence of Processor Instructions Leads to Unexpected Behavior"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-37020",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-31157",
+      "cwe": {
+        "id": "CWE-665",
+        "name": "Improper Initialization"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-31157",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-39279",
+      "cwe": {
+        "id": "CWE-1220",
+        "name": "Insufficient Granularity of Access Control"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-39279",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-36293",
+      "cwe": {
+        "id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-36293",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-39355",
+      "cwe": {
+        "id": "CWE-1384",
+        "name": "Improper Handling of Physical or Environmental Conditions"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-39355",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-34440",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-34440",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-21820",
+      "cwe": {
+        "id": "CWE-276",
+        "name": "Incorrect Default Permissions"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-21820",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-28127",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-28127",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-21853",
+      "cwe": {
+        "id": "CWE-1245",
+        "name": "Improper Finite State Machines (FSMs) in Hardware Logic"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-21853",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 4.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-24582",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-24582",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-29214",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-29214",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-31068",
+      "cwe": {
+        "id": "CWE-1245",
+        "name": "Improper Finite State Machines (FSMs) in Hardware Logic"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-31068",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-23918",
+      "cwe": {
+        "id": "CWE-92",
+        "name": "DEPRECATED: Improper Sanitization of Custom Special Characters"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-23918",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-43758",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-43758",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-23984",
+      "cwe": {
+        "id": "CWE-203",
+        "name": "Observable Discrepancy"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-23984",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+          "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update microcode_ctl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:microcode_ctl-0:20240910-1.20250211.1.el9_4.94ciq_lts.src",
+            "lts-9.4:microcode_ctl-4:20240910-1.20250211.1.el9_4.94ciq_lts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ]
+    }
+  ]
+}
