@@ -1,0 +1,1620 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for rsyslog",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the rsyslog SRPM in CIQ LTS 9.6. It addresses 4 CVEs: CVE-2022-24903, CVE-2011-3200, CVE-2014-3634, CVE-2026-78002.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-24903",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-24903.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-3200",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-3200.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-3634",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-3634.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-78002",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-78002.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1504.json"
+      }
+    ],
+    "title": "rsyslog security update for CIQ LTS 9.6",
+    "tracking": {
+      "current_release_date": "2026-09-03T07:01:59.857525+00:00",
+      "generator": {
+        "date": "2026-09-03T07:01:59.857525+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.1"
+        }
+      },
+      "id": "CIQSA-2026:1504",
+      "initial_release_date": "2026-09-03T07:01:59.857525+00:00",
+      "revision_history": [
+        {
+          "date": "2026-09-03T07:01:59.857525+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 4 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS 9.6",
+                "product": {
+                  "name": "CIQ LTS 9.6",
+                  "product_id": "lts-9.6",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:aarch64:lts"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-crypto@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-elasticsearch@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-gnutls@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-gssapi@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-kafka@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-snmp@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-udpspoof@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-logrotate@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmaudit@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmfields@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmjsonparse@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmkubernetes@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmnormalize@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmsnmptrapd@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mysql@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-omamqp1@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-openssl@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-pgsql@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_id": "rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-relp@8.2412.0-1.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+                "product": {
+                  "name": "rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+                  "product_id": "rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-doc@8.2412.0-1.1.el9_6_ciq?arch=noarch"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-crypto@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-elasticsearch@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-gnutls@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-gssapi@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-kafka@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-logrotate@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmaudit@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmfields@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmjsonparse@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmkubernetes@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmnormalize@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mmsnmptrapd@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-mysql@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-omamqp1@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-openssl@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-pgsql@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-relp@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-snmp@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_id": "rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsyslog-udpspoof@8.2412.0-1.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch"
+        },
+        "product_reference": "rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-24903",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-24903",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+          "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update rsyslog to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-3200",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-3200",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+          "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update rsyslog to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 2.9,
+            "vectorString": "AV:A/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-3634",
+      "cwe": {
+        "id": "CWE-131",
+        "name": "Incorrect Calculation of Buffer Size"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-3634",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+          "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update rsyslog to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:A/AC:H/Au:N/C:C/I:C/A:C",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-78002",
+      "cwe": {
+        "id": "CWE-131",
+        "name": "Incorrect Calculation of Buffer Size"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-78002",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+          "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+          "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+          "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update rsyslog to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-doc-0:8.2412.0-1.1.el9_6_ciq.noarch",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-crypto-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-elasticsearch-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gnutls-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-gssapi-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-kafka-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.x86_64",
+            "lts-9.6:rsyslog-snmp-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-udpspoof-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-logrotate-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmaudit-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmfields-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmjsonparse-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmkubernetes-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmnormalize-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mmsnmptrapd-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-mysql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-omamqp1-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-openssl-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-pgsql-0:8.2412.0-1.1.el9_6_ciq.aarch64",
+            "lts-9.6:rsyslog-relp-0:8.2412.0-1.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}
