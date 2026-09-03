@@ -54,9 +54,9 @@
     ],
     "title": "mariadb security update (CVE-2023-24805)",
     "tracking": {
-      "current_release_date": "2026-09-01T23:59:27.601304+00:00",
+      "current_release_date": "2026-09-03T20:33:51.939552+00:00",
       "generator": {
-        "date": "2026-09-01T23:59:27.601304+00:00",
+        "date": "2026-09-03T20:33:51.939552+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.1"
@@ -69,10 +69,15 @@
           "date": "2026-09-01T23:59:27.601304+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 1 CVE fixed"
+        },
+        {
+          "date": "2026-09-03T20:33:51.949142+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -596,12 +601,12 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "mariadb-0:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
+                "name": "mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
                 "product": {
-                  "name": "mariadb-0:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
-                  "product_id": "mariadb-0:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
+                  "name": "mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
+                  "product_id": "mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
                   "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/mariadb@10.5.22-1.module+el8.6.0+2165+c8e4a65e?arch=src"
+                    "purl": "pkg:rpm/ciq/mariadb@10.5.22-1.module+el8.6.0+2165+c8e4a65e?arch=src&epoch=3"
                   }
                 }
               }
@@ -863,15 +868,6 @@
       }
     ],
     "relationships": [
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "mariadb-0:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:mariadb-0:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src"
-        },
-        "product_reference": "mariadb-0:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
-        "relates_to_product_reference": "lts-8.6"
-      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -1465,6 +1461,15 @@
         },
         "product_reference": "mariadb-test-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
         "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src"
+        },
+        "product_reference": "mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
+        "relates_to_product_reference": "lts-8.6"
       }
     ]
   },
@@ -1484,7 +1489,6 @@
       ],
       "product_status": {
         "fixed": [
-          "lts-8.6:mariadb-0:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
           "lts-8.6:mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.i686",
           "lts-8.6:mariadb-common-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.i686",
           "lts-8.6:mariadb-errmsg-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.i686",
@@ -1550,7 +1554,8 @@
           "lts-8.6:mariadb-gssapi-server-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
           "lts-8.6:mariadb-server-utils-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
           "lts-8.6:mariadb-embedded-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
-          "lts-8.6:mariadb-test-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64"
+          "lts-8.6:mariadb-test-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
+          "lts-8.6:mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src"
         ]
       },
       "remediations": [
@@ -1558,7 +1563,6 @@
           "category": "vendor_fix",
           "details": "Update mariadb to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-8.6:mariadb-0:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
             "lts-8.6:mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.i686",
             "lts-8.6:mariadb-common-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.i686",
             "lts-8.6:mariadb-errmsg-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.i686",
@@ -1624,7 +1628,8 @@
             "lts-8.6:mariadb-gssapi-server-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
             "lts-8.6:mariadb-server-utils-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
             "lts-8.6:mariadb-embedded-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
-            "lts-8.6:mariadb-test-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64"
+            "lts-8.6:mariadb-test-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
+            "lts-8.6:mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -1646,7 +1651,6 @@
             "version": "3.1"
           },
           "products": [
-            "lts-8.6:mariadb-0:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src",
             "lts-8.6:mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.i686",
             "lts-8.6:mariadb-common-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.i686",
             "lts-8.6:mariadb-errmsg-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.i686",
@@ -1712,7 +1716,8 @@
             "lts-8.6:mariadb-gssapi-server-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
             "lts-8.6:mariadb-server-utils-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
             "lts-8.6:mariadb-embedded-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
-            "lts-8.6:mariadb-test-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64"
+            "lts-8.6:mariadb-test-debuginfo-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.aarch64",
+            "lts-8.6:mariadb-3:10.5.22-1.module+el8.6.0+2165+c8e4a65e.src"
           ]
         }
       ]
