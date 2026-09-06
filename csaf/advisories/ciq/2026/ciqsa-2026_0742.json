@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the tcpdump SRPM in CIQ CentOS Bridge 7.9. It addresses 28 CVEs: CVE-2017-16808, CVE-2018-10103, CVE-2018-10105, CVE-2018-14461, CVE-2018-14462, and 23 more.",
+        "text": "This advisory aggregates security fixes for the tcpdump SRPM in CIQ CentOS Bridge 7.9. It addresses 29 CVEs: CVE-2017-16808, CVE-2018-10103, CVE-2018-10105, CVE-2018-14461, CVE-2018-14462, and 24 more.",
         "title": "Description"
       },
       {
@@ -182,6 +182,11 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-8037.json"
       },
       {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-15120",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-15120.json"
+      },
+      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0742.json"
@@ -189,9 +194,9 @@
     ],
     "title": "tcpdump security update for CIQ CentOS Bridge 7.9",
     "tracking": {
-      "current_release_date": "2026-09-03T20:33:42.069113+00:00",
+      "current_release_date": "2026-09-06T07:01:54.820002+00:00",
       "generator": {
-        "date": "2026-09-03T20:33:42.069113+00:00",
+        "date": "2026-09-06T07:01:54.820002+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.1"
@@ -209,10 +214,15 @@
           "date": "2026-09-03T20:33:42.079954+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-09-06T07:01:54.918797+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -1984,6 +1994,65 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tcpdump-debuginfo-14:4.9.3-3.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:tcpdump-14:4.9.3-3.el7_9.ciqcbr.src",
+            "cbr-7.9-bridge:tcpdump-14:4.9.3-3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:tcpdump-debuginfo-14:4.9.3-3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-15120",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-15120",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tcpdump-debuginfo-14:4.9.3-3.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:tcpdump-14:4.9.3-3.el7_9.ciqcbr.src",
+          "cbr-7.9-bridge:tcpdump-14:4.9.3-3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:tcpdump-debuginfo-14:4.9.3-3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tcpdump-debuginfo-14:4.9.3-3.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:tcpdump-14:4.9.3-3.el7_9.ciqcbr.src",
+            "cbr-7.9-bridge:tcpdump-14:4.9.3-3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:tcpdump-debuginfo-14:4.9.3-3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
             "version": "3.1"
           },
           "products": [
