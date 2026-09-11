@@ -1,0 +1,738 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for redis",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the redis SRPM in CIQ LTS 9.2. It addresses 7 CVEs: CVE-2024-46981, CVE-2025-32023, CVE-2024-31449, CVE-2025-21605, CVE-2025-46817, and 2 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-46981",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-46981.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-32023",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-32023.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-31449",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-31449.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-21605",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-21605.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-46817",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-46817.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-66373",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-66373.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2013-7458",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2013/cve-2013-7458.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1524.json"
+      }
+    ],
+    "title": "redis security update for CIQ LTS 9.2",
+    "tracking": {
+      "current_release_date": "2026-09-11T04:32:06.766252+00:00",
+      "generator": {
+        "date": "2026-09-11T04:32:06.766252+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.1"
+        }
+      },
+      "id": "CIQSA-2026:1524",
+      "initial_release_date": "2026-09-11T04:32:06.766252+00:00",
+      "revision_history": [
+        {
+          "date": "2026-09-11T04:32:06.766252+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 7 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS 9.2",
+                "product": {
+                  "name": "CIQ LTS 9.2",
+                  "product_id": "lts-9.2",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:aarch64:lts"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+                "product": {
+                  "name": "redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+                  "product_id": "redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/redis@6.2.7-1.1.el9_2_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64",
+                "product": {
+                  "name": "redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64",
+                  "product_id": "redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/redis-devel@6.2.7-1.1.el9_2_ciq?arch=aarch64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+                "product": {
+                  "name": "redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+                  "product_id": "redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/redis-devel@6.2.7-1.1.el9_2_ciq?arch=i686"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "i686"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+                "product": {
+                  "name": "redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+                  "product_id": "redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/redis-doc@6.2.7-1.1.el9_2_ciq?arch=noarch"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+                "product": {
+                  "name": "redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+                  "product_id": "redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/redis@6.2.7-1.1.el9_2_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+                "product": {
+                  "name": "redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+                  "product_id": "redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/redis-devel@6.2.7-1.1.el9_2_ciq?arch=x86_64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "redis-0:6.2.7-1.1.el9_2_ciq.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64"
+        },
+        "product_reference": "redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64"
+        },
+        "product_reference": "redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "redis-devel-0:6.2.7-1.1.el9_2_ciq.i686 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686"
+        },
+        "product_reference": "redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch"
+        },
+        "product_reference": "redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "redis-0:6.2.7-1.1.el9_2_ciq.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64"
+        },
+        "product_reference": "redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+        },
+        "product_reference": "redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-46981",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-46981",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+          "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update redis to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-32023",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-32023",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+          "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update redis to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-31449",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-31449",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+          "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update redis to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-21605",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-21605",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+          "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update redis to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-46817",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-46817",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+          "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update redis to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-66373",
+      "cwe": {
+        "id": "CWE-1341",
+        "name": "Multiple Releases of Same Resource or Handle"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-66373",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+          "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update redis to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2013-7458",
+      "cwe": {
+        "id": "CWE-732",
+        "name": "Incorrect Permission Assignment for Critical Resource"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2013-7458",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+          "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+          "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+          "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update redis to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
+            "baseScore": 2.9,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.x86_64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.i686",
+            "lts-9.2:redis-doc-0:6.2.7-1.1.el9_2_ciq.noarch",
+            "lts-9.2:redis-0:6.2.7-1.1.el9_2_ciq.aarch64",
+            "lts-9.2:redis-devel-0:6.2.7-1.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}
