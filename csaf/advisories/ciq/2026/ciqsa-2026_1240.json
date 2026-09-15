@@ -234,9 +234,9 @@
     ],
     "title": "kernel security update for CIQ LTS 9.2",
     "tracking": {
-      "current_release_date": "2026-09-02T00:00:45.902920+00:00",
+      "current_release_date": "2026-09-15T07:03:13.983474+00:00",
       "generator": {
-        "date": "2026-09-02T00:00:45.902920+00:00",
+        "date": "2026-09-15T07:03:13.983474+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.1"
@@ -249,10 +249,15 @@
           "date": "2026-09-02T00:00:45.902920+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 37 CVEs fixed"
+        },
+        {
+          "date": "2026-09-15T07:03:14.117278+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -551,6 +556,10 @@
     },
     {
       "cve": "CVE-2023-52433",
+      "cwe": {
+        "id": "CWE-273",
+        "name": "Improper Check for Dropped Privileges"
+      },
       "notes": [
         {
           "category": "description",
@@ -573,6 +582,28 @@
             "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1+16.1.el9_2_ciq.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1+16.1.el9_2_ciq.aarch64",
+            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1+16.1.el9_2_ciq.x86_64"
+          ]
         }
       ]
     },
