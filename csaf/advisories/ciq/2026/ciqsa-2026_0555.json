@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the nginx SRPM in CIQ LTS 9.4. It addresses 3 CVEs: CVE-2024-7347, CVE-2022-41741, CVE-2022-41742.",
+        "text": "This advisory aggregates security fixes for the nginx SRPM in CIQ LTS 9.4. It addresses 3 CVEs: CVE-2022-41741, CVE-2022-41742, CVE-2024-7347.",
         "title": "Description"
       },
       {
@@ -43,11 +43,6 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-7347",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-7347.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2022-41741",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-41741.json"
       },
@@ -57,6 +52,11 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-41742.json"
       },
       {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-7347",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-7347.json"
+      },
+      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0555.json"
@@ -64,12 +64,12 @@
     ],
     "title": "nginx security update for CIQ LTS 9.4",
     "tracking": {
-      "current_release_date": "2026-09-03T20:32:33.704530+00:00",
+      "current_release_date": "2026-09-29T22:42:28.046741+00:00",
       "generator": {
-        "date": "2026-09-03T20:32:33.704530+00:00",
+        "date": "2026-09-29T22:42:28.046741+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.2"
         }
       },
       "id": "CIQSA-2026:0555",
@@ -84,10 +84,15 @@
           "date": "2026-09-03T20:32:33.712696+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-09-29T22:42:28.059976+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -103,7 +108,7 @@
                   "name": "CIQ LTS 9.4",
                   "product_id": "lts-9.4",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.4:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.4:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -951,173 +956,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2024-7347",
-      "cwe": {
-        "id": "CWE-126",
-        "name": "Buffer Over-read"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-7347",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-          "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-          "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-          "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-          "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-          "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-          "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.i686",
-          "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.src",
-          "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-all-modules-1:1.20.1-16.el9_4_ciq.2.noarch",
-          "lts-9.4:nginx-filesystem-1:1.20.1-16.el9_4_ciq.2.noarch",
-          "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.x86_64",
-          "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-          "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update nginx to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.src",
-            "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-all-modules-1:1.20.1-16.el9_4_ciq.2.noarch",
-            "lts-9.4:nginx-filesystem-1:1.20.1-16.el9_4_ciq.2.noarch",
-            "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 4.7,
-            "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.i686",
-            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.src",
-            "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-all-modules-1:1.20.1-16.el9_4_ciq.2.noarch",
-            "lts-9.4:nginx-filesystem-1:1.20.1-16.el9_4_ciq.2.noarch",
-            "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.x86_64",
-            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
-            "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.aarch64"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2022-41741",
       "cwe": {
         "id": "CWE-787",
@@ -1404,6 +1242,173 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.src",
+            "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-all-modules-1:1.20.1-16.el9_4_ciq.2.noarch",
+            "lts-9.4:nginx-filesystem-1:1.20.1-16.el9_4_ciq.2.noarch",
+            "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-7347",
+      "cwe": {
+        "id": "CWE-126",
+        "name": "Buffer Over-read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-7347",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+          "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+          "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+          "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+          "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+          "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+          "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.i686",
+          "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.src",
+          "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-all-modules-1:1.20.1-16.el9_4_ciq.2.noarch",
+          "lts-9.4:nginx-filesystem-1:1.20.1-16.el9_4_ciq.2.noarch",
+          "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.x86_64",
+          "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+          "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update nginx to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.i686",
+            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.src",
+            "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-all-modules-1:1.20.1-16.el9_4_ciq.2.noarch",
+            "lts-9.4:nginx-filesystem-1:1.20.1-16.el9_4_ciq.2.noarch",
+            "lts-9.4:nginx-mod-http-xslt-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-http-image-filter-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-http-perl-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-mail-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-stream-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-http-perl-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.x86_64",
+            "lts-9.4:nginx-mod-http-image-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-mail-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-stream-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-debugsource-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-devel-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-mod-http-xslt-filter-debuginfo-1:1.20.1-16.el9_4_ciq.2.aarch64",
+            "lts-9.4:nginx-core-1:1.20.1-16.el9_4_ciq.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 4.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
