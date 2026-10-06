@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the libtiff SRPM in CIQ LTS 8.6. It addresses 6 CVEs: CVE-2022-48281, CVE-2023-0800, CVE-2023-0804, CVE-2023-0801, CVE-2023-0803, and 1 more.",
+        "text": "This advisory aggregates security fixes for the libtiff SRPM in CIQ LTS 8.6. It addresses 6 CVEs: CVE-2022-48281, CVE-2023-0800, CVE-2023-0804, CVE-2023-0803, CVE-2023-0802, and 1 more.",
         "title": "Description"
       },
       {
@@ -58,11 +58,6 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-0801",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-0801.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2023-0803",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-0803.json"
       },
@@ -72,6 +67,11 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-0802.json"
       },
       {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-0801",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-0801.json"
+      },
+      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0938.json"
@@ -79,12 +79,12 @@
     ],
     "title": "libtiff security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-01T23:59:18.939796+00:00",
+      "current_release_date": "2026-10-06T07:01:47.888314+00:00",
       "generator": {
-        "date": "2026-09-01T23:59:18.939796+00:00",
+        "date": "2026-10-06T07:01:47.888314+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.2"
         }
       },
       "id": "CIQSA-2026:0938",
@@ -94,10 +94,15 @@
           "date": "2026-09-01T23:59:18.939796+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 6 CVEs fixed"
+        },
+        {
+          "date": "2026-10-06T07:01:47.903840+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -113,7 +118,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -930,119 +935,6 @@
       ]
     },
     {
-      "cve": "CVE-2023-0801",
-      "cwe": {
-        "id": "CWE-787",
-        "name": "Out-of-bounds Write"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-0801",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.aarch64",
-          "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.i686",
-          "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.i686",
-          "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.x86_64",
-          "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.x86_64",
-          "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.x86_64",
-          "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.x86_64",
-          "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.x86_64",
-          "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
-          "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
-          "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
-          "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.aarch64",
-          "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.aarch64",
-          "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.aarch64",
-          "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.aarch64",
-          "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
-          "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686",
-          "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.src",
-          "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.i686",
-          "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.i686",
-          "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.i686",
-          "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update libtiff to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.src",
-            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 6.1,
-            "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "LOW",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "REQUIRED",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.aarch64",
-            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
-            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.src",
-            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.i686",
-            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2023-0803",
       "cwe": {
         "id": "CWE-787",
@@ -1165,6 +1057,119 @@
         {
           "category": "description",
           "text": "Security vulnerability CVE-2023-0802",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.aarch64",
+          "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.i686",
+          "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.i686",
+          "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.x86_64",
+          "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.x86_64",
+          "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.x86_64",
+          "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.x86_64",
+          "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.x86_64",
+          "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
+          "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
+          "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
+          "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.aarch64",
+          "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.aarch64",
+          "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.aarch64",
+          "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.aarch64",
+          "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
+          "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686",
+          "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.src",
+          "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.i686",
+          "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.i686",
+          "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.i686",
+          "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libtiff to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.src",
+            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.1,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-devel-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.aarch64",
+            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.x86_64",
+            "lts-8.6:libtiff-tools-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-0:4.0.9-29.el8_6.ciqlts.src",
+            "lts-8.6:libtiff-static-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-tools-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-debugsource-0:4.0.9-29.el8_6.ciqlts.i686",
+            "lts-8.6:libtiff-debuginfo-0:4.0.9-29.el8_6.ciqlts.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0801",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-0801",
           "title": "Vulnerability Description"
         }
       ],
