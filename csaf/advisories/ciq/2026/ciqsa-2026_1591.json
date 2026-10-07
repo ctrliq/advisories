@@ -1,0 +1,2201 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Critical"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for git",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the git SRPM in CIQ CentOS Bridge 7.9. It addresses 16 CVEs: CVE-2009-2108, CVE-2023-29007, CVE-2022-23521, CVE-2022-41903, CVE-2020-11008, and 11 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2009-2108",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2009/cve-2009-2108.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-29007",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-29007.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-23521",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-23521.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-41903",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-41903.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-11008",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-11008.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-2324",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-2324.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-1000117",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-1000117.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-9938",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-9938.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-48384",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-48384.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-2315",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-2315.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-11235",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-11235.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-17456",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-17456.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-8386",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-8386.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-5260",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-5260.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-25652",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-25652.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-1387",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-1387.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1591.json"
+      }
+    ],
+    "title": "git security update for CIQ CentOS Bridge 7.9",
+    "tracking": {
+      "current_release_date": "2026-10-07T07:02:16.620237+00:00",
+      "generator": {
+        "date": "2026-10-07T07:02:16.620237+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1591",
+      "initial_release_date": "2026-10-07T07:02:16.620237+00:00",
+      "revision_history": [
+        {
+          "date": "2026-10-07T07:02:16.620237+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 16 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ CentOS Bridge 7.9",
+                "product": {
+                  "name": "CIQ CentOS Bridge 7.9",
+                  "product_id": "cbr-7.9-bridge",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:centos_linux_bridge:7.9:*:*:*:*:*:*:bridge"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ Bridge"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-email@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-gui@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-hg@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-instaweb@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/gitk@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-p4@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/gitweb@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/perl-Git@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/perl-Git-SVN@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/emacs-git@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/emacs-git-el@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-all@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-bzr@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_id": "git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-cvs@1.8.3.1-25.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-daemon@1.8.3.1-25.1.el7_9.ciqcbr?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-gnome-keyring@1.8.3.1-25.1.el7_9.ciqcbr?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git-svn@1.8.3.1-25.1.el7_9.ciqcbr?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/git@1.8.3.1-25.1.el7_9.ciqcbr?arch=x86_64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2009-2108",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2009-2108",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.0,
+            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-29007",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-29007",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-23521",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-23521",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-41903",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-41903",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-11008",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-11008",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-2324",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-2324",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-1000117",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-1000117",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 6.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-9938",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-9938",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-48384",
+      "cwe": {
+        "id": "CWE-59",
+        "name": "Improper Link Resolution Before File Access ('Link Following')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-48384",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-2315",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-2315",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-11235",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-11235",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-17456",
+      "cwe": {
+        "id": "CWE-77",
+        "name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-17456",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-8386",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-8386",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.0,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-5260",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-5260",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-25652",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-25652",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-1387",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-1387",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update git to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:git-daemon-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-email-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-gnome-keyring-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-gui-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-hg-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-instaweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:gitk-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-p4-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-svn-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:gitweb-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:perl-Git-SVN-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:emacs-git-el-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-0:1.8.3.1-25.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:git-all-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-bzr-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:git-cvs-0:1.8.3.1-25.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    }
+  ]
+}
