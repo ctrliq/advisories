@@ -1,0 +1,3392 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for grub2",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the grub2 SRPM in CIQ LTS 8.6. It addresses 26 CVEs: CVE-2021-3981, CVE-2021-20233, CVE-2020-14310, CVE-2022-28735, CVE-2022-28734, and 21 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3981",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3981.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-20233",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-20233.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-14310",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-14310.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-28735",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-28735.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-28734",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-28734.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-25632",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-25632.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3695",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3695.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-27749",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-27749.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-27779",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-27779.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-28733",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-28733.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-10713",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-10713.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-20225",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-20225.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-14308",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-14308.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-14865",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-14865.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-14372",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-14372.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-28736",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-28736.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-14311",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-14311.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3696",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3696.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-15705",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-15705.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3697",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3697.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-45775",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-45775.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4692",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4692.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2015-8370",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2015/cve-2015-8370.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-25647",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-25647.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-14309",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-14309.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-4607",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-4607.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1601.json"
+      }
+    ],
+    "title": "grub2 security update for CIQ LTS 8.6",
+    "tracking": {
+      "current_release_date": "2026-10-11T13:36:49.278021+00:00",
+      "generator": {
+        "date": "2026-10-11T13:36:49.278021+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1601",
+      "initial_release_date": "2026-10-11T13:36:49.278021+00:00",
+      "revision_history": [
+        {
+          "date": "2026-10-11T13:36:49.278021+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 26 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS 8.6",
+                "product": {
+                  "name": "CIQ LTS 8.6",
+                  "product_id": "lts-8.6",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                "product": {
+                  "name": "grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                  "product_id": "grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-efi-aa64@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=aarch64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                "product": {
+                  "name": "grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                  "product_id": "grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-efi-aa64-cdboot@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=aarch64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                "product": {
+                  "name": "grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                  "product_id": "grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-tools@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=aarch64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                "product": {
+                  "name": "grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                  "product_id": "grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-tools-extra@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=aarch64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                "product": {
+                  "name": "grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                  "product_id": "grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-tools-minimal@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=aarch64&epoch=1"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                "product": {
+                  "name": "grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                  "product_id": "grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-efi-x64-modules@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=noarch&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                "product": {
+                  "name": "grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                  "product_id": "grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-pc-modules@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=noarch&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                "product": {
+                  "name": "grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                  "product_id": "grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-common@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=noarch&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                "product": {
+                  "name": "grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                  "product_id": "grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-efi-aa64-modules@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=noarch&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                "product": {
+                  "name": "grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                  "product_id": "grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-efi-ia32-modules@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=noarch&epoch=1"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                "product": {
+                  "name": "grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_id": "grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-efi-ia32@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                "product": {
+                  "name": "grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_id": "grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-efi-ia32-cdboot@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                "product": {
+                  "name": "grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_id": "grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-tools-extra@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                "product": {
+                  "name": "grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_id": "grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-efi-x64@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                "product": {
+                  "name": "grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_id": "grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-efi-x64-cdboot@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                "product": {
+                  "name": "grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_id": "grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-pc@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                "product": {
+                  "name": "grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_id": "grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-tools@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                "product": {
+                  "name": "grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_id": "grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-tools-efi@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                "product": {
+                  "name": "grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_id": "grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/grub2-tools-minimal@2.02-167.el8_6.86ciq_lts.ciq.0.1.2?arch=x86_64&epoch=1"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64"
+        },
+        "product_reference": "grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64"
+        },
+        "product_reference": "grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch"
+        },
+        "product_reference": "grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch"
+        },
+        "product_reference": "grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64"
+        },
+        "product_reference": "grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch"
+        },
+        "product_reference": "grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch"
+        },
+        "product_reference": "grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch"
+        },
+        "product_reference": "grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64"
+        },
+        "product_reference": "grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64"
+        },
+        "product_reference": "grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64"
+        },
+        "product_reference": "grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64"
+        },
+        "product_reference": "grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64"
+        },
+        "product_reference": "grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64"
+        },
+        "product_reference": "grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        },
+        "product_reference": "grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        },
+        "product_reference": "grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        },
+        "product_reference": "grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        },
+        "product_reference": "grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        },
+        "product_reference": "grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-3981",
+      "cwe": {
+        "id": "CWE-276",
+        "name": "Incorrect Default Permissions"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3981",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-20233",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-20233",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-14310",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-14310",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-28735",
+      "cwe": {
+        "id": "CWE-829",
+        "name": "Inclusion of Functionality from Untrusted Control Sphere"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-28735",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-28734",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-28734",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-25632",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-25632",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3695",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3695",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-27749",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-27749",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-27779",
+      "cwe": {
+        "id": "CWE-285",
+        "name": "Improper Authorization"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-27779",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-28733",
+      "cwe": {
+        "id": "CWE-191",
+        "name": "Integer Underflow (Wrap or Wraparound)"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-28733",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-10713",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-10713",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-20225",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-20225",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-14308",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-14308",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-14865",
+      "cwe": {
+        "id": "CWE-267",
+        "name": "Privilege Defined With Unsafe Actions"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-14865",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:C/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-14372",
+      "cwe": {
+        "id": "CWE-184",
+        "name": "Incomplete List of Disallowed Inputs"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-14372",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-28736",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-28736",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-14311",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-14311",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3696",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3696",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.0,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-15705",
+      "cwe": {
+        "id": "CWE-440",
+        "name": "Expected Behavior Violation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-15705",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3697",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3697",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-45775",
+      "cwe": {
+        "id": "CWE-252",
+        "name": "Unchecked Return Value"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-45775",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.2,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4692",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4692",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-8370",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2015-8370",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.9,
+            "vectorString": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-25647",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-25647",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "PHYSICAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.6,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-14309",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-14309",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-4607",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-4607",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+          "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+          "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+          "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update grub2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.1,
+            "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:grub2-efi-ia32-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-ia32-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-pc-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-common-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-aa64-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-ia32-modules-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.noarch",
+            "lts-8.6:grub2-efi-x64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-x64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-pc-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-efi-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.x86_64",
+            "lts-8.6:grub2-efi-aa64-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-efi-aa64-cdboot-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-extra-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64",
+            "lts-8.6:grub2-tools-minimal-1:2.02-167.el8_6.86ciq_lts.ciq.0.1.2.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}
