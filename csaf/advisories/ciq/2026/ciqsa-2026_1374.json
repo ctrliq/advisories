@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ CentOS Bridge 7.9. It addresses 5 CVEs: CVE-2025-39971, CVE-2025-39973, CVE-2025-39955, CVE-2026-43037, CVE-2025-38718.",
+        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ CentOS Bridge 7.9. It addresses 5 CVEs: CVE-2025-39971, CVE-2025-39973, CVE-2025-38718, CVE-2025-39955, CVE-2026-43037.",
         "title": "Description"
       },
       {
@@ -53,6 +53,11 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2025-38718",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-38718.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2025-39955",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-39955.json"
       },
@@ -62,11 +67,6 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-43037.json"
       },
       {
-        "category": "external",
-        "summary": "VEX document for CVE-2025-38718",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-38718.json"
-      },
-      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1374.json"
@@ -74,12 +74,12 @@
     ],
     "title": "kernel security update for CIQ CentOS Bridge 7.9",
     "tracking": {
-      "current_release_date": "2026-10-01T07:01:40.973499+00:00",
+      "current_release_date": "2026-10-11T13:44:18.285130+00:00",
       "generator": {
-        "date": "2026-10-01T07:01:40.973499+00:00",
+        "date": "2026-10-11T13:44:18.285130+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.2"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1374",
@@ -94,10 +94,15 @@
           "date": "2026-10-01T07:01:40.981368+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:44:18.297481+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -789,6 +794,116 @@
       ]
     },
     {
+      "cve": "CVE-2025-38718",
+      "cwe": {
+        "id": "CWE-664",
+        "name": "Improper Control of a Resource Through its Lifetime"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-38718",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.src",
+          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
+          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
+          "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+          "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.src",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
+            "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.src",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
+            "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
+            "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2025-39955",
       "cwe": {
         "id": "CWE-213",
@@ -980,116 +1095,6 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.src",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
-            "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2025-38718",
-      "cwe": {
-        "id": "CWE-664",
-        "name": "Improper Control of a Resource Through its Lifetime"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2025-38718",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.src",
-          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
-          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
-          "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-          "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.src",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.noarch",
-            "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64",
-            "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.17.1.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
