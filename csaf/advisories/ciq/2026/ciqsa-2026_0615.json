@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ FIPS 9.2 Compliant. It addresses 7 CVEs: CVE-2023-51042, CVE-2025-37890, CVE-2025-38001, CVE-2024-50151, CVE-2023-40283, and 2 more.",
+        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ FIPS 9.2 Compliant. It addresses 7 CVEs: CVE-2023-40283, CVE-2024-56601, CVE-2023-51042, CVE-2025-37890, CVE-2025-38001, and 2 more.",
         "title": "Description"
       },
       {
@@ -40,6 +40,16 @@
         "category": "external",
         "summary": "CIQ Security Advisories",
         "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-40283",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-40283.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-56601",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-56601.json"
       },
       {
         "category": "external",
@@ -63,16 +73,6 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-40283",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-40283.json"
-      },
-      {
-        "category": "external",
-        "summary": "VEX document for CVE-2024-56601",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-56601.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2023-6040",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-6040.json"
       },
@@ -84,12 +84,12 @@
     ],
     "title": "kernel security update for CIQ FIPS 9.2 Compliant",
     "tracking": {
-      "current_release_date": "2026-10-01T07:01:10.154834+00:00",
+      "current_release_date": "2026-10-11T13:40:04.773749+00:00",
       "generator": {
-        "date": "2026-10-01T07:01:10.154834+00:00",
+        "date": "2026-10-11T13:40:04.773749+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.2"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0615",
@@ -104,10 +104,15 @@
           "date": "2026-10-01T07:01:10.163828+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:40:04.791740+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -135,23 +140,23 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-                "product": {
-                  "name": "kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-                  "product_id": "kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/kernel-abi-stablelists@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=noarch"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
                 "name": "kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
                 "product": {
                   "name": "kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
                   "product_id": "kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/kernel-doc@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+                "product": {
+                  "name": "kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+                  "product_id": "kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/kernel-abi-stablelists@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=noarch"
                   }
                 }
               }
@@ -257,12 +262,67 @@
               },
               {
                 "category": "product_version",
-                "name": "kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                "name": "kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
                 "product": {
-                  "name": "kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_id": "kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "name": "kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_id": "kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
                   "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/kernel-debug@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
+                    "purl": "pkg:rpm/ciq/kernel-devel-matched@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                "product": {
+                  "name": "kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_id": "kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/kernel-debug-devel-matched@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                "product": {
+                  "name": "kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_id": "kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/kernel-tools-libs@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                "product": {
+                  "name": "kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_id": "kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/kernel-tools@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                "product": {
+                  "name": "kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_id": "kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/kernel-debug-modules-extra@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                "product": {
+                  "name": "kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_id": "kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/kernel-modules-extra@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
                   }
                 }
               },
@@ -521,67 +581,12 @@
               },
               {
                 "category": "product_version",
-                "name": "kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                "name": "kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
                 "product": {
-                  "name": "kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_id": "kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "name": "kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+                  "product_id": "kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
                   "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/kernel-devel-matched@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                "product": {
-                  "name": "kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_id": "kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/kernel-debug-devel-matched@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                "product": {
-                  "name": "kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_id": "kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/kernel-tools-libs@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                "product": {
-                  "name": "kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_id": "kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/kernel-tools@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                "product": {
-                  "name": "kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_id": "kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/kernel-debug-modules-extra@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                "product": {
-                  "name": "kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_id": "kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/kernel-modules-extra@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
+                    "purl": "pkg:rpm/ciq/kernel-debug@5.14.0-284.30.1.el9_2.ciqfips.0.16.1?arch=x86_64"
                   }
                 }
               }
@@ -661,10 +666,73 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
-          "product_id": "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          "name": "kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src as a component of CIQ FIPS 9.2 Compliant",
+          "product_id": "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src"
         },
-        "product_reference": "kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+        "product_reference": "kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+        "relates_to_product_reference": "fips-9.2-compliant"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch as a component of CIQ FIPS 9.2 Compliant",
+          "product_id": "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch"
+        },
+        "product_reference": "kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+        "relates_to_product_reference": "fips-9.2-compliant"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
+          "product_id": "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+        },
+        "product_reference": "kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+        "relates_to_product_reference": "fips-9.2-compliant"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
+          "product_id": "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+        },
+        "product_reference": "kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+        "relates_to_product_reference": "fips-9.2-compliant"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
+          "product_id": "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+        },
+        "product_reference": "kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+        "relates_to_product_reference": "fips-9.2-compliant"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
+          "product_id": "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+        },
+        "product_reference": "kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+        "relates_to_product_reference": "fips-9.2-compliant"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
+          "product_id": "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+        },
+        "product_reference": "kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+        "relates_to_product_reference": "fips-9.2-compliant"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
+          "product_id": "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+        },
+        "product_reference": "kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
         "relates_to_product_reference": "fips-9.2-compliant"
       },
       {
@@ -886,746 +954,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src as a component of CIQ FIPS 9.2 Compliant",
-          "product_id": "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src"
+          "name": "kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
+          "product_id": "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
         },
-        "product_reference": "kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-        "relates_to_product_reference": "fips-9.2-compliant"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch as a component of CIQ FIPS 9.2 Compliant",
-          "product_id": "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch"
-        },
-        "product_reference": "kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-        "relates_to_product_reference": "fips-9.2-compliant"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
-          "product_id": "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-        },
-        "product_reference": "kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-        "relates_to_product_reference": "fips-9.2-compliant"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
-          "product_id": "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-        },
-        "product_reference": "kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-        "relates_to_product_reference": "fips-9.2-compliant"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
-          "product_id": "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-        },
-        "product_reference": "kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-        "relates_to_product_reference": "fips-9.2-compliant"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
-          "product_id": "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-        },
-        "product_reference": "kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-        "relates_to_product_reference": "fips-9.2-compliant"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
-          "product_id": "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-        },
-        "product_reference": "kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-        "relates_to_product_reference": "fips-9.2-compliant"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64 as a component of CIQ FIPS 9.2 Compliant",
-          "product_id": "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-        },
-        "product_reference": "kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+        "product_reference": "kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
         "relates_to_product_reference": "fips-9.2-compliant"
       }
     ]
   },
   "vulnerabilities": [
-    {
-      "cve": "CVE-2023-51042",
-      "cwe": {
-        "id": "CWE-416",
-        "name": "Use After Free"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-51042",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2025-37890",
-      "cwe": {
-        "id": "CWE-416",
-        "name": "Use After Free"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2025-37890",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.0,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2025-38001",
-      "cwe": {
-        "id": "CWE-416",
-        "name": "Use After Free"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2025-38001",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.0,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-50151",
-      "cwe": {
-        "id": "CWE-787",
-        "name": "Out-of-bounds Write"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-50151",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
-          ]
-        }
-      ]
-    },
     {
       "cve": "CVE-2023-40283",
       "cwe": {
@@ -1648,7 +985,14 @@
           "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
@@ -1673,14 +1017,7 @@
           "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
         ]
       },
       "remediations": [
@@ -1695,7 +1032,14 @@
             "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
@@ -1720,14 +1064,7 @@
             "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -1756,7 +1093,14 @@
             "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
@@ -1781,14 +1125,7 @@
             "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
           ]
         }
       ]
@@ -1815,7 +1152,14 @@
           "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
@@ -1840,14 +1184,7 @@
           "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
         ]
       },
       "remediations": [
@@ -1862,7 +1199,14 @@
             "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
@@ -1887,14 +1231,7 @@
             "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -1923,7 +1260,14 @@
             "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
@@ -1948,28 +1292,21 @@
             "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
           ]
         }
       ]
     },
     {
-      "cve": "CVE-2023-6040",
+      "cve": "CVE-2023-51042",
       "cwe": {
-        "id": "CWE-119",
-        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+        "id": "CWE-416",
+        "name": "Use After Free"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2023-6040",
+          "text": "Security vulnerability CVE-2023-51042",
           "title": "Vulnerability Description"
         }
       ],
@@ -1982,7 +1319,14 @@
           "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
@@ -2007,14 +1351,7 @@
           "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
           "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
         ]
       },
       "remediations": [
@@ -2029,7 +1366,14 @@
             "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
@@ -2054,14 +1398,7 @@
             "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
-            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
-            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -2090,7 +1427,14 @@
             "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
@@ -2115,6 +1459,80 @@
             "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-37890",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-37890",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel to the latest version from CIQ repositories",
+          "product_ids": [
+            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
             "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
             "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
@@ -2122,7 +1540,594 @@
             "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
             "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
-            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-38001",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-38001",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel to the latest version from CIQ repositories",
+          "product_ids": [
+            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-50151",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-50151",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel to the latest version from CIQ repositories",
+          "product_ids": [
+            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-6040",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-6040",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+          "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+          "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+          "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel to the latest version from CIQ repositories",
+          "product_ids": [
+            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "fips-9.2-compliant:kernel-tools-libs-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-ipaclones-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-selftests-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-common-x86_64-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.src",
+            "fips-9.2-compliant:kernel-doc-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-matched-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-libs-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-tools-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-extra-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-partner-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-cross-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-abi-stablelists-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.noarch",
+            "fips-9.2-compliant:kernel-tools-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:perf-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-uki-virt-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-debuginfo-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-modules-internal-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-headers-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-modules-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-devel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-core-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:bpftool-0:7.0.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:rtla-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:python3-perf-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64",
+            "fips-9.2-compliant:kernel-debug-0:5.14.0-284.30.1.el9_2.ciqfips.0.16.1.x86_64"
           ]
         }
       ]
