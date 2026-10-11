@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the squid SRPM in CIQ LTS 8.8. It addresses 9 CVEs: CVE-2023-5824, CVE-2023-46847, CVE-2023-49286, CVE-2024-25111, CVE-2023-49285, and 4 more.",
+        "text": "This advisory aggregates security fixes for the squid SRPM in CIQ LTS 8.8. It addresses 9 CVEs: CVE-2024-25111, CVE-2023-5824, CVE-2023-49286, CVE-2024-25617, CVE-2023-46728, and 4 more.",
         "title": "Description"
       },
       {
@@ -43,28 +43,18 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-5824",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5824.json"
-      },
-      {
-        "category": "external",
-        "summary": "VEX document for CVE-2023-46847",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-46847.json"
-      },
-      {
-        "category": "external",
-        "summary": "VEX document for CVE-2023-49286",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-49286.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2024-25111",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-25111.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-49285",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-49285.json"
+        "summary": "VEX document for CVE-2023-5824",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5824.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-49286",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-49286.json"
       },
       {
         "category": "external",
@@ -78,6 +68,11 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2023-49285",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-49285.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2023-46724",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-46724.json"
       },
@@ -87,6 +82,11 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-50269.json"
       },
       {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-46847",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-46847.json"
+      },
+      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0295.json"
@@ -94,12 +94,12 @@
     ],
     "title": "squid security update for CIQ LTS 8.8",
     "tracking": {
-      "current_release_date": "2026-09-03T20:29:36.000543+00:00",
+      "current_release_date": "2026-10-11T13:37:19.834092+00:00",
       "generator": {
-        "date": "2026-09-03T20:29:36.000543+00:00",
+        "date": "2026-10-11T13:37:19.834092+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0295",
@@ -114,10 +114,15 @@
           "date": "2026-09-03T20:29:36.005771+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:37:19.842619+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -133,7 +138,7 @@
                   "name": "CIQ LTS 8.8",
                   "product_id": "lts-8.8",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.8:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.8:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -309,210 +314,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-5824",
-      "cwe": {
-        "id": "CWE-755",
-        "name": "Improper Handling of Exceptional Conditions"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-5824",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update squid to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-46847",
-      "cwe": {
-        "id": "CWE-120",
-        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-46847",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update squid to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 8.6,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "LOW",
-            "integrityImpact": "LOW",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-49286",
-      "cwe": {
-        "id": "CWE-253",
-        "name": "Incorrect Check of Function Return Value"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-49286",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update squid to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
-            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2024-25111",
       "cwe": {
         "id": "CWE-674",
@@ -581,15 +382,83 @@
       ]
     },
     {
-      "cve": "CVE-2023-49285",
+      "cve": "CVE-2023-5824",
       "cwe": {
-        "id": "CWE-126",
-        "name": "Buffer Over-read"
+        "id": "CWE-755",
+        "name": "Improper Handling of Exceptional Conditions"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2023-49285",
+          "text": "Security vulnerability CVE-2023-5824",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update squid to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-49286",
+      "cwe": {
+        "id": "CWE-253",
+        "name": "Incorrect Check of Function Return Value"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-49286",
           "title": "Vulnerability Description"
         }
       ],
@@ -785,6 +654,74 @@
       ]
     },
     {
+      "cve": "CVE-2023-49285",
+      "cwe": {
+        "id": "CWE-126",
+        "name": "Buffer Over-read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-49285",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update squid to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2023-46724",
       "cwe": {
         "id": "CWE-125",
@@ -906,6 +843,74 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-46847",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-46847",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+          "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+          "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+          "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update squid to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debuginfo-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-debugsource-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.x86_64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.aarch64",
+            "lts-8.8:squid-7:4.15-7.module+el8.8.0+2982+244c2fc6.10.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
             "version": "3.1"
           },
           "products": [
