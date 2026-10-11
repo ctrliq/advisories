@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the python-requests SRPM in CIQ LTS 8.6. It addresses 4 CVEs: CVE-2015-20107, CVE-2023-32681, CVE-2022-45061, CVE-2023-24329.",
+        "text": "This advisory aggregates security fixes for the python-requests SRPM in CIQ LTS 8.6. It addresses 6 CVEs: CVE-2015-20107, CVE-2023-32681, CVE-2022-45061, CVE-2023-24329, CVE-2018-18074, and 1 more.",
         "title": "Description"
       },
       {
@@ -62,6 +62,16 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-24329.json"
       },
       {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-18074",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-18074.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2015-2296",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2015/cve-2015-2296.json"
+      },
+      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0187.json"
@@ -69,12 +79,12 @@
     ],
     "title": "python-requests security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-10-02T07:01:16.361659+00:00",
+      "current_release_date": "2026-10-11T13:37:11.022050+00:00",
       "generator": {
-        "date": "2026-10-02T07:01:16.361659+00:00",
+        "date": "2026-10-11T13:37:11.022050+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.2"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0187",
@@ -89,10 +99,15 @@
           "date": "2026-10-02T07:01:16.366405+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:37:11.027435+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -344,6 +359,97 @@
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:python2-requests-0:2.20.0-4.module+el8.6.0+3618+058c41dd.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-18074",
+      "cwe": {
+        "id": "CWE-522",
+        "name": "Insufficiently Protected Credentials"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-18074",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:python2-requests-0:2.20.0-4.module+el8.6.0+3618+058c41dd.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update python-requests to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:python2-requests-0:2.20.0-4.module+el8.6.0+3618+058c41dd.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "ADJACENT_NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 2.6,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:A/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.6:python2-requests-0:2.20.0-4.module+el8.6.0+3618+058c41dd.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-2296",
+      "cwe": {
+        "id": "CWE-201",
+        "name": "Insertion of Sensitive Information Into Sent Data"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2015-2296",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:python2-requests-0:2.20.0-4.module+el8.6.0+3618+058c41dd.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update python-requests to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:python2-requests-0:2.20.0-4.module+el8.6.0+3618+058c41dd.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+            "version": "2.0"
           },
           "products": [
             "lts-8.6:python2-requests-0:2.20.0-4.module+el8.6.0+3618+058c41dd.noarch"
