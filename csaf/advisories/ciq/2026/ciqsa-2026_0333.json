@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the tomcat SRPM in CIQ LTS 8.8. It addresses 3 CVEs: CVE-2025-24813, CVE-2024-24549, CVE-2024-23672.",
+        "text": "This advisory aggregates security fixes for the tomcat SRPM in CIQ LTS 8.8. It addresses 3 CVEs: CVE-2024-23672, CVE-2025-24813, CVE-2024-24549.",
         "title": "Description"
       },
       {
@@ -43,6 +43,11 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2024-23672",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-23672.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2025-24813",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-24813.json"
       },
@@ -52,11 +57,6 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-24549.json"
       },
       {
-        "category": "external",
-        "summary": "VEX document for CVE-2024-23672",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-23672.json"
-      },
-      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0333.json"
@@ -64,12 +64,12 @@
     ],
     "title": "tomcat security update for CIQ LTS 8.8",
     "tracking": {
-      "current_release_date": "2026-09-03T20:29:38.766548+00:00",
+      "current_release_date": "2026-10-11T13:37:25.758127+00:00",
       "generator": {
-        "date": "2026-09-03T20:29:38.766548+00:00",
+        "date": "2026-10-11T13:37:25.758127+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0333",
@@ -84,10 +84,15 @@
           "date": "2026-09-03T20:29:38.880849+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:37:25.764926+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -103,7 +108,7 @@
                   "name": "CIQ LTS 8.8",
                   "product_id": "lts-8.8",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.8:*:*:*:*:*:noarch:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.8:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -231,6 +236,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "tomcat-1:9.0.87-1.el8_8.ciqlts.2.src as a component of CIQ LTS 8.8",
+          "product_id": "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
+        },
+        "product_reference": "tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch as a component of CIQ LTS 8.8",
           "product_id": "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch"
         },
@@ -299,19 +313,84 @@
         },
         "product_reference": "tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch",
         "relates_to_product_reference": "lts-8.8"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "tomcat-1:9.0.87-1.el8_8.ciqlts.2.src as a component of CIQ LTS 8.8",
-          "product_id": "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
-        },
-        "product_reference": "tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
-        "relates_to_product_reference": "lts-8.8"
       }
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2024-23672",
+      "cwe": {
+        "id": "CWE-459",
+        "name": "Incomplete Cleanup"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-23672",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
+          "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+          "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+          "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+          "lts-8.8:tomcat-servlet-4.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+          "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+          "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+          "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+          "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
+            "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-servlet-4.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
+            "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-servlet-4.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
+            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2025-24813",
       "cwe": {
@@ -327,6 +406,7 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
           "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
           "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
           "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
@@ -334,8 +414,7 @@
           "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
           "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
           "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
+          "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch"
         ]
       },
       "remediations": [
@@ -343,6 +422,7 @@
           "category": "vendor_fix",
           "details": "Update tomcat to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
             "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
@@ -350,8 +430,7 @@
             "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
+            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -373,6 +452,7 @@
             "version": "3.1"
           },
           "products": [
+            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
             "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
@@ -380,8 +460,7 @@
             "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
+            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch"
           ]
         }
       ]
@@ -401,6 +480,7 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
           "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
           "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
           "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
@@ -408,8 +488,7 @@
           "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
           "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
           "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
+          "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch"
         ]
       },
       "remediations": [
@@ -417,6 +496,7 @@
           "category": "vendor_fix",
           "details": "Update tomcat to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
             "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
@@ -424,8 +504,7 @@
             "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
+            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -447,6 +526,7 @@
             "version": "3.1"
           },
           "products": [
+            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src",
             "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
@@ -454,82 +534,7 @@
             "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
             "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-23672",
-      "cwe": {
-        "id": "CWE-459",
-        "name": "Incomplete Cleanup"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-23672",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-servlet-4.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-          "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update tomcat to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-servlet-4.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.8:tomcat-el-3.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-jsp-2.3-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-lib-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-servlet-4.0-api-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-admin-webapps-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch",
-            "lts-8.8:tomcat-1:9.0.87-1.el8_8.ciqlts.2.src"
+            "lts-8.8:tomcat-docs-webapp-1:9.0.87-1.el8_8.ciqlts.2.noarch"
           ]
         }
       ]
