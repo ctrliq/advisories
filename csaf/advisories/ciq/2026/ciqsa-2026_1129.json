@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the libxml2 SRPM in CIQ LTS 8.6. It addresses 2 CVEs: CVE-2025-24928, CVE-2024-56171.",
+        "text": "This advisory aggregates security fixes for the libxml2 SRPM in CIQ LTS 8.6. It addresses 2 CVEs: CVE-2024-56171, CVE-2025-24928.",
         "title": "Description"
       },
       {
@@ -43,13 +43,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2025-24928",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-24928.json"
+        "summary": "VEX document for CVE-2024-56171",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-56171.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-56171",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-56171.json"
+        "summary": "VEX document for CVE-2025-24928",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-24928.json"
       },
       {
         "category": "self",
@@ -59,12 +59,12 @@
     ],
     "title": "libxml2 security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-02T00:00:18.500852+00:00",
+      "current_release_date": "2026-10-11T13:42:00.979114+00:00",
       "generator": {
-        "date": "2026-09-02T00:00:18.500852+00:00",
+        "date": "2026-10-11T13:42:00.979114+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1129",
@@ -74,10 +74,15 @@
           "date": "2026-09-02T00:00:18.500852+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 2 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:42:00.994294+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -93,7 +98,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -385,6 +390,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src"
+        },
+        "product_reference": "libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64 as a component of CIQ LTS 8.6",
           "product_id": "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64"
         },
@@ -443,15 +457,6 @@
           "product_id": "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64"
         },
         "product_reference": "python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src"
-        },
-        "product_reference": "libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
         "relates_to_product_reference": "lts-8.6"
       },
       {
@@ -575,119 +580,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-24928",
-      "cwe": {
-        "id": "CWE-121",
-        "name": "Stack-based Buffer Overflow"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2025-24928",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-          "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-          "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-          "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-          "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-          "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-          "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-          "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-          "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
-          "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-          "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-          "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-          "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-          "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-          "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-          "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-          "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-          "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-          "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-          "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-          "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-          "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update libxml2 to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
-            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "NONE",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "CHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
-            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
-            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
-            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2024-56171",
       "cwe": {
         "id": "CWE-416",
@@ -703,6 +595,7 @@
       "product_status": {
         "fixed": [
           "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
           "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
           "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
           "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
@@ -710,7 +603,6 @@
           "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
           "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
           "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-          "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
           "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
           "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
           "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
@@ -732,6 +624,7 @@
           "details": "Update libxml2 to the latest version from CIQ repositories",
           "product_ids": [
             "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
             "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
             "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
             "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
@@ -739,7 +632,6 @@
             "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
             "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
             "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
-            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
             "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
             "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
             "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
@@ -775,6 +667,7 @@
           },
           "products": [
             "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
             "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
             "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
             "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
@@ -782,7 +675,119 @@
             "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
             "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
             "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-24928",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-24928",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
+          "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+          "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+          "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+          "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+          "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+          "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+          "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+          "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+          "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+          "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libxml2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
             "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
+            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
+            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.aarch64",
+            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.src",
+            "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:libxml2-devel-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:libxml2-static-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:python3-libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
+            "lts-8.6:python3-libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.x86_64",
             "lts-8.6:libxml2-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
             "lts-8.6:libxml2-debuginfo-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
             "lts-8.6:libxml2-debugsource-0:2.9.7-19.el8_6.86ciq_lts.2.i686",
