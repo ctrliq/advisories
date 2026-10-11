@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the dnsmasq SRPM in CIQ LTS 8.6. It addresses 7 CVEs: CVE-2023-50868, CVE-2023-50387, CVE-2026-4892, CVE-2026-4891, CVE-2026-2291, and 2 more.",
+        "text": "This advisory aggregates security fixes for the dnsmasq SRPM in CIQ LTS 8.6. It addresses 7 CVEs: CVE-2026-4892, CVE-2023-50387, CVE-2026-4891, CVE-2026-4890, CVE-2023-50868, and 2 more.",
         "title": "Description"
       },
       {
@@ -43,8 +43,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-50868",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-50868.json"
+        "summary": "VEX document for CVE-2026-4892",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-4892.json"
       },
       {
         "category": "external",
@@ -53,23 +53,23 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2026-4892",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-4892.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2026-4891",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-4891.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2026-2291",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-2291.json"
+        "summary": "VEX document for CVE-2026-4890",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-4890.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2026-4890",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-4890.json"
+        "summary": "VEX document for CVE-2023-50868",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-50868.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-2291",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-2291.json"
       },
       {
         "category": "external",
@@ -84,12 +84,12 @@
     ],
     "title": "dnsmasq security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-02T00:02:10.019186+00:00",
+      "current_release_date": "2026-10-11T13:44:36.322364+00:00",
       "generator": {
-        "date": "2026-09-02T00:02:10.019186+00:00",
+        "date": "2026-10-11T13:44:36.322364+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1467",
@@ -99,10 +99,15 @@
           "date": "2026-09-02T00:02:10.019186+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 7 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:44:36.331327+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -118,7 +123,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -348,15 +353,15 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-50868",
+      "cve": "CVE-2026-4892",
       "cwe": {
-        "id": "CWE-400",
-        "name": "Uncontrolled Resource Consumption"
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2023-50868",
+          "text": "Security vulnerability CVE-2026-4892",
           "title": "Vulnerability Description"
         }
       ],
@@ -397,16 +402,16 @@
         {
           "cvss_v3": {
             "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
+            "attackVector": "ADJACENT_NETWORK",
             "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
+            "baseScore": 8.8,
             "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
             "privilegesRequired": "NONE",
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -502,15 +507,15 @@
       ]
     },
     {
-      "cve": "CVE-2026-4892",
+      "cve": "CVE-2026-4891",
       "cwe": {
-        "id": "CWE-122",
-        "name": "Heap-based Buffer Overflow"
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2026-4892",
+          "text": "Security vulnerability CVE-2026-4891",
           "title": "Vulnerability Description"
         }
       ],
@@ -551,16 +556,16 @@
         {
           "cvss_v3": {
             "attackComplexity": "LOW",
-            "attackVector": "ADJACENT_NETWORK",
+            "attackVector": "NETWORK",
             "availabilityImpact": "HIGH",
-            "baseScore": 8.8,
+            "baseScore": 7.5,
             "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
             "privilegesRequired": "NONE",
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -579,15 +584,92 @@
       ]
     },
     {
-      "cve": "CVE-2026-4891",
+      "cve": "CVE-2026-4890",
       "cwe": {
-        "id": "CWE-125",
-        "name": "Out-of-bounds Read"
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2026-4891",
+          "text": "Security vulnerability CVE-2026-4890",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
+          "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.aarch64",
+          "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
+          "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.aarch64",
+          "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.aarch64",
+          "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
+          "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.x86_64",
+          "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
+          "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.x86_64",
+          "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dnsmasq to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
+            "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.aarch64",
+            "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
+            "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.aarch64",
+            "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.aarch64",
+            "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
+            "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.x86_64",
+            "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
+            "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.x86_64",
+            "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
+            "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.aarch64",
+            "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
+            "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.aarch64",
+            "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.aarch64",
+            "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
+            "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.x86_64",
+            "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
+            "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.x86_64",
+            "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-50868",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-50868",
           "title": "Vulnerability Description"
         }
       ],
@@ -715,83 +797,6 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
-            "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.aarch64",
-            "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
-            "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.aarch64",
-            "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.aarch64",
-            "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
-            "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.x86_64",
-            "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
-            "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.x86_64",
-            "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2026-4890",
-      "cwe": {
-        "id": "CWE-835",
-        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2026-4890",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
-          "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.aarch64",
-          "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
-          "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.aarch64",
-          "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.aarch64",
-          "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
-          "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.x86_64",
-          "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
-          "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.x86_64",
-          "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update dnsmasq to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
-            "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.aarch64",
-            "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.aarch64",
-            "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.aarch64",
-            "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.aarch64",
-            "lts-8.6:dnsmasq-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
-            "lts-8.6:dnsmasq-debugsource-0:2.79-36.el8_6_ciq.x86_64",
-            "lts-8.6:dnsmasq-utils-debuginfo-0:2.79-36.el8_6_ciq.x86_64",
-            "lts-8.6:dnsmasq-0:2.79-36.el8_6_ciq.x86_64",
-            "lts-8.6:dnsmasq-utils-0:2.79-36.el8_6_ciq.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
