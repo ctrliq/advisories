@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the postgresql-jdbc SRPM in CIQ LTS 9.2. It addresses 1 CVE: CVE-2024-1597.",
+        "text": "This advisory aggregates security fixes for the postgresql-jdbc SRPM in CIQ LTS 9.2. It addresses 4 CVEs: CVE-2022-41946, CVE-2022-31197, CVE-2024-1597, CVE-2020-13692.",
         "title": "Description"
       },
       {
@@ -43,8 +43,23 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2022-41946",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-41946.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-31197",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-31197.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2024-1597",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-1597.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-13692",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-13692.json"
       },
       {
         "category": "self",
@@ -52,14 +67,14 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0479.json"
       }
     ],
-    "title": "postgresql-jdbc security update (CVE-2024-1597)",
+    "title": "postgresql-jdbc security update for CIQ LTS 9.2",
     "tracking": {
-      "current_release_date": "2026-09-01T23:56:24.637494+00:00",
+      "current_release_date": "2026-10-11T13:39:22.794093+00:00",
       "generator": {
-        "date": "2026-09-01T23:56:24.637494+00:00",
+        "date": "2026-10-11T13:39:22.794093+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0479",
@@ -69,10 +84,15 @@
           "date": "2026-09-01T23:56:24.637494+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 1 CVE fixed"
+        },
+        {
+          "date": "2026-10-11T13:39:22.804472+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -88,7 +108,7 @@
                   "name": "CIQ LTS 9.2",
                   "product_id": "lts-9.2",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:noarch:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -150,19 +170,19 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src"
+          "name": "postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch"
         },
-        "product_reference": "postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
+        "product_reference": "postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
         "relates_to_product_reference": "lts-9.2"
       },
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch"
+          "name": "postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src"
         },
-        "product_reference": "postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+        "product_reference": "postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
         "relates_to_product_reference": "lts-9.2"
       },
       {
@@ -178,6 +198,118 @@
   },
   "vulnerabilities": [
     {
+      "cve": "CVE-2022-41946",
+      "cwe": {
+        "id": "CWE-379",
+        "name": "Creation of Temporary File in Directory with Insecure Permissions"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-41946",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+          "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
+          "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update postgresql-jdbc to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
+            "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
+            "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-31197",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-31197",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+          "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
+          "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update postgresql-jdbc to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
+            "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
+            "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2024-1597",
       "cwe": {
         "id": "CWE-89",
@@ -192,8 +324,8 @@
       ],
       "product_status": {
         "fixed": [
-          "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
           "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+          "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
           "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
         ]
       },
@@ -202,8 +334,8 @@
           "category": "vendor_fix",
           "details": "Update postgresql-jdbc to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
             "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
             "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
           ],
           "url": "https://github.com/ctrliq/advisories"
@@ -226,8 +358,64 @@
             "version": "3.1"
           },
           "products": [
-            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
             "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
+            "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-13692",
+      "cwe": {
+        "id": "CWE-611",
+        "name": "Improper Restriction of XML External Entity Reference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-13692",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+          "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
+          "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update postgresql-jdbc to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
+            "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.7,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.noarch",
+            "lts-9.2:postgresql-jdbc-0:42.2.28-1.el9_2.ciqlts.src",
             "lts-9.2:postgresql-jdbc-javadoc-0:42.2.28-1.el9_2.ciqlts.noarch"
           ]
         }
