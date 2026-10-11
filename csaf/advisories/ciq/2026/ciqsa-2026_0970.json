@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the sudo SRPM in CIQ LTS 8.8. It addresses 3 CVEs: CVE-2023-42465, CVE-2023-28486, CVE-2023-28487.",
+        "text": "This advisory aggregates security fixes for the sudo SRPM in CIQ LTS 8.8. It addresses 3 CVEs: CVE-2023-28486, CVE-2023-42465, CVE-2023-28487.",
         "title": "Description"
       },
       {
@@ -43,13 +43,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-42465",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-42465.json"
+        "summary": "VEX document for CVE-2023-28486",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-28486.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-28486",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-28486.json"
+        "summary": "VEX document for CVE-2023-42465",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-42465.json"
       },
       {
         "category": "external",
@@ -64,12 +64,12 @@
     ],
     "title": "sudo security update for CIQ LTS 8.8",
     "tracking": {
-      "current_release_date": "2026-09-01T23:59:29.386432+00:00",
+      "current_release_date": "2026-10-11T13:41:39.494942+00:00",
       "generator": {
-        "date": "2026-09-01T23:59:29.386432+00:00",
+        "date": "2026-10-11T13:41:39.494942+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0970",
@@ -79,10 +79,15 @@
           "date": "2026-09-01T23:59:29.386432+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 3 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:41:39.502902+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -98,7 +103,7 @@
                   "name": "CIQ LTS 8.8",
                   "product_id": "lts-8.8",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.8:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.8:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -400,92 +405,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-42465",
-      "cwe": {
-        "id": "CWE-1319",
-        "name": "Improper Protection against Electromagnetic Fault Injection (EM-FI)"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-42465",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.src",
-          "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-          "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-          "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-          "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-          "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update sudo to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.src",
-            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.0,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.src",
-            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
-            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2023-28486",
       "cwe": {
         "id": "CWE-117",
@@ -551,6 +470,92 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.src",
+            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-42465",
+      "cwe": {
+        "id": "CWE-1319",
+        "name": "Improper Protection against Electromagnetic Fault Injection (EM-FI)"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-42465",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.src",
+          "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+          "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+          "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+          "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+          "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update sudo to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.src",
+            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.i686",
+            "lts-8.8:sudo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:sudo-devel-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:sudo-debugsource-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:sudo-debuginfo-0:1.9.5p2-1.el8_8.88ciq_lts.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
