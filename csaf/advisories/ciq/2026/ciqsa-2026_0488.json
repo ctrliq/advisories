@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the unbound SRPM in CIQ LTS 9.2. It addresses 3 CVEs: CVE-2023-50868, CVE-2024-1488, CVE-2023-50387.",
+        "text": "This advisory aggregates security fixes for the unbound SRPM in CIQ LTS 9.2. It addresses 12 CVEs: CVE-2011-4528, CVE-2014-8602, CVE-2019-16866, CVE-2023-50868, CVE-2020-12662, and 7 more.",
         "title": "Description"
       },
       {
@@ -43,8 +43,43 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2011-4528",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-4528.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-8602",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-8602.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-16866",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-16866.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2023-50868",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-50868.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-12662",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-12662.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-18934",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-18934.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-15105",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-15105.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-50387",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-50387.json"
       },
       {
         "category": "external",
@@ -53,8 +88,18 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-50387",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-50387.json"
+        "summary": "VEX document for CVE-2020-12663",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-12663.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2008-5077",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2008/cve-2008-5077.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-1922",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-1922.json"
       },
       {
         "category": "self",
@@ -64,12 +109,12 @@
     ],
     "title": "unbound security update for CIQ LTS 9.2",
     "tracking": {
-      "current_release_date": "2026-09-01T23:56:26.854486+00:00",
+      "current_release_date": "2026-10-11T13:39:23.630232+00:00",
       "generator": {
-        "date": "2026-09-01T23:56:26.854486+00:00",
+        "date": "2026-10-11T13:39:23.630232+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0488",
@@ -79,10 +124,15 @@
           "date": "2026-09-01T23:56:26.854486+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 3 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:39:23.645485+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -98,7 +148,7 @@
                   "name": "CIQ LTS 9.2",
                   "product_id": "lts-9.2",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -116,6 +166,17 @@
                   "product_id": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/unbound-libs@1.16.2-3.el9_2.ciqlts.5?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+                "product": {
+                  "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+                  "product_id": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/unbound-devel@1.16.2-3.el9_2.ciqlts.5?arch=aarch64"
                   }
                 }
               },
@@ -160,17 +221,6 @@
                   "product_id": "unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/unbound-debuginfo@1.16.2-3.el9_2.ciqlts.5?arch=aarch64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-                "product": {
-                  "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-                  "product_id": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/unbound-devel@1.16.2-3.el9_2.ciqlts.5?arch=aarch64"
                   }
                 }
               },
@@ -270,23 +320,23 @@
               },
               {
                 "category": "product_version",
-                "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-                "product": {
-                  "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-                  "product_id": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/unbound-libs@1.16.2-3.el9_2.ciqlts.5?arch=i686"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
                 "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
                 "product": {
                   "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
                   "product_id": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/unbound-devel@1.16.2-3.el9_2.ciqlts.5?arch=i686"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+                "product": {
+                  "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+                  "product_id": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/unbound-libs@1.16.2-3.el9_2.ciqlts.5?arch=i686"
                   }
                 }
               }
@@ -315,12 +365,56 @@
             "branches": [
               {
                 "category": "product_version",
+                "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                "product": {
+                  "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                  "product_id": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/unbound-libs@1.16.2-3.el9_2.ciqlts.5?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
                 "name": "unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
                 "product": {
                   "name": "unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
                   "product_id": "unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/unbound-libs-debuginfo@1.16.2-3.el9_2.ciqlts.5?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                "product": {
+                  "name": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                  "product_id": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/python3-unbound@1.16.2-3.el9_2.ciqlts.5?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                "product": {
+                  "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                  "product_id": "unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/unbound@1.16.2-3.el9_2.ciqlts.5?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                "product": {
+                  "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                  "product_id": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/unbound-devel@1.16.2-3.el9_2.ciqlts.5?arch=x86_64"
                   }
                 }
               },
@@ -356,50 +450,6 @@
                     "purl": "pkg:rpm/ciq/unbound-debuginfo@1.16.2-3.el9_2.ciqlts.5?arch=x86_64"
                   }
                 }
-              },
-              {
-                "category": "product_version",
-                "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                "product": {
-                  "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                  "product_id": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/unbound-devel@1.16.2-3.el9_2.ciqlts.5?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                "product": {
-                  "name": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                  "product_id": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/python3-unbound@1.16.2-3.el9_2.ciqlts.5?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                "product": {
-                  "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                  "product_id": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/unbound-libs@1.16.2-3.el9_2.ciqlts.5?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                "product": {
-                  "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                  "product_id": "unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/unbound@1.16.2-3.el9_2.ciqlts.5?arch=x86_64"
-                  }
-                }
               }
             ],
             "category": "architecture",
@@ -418,6 +468,33 @@
           "product_id": "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
         },
         "product_reference": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.src as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src"
+        },
+        "product_reference": "unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        },
+        "product_reference": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+        },
+        "product_reference": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
         "relates_to_product_reference": "lts-9.2"
       },
       {
@@ -504,6 +581,87 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        },
+        "product_reference": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.i686 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686"
+        },
+        "product_reference": "unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        },
+        "product_reference": "unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        },
+        "product_reference": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686"
+        },
+        "product_reference": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686"
+        },
+        "product_reference": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686"
+        },
+        "product_reference": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+        },
+        "product_reference": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+        },
+        "product_reference": "unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64 as a component of CIQ LTS 9.2",
           "product_id": "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
         },
@@ -527,118 +685,354 @@
         },
         "product_reference": "unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
         "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.src as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src"
-        },
-        "product_reference": "unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
-        },
-        "product_reference": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
-        },
-        "product_reference": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
-        },
-        "product_reference": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
-        },
-        "product_reference": "unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.i686 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686"
-        },
-        "product_reference": "unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686"
-        },
-        "product_reference": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686"
-        },
-        "product_reference": "unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686"
-        },
-        "product_reference": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
-        },
-        "product_reference": "unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
-        },
-        "product_reference": "python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64 as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
-        },
-        "product_reference": "unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-        "relates_to_product_reference": "lts-9.2"
       }
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2011-4528",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-4528",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update unbound to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.0,
+            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-8602",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-8602",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update unbound to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 2.6,
+            "vectorString": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-16866",
+      "cwe": {
+        "id": "CWE-822",
+        "name": "Untrusted Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-16866",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update unbound to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2023-50868",
       "cwe": {
@@ -655,6 +1049,9 @@
       "product_status": {
         "fixed": [
           "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
           "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
           "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
@@ -664,21 +1061,18 @@
           "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
           "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
-          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
         ]
       },
       "remediations": [
@@ -687,6 +1081,9 @@
           "details": "Update unbound to the latest version from CIQ repositories",
           "product_ids": [
             "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
@@ -696,21 +1093,18 @@
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -733,6 +1127,9 @@
           },
           "products": [
             "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
@@ -742,21 +1139,506 @@
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-12662",
+      "cwe": {
+        "id": "CWE-941",
+        "name": "Incorrectly Specified Destination in a Communication Channel"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-12662",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update unbound to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
             "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
             "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-18934",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-18934",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update unbound to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-15105",
+      "cwe": {
+        "id": "CWE-358",
+        "name": "Improperly Implemented Security Check for Standard"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-15105",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update unbound to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-50387",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-50387",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update unbound to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
           ]
         }
       ]
@@ -777,6 +1659,9 @@
       "product_status": {
         "fixed": [
           "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
           "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
           "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
@@ -786,21 +1671,18 @@
           "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
           "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
-          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
         ]
       },
       "remediations": [
@@ -809,6 +1691,9 @@
           "details": "Update unbound to the latest version from CIQ repositories",
           "product_ids": [
             "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
@@ -818,21 +1703,18 @@
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -855,6 +1737,9 @@
           },
           "products": [
             "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
@@ -864,41 +1749,41 @@
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
           ]
         }
       ]
     },
     {
-      "cve": "CVE-2023-50387",
+      "cve": "CVE-2020-12663",
       "cwe": {
-        "id": "CWE-400",
-        "name": "Uncontrolled Resource Consumption"
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2023-50387",
+          "text": "Security vulnerability CVE-2020-12663",
           "title": "Vulnerability Description"
         }
       ],
       "product_status": {
         "fixed": [
           "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
           "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
           "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
@@ -908,21 +1793,18 @@
           "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
           "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
           "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
-          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
-          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
         ]
       },
       "remediations": [
@@ -931,6 +1813,9 @@
           "details": "Update unbound to the latest version from CIQ repositories",
           "product_ids": [
             "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
@@ -940,21 +1825,18 @@
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -977,6 +1859,9 @@
           },
           "products": [
             "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
@@ -986,21 +1871,240 @@
             "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2008-5077",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2008-5077",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update unbound to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
             "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
             "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
-            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
             "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
             "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
-            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64"
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-1922",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-1922",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+          "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+          "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+          "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update unbound to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.0,
+            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.src",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-libs-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-devel-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:unbound-libs-0:1.16.2-3.el9_2.ciqlts.5.i686",
+            "lts-9.2:python3-unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:unbound-0:1.16.2-3.el9_2.ciqlts.5.aarch64",
+            "lts-9.2:python3-unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debugsource-0:1.16.2-3.el9_2.ciqlts.5.x86_64",
+            "lts-9.2:unbound-debuginfo-0:1.16.2-3.el9_2.ciqlts.5.x86_64"
           ]
         }
       ]
