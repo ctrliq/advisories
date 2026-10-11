@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the oniguruma SRPM in CIQ LTS 8.8. It addresses 5 CVEs: CVE-2019-13224, CVE-2019-16163, CVE-2019-19012, CVE-2019-19203, CVE-2019-19204.",
+        "text": "This advisory aggregates security fixes for the oniguruma SRPM in CIQ LTS 8.8. It addresses 5 CVEs: CVE-2019-19203, CVE-2019-16163, CVE-2019-19204, CVE-2019-13224, CVE-2019-19012.",
         "title": "Description"
       },
       {
@@ -43,8 +43,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2019-13224",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-13224.json"
+        "summary": "VEX document for CVE-2019-19203",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-19203.json"
       },
       {
         "category": "external",
@@ -53,18 +53,18 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2019-19012",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-19012.json"
-      },
-      {
-        "category": "external",
-        "summary": "VEX document for CVE-2019-19203",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-19203.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2019-19204",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-19204.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-13224",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-13224.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-19012",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-19012.json"
       },
       {
         "category": "self",
@@ -74,12 +74,12 @@
     ],
     "title": "oniguruma security update for CIQ LTS 8.8",
     "tracking": {
-      "current_release_date": "2026-09-01T23:58:40.858873+00:00",
+      "current_release_date": "2026-10-11T13:41:12.486295+00:00",
       "generator": {
-        "date": "2026-09-01T23:58:40.858873+00:00",
+        "date": "2026-10-11T13:41:12.486295+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0782",
@@ -89,10 +89,15 @@
           "date": "2026-09-01T23:58:40.858873+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 5 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:41:12.495363+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -108,7 +113,7 @@
                   "name": "CIQ LTS 8.8",
                   "product_id": "lts-8.8",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.8:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.8:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -324,15 +329,15 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2019-13224",
+      "cve": "CVE-2019-19203",
       "cwe": {
-        "id": "CWE-416",
-        "name": "Use After Free"
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2019-13224",
+          "text": "Security vulnerability CVE-2019-19203",
           "title": "Vulnerability Description"
         }
       ],
@@ -373,15 +378,15 @@
             "attackComplexity": "LOW",
             "attackVector": "NETWORK",
             "availabilityImpact": "HIGH",
-            "baseScore": 6.8,
-            "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "LOW",
-            "integrityImpact": "LOW",
-            "privilegesRequired": "LOW",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
             "scope": "UNCHANGED",
-            "userInteraction": "REQUIRED",
-            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:H",
-            "version": "3.0"
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
           },
           "products": [
             "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
@@ -472,154 +477,6 @@
       ]
     },
     {
-      "cve": "CVE-2019-19012",
-      "cwe": {
-        "id": "CWE-125",
-        "name": "Out-of-bounds Read"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2019-19012",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
-          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update oniguruma to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2019-19203",
-      "cwe": {
-        "id": "CWE-125",
-        "name": "Out-of-bounds Read"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2019-19203",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
-          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update oniguruma to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2019-19204",
       "cwe": {
         "id": "CWE-125",
@@ -629,6 +486,154 @@
         {
           "category": "description",
           "text": "Security vulnerability CVE-2019-19204",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
+          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update oniguruma to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-13224",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-13224",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
+          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update oniguruma to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.8,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.src",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-devel-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debuginfo-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:oniguruma-debugsource-0:6.8.2-2.1.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:oniguruma-0:6.8.2-2.1.el8_8.88ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-19012",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-19012",
           "title": "Vulnerability Description"
         }
       ],
