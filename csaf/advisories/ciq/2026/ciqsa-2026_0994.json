@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the bind SRPM in CIQ LTS 9.2. It addresses 6 CVEs: CVE-2023-5517, CVE-2023-50868, CVE-2023-5679, CVE-2023-6516, CVE-2023-4408, and 1 more.",
+        "text": "This advisory aggregates security fixes for the bind SRPM in CIQ LTS 9.2. It addresses 6 CVEs: CVE-2023-5517, CVE-2023-50868, CVE-2023-4408, CVE-2023-6516, CVE-2023-50387, and 1 more.",
         "title": "Description"
       },
       {
@@ -53,8 +53,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-5679",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5679.json"
+        "summary": "VEX document for CVE-2023-4408",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4408.json"
       },
       {
         "category": "external",
@@ -63,13 +63,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-4408",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4408.json"
+        "summary": "VEX document for CVE-2023-50387",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-50387.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-50387",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-50387.json"
+        "summary": "VEX document for CVE-2023-5679",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-5679.json"
       },
       {
         "category": "self",
@@ -79,12 +79,12 @@
     ],
     "title": "bind security update for CIQ LTS 9.2",
     "tracking": {
-      "current_release_date": "2026-09-03T20:33:56.077743+00:00",
+      "current_release_date": "2026-10-11T13:41:46.733012+00:00",
       "generator": {
-        "date": "2026-09-03T20:33:56.077743+00:00",
+        "date": "2026-10-11T13:41:46.733012+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0994",
@@ -99,10 +99,15 @@
           "date": "2026-09-03T20:33:56.087317+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:41:46.748097+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -118,7 +123,7 @@
                   "name": "CIQ LTS 9.2",
                   "product_id": "lts-9.2",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -351,6 +356,17 @@
             "branches": [
               {
                 "category": "product_version",
+                "name": "bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+                "product": {
+                  "name": "bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+                  "product_id": "bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/bind-dnssec-doc@9.16.23-14.el9_2.ciqlts.4?arch=noarch&epoch=32"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
                 "name": "bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
                 "product": {
                   "name": "bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
@@ -379,17 +395,6 @@
                   "product_id": "bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/bind-doc@9.16.23-14.el9_2.ciqlts.4?arch=noarch&epoch=32"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-                "product": {
-                  "name": "bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-                  "product_id": "bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/bind-dnssec-doc@9.16.23-14.el9_2.ciqlts.4?arch=noarch&epoch=32"
                   }
                 }
               }
@@ -547,6 +552,24 @@
       }
     ],
     "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind-32:9.16.23-14.el9_2.ciqlts.4.src as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src"
+        },
+        "product_reference": "bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch"
+        },
+        "product_reference": "bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+        "relates_to_product_reference": "lts-9.2"
+      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -829,24 +852,6 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch"
-        },
-        "product_reference": "bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "bind-32:9.16.23-14.el9_2.ciqlts.4.src as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src"
-        },
-        "product_reference": "bind-32:9.16.23-14.el9_2.ciqlts.4.src",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686 as a component of CIQ LTS 9.2",
           "product_id": "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686"
         },
@@ -880,6 +885,8 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
           "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -911,8 +918,6 @@
           "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
           "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
           "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
           "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
         ]
@@ -922,6 +927,8 @@
           "category": "vendor_fix",
           "details": "Update bind to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
             "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -953,8 +960,6 @@
             "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
             "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
           ],
@@ -978,6 +983,8 @@
             "version": "3.1"
           },
           "products": [
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
             "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -1009,8 +1016,6 @@
             "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
             "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
           ]
@@ -1032,6 +1037,8 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
           "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -1063,8 +1070,6 @@
           "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
           "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
           "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
           "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
         ]
@@ -1074,6 +1079,8 @@
           "category": "vendor_fix",
           "details": "Update bind to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
             "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -1105,8 +1112,6 @@
             "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
             "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
           ],
@@ -1130,6 +1135,8 @@
             "version": "3.1"
           },
           "products": [
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
             "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -1161,312 +1168,6 @@
             "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-5679",
-      "cwe": {
-        "id": "CWE-617",
-        "name": "Reachable Assertion"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-5679",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
-          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update bind to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-6516",
-      "cwe": {
-        "id": "CWE-400",
-        "name": "Uncontrolled Resource Consumption"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-6516",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
-          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update bind to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
-            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
-            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
             "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
           ]
@@ -1488,6 +1189,8 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
           "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -1519,8 +1222,6 @@
           "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
           "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
           "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
           "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
         ]
@@ -1530,6 +1231,8 @@
           "category": "vendor_fix",
           "details": "Update bind to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
             "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -1561,8 +1264,6 @@
             "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
             "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
           ],
@@ -1586,6 +1287,8 @@
             "version": "3.1"
           },
           "products": [
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
             "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -1617,8 +1320,158 @@
             "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-6516",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-6516",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+          "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+          "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind to the latest version from CIQ repositories",
+          "product_ids": [
             "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
           ]
@@ -1640,6 +1493,8 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
           "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -1671,8 +1526,6 @@
           "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
           "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
           "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
           "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
           "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
         ]
@@ -1682,6 +1535,8 @@
           "category": "vendor_fix",
           "details": "Update bind to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
             "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -1713,8 +1568,6 @@
             "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
-            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
             "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
           ],
@@ -1738,6 +1591,8 @@
             "version": "3.1"
           },
           "products": [
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
             "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
@@ -1769,8 +1624,158 @@
             "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
             "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
-            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-5679",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-5679",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+          "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+          "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+          "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+          "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+          "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+          "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind to the latest version from CIQ repositories",
+          "product_ids": [
             "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.src",
+            "lts-9.2:bind-dnssec-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-license-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:python3-bind-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-doc-32:9.16.23-14.el9_2.ciqlts.4.noarch",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.x86_64",
+            "lts-9.2:bind-libs-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.i686",
+            "lts-9.2:bind-chroot-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-dnssec-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-devel-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.aarch64",
+            "lts-9.2:bind-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-dnssec-utils-debuginfo-32:9.16.23-14.el9_2.ciqlts.4.i686",
             "lts-9.2:bind-debugsource-32:9.16.23-14.el9_2.ciqlts.4.i686"
           ]
