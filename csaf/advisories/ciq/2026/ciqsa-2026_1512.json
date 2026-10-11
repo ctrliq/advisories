@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the libtiff SRPM in CIQ LTS 8.6. It addresses 2 CVEs: CVE-2025-8176, CVE-2026-4775.",
+        "text": "This advisory aggregates security fixes for the libtiff SRPM in CIQ LTS 8.6. It addresses 2 CVEs: CVE-2026-4775, CVE-2025-8176.",
         "title": "Description"
       },
       {
@@ -43,13 +43,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2025-8176",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-8176.json"
+        "summary": "VEX document for CVE-2026-4775",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-4775.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2026-4775",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-4775.json"
+        "summary": "VEX document for CVE-2025-8176",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-8176.json"
       },
       {
         "category": "self",
@@ -59,12 +59,12 @@
     ],
     "title": "libtiff security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-10-06T07:02:22.733942+00:00",
+      "current_release_date": "2026-10-11T13:44:44.555051+00:00",
       "generator": {
-        "date": "2026-10-06T07:02:22.733942+00:00",
+        "date": "2026-10-11T13:44:44.555051+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.2"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1512",
@@ -79,10 +79,15 @@
           "date": "2026-10-06T07:02:22.740174+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:44:44.561276+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -334,83 +339,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-8176",
-      "cwe": {
-        "id": "CWE-416",
-        "name": "Use After Free"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2025-8176",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.x86_64",
-          "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.i686",
-          "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.i686",
-          "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.x86_64",
-          "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.x86_64",
-          "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.x86_64",
-          "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.aarch64",
-          "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.aarch64",
-          "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.aarch64",
-          "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update libtiff to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.x86_64",
-            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.i686",
-            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.i686",
-            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.x86_64",
-            "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.x86_64",
-            "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.x86_64",
-            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.aarch64",
-            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.aarch64",
-            "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.aarch64",
-            "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.x86_64",
-            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.i686",
-            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.i686",
-            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.x86_64",
-            "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.x86_64",
-            "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.x86_64",
-            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.aarch64",
-            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.aarch64",
-            "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.aarch64",
-            "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.aarch64"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2026-4775",
       "cwe": {
         "id": "CWE-190",
@@ -470,6 +398,83 @@
             "scope": "UNCHANGED",
             "userInteraction": "REQUIRED",
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.x86_64",
+            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.i686",
+            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.i686",
+            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.x86_64",
+            "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.x86_64",
+            "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.x86_64",
+            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.aarch64",
+            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.aarch64",
+            "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.aarch64",
+            "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-8176",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-8176",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.x86_64",
+          "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.i686",
+          "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.i686",
+          "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.x86_64",
+          "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.x86_64",
+          "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.x86_64",
+          "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.aarch64",
+          "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.aarch64",
+          "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.aarch64",
+          "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libtiff to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.x86_64",
+            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.i686",
+            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.i686",
+            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.x86_64",
+            "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.x86_64",
+            "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.x86_64",
+            "lts-8.6:libtiff-0:4.0.9-35.1.el8_6_ciq.aarch64",
+            "lts-8.6:libtiff-devel-0:4.0.9-35.1.el8_6_ciq.aarch64",
+            "lts-8.6:libtiff-static-0:4.0.9-35.1.el8_6_ciq.aarch64",
+            "lts-8.6:libtiff-tools-0:4.0.9-35.1.el8_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
