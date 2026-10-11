@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the rsync SRPM in CIQ LTS 8.6. It addresses 2 CVEs: CVE-2016-9840, CVE-2025-4638.",
+        "text": "This advisory aggregates security fixes for the rsync SRPM in CIQ LTS 8.6. It addresses 5 CVEs: CVE-2025-4638, CVE-2014-2855, CVE-2006-2083, CVE-2016-9840, CVE-2018-5764.",
         "title": "Description"
       },
       {
@@ -43,13 +43,28 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2025-4638",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-4638.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-2855",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-2855.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2006-2083",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2006/cve-2006-2083.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2016-9840",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9840.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2025-4638",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-4638.json"
+        "summary": "VEX document for CVE-2018-5764",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-5764.json"
       },
       {
         "category": "self",
@@ -59,12 +74,12 @@
     ],
     "title": "rsync security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-01T23:53:32.084604+00:00",
+      "current_release_date": "2026-10-11T13:37:13.559050+00:00",
       "generator": {
-        "date": "2026-09-01T23:53:32.084604+00:00",
+        "date": "2026-10-11T13:37:13.559050+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0255",
@@ -74,10 +89,15 @@
           "date": "2026-09-01T23:53:32.084604+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 2 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:37:13.568386+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -93,7 +113,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -103,17 +123,6 @@
           },
           {
             "branches": [
-              {
-                "category": "product_version",
-                "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-                "product": {
-                  "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-                  "product_id": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/rsync@3.1.3-19.el8_6.86ciq_lts.5?arch=aarch64"
-                  }
-                }
-              },
               {
                 "category": "product_version",
                 "name": "rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
@@ -135,6 +144,17 @@
                     "purl": "pkg:rpm/ciq/rsync-debuginfo@3.1.3-19.el8_6.86ciq_lts.5?arch=aarch64"
                   }
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+                "product": {
+                  "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+                  "product_id": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsync@3.1.3-19.el8_6.86ciq_lts.5?arch=aarch64"
+                  }
+                }
               }
             ],
             "category": "architecture",
@@ -142,17 +162,6 @@
           },
           {
             "branches": [
-              {
-                "category": "product_version",
-                "name": "rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-                "product": {
-                  "name": "rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-                  "product_id": "rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/rsync-debuginfo@3.1.3-19.el8_6.86ciq_lts.5?arch=i686"
-                  }
-                }
-              },
               {
                 "category": "product_version",
                 "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
@@ -172,6 +181,17 @@
                   "product_id": "rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/rsync-debugsource@3.1.3-19.el8_6.86ciq_lts.5?arch=i686"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+                "product": {
+                  "name": "rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+                  "product_id": "rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsync-debuginfo@3.1.3-19.el8_6.86ciq_lts.5?arch=i686"
                   }
                 }
               }
@@ -217,17 +237,6 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-                "product": {
-                  "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-                  "product_id": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/rsync@3.1.3-19.el8_6.86ciq_lts.5?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
                 "name": "rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
                 "product": {
                   "name": "rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
@@ -247,6 +256,17 @@
                     "purl": "pkg:rpm/ciq/rsync-debuginfo@3.1.3-19.el8_6.86ciq_lts.5?arch=x86_64"
                   }
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+                "product": {
+                  "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+                  "product_id": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/rsync@3.1.3-19.el8_6.86ciq_lts.5?arch=x86_64"
+                  }
+                }
               }
             ],
             "category": "architecture",
@@ -261,28 +281,37 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch"
+          "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src"
         },
-        "product_reference": "rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+        "product_reference": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
         "relates_to_product_reference": "lts-8.6"
       },
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64"
+          "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
         },
-        "product_reference": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+        "product_reference": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
         "relates_to_product_reference": "lts-8.6"
       },
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+          "name": "rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
         },
-        "product_reference": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+        "product_reference": "rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
+        },
+        "product_reference": "rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
         "relates_to_product_reference": "lts-8.6"
       },
       {
@@ -324,122 +353,33 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
+          "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64"
         },
-        "product_reference": "rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+        "product_reference": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
         "relates_to_product_reference": "lts-8.6"
       },
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src"
+          "name": "rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch"
         },
-        "product_reference": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+        "product_reference": "rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
         "relates_to_product_reference": "lts-8.6"
       },
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
+          "name": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
         },
-        "product_reference": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
-        },
-        "product_reference": "rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+        "product_reference": "rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
         "relates_to_product_reference": "lts-8.6"
       }
     ]
   },
   "vulnerabilities": [
-    {
-      "cve": "CVE-2016-9840",
-      "cwe": {
-        "id": "CWE-125",
-        "name": "Out-of-bounds Read"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2016-9840",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
-          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
-          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update rsync to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 8.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "REQUIRED",
-            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-            "version": "3.0"
-          },
-          "products": [
-            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
-          ]
-        }
-      ]
-    },
     {
       "cve": "CVE-2025-4638",
       "cwe": {
@@ -455,17 +395,17 @@
       ],
       "product_status": {
         "fixed": [
-          "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
-          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
           "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
           "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
           "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
           "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
-          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
         ]
       },
       "remediations": [
@@ -473,17 +413,17 @@
           "category": "vendor_fix",
           "details": "Update rsync to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
             "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
             "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
             "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
             "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -505,17 +445,315 @@
             "version": "3.1"
           },
           "products": [
-            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
-            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
             "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
             "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
             "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
             "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
-            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-2855",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-2855",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update rsync to the latest version from CIQ repositories",
+          "product_ids": [
             "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
             "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
-            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686"
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2006-2083",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2006-2083",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update rsync to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 7.5,
+            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9840",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9840",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update rsync to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-5764",
+      "cwe": {
+        "id": "CWE-77",
+        "name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-5764",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+          "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+          "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+          "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update rsync to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 6.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.src",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.i686",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-debugsource-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-debuginfo-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.x86_64",
+            "lts-8.6:rsync-daemon-0:3.1.3-19.el8_6.86ciq_lts.5.noarch",
+            "lts-8.6:rsync-0:3.1.3-19.el8_6.86ciq_lts.5.aarch64"
           ]
         }
       ]
