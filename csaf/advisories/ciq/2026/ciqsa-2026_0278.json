@@ -1,7 +1,7 @@
 {
   "document": {
     "aggregate_severity": {
-      "text": "High"
+      "text": "Critical"
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the xmlrpc-c SRPM in CIQ LTS 8.6. It addresses 1 CVE: CVE-2024-8176.",
+        "text": "This advisory aggregates security fixes for the xmlrpc-c SRPM in CIQ LTS 8.6. It addresses 3 CVEs: CVE-2024-8176, CVE-2024-4549, CVE-2022-25235.",
         "title": "Description"
       },
       {
@@ -47,19 +47,29 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-8176.json"
       },
       {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-4549",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-4549.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-25235",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-25235.json"
+      },
+      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0278.json"
       }
     ],
-    "title": "xmlrpc-c security update (CVE-2024-8176)",
+    "title": "xmlrpc-c security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-01T23:53:36.071580+00:00",
+      "current_release_date": "2026-10-11T13:37:17.486199+00:00",
       "generator": {
-        "date": "2026-09-01T23:53:36.071580+00:00",
+        "date": "2026-10-11T13:37:17.486199+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0278",
@@ -69,10 +79,15 @@
           "date": "2026-09-01T23:53:36.071580+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 1 CVE fixed"
+        },
+        {
+          "date": "2026-10-11T13:37:17.497094+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -88,7 +103,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -98,6 +113,17 @@
           },
           {
             "branches": [
+              {
+                "category": "product_version",
+                "name": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                "product": {
+                  "name": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                  "product_id": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/xmlrpc-c-devel@1.51.0-11.el8_6.86ciq_lts?arch=aarch64"
+                  }
+                }
+              },
               {
                 "category": "product_version",
                 "name": "xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
@@ -122,17 +148,6 @@
               },
               {
                 "category": "product_version",
-                "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-                "product": {
-                  "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-                  "product_id": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/xmlrpc-c-apps-debuginfo@1.51.0-11.el8_6.86ciq_lts?arch=aarch64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
                 "name": "xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
                 "product": {
                   "name": "xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
@@ -144,12 +159,12 @@
               },
               {
                 "category": "product_version",
-                "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
                 "product": {
-                  "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-                  "product_id": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                  "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                  "product_id": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
                   "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/xmlrpc-c-c%2B%2B-debuginfo@1.51.0-11.el8_6.86ciq_lts?arch=aarch64"
+                    "purl": "pkg:rpm/ciq/xmlrpc-c-client@1.51.0-11.el8_6.86ciq_lts?arch=aarch64"
                   }
                 }
               },
@@ -166,23 +181,34 @@
               },
               {
                 "category": "product_version",
+                "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                "product": {
+                  "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                  "product_id": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/xmlrpc-c-apps-debuginfo@1.51.0-11.el8_6.86ciq_lts?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                "product": {
+                  "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                  "product_id": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/xmlrpc-c-c%2B%2B-debuginfo@1.51.0-11.el8_6.86ciq_lts?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
                 "name": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
                 "product": {
                   "name": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
                   "product_id": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/xmlrpc-c-client%2B%2B-debuginfo@1.51.0-11.el8_6.86ciq_lts?arch=aarch64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-                "product": {
-                  "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-                  "product_id": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/xmlrpc-c-client@1.51.0-11.el8_6.86ciq_lts?arch=aarch64"
                   }
                 }
               },
@@ -216,17 +242,6 @@
                   "product_id": "xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/xmlrpc-c-debugsource@1.51.0-11.el8_6.86ciq_lts?arch=aarch64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-                "product": {
-                  "name": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-                  "product_id": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/xmlrpc-c-devel@1.51.0-11.el8_6.86ciq_lts?arch=aarch64"
                   }
                 }
               }
@@ -288,28 +303,6 @@
               },
               {
                 "category": "product_version",
-                "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-                "product": {
-                  "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-                  "product_id": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/xmlrpc-c-apps-debuginfo@1.51.0-11.el8_6.86ciq_lts?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-                "product": {
-                  "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-                  "product_id": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/xmlrpc-c-c%2B%2B-debuginfo@1.51.0-11.el8_6.86ciq_lts?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
                 "name": "xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
                 "product": {
                   "name": "xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
@@ -321,23 +314,23 @@
               },
               {
                 "category": "product_version",
+                "name": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                "product": {
+                  "name": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                  "product_id": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/xmlrpc-c-devel@1.51.0-11.el8_6.86ciq_lts?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
                 "name": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
                 "product": {
                   "name": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
                   "product_id": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/xmlrpc-c-client%2B%2B-debuginfo@1.51.0-11.el8_6.86ciq_lts?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-                "product": {
-                  "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-                  "product_id": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/xmlrpc-c-client@1.51.0-11.el8_6.86ciq_lts?arch=x86_64"
                   }
                 }
               },
@@ -376,12 +369,34 @@
               },
               {
                 "category": "product_version",
-                "name": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
                 "product": {
-                  "name": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-                  "product_id": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                  "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                  "product_id": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
                   "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/xmlrpc-c-devel@1.51.0-11.el8_6.86ciq_lts?arch=x86_64"
+                    "purl": "pkg:rpm/ciq/xmlrpc-c-client@1.51.0-11.el8_6.86ciq_lts?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                "product": {
+                  "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                  "product_id": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/xmlrpc-c-apps-debuginfo@1.51.0-11.el8_6.86ciq_lts?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                "product": {
+                  "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                  "product_id": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/xmlrpc-c-c%2B%2B-debuginfo@1.51.0-11.el8_6.86ciq_lts?arch=x86_64"
                   }
                 }
               }
@@ -425,19 +440,10 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+          "name": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
         },
-        "product_reference": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
-        },
-        "product_reference": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+        "product_reference": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
         "relates_to_product_reference": "lts-8.6"
       },
       {
@@ -456,51 +462,6 @@
           "product_id": "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
         },
         "product_reference": "xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
-        },
-        "product_reference": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
-        },
-        "product_reference": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
-        },
-        "product_reference": "xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
-        },
-        "product_reference": "xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
-        },
-        "product_reference": "xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
         "relates_to_product_reference": "lts-8.6"
       },
       {
@@ -533,15 +494,6 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
-        },
-        "product_reference": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
           "product_id": "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
         },
@@ -551,10 +503,10 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
+          "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
         },
-        "product_reference": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+        "product_reference": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
         "relates_to_product_reference": "lts-8.6"
       },
       {
@@ -569,19 +521,73 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
+          "name": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
         },
-        "product_reference": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+        "product_reference": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
         "relates_to_product_reference": "lts-8.6"
       },
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
+          "name": "xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
         },
-        "product_reference": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+        "product_reference": "xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+        },
+        "product_reference": "xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+        },
+        "product_reference": "xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
+        },
+        "product_reference": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
+        },
+        "product_reference": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+        },
+        "product_reference": "xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
+        },
+        "product_reference": "xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
         "relates_to_product_reference": "lts-8.6"
       },
       {
@@ -614,10 +620,19 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
+          "name": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
         },
-        "product_reference": "xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+        "product_reference": "xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+        },
+        "product_reference": "xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
         "relates_to_product_reference": "lts-8.6"
       }
     ]
@@ -641,28 +656,28 @@
           "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
           "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
           "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-          "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-          "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
           "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.src",
           "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-          "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-          "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-          "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-          "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-          "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
           "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
           "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
           "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-          "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
           "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-          "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-          "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-          "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
           "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
           "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
           "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
           "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-          "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
+          "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
         ]
       },
       "remediations": [
@@ -673,28 +688,28 @@
             "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
             "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
             "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.src",
             "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
             "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
             "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -719,28 +734,272 @@
             "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
             "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
             "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.src",
             "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
-            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
             "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
             "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
             "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64"
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-4549",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-4549",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.src",
+          "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update xmlrpc-c to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.src",
+            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.src",
+            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-25235",
+      "cwe": {
+        "id": "CWE-838",
+        "name": "Inappropriate Encoding for Output Context"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-25235",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.src",
+          "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update xmlrpc-c to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.src",
+            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.src",
+            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-devel-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-apps-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-c++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-client++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-client-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-debugsource-0:1.51.0-11.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:xmlrpc-c-apps-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:xmlrpc-c-c++-debuginfo-0:1.51.0-11.el8_6.86ciq_lts.x86_64"
           ]
         }
       ]
