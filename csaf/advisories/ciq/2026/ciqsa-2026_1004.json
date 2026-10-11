@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the golang SRPM in CIQ LTS 8.6. It addresses 5 CVEs: CVE-2024-34155, CVE-2024-34156, CVE-2024-34158, CVE-2023-45285, CVE-2024-24791.",
+        "text": "This advisory aggregates security fixes for the golang SRPM in CIQ LTS 8.6. It addresses 5 CVEs: CVE-2024-34155, CVE-2024-24791, CVE-2024-34158, CVE-2024-34156, CVE-2023-45285.",
         "title": "Description"
       },
       {
@@ -48,8 +48,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-34156",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-34156.json"
+        "summary": "VEX document for CVE-2024-24791",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-24791.json"
       },
       {
         "category": "external",
@@ -58,13 +58,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-45285",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45285.json"
+        "summary": "VEX document for CVE-2024-34156",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-34156.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-24791",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-24791.json"
+        "summary": "VEX document for CVE-2023-45285",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45285.json"
       },
       {
         "category": "self",
@@ -74,12 +74,12 @@
     ],
     "title": "golang security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-01T23:59:46.339856+00:00",
+      "current_release_date": "2026-10-11T13:41:47.925201+00:00",
       "generator": {
-        "date": "2026-09-01T23:59:46.339856+00:00",
+        "date": "2026-10-11T13:41:47.925201+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1004",
@@ -89,10 +89,15 @@
           "date": "2026-09-01T23:59:46.339856+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 5 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:41:47.932109+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -108,7 +113,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -404,15 +409,15 @@
       ]
     },
     {
-      "cve": "CVE-2024-34156",
+      "cve": "CVE-2024-24791",
       "cwe": {
-        "id": "CWE-674",
-        "name": "Uncontrolled Recursion"
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2024-34156",
+          "text": "Security vulnerability CVE-2024-24791",
           "title": "Vulnerability Description"
         }
       ],
@@ -450,17 +455,17 @@
       "scores": [
         {
           "cvss_v3": {
-            "attackComplexity": "LOW",
+            "attackComplexity": "HIGH",
             "attackVector": "NETWORK",
             "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
             "confidentialityImpact": "NONE",
             "integrityImpact": "NONE",
             "privilegesRequired": "NONE",
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -552,6 +557,80 @@
       ]
     },
     {
+      "cve": "CVE-2024-34156",
+      "cwe": {
+        "id": "CWE-674",
+        "name": "Uncontrolled Recursion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-34156",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:golang-misc-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+          "lts-8.6:golang-tests-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+          "lts-8.6:golang-src-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+          "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.src",
+          "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
+          "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
+          "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64",
+          "lts-8.6:golang-docs-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+          "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:golang-misc-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+            "lts-8.6:golang-tests-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+            "lts-8.6:golang-src-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.src",
+            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
+            "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
+            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64",
+            "lts-8.6:golang-docs-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+            "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:golang-misc-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+            "lts-8.6:golang-tests-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+            "lts-8.6:golang-src-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.src",
+            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
+            "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
+            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64",
+            "lts-8.6:golang-docs-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
+            "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2023-45285",
       "cwe": {
         "id": "CWE-693",
@@ -609,80 +688,6 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.6:golang-misc-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-            "lts-8.6:golang-tests-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-            "lts-8.6:golang-src-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.src",
-            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
-            "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
-            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64",
-            "lts-8.6:golang-docs-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-            "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-24791",
-      "cwe": {
-        "id": "CWE-20",
-        "name": "Improper Input Validation"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-24791",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:golang-misc-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-          "lts-8.6:golang-tests-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-          "lts-8.6:golang-src-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-          "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.src",
-          "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
-          "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
-          "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64",
-          "lts-8.6:golang-docs-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-          "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update golang to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:golang-misc-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-            "lts-8.6:golang-tests-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-            "lts-8.6:golang-src-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.src",
-            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
-            "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.x86_64",
-            "lts-8.6:golang-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64",
-            "lts-8.6:golang-docs-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.noarch",
-            "lts-8.6:golang-bin-0:1.21.13-2.module+el8.6.0+4780+2e8a227d.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 5.9,
-            "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
