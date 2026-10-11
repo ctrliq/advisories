@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the mod_http2 SRPM in CIQ LTS 8.6. It addresses 5 CVEs: CVE-2006-20001, CVE-2022-36760, CVE-2022-37436, CVE-2023-25690, CVE-2023-27522.",
+        "text": "This advisory aggregates security fixes for the mod_http2 SRPM in CIQ LTS 8.6. It addresses 5 CVEs: CVE-2023-25690, CVE-2022-36760, CVE-2022-37436, CVE-2006-20001, CVE-2023-27522.",
         "title": "Description"
       },
       {
@@ -43,8 +43,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2006-20001",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2006/cve-2006-20001.json"
+        "summary": "VEX document for CVE-2023-25690",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-25690.json"
       },
       {
         "category": "external",
@@ -58,8 +58,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-25690",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-25690.json"
+        "summary": "VEX document for CVE-2006-20001",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2006/cve-2006-20001.json"
       },
       {
         "category": "external",
@@ -74,12 +74,12 @@
     ],
     "title": "mod_http2 security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-01T23:58:37.291164+00:00",
+      "current_release_date": "2026-10-11T13:41:11.575117+00:00",
       "generator": {
-        "date": "2026-09-01T23:58:37.291164+00:00",
+        "date": "2026-10-11T13:41:11.575117+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0751",
@@ -89,10 +89,15 @@
           "date": "2026-09-01T23:58:37.291164+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 5 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:41:11.581995+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -108,7 +113,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -176,6 +181,17 @@
             "branches": [
               {
                 "category": "product_version",
+                "name": "mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+                "product": {
+                  "name": "mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+                  "product_id": "mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/mod_http2@1.15.7-8.module+el8.6.0+3210+bce686fe.5?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
                 "name": "mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
                 "product": {
                   "name": "mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
@@ -195,17 +211,6 @@
                     "purl": "pkg:rpm/ciq/mod_http2-debuginfo@1.15.7-8.module+el8.6.0+3210+bce686fe.5?arch=x86_64"
                   }
                 }
-              },
-              {
-                "category": "product_version",
-                "name": "mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-                "product": {
-                  "name": "mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-                  "product_id": "mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/mod_http2@1.15.7-8.module+el8.6.0+3210+bce686fe.5?arch=x86_64"
-                  }
-                }
               }
             ],
             "category": "architecture",
@@ -217,24 +222,6 @@
       }
     ],
     "relationships": [
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
-        },
-        "product_reference": "mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
-        },
-        "product_reference": "mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -279,214 +266,28 @@
         },
         "product_reference": "mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
         "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+        },
+        "product_reference": "mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+        },
+        "product_reference": "mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+        "relates_to_product_reference": "lts-8.6"
       }
     ]
   },
   "vulnerabilities": [
-    {
-      "cve": "CVE-2006-20001",
-      "cwe": {
-        "id": "CWE-125",
-        "name": "Out-of-bounds Read"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2006-20001",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
-          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update mod_http2 to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2022-36760",
-      "cwe": {
-        "id": "CWE-444",
-        "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2022-36760",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
-          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update mod_http2 to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "LOW",
-            "baseScore": 6.5,
-            "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "LOW",
-            "integrityImpact": "LOW",
-            "privilegesRequired": "NONE",
-            "scope": "CHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:L",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2022-37436",
-      "cwe": {
-        "id": "CWE-113",
-        "name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2022-37436",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
-          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update mod_http2 to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "NONE",
-            "baseScore": 5.3,
-            "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "LOW",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
-            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
-          ]
-        }
-      ]
-    },
     {
       "cve": "CVE-2023-25690",
       "cwe": {
@@ -502,13 +303,13 @@
       ],
       "product_status": {
         "fixed": [
-          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
           "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
           "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
           "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
           "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
+          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
         ]
       },
       "remediations": [
@@ -516,13 +317,13 @@
           "category": "vendor_fix",
           "details": "Update mod_http2 to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
             "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -544,13 +345,217 @@
             "version": "3.1"
           },
           "products": [
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
             "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-36760",
+      "cwe": {
+        "id": "CWE-444",
+        "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-36760",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
+          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update mod_http2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-37436",
+      "cwe": {
+        "id": "CWE-113",
+        "name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-37436",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
+          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update mod_http2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2006-20001",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2006-20001",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
+          "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update mod_http2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
+            "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
           ]
         }
       ]
@@ -570,13 +575,13 @@
       ],
       "product_status": {
         "fixed": [
-          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
           "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
           "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
           "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
           "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
+          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+          "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+          "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
         ]
       },
       "remediations": [
@@ -584,13 +589,13 @@
           "category": "vendor_fix",
           "details": "Update mod_http2 to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
             "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -612,13 +617,13 @@
             "version": "3.1"
           },
           "products": [
-            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.src",
             "lts-8.6:mod_http2-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
             "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
-            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64"
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.aarch64",
+            "lts-8.6:mod_http2-debugsource-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64",
+            "lts-8.6:mod_http2-debuginfo-0:1.15.7-8.module+el8.6.0+3210+bce686fe.5.x86_64"
           ]
         }
       ]
