@@ -1,7 +1,7 @@
 {
   "document": {
     "aggregate_severity": {
-      "text": "Low"
+      "text": "High"
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the gdk-pixbuf2 SRPM in CIQ LTS 9.6. It addresses 1 CVE: CVE-2025-6199.",
+        "text": "This advisory aggregates security fixes for the gdk-pixbuf2 SRPM in CIQ LTS 9.6. It addresses 6 CVEs: CVE-2025-7345, CVE-2021-44648, CVE-2022-48622, CVE-2021-46829, CVE-2025-6199, and 1 more.",
         "title": "Description"
       },
       {
@@ -43,8 +43,33 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2025-7345",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-7345.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-44648",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-44648.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-48622",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-48622.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-46829",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-46829.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2025-6199",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-6199.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-2485",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-2485.json"
       },
       {
         "category": "self",
@@ -52,14 +77,14 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1520.json"
       }
     ],
-    "title": "gdk-pixbuf2 security update (CVE-2025-6199)",
+    "title": "gdk-pixbuf2 security update for CIQ LTS 9.6",
     "tracking": {
-      "current_release_date": "2026-09-06T07:02:00.355175+00:00",
+      "current_release_date": "2026-10-11T13:44:46.057563+00:00",
       "generator": {
-        "date": "2026-09-06T07:02:00.355175+00:00",
+        "date": "2026-10-11T13:44:46.057563+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1520",
@@ -69,10 +94,15 @@
           "date": "2026-09-06T07:02:00.355175+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 1 CVE fixed"
+        },
+        {
+          "date": "2026-10-11T13:44:46.064415+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -88,7 +118,7 @@
                   "name": "CIQ LTS 9.6",
                   "product_id": "lts-9.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -98,6 +128,17 @@
           },
           {
             "branches": [
+              {
+                "category": "product_version",
+                "name": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+                  "product_id": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/gdk-pixbuf2-modules@2.42.6-6.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
               {
                 "category": "product_version",
                 "name": "gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
@@ -117,17 +158,6 @@
                   "product_id": "gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/gdk-pixbuf2-devel@2.42.6-6.1.el9_6_ciq?arch=aarch64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
-                "product": {
-                  "name": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
-                  "product_id": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/gdk-pixbuf2-modules@2.42.6-6.1.el9_6_ciq?arch=aarch64"
                   }
                 }
               }
@@ -222,6 +252,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686 as a component of CIQ LTS 9.6",
           "product_id": "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686"
         },
@@ -258,19 +297,19 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686 as a component of CIQ LTS 9.6",
-          "product_id": "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686"
+          "name": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64"
         },
-        "product_reference": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+        "product_reference": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
         "relates_to_product_reference": "lts-9.6"
       },
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
-          "product_id": "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64"
+          "name": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686"
         },
-        "product_reference": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+        "product_reference": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
         "relates_to_product_reference": "lts-9.6"
       },
       {
@@ -290,19 +329,306 @@
         },
         "product_reference": "gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64",
         "relates_to_product_reference": "lts-9.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
-          "product_id": "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64"
-        },
-        "product_reference": "gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
-        "relates_to_product_reference": "lts-9.6"
       }
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2025-7345",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-7345",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update gdk-pixbuf2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-44648",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-44648",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update gdk-pixbuf2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-48622",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-48622",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update gdk-pixbuf2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-46829",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-46829",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update gdk-pixbuf2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2025-6199",
       "cwe": {
@@ -318,15 +644,15 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
           "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
           "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
           "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
           "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
-          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
           "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
           "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
-          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64",
-          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
         ]
       },
       "remediations": [
@@ -334,15 +660,15 @@
           "category": "vendor_fix",
           "details": "Update gdk-pixbuf2 to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
             "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
             "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
             "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
             "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
-            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
             "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
             "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
-            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64",
-            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64"
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -364,15 +690,76 @@
             "version": "3.1"
           },
           "products": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
             "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
             "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
             "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
             "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
-            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
             "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
             "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
-            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64",
-            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64"
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-2485",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-2485",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+          "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+          "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+          "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update gdk-pixbuf2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.x86_64",
+            "lts-9.6:gdk-pixbuf2-modules-0:2.42.6-6.1.el9_6_ciq.i686",
+            "lts-9.6:gdk-pixbuf2-0:2.42.6-6.1.el9_6_ciq.aarch64",
+            "lts-9.6:gdk-pixbuf2-devel-0:2.42.6-6.1.el9_6_ciq.aarch64"
           ]
         }
       ]
