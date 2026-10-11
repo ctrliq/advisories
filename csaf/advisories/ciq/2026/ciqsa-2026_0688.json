@@ -54,12 +54,12 @@
     ],
     "title": "krb5 security update (CVE-2024-3596)",
     "tracking": {
-      "current_release_date": "2026-09-01T23:57:46.518708+00:00",
+      "current_release_date": "2026-10-11T13:40:16.038264+00:00",
       "generator": {
-        "date": "2026-09-01T23:57:46.518708+00:00",
+        "date": "2026-10-11T13:40:16.038264+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0688",
@@ -69,10 +69,15 @@
           "date": "2026-09-01T23:57:46.518708+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 1 CVE fixed"
+        },
+        {
+          "date": "2026-10-11T13:40:16.044672+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -88,7 +93,7 @@
                   "name": "CIQ CentOS Bridge 7.9",
                   "product_id": "cbr-7.9-bridge",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:centos_linux_bridge:7.9:*:*:*:*:*:i686:bridge"
+                    "cpe": "cpe:2.3:o:ciq:centos_linux_bridge:7.9:*:*:*:*:*:*:bridge"
                   }
                 }
               }
@@ -117,6 +122,17 @@
                   "product_id": "libkadm5-0:1.15.1-57.el7_9.ciqcbr.i686",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/libkadm5@1.15.1-57.el7_9.ciqcbr?arch=i686"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
+                "product": {
+                  "name": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
+                  "product_id": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/krb5-devel@1.15.1-57.el7_9.ciqcbr?arch=i686"
                   }
                 }
               },
@@ -161,17 +177,6 @@
                   "product_id": "krb5-server-ldap-0:1.15.1-57.el7_9.ciqcbr.i686",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/krb5-server-ldap@1.15.1-57.el7_9.ciqcbr?arch=i686"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
-                "product": {
-                  "name": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
-                  "product_id": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/krb5-devel@1.15.1-57.el7_9.ciqcbr?arch=i686"
                   }
                 }
               }
@@ -343,6 +348,24 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686"
+        },
+        "product_reference": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "krb5-server-0:1.15.1-57.el7_9.ciqcbr.i686 as a component of CIQ CentOS Bridge 7.9",
           "product_id": "cbr-7.9-bridge:krb5-server-0:1.15.1-57.el7_9.ciqcbr.i686"
         },
@@ -375,24 +398,6 @@
         },
         "product_reference": "krb5-server-ldap-0:1.15.1-57.el7_9.ciqcbr.i686",
         "relates_to_product_reference": "cbr-7.9-bridge"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686 as a component of CIQ CentOS Bridge 7.9",
-          "product_id": "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686"
-        },
-        "product_reference": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
-        "relates_to_product_reference": "cbr-7.9-bridge"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
-          "product_id": "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64"
-        },
-        "product_reference": "krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64",
-        "relates_to_product_reference": "cbr-7.9-bridge"
       }
     ]
   },
@@ -420,12 +425,12 @@
           "cbr-7.9-bridge:krb5-workstation-0:1.15.1-57.el7_9.ciqcbr.x86_64",
           "cbr-7.9-bridge:libkadm5-0:1.15.1-57.el7_9.ciqcbr.x86_64",
           "cbr-7.9-bridge:libkadm5-0:1.15.1-57.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64",
           "cbr-7.9-bridge:krb5-server-0:1.15.1-57.el7_9.ciqcbr.i686",
           "cbr-7.9-bridge:krb5-workstation-0:1.15.1-57.el7_9.ciqcbr.i686",
           "cbr-7.9-bridge:krb5-pkinit-0:1.15.1-57.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:krb5-server-ldap-0:1.15.1-57.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64"
+          "cbr-7.9-bridge:krb5-server-ldap-0:1.15.1-57.el7_9.ciqcbr.i686"
         ]
       },
       "remediations": [
@@ -441,12 +446,12 @@
             "cbr-7.9-bridge:krb5-workstation-0:1.15.1-57.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:libkadm5-0:1.15.1-57.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:libkadm5-0:1.15.1-57.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:krb5-server-0:1.15.1-57.el7_9.ciqcbr.i686",
             "cbr-7.9-bridge:krb5-workstation-0:1.15.1-57.el7_9.ciqcbr.i686",
             "cbr-7.9-bridge:krb5-pkinit-0:1.15.1-57.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:krb5-server-ldap-0:1.15.1-57.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64"
+            "cbr-7.9-bridge:krb5-server-ldap-0:1.15.1-57.el7_9.ciqcbr.i686"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -476,12 +481,12 @@
             "cbr-7.9-bridge:krb5-workstation-0:1.15.1-57.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:libkadm5-0:1.15.1-57.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:libkadm5-0:1.15.1-57.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:krb5-server-0:1.15.1-57.el7_9.ciqcbr.i686",
             "cbr-7.9-bridge:krb5-workstation-0:1.15.1-57.el7_9.ciqcbr.i686",
             "cbr-7.9-bridge:krb5-pkinit-0:1.15.1-57.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:krb5-server-ldap-0:1.15.1-57.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:krb5-devel-0:1.15.1-57.el7_9.ciqcbr.x86_64"
+            "cbr-7.9-bridge:krb5-server-ldap-0:1.15.1-57.el7_9.ciqcbr.i686"
           ]
         }
       ]
