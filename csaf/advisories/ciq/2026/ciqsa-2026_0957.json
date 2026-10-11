@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the libreswan SRPM in CIQ LTS 8.6. It addresses 3 CVEs: CVE-2023-2295, CVE-2023-23009, CVE-2023-30570.",
+        "text": "This advisory aggregates security fixes for the libreswan SRPM in CIQ LTS 8.6. It addresses 3 CVEs: CVE-2023-23009, CVE-2023-2295, CVE-2023-30570.",
         "title": "Description"
       },
       {
@@ -43,13 +43,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-2295",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-2295.json"
+        "summary": "VEX document for CVE-2023-23009",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-23009.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-23009",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-23009.json"
+        "summary": "VEX document for CVE-2023-2295",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-2295.json"
       },
       {
         "category": "external",
@@ -64,12 +64,12 @@
     ],
     "title": "libreswan security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-01T23:59:26.212269+00:00",
+      "current_release_date": "2026-10-11T13:41:37.704345+00:00",
       "generator": {
-        "date": "2026-09-01T23:59:26.212269+00:00",
+        "date": "2026-10-11T13:41:37.704345+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0957",
@@ -79,10 +79,15 @@
           "date": "2026-09-01T23:59:26.212269+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 3 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:41:37.711390+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -98,7 +103,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -249,6 +254,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "libreswan-0:4.9-3.el8_6.ciqlts.src as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src"
+        },
+        "product_reference": "libreswan-0:4.9-3.el8_6.ciqlts.src",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "libreswan-0:4.9-3.el8_6.ciqlts.i686 as a component of CIQ LTS 8.6",
           "product_id": "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686"
         },
@@ -271,15 +285,6 @@
           "product_id": "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686"
         },
         "product_reference": "libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "libreswan-0:4.9-3.el8_6.ciqlts.src as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src"
-        },
-        "product_reference": "libreswan-0:4.9-3.el8_6.ciqlts.src",
         "relates_to_product_reference": "lts-8.6"
       },
       {
@@ -340,83 +345,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-2295",
-      "cwe": {
-        "id": "CWE-400",
-        "name": "Uncontrolled Resource Consumption"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-2295",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
-          "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
-          "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
-          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
-          "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
-          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
-          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
-          "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.x86_64",
-          "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.aarch64",
-          "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update libreswan to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
-            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
-            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
-            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
-            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.x86_64",
-            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.aarch64",
-            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
-            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
-            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
-            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
-            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.x86_64",
-            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.aarch64",
-            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.aarch64"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2023-23009",
       "cwe": {
         "id": "CWE-20",
@@ -431,10 +359,10 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
           "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
           "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
           "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
-          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
           "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
           "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
           "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
@@ -448,10 +376,10 @@
           "category": "vendor_fix",
           "details": "Update libreswan to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
             "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
             "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
             "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
@@ -479,10 +407,10 @@
             "version": "3.1"
           },
           "products": [
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
             "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
             "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
             "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
@@ -494,7 +422,7 @@
       ]
     },
     {
-      "cve": "CVE-2023-30570",
+      "cve": "CVE-2023-2295",
       "cwe": {
         "id": "CWE-400",
         "name": "Uncontrolled Resource Consumption"
@@ -502,16 +430,16 @@
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2023-30570",
+          "text": "Security vulnerability CVE-2023-2295",
           "title": "Vulnerability Description"
         }
       ],
       "product_status": {
         "fixed": [
+          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
           "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
           "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
           "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
-          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
           "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
           "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
           "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
@@ -525,10 +453,10 @@
           "category": "vendor_fix",
           "details": "Update libreswan to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
             "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
             "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
-            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
             "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
@@ -556,10 +484,87 @@
             "version": "3.1"
           },
           "products": [
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
             "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
             "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
+            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
+            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.x86_64",
+            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.aarch64",
+            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-30570",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-30570",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
+          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
+          "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
+          "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
+          "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
+          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
+          "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
+          "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.x86_64",
+          "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.aarch64",
+          "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libreswan to the latest version from CIQ repositories",
+          "product_ids": [
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
+            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
+            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
+            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
+            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.x86_64",
+            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.aarch64",
+            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.src",
+            "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.i686",
+            "lts-8.6:libreswan-debugsource-0:4.9-3.el8_6.ciqlts.i686",
+            "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.i686",
             "lts-8.6:libreswan-debuginfo-0:4.9-3.el8_6.ciqlts.x86_64",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.aarch64",
             "lts-8.6:libreswan-0:4.9-3.el8_6.ciqlts.x86_64",
