@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the httpd SRPM in CIQ LTS 8.6. It addresses 5 CVEs: CVE-2006-20001, CVE-2022-36760, CVE-2022-37436, CVE-2023-25690, CVE-2023-27522.",
+        "text": "This advisory aggregates security fixes for the httpd SRPM in CIQ LTS 8.6. It addresses 5 CVEs: CVE-2023-25690, CVE-2023-27522, CVE-2022-36760, CVE-2022-37436, CVE-2006-20001.",
         "title": "Description"
       },
       {
@@ -43,8 +43,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2006-20001",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2006/cve-2006-20001.json"
+        "summary": "VEX document for CVE-2023-25690",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-25690.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-27522",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-27522.json"
       },
       {
         "category": "external",
@@ -58,13 +63,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-25690",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-25690.json"
-      },
-      {
-        "category": "external",
-        "summary": "VEX document for CVE-2023-27522",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-27522.json"
+        "summary": "VEX document for CVE-2006-20001",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2006/cve-2006-20001.json"
       },
       {
         "category": "self",
@@ -74,12 +74,12 @@
     ],
     "title": "httpd security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-03T20:33:42.373584+00:00",
+      "current_release_date": "2026-10-11T13:41:11.438160+00:00",
       "generator": {
-        "date": "2026-09-03T20:33:42.373584+00:00",
+        "date": "2026-10-11T13:41:11.438160+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0749",
@@ -94,10 +94,15 @@
           "date": "2026-09-03T20:33:42.383035+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:41:11.451834+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -113,7 +118,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -775,15 +780,15 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2006-20001",
+      "cve": "CVE-2023-25690",
       "cwe": {
-        "id": "CWE-125",
-        "name": "Out-of-bounds Read"
+        "id": "CWE-113",
+        "name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2006-20001",
+          "text": "Security vulnerability CVE-2023-25690",
           "title": "Vulnerability Description"
         }
       ],
@@ -868,14 +873,154 @@
             "attackComplexity": "LOW",
             "attackVector": "NETWORK",
             "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
             "privilegesRequired": "NONE",
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-manual-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
+            "lts-8.6:httpd-filesystem-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
+            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-27522",
+      "cwe": {
+        "id": "CWE-113",
+        "name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-27522",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:httpd-manual-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
+          "lts-8.6:httpd-filesystem-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
+          "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+          "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+          "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update httpd to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-manual-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
+            "lts-8.6:httpd-filesystem-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
+            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
+            "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
+            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
@@ -1195,15 +1340,15 @@
       ]
     },
     {
-      "cve": "CVE-2023-25690",
+      "cve": "CVE-2006-20001",
       "cwe": {
-        "id": "CWE-113",
-        "name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')"
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2023-25690",
+          "text": "Security vulnerability CVE-2006-20001",
           "title": "Vulnerability Description"
         }
       ],
@@ -1288,154 +1433,14 @@
             "attackComplexity": "LOW",
             "attackVector": "NETWORK",
             "availabilityImpact": "HIGH",
-            "baseScore": 9.8,
-            "baseSeverity": "CRITICAL",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-manual-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
-            "lts-8.6:httpd-filesystem-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
-            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.src"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-27522",
-      "cwe": {
-        "id": "CWE-113",
-        "name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-27522",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:httpd-manual-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
-          "lts-8.6:httpd-filesystem-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
-          "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-          "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-          "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.src"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update httpd to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_ssl-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_proxy_html-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_ssl-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_proxy_html-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-manual-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
-            "lts-8.6:httpd-filesystem-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.noarch",
-            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-devel-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-tools-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_ldap-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_session-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.x86_64",
-            "lts-8.6:httpd-debugsource-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-tools-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_session-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:mod_ldap-debuginfo-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.aarch64",
-            "lts-8.6:httpd-1:2.4.37-56.module+el8.6.0+3210+bce686fe.7.src"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "NONE",
             "baseScore": 7.5,
             "baseSeverity": "HIGH",
             "confidentialityImpact": "NONE",
-            "integrityImpact": "HIGH",
+            "integrityImpact": "NONE",
             "privilegesRequired": "NONE",
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
