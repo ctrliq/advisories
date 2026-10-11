@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the iperf3 SRPM in CIQ LTS 8.8. It addresses 3 CVEs: CVE-2023-7250, CVE-2024-53580, CVE-2024-26306.",
+        "text": "This advisory aggregates security fixes for the iperf3 SRPM in CIQ LTS 8.8. It addresses 3 CVEs: CVE-2023-7250, CVE-2024-26306, CVE-2024-53580.",
         "title": "Description"
       },
       {
@@ -48,13 +48,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-53580",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-53580.json"
+        "summary": "VEX document for CVE-2024-26306",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-26306.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-26306",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-26306.json"
+        "summary": "VEX document for CVE-2024-53580",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-53580.json"
       },
       {
         "category": "self",
@@ -64,12 +64,12 @@
     ],
     "title": "iperf3 security update for CIQ LTS 8.8",
     "tracking": {
-      "current_release_date": "2026-09-01T23:54:03.392599+00:00",
+      "current_release_date": "2026-10-11T13:37:31.124888+00:00",
       "generator": {
-        "date": "2026-09-01T23:54:03.392599+00:00",
+        "date": "2026-10-11T13:37:31.124888+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0363",
@@ -79,10 +79,15 @@
           "date": "2026-09-01T23:54:03.392599+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 3 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:37:31.132061+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -98,7 +103,7 @@
                   "name": "CIQ LTS 8.8",
                   "product_id": "lts-8.8",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.8:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.8:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -108,6 +113,17 @@
           },
           {
             "branches": [
+              {
+                "category": "product_version",
+                "name": "iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
+                "product": {
+                  "name": "iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
+                  "product_id": "iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/iperf3-debuginfo@3.5-11.el8_8.88ciq_lts?arch=aarch64"
+                  }
+                }
+              },
               {
                 "category": "product_version",
                 "name": "iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
@@ -127,17 +143,6 @@
                   "product_id": "iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/iperf3-devel@3.5-11.el8_8.88ciq_lts?arch=aarch64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
-                "product": {
-                  "name": "iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
-                  "product_id": "iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/iperf3-debuginfo@3.5-11.el8_8.88ciq_lts?arch=aarch64"
                   }
                 }
               },
@@ -327,6 +332,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64 as a component of CIQ LTS 8.8",
+          "product_id": "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64"
+        },
+        "product_reference": "iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "iperf3-0:3.5-11.el8_8.88ciq_lts.i686 as a component of CIQ LTS 8.8",
           "product_id": "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686"
         },
@@ -381,15 +395,6 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64 as a component of CIQ LTS 8.8",
-          "product_id": "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64"
-        },
-        "product_reference": "iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
-        "relates_to_product_reference": "lts-8.8"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64 as a component of CIQ LTS 8.8",
           "product_id": "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
         },
@@ -419,13 +424,13 @@
           "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
           "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
           "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
           "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
           "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
           "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
           "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
           "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
           "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
           "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
         ]
       },
@@ -439,13 +444,13 @@
             "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
           ],
           "url": "https://github.com/ctrliq/advisories"
@@ -473,99 +478,13 @@
             "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-53580",
-      "cwe": {
-        "id": "CWE-476",
-        "name": "NULL Pointer Dereference"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-53580",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.src",
-          "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.i686",
-          "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
-          "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
-          "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
-          "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
-          "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update iperf3 to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.src",
-            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.i686",
-            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
-            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
-            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
-            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.src",
-            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.i686",
-            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
-            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
-            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
-            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
-            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
           ]
         }
@@ -591,13 +510,13 @@
           "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
           "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
           "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
           "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
           "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
           "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
           "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
           "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
           "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
-          "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
           "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
         ]
       },
@@ -611,13 +530,13 @@
             "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
-            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
           ],
           "url": "https://github.com/ctrliq/advisories"
@@ -645,13 +564,99 @@
             "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-53580",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-53580",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.src",
+          "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.i686",
+          "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
+          "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
+          "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
+          "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
+          "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
+          "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update iperf3 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.src",
+            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.i686",
+            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
+            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
             "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
+            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
+            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.src",
+            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.i686",
+            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.i686",
+            "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-debuginfo-0:3.5-11.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.i686",
+            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.i686",
+            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.x86_64",
+            "lts-8.8:iperf3-0:3.5-11.el8_8.88ciq_lts.aarch64",
+            "lts-8.8:iperf3-devel-0:3.5-11.el8_8.88ciq_lts.aarch64",
             "lts-8.8:iperf3-debugsource-0:3.5-11.el8_8.88ciq_lts.aarch64"
           ]
         }
