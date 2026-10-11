@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ CentOS Bridge 7.9. It addresses 7 CVEs: CVE-2022-50022, CVE-2025-38352, CVE-2024-53197, CVE-2024-50302, CVE-2025-38079, and 2 more.",
+        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ CentOS Bridge 7.9. It addresses 7 CVEs: CVE-2022-50022, CVE-2024-53197, CVE-2024-50302, CVE-2025-38079, CVE-2025-22004, and 2 more.",
         "title": "Description"
       },
       {
@@ -48,11 +48,6 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2025-38352",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-38352.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2024-53197",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-53197.json"
       },
@@ -77,6 +72,11 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-1011.json"
       },
       {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-38352",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-38352.json"
+      },
+      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0649.json"
@@ -84,12 +84,12 @@
     ],
     "title": "kernel security update for CIQ CentOS Bridge 7.9",
     "tracking": {
-      "current_release_date": "2026-10-01T07:01:15.218832+00:00",
+      "current_release_date": "2026-10-11T13:40:12.001322+00:00",
       "generator": {
-        "date": "2026-10-01T07:01:15.218832+00:00",
+        "date": "2026-10-11T13:40:12.001322+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.2"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0649",
@@ -104,10 +104,15 @@
           "date": "2026-10-01T07:01:15.225594+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:40:12.012827+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -195,17 +200,6 @@
           },
           {
             "branches": [
-              {
-                "category": "product_version",
-                "name": "kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-                "product": {
-                  "name": "kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-                  "product_id": "kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/kernel-debug-devel@3.10.0-1160.119.1.el7_9.ciqcbr.8.1?arch=x86_64"
-                  }
-                }
-              },
               {
                 "category": "product_version",
                 "name": "kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
@@ -373,6 +367,17 @@
               },
               {
                 "category": "product_version",
+                "name": "kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+                "product": {
+                  "name": "kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+                  "product_id": "kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/kernel-debug-devel@3.10.0-1160.119.1.el7_9.ciqcbr.8.1?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
                 "name": "python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
                 "product": {
                   "name": "python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
@@ -403,33 +408,6 @@
       }
     ],
     "relationships": [
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch as a component of CIQ CentOS Bridge 7.9",
-          "product_id": "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch"
-        },
-        "product_reference": "kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-        "relates_to_product_reference": "cbr-7.9-bridge"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch as a component of CIQ CentOS Bridge 7.9",
-          "product_id": "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch"
-        },
-        "product_reference": "kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-        "relates_to_product_reference": "cbr-7.9-bridge"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64 as a component of CIQ CentOS Bridge 7.9",
-          "product_id": "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
-        },
-        "product_reference": "kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-        "relates_to_product_reference": "cbr-7.9-bridge"
-      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -586,6 +564,33 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch"
+        },
+        "product_reference": "kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch"
+        },
+        "product_reference": "kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
+        },
+        "product_reference": "kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64 as a component of CIQ CentOS Bridge 7.9",
           "product_id": "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
         },
@@ -619,9 +624,6 @@
       ],
       "product_status": {
         "fixed": [
-          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -639,6 +641,9 @@
           "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
         ]
@@ -648,9 +653,6 @@
           "category": "vendor_fix",
           "details": "Update kernel to the latest version from CIQ repositories",
           "product_ids": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -668,6 +670,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ],
@@ -691,9 +696,6 @@
             "version": "3.1"
           },
           "products": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -711,119 +713,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2025-38352",
-      "cwe": {
-        "id": "CWE-362",
-        "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2025-38352",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
-          "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.i686",
-          "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-          "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
             "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
             "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
             "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
-            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.i686",
-            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
-            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.i686",
-            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
-            "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ]
@@ -845,9 +737,6 @@
       ],
       "product_status": {
         "fixed": [
-          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -865,6 +754,9 @@
           "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
         ]
@@ -874,9 +766,6 @@
           "category": "vendor_fix",
           "details": "Update kernel to the latest version from CIQ repositories",
           "product_ids": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -894,6 +783,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ],
@@ -917,9 +809,6 @@
             "version": "3.1"
           },
           "products": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -937,6 +826,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ]
@@ -958,9 +850,6 @@
       ],
       "product_status": {
         "fixed": [
-          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -978,6 +867,9 @@
           "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
         ]
@@ -987,9 +879,6 @@
           "category": "vendor_fix",
           "details": "Update kernel to the latest version from CIQ repositories",
           "product_ids": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1007,6 +896,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ],
@@ -1030,9 +922,6 @@
             "version": "3.1"
           },
           "products": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1050,6 +939,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ]
@@ -1071,9 +963,6 @@
       ],
       "product_status": {
         "fixed": [
-          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1091,6 +980,9 @@
           "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
         ]
@@ -1100,9 +992,6 @@
           "category": "vendor_fix",
           "details": "Update kernel to the latest version from CIQ repositories",
           "product_ids": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1120,6 +1009,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ],
@@ -1143,9 +1035,6 @@
             "version": "3.1"
           },
           "products": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1163,6 +1052,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ]
@@ -1184,9 +1076,6 @@
       ],
       "product_status": {
         "fixed": [
-          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1204,6 +1093,9 @@
           "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
         ]
@@ -1213,9 +1105,6 @@
           "category": "vendor_fix",
           "details": "Update kernel to the latest version from CIQ repositories",
           "product_ids": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1233,6 +1122,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ],
@@ -1256,9 +1148,6 @@
             "version": "3.1"
           },
           "products": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1276,6 +1165,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ]
@@ -1297,9 +1189,6 @@
       ],
       "product_status": {
         "fixed": [
-          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1317,6 +1206,9 @@
           "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
           "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
         ]
@@ -1326,9 +1218,6 @@
           "category": "vendor_fix",
           "details": "Update kernel to the latest version from CIQ repositories",
           "product_ids": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1346,6 +1235,9 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ],
@@ -1369,9 +1261,6 @@
             "version": "3.1"
           },
           "products": [
-            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
-            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
@@ -1389,6 +1278,122 @@
             "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-38352",
+      "cwe": {
+        "id": "CWE-362",
+        "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-38352",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
+          "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.i686",
+          "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+          "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+          "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
+            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.i686",
+            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:kernel-debuginfo-common-x86_64-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.src",
+            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.i686",
+            "cbr-7.9-bridge:kernel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-headers-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-debug-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:python-perf-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-debug-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:bpftool-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-libs-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-libs-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-tools-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:bpftool-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
+            "cbr-7.9-bridge:kernel-doc-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-abi-whitelists-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.noarch",
+            "cbr-7.9-bridge:kernel-debug-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:python-perf-debuginfo-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64",
             "cbr-7.9-bridge:kernel-devel-0:3.10.0-1160.119.1.el7_9.ciqcbr.8.1.x86_64"
           ]
