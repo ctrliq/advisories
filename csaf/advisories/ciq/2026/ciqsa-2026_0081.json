@@ -1,7 +1,7 @@
 {
   "document": {
     "aggregate_severity": {
-      "text": "High"
+      "text": "Critical"
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the nghttp2 SRPM in CIQ LTS 8.6. It addresses 1 CVE: CVE-2023-44487.",
+        "text": "This advisory aggregates security fixes for the nghttp2 SRPM in CIQ LTS 8.6. It addresses 7 CVEs: CVE-2023-44487, CVE-2018-1000168, CVE-2016-1544, CVE-2019-9513, CVE-2015-8659, and 2 more.",
         "title": "Description"
       },
       {
@@ -47,19 +47,49 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-44487.json"
       },
       {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-1000168",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-1000168.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-1544",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-1544.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-9513",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-9513.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2015-8659",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2015/cve-2015-8659.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-11080",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-11080.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-9511",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-9511.json"
+      },
+      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0081.json"
       }
     ],
-    "title": "nghttp2 security update (CVE-2023-44487)",
+    "title": "nghttp2 security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-01T23:52:49.470469+00:00",
+      "current_release_date": "2026-10-11T13:36:53.425899+00:00",
       "generator": {
-        "date": "2026-09-01T23:52:49.470469+00:00",
+        "date": "2026-10-11T13:36:53.425899+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0081",
@@ -69,10 +99,15 @@
           "date": "2026-09-01T23:52:49.470469+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 1 CVE fixed"
+        },
+        {
+          "date": "2026-10-11T13:36:53.436018+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -88,7 +123,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -98,6 +133,39 @@
           },
           {
             "branches": [
+              {
+                "category": "product_version",
+                "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+                "product": {
+                  "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+                  "product_id": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libnghttp2@1.33.0-5.el8_6.ciqlts?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+                "product": {
+                  "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+                  "product_id": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libnghttp2-devel@1.33.0-5.el8_6.ciqlts?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+                "product": {
+                  "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+                  "product_id": "nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nghttp2@1.33.0-5.el8_6.ciqlts?arch=aarch64"
+                  }
+                }
+              },
               {
                 "category": "product_version",
                 "name": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
@@ -130,39 +198,6 @@
                     "purl": "pkg:rpm/ciq/libnghttp2-debuginfo@1.33.0-5.el8_6.ciqlts?arch=aarch64"
                   }
                 }
-              },
-              {
-                "category": "product_version",
-                "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-                "product": {
-                  "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-                  "product_id": "nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/nghttp2@1.33.0-5.el8_6.ciqlts?arch=aarch64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-                "product": {
-                  "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-                  "product_id": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/libnghttp2@1.33.0-5.el8_6.ciqlts?arch=aarch64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
-                "product": {
-                  "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
-                  "product_id": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/libnghttp2-devel@1.33.0-5.el8_6.ciqlts?arch=aarch64"
-                  }
-                }
               }
             ],
             "category": "architecture",
@@ -170,39 +205,6 @@
           },
           {
             "branches": [
-              {
-                "category": "product_version",
-                "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
-                "product": {
-                  "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
-                  "product_id": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/libnghttp2-devel@1.33.0-5.el8_6.ciqlts?arch=i686"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-                "product": {
-                  "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-                  "product_id": "nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/nghttp2@1.33.0-5.el8_6.ciqlts?arch=i686"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-                "product": {
-                  "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-                  "product_id": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/libnghttp2@1.33.0-5.el8_6.ciqlts?arch=i686"
-                  }
-                }
-              },
               {
                 "category": "product_version",
                 "name": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
@@ -235,6 +237,39 @@
                     "purl": "pkg:rpm/ciq/libnghttp2-debuginfo@1.33.0-5.el8_6.ciqlts?arch=i686"
                   }
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+                "product": {
+                  "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+                  "product_id": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libnghttp2-devel@1.33.0-5.el8_6.ciqlts?arch=i686"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+                "product": {
+                  "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+                  "product_id": "nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nghttp2@1.33.0-5.el8_6.ciqlts?arch=i686"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+                "product": {
+                  "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+                  "product_id": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libnghttp2@1.33.0-5.el8_6.ciqlts?arch=i686"
+                  }
+                }
               }
             ],
             "category": "architecture",
@@ -261,12 +296,23 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+                "name": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
                 "product": {
-                  "name": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
-                  "product_id": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+                  "name": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+                  "product_id": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
                   "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/libnghttp2-debuginfo@1.33.0-5.el8_6.ciqlts?arch=x86_64"
+                    "purl": "pkg:rpm/ciq/nghttp2-debugsource@1.33.0-5.el8_6.ciqlts?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+                "product": {
+                  "name": "nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+                  "product_id": "nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nghttp2-debuginfo@1.33.0-5.el8_6.ciqlts?arch=x86_64"
                   }
                 }
               },
@@ -305,23 +351,12 @@
               },
               {
                 "category": "product_version",
-                "name": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+                "name": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
                 "product": {
-                  "name": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
-                  "product_id": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+                  "name": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+                  "product_id": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
                   "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/nghttp2-debugsource@1.33.0-5.el8_6.ciqlts?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
-                "product": {
-                  "name": "nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
-                  "product_id": "nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/nghttp2-debuginfo@1.33.0-5.el8_6.ciqlts?arch=x86_64"
+                    "purl": "pkg:rpm/ciq/libnghttp2-debuginfo@1.33.0-5.el8_6.ciqlts?arch=x86_64"
                   }
                 }
               }
@@ -335,132 +370,6 @@
       }
     ],
     "relationships": [
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686"
-        },
-        "product_reference": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64"
-        },
-        "product_reference": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64"
-        },
-        "product_reference": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64"
-        },
-        "product_reference": "nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64"
-        },
-        "product_reference": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.i686 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
-        },
-        "product_reference": "nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
-        },
-        "product_reference": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64"
-        },
-        "product_reference": "nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64"
-        },
-        "product_reference": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64"
-        },
-        "product_reference": "nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64"
-        },
-        "product_reference": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64"
-        },
-        "product_reference": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.src as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src"
-        },
-        "product_reference": "nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64 as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64"
-        },
-        "product_reference": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
-        "relates_to_product_reference": "lts-8.6"
-      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -505,6 +414,132 @@
         },
         "product_reference": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
         "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64"
+        },
+        "product_reference": "nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64"
+        },
+        "product_reference": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64"
+        },
+        "product_reference": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.src as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src"
+        },
+        "product_reference": "nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64"
+        },
+        "product_reference": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686"
+        },
+        "product_reference": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.i686 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+        },
+        "product_reference": "nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64"
+        },
+        "product_reference": "libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64"
+        },
+        "product_reference": "nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64"
+        },
+        "product_reference": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64"
+        },
+        "product_reference": "nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64"
+        },
+        "product_reference": "nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64"
+        },
+        "product_reference": "libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+        },
+        "product_reference": "libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+        "relates_to_product_reference": "lts-8.6"
       }
     ]
   },
@@ -524,25 +559,25 @@
       ],
       "product_status": {
         "fixed": [
-          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
-          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
-          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
-          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
-          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
-          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
-          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
-          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
-          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
-          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
           "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
           "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
           "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
           "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
-          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686"
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
         ]
       },
       "remediations": [
@@ -550,25 +585,25 @@
           "category": "vendor_fix",
           "details": "Update nghttp2 to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
-            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
-            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
-            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
-            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
-            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
             "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
             "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
             "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
             "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
-            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686"
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -590,25 +625,705 @@
             "version": "3.1"
           },
           "products": [
-            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
-            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
-            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
-            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
-            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
-            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
-            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
-            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
             "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
             "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
             "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
             "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
-            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686"
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-1000168",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-1000168",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update nghttp2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-1544",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-1544",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update nghttp2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 1.9,
+            "vectorString": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-9513",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-9513",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update nghttp2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-8659",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2015-8659",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update nghttp2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 10.0,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-11080",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-11080",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update nghttp2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-9511",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-9511",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+          "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+          "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+          "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update nghttp2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.src",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.i686",
+            "lts-8.6:libnghttp2-devel-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.x86_64",
+            "lts-8.6:nghttp2-debugsource-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:nghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-debuginfo-0:1.33.0-5.el8_6.ciqlts.aarch64",
+            "lts-8.6:libnghttp2-0:1.33.0-5.el8_6.ciqlts.i686"
           ]
         }
       ]
