@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the httpd SRPM in CIQ CentOS Bridge 7.9. It addresses 3 CVEs: CVE-2026-28780, CVE-2026-33857, CVE-2026-34032.",
+        "text": "This advisory aggregates security fixes for the httpd SRPM in CIQ CentOS Bridge 7.9. It addresses 3 CVEs: CVE-2026-34032, CVE-2026-28780, CVE-2026-33857.",
         "title": "Description"
       },
       {
@@ -43,6 +43,11 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2026-34032",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-34032.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2026-28780",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-28780.json"
       },
@@ -52,11 +57,6 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-33857.json"
       },
       {
-        "category": "external",
-        "summary": "VEX document for CVE-2026-34032",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-34032.json"
-      },
-      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1488.json"
@@ -64,12 +64,12 @@
     ],
     "title": "httpd security update for CIQ CentOS Bridge 7.9",
     "tracking": {
-      "current_release_date": "2026-09-03T20:34:08.576610+00:00",
+      "current_release_date": "2026-10-11T13:44:41.199031+00:00",
       "generator": {
-        "date": "2026-09-03T20:34:08.576610+00:00",
+        "date": "2026-10-11T13:44:41.199031+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1488",
@@ -84,10 +84,15 @@
           "date": "2026-09-03T20:34:08.581962+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:44:41.206961+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -103,7 +108,7 @@
                   "name": "CIQ CentOS Bridge 7.9",
                   "product_id": "cbr-7.9-bridge",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:centos_linux_bridge:7.9:*:*:*:*:*:i686:bridge"
+                    "cpe": "cpe:2.3:o:ciq:centos_linux_bridge:7.9:*:*:*:*:*:*:bridge"
                   }
                 }
               }
@@ -215,17 +220,6 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-                "product": {
-                  "name": "httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-                  "product_id": "httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/httpd-debuginfo@2.4.6-99.1.el7_9.ciqcbr.12?arch=x86_64&epoch=1"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
                 "name": "mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
                 "product": {
                   "name": "mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
@@ -243,6 +237,17 @@
                   "product_id": "mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/mod_ssl@2.4.6-99.1.el7_9.ciqcbr.12?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+                "product": {
+                  "name": "httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+                  "product_id": "httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/httpd-debuginfo@2.4.6-99.1.el7_9.ciqcbr.12?arch=x86_64&epoch=1"
                   }
                 }
               },
@@ -314,15 +319,6 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64 as a component of CIQ CentOS Bridge 7.9",
-          "product_id": "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
-        },
-        "product_reference": "httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-        "relates_to_product_reference": "cbr-7.9-bridge"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64 as a component of CIQ CentOS Bridge 7.9",
           "product_id": "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
         },
@@ -354,6 +350,15 @@
           "product_id": "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686"
         },
         "product_reference": "mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
+        },
+        "product_reference": "httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
         "relates_to_product_reference": "cbr-7.9-bridge"
       },
       {
@@ -459,196 +464,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2026-28780",
-      "cwe": {
-        "id": "CWE-787",
-        "name": "Out-of-bounds Write"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2026-28780",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
-          "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update httpd to the latest version from CIQ repositories",
-          "product_ids": [
-            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
-            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 8.1,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
-            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2026-33857",
-      "cwe": {
-        "id": "CWE-125",
-        "name": "Out-of-bounds Read"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2026-33857",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
-          "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-          "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-          "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update httpd to the latest version from CIQ repositories",
-          "product_ids": [
-            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
-            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
-            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
-            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
-            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2026-34032",
       "cwe": {
         "id": "CWE-170",
@@ -663,11 +478,11 @@
       ],
       "product_status": {
         "fixed": [
-          "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
           "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
           "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
           "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
           "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
           "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
           "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
           "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
@@ -686,11 +501,11 @@
           "category": "vendor_fix",
           "details": "Update httpd to the latest version from CIQ repositories",
           "product_ids": [
-            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
             "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
             "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
             "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
             "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
             "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
             "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
             "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
@@ -723,11 +538,201 @@
             "version": "3.1"
           },
           "products": [
-            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
             "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
             "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
             "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
             "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
+            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-28780",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-28780",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
+          "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update httpd to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
+            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
+            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-33857",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-33857",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
+          "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+          "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+          "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update httpd to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:httpd-manual-1:2.4.6-99.1.el7_9.ciqcbr.12.noarch",
+            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-tools-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_ldap-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_session-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_proxy_html-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
+            "cbr-7.9-bridge:mod_ssl-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
+            "cbr-7.9-bridge:httpd-debuginfo-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
             "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.x86_64",
             "cbr-7.9-bridge:httpd-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
             "cbr-7.9-bridge:httpd-devel-1:2.4.6-99.1.el7_9.ciqcbr.12.i686",
