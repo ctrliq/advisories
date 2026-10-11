@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ FIPS 8.6 Compliant. It addresses 7 CVEs: CVE-2024-53150, CVE-2024-41090, CVE-2024-41091, CVE-2025-21756, CVE-2025-21927, and 2 more.",
+        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ FIPS 8.6 Compliant. It addresses 7 CVEs: CVE-2024-41090, CVE-2025-21756, CVE-2025-21927, CVE-2025-21785, CVE-2024-53150, and 2 more.",
         "title": "Description"
       },
       {
@@ -43,18 +43,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-53150",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-53150.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2024-41090",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-41090.json"
-      },
-      {
-        "category": "external",
-        "summary": "VEX document for CVE-2024-41091",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-41091.json"
       },
       {
         "category": "external",
@@ -73,6 +63,16 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2024-53150",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-53150.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-41091",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-41091.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2024-53141",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-53141.json"
       },
@@ -84,12 +84,12 @@
     ],
     "title": "kernel security update for CIQ FIPS 8.6 Compliant",
     "tracking": {
-      "current_release_date": "2026-10-01T07:01:22.527687+00:00",
+      "current_release_date": "2026-10-11T13:41:58.546738+00:00",
       "generator": {
-        "date": "2026-10-01T07:01:22.527687+00:00",
+        "date": "2026-10-11T13:41:58.546738+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.2"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1114",
@@ -104,10 +104,15 @@
           "date": "2026-10-01T07:01:22.535636+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:41:58.564434+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -799,149 +804,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2024-53150",
-      "cwe": {
-        "id": "CWE-125",
-        "name": "Out-of-bounds Read"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-53150",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
-          "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
-          "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
-            "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
-            "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.1,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
-            "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
-            "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2024-41090",
       "cwe": {
         "id": "CWE-20",
@@ -951,149 +813,6 @@
         {
           "category": "description",
           "text": "Security vulnerability CVE-2024-41090",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
-          "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
-          "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-          "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
-            "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
-            "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.1,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "CHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
-            "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
-            "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
-            "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-41091",
-      "cwe": {
-        "id": "CWE-20",
-        "name": "Improper Input Validation"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-41091",
           "title": "Vulnerability Description"
         }
       ],
@@ -1617,6 +1336,292 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
+            "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
+            "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-53150",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-53150",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
+          "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
+          "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel to the latest version from CIQ repositories",
+          "product_ids": [
+            "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
+            "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
+            "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
+            "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
+            "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-41091",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-41091",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
+          "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
+          "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+          "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update kernel to the latest version from CIQ repositories",
+          "product_ids": [
+            "fips-8.6-compliant:kernel-selftests-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:bpftool-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-libs-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-libs-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:bpftool-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-core-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-cross-headers-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debuginfo-common-x86_64-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:python3-perf-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:python3-perf-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-tools-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-devel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-extra-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debug-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-debuginfo-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-ipaclones-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.src",
+            "fips-8.6-compliant:kernel-abi-stablelists-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch",
+            "fips-8.6-compliant:kernel-modules-internal-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.x86_64",
+            "fips-8.6-compliant:kernel-doc-0:4.18.0-553.16.1.el8_6.ciqfips.0.8.1.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
