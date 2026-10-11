@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the rsync SRPM in CIQ LTS 9.4. It addresses 3 CVEs: CVE-2024-12087, CVE-2024-12088, CVE-2024-12747.",
+        "text": "This advisory aggregates security fixes for the rsync SRPM in CIQ LTS 9.4. It addresses 3 CVEs: CVE-2024-12747, CVE-2024-12088, CVE-2024-12087.",
         "title": "Description"
       },
       {
@@ -43,8 +43,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-12087",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-12087.json"
+        "summary": "VEX document for CVE-2024-12747",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-12747.json"
       },
       {
         "category": "external",
@@ -53,8 +53,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-12747",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-12747.json"
+        "summary": "VEX document for CVE-2024-12087",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-12087.json"
       },
       {
         "category": "self",
@@ -64,12 +64,12 @@
     ],
     "title": "rsync security update for CIQ LTS 9.4",
     "tracking": {
-      "current_release_date": "2026-09-02T00:01:33.543516+00:00",
+      "current_release_date": "2026-10-11T13:44:15.790618+00:00",
       "generator": {
-        "date": "2026-09-02T00:01:33.543516+00:00",
+        "date": "2026-10-11T13:44:15.790618+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1366",
@@ -79,10 +79,15 @@
           "date": "2026-09-02T00:01:33.543516+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 3 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:44:15.797215+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -98,7 +103,7 @@
                   "name": "CIQ LTS 9.4",
                   "product_id": "lts-9.4",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.4:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.4:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -320,15 +325,15 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2024-12087",
+      "cve": "CVE-2024-12747",
       "cwe": {
-        "id": "CWE-22",
-        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        "id": "CWE-362",
+        "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2024-12087",
+          "text": "Security vulnerability CVE-2024-12747",
           "title": "Vulnerability Description"
         }
       ],
@@ -366,17 +371,17 @@
       "scores": [
         {
           "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
             "availabilityImpact": "NONE",
-            "baseScore": 6.5,
+            "baseScore": 5.6,
             "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "REQUIRED",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
             "version": "3.1"
           },
           "products": [
@@ -396,8 +401,8 @@
     {
       "cve": "CVE-2024-12088",
       "cwe": {
-        "id": "CWE-22",
-        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        "id": "CWE-35",
+        "name": "Path Traversal: '.../...//'"
       },
       "notes": [
         {
@@ -468,15 +473,15 @@
       ]
     },
     {
-      "cve": "CVE-2024-12747",
+      "cve": "CVE-2024-12087",
       "cwe": {
-        "id": "CWE-362",
-        "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+        "id": "CWE-35",
+        "name": "Path Traversal: '.../...//'"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2024-12747",
+          "text": "Security vulnerability CVE-2024-12087",
           "title": "Vulnerability Description"
         }
       ],
@@ -514,17 +519,17 @@
       "scores": [
         {
           "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "LOCAL",
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
             "availabilityImpact": "NONE",
-            "baseScore": 5.6,
+            "baseScore": 6.5,
             "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "LOW",
-            "scope": "CHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
