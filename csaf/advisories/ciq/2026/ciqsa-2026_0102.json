@@ -1,7 +1,7 @@
 {
   "document": {
     "aggregate_severity": {
-      "text": "High"
+      "text": "Critical"
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the libxslt SRPM in CIQ LTS 8.6. It addresses 2 CVEs: CVE-2025-24855, CVE-2024-55549.",
+        "text": "This advisory aggregates security fixes for the libxslt SRPM in CIQ LTS 8.6. It addresses 5 CVEs: CVE-2019-11068, CVE-2024-55549, CVE-2019-18197, CVE-2008-2935, CVE-2025-24855.",
         "title": "Description"
       },
       {
@@ -43,13 +43,28 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2025-24855",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-24855.json"
+        "summary": "VEX document for CVE-2019-11068",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-11068.json"
       },
       {
         "category": "external",
         "summary": "VEX document for CVE-2024-55549",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-55549.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-18197",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-18197.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2008-2935",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2008/cve-2008-2935.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-24855",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-24855.json"
       },
       {
         "category": "self",
@@ -59,12 +74,12 @@
     ],
     "title": "libxslt security update for CIQ LTS 8.6",
     "tracking": {
-      "current_release_date": "2026-09-01T23:52:54.741885+00:00",
+      "current_release_date": "2026-10-11T13:36:57.453439+00:00",
       "generator": {
-        "date": "2026-09-01T23:52:54.741885+00:00",
+        "date": "2026-10-11T13:36:57.453439+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0102",
@@ -74,10 +89,15 @@
           "date": "2026-09-01T23:52:54.741885+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 2 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:36:57.460516+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -93,7 +113,7 @@
                   "name": "CIQ LTS 8.6",
                   "product_id": "lts-8.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -227,15 +247,6 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src as a component of CIQ LTS 8.6",
-          "product_id": "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
-        },
-        "product_reference": "libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src",
-        "relates_to_product_reference": "lts-8.6"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64 as a component of CIQ LTS 8.6",
           "product_id": "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64"
         },
@@ -304,26 +315,34 @@
         },
         "product_reference": "libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
         "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
+        },
+        "product_reference": "libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src",
+        "relates_to_product_reference": "lts-8.6"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-24855",
+      "cve": "CVE-2019-11068",
       "cwe": {
-        "id": "CWE-416",
-        "name": "Use After Free"
+        "id": "CWE-284",
+        "name": "Improper Access Control"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2025-24855",
+          "text": "Security vulnerability CVE-2019-11068",
           "title": "Vulnerability Description"
         }
       ],
       "product_status": {
         "fixed": [
-          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src",
           "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
           "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
           "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
@@ -331,7 +350,8 @@
           "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
           "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
           "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
-          "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64"
+          "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
         ]
       },
       "remediations": [
@@ -339,7 +359,6 @@
           "category": "vendor_fix",
           "details": "Update libxslt to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src",
             "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
@@ -347,7 +366,8 @@
             "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64"
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -355,21 +375,20 @@
       "scores": [
         {
           "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "HIGH",
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 6.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
             "privilegesRequired": "NONE",
-            "scope": "CHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:H",
-            "version": "3.1"
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+            "version": "3.0"
           },
           "products": [
-            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src",
             "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
@@ -377,7 +396,8 @@
             "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64"
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
           ]
         }
       ]
@@ -397,7 +417,6 @@
       ],
       "product_status": {
         "fixed": [
-          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src",
           "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
           "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
           "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
@@ -405,7 +424,8 @@
           "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
           "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
           "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
-          "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64"
+          "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
         ]
       },
       "remediations": [
@@ -413,7 +433,6 @@
           "category": "vendor_fix",
           "details": "Update libxslt to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src",
             "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
@@ -421,7 +440,8 @@
             "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64"
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -443,7 +463,6 @@
             "version": "3.1"
           },
           "products": [
-            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src",
             "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
@@ -451,7 +470,221 @@
             "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
             "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
-            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64"
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-18197",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-18197",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libxslt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2008-2935",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2008-2935",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libxslt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 7.5,
+            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-24855",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-24855",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+          "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+          "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libxslt to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-devel-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.x86_64",
+            "lts-8.6:libxslt-debugsource-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-debuginfo-0:1.1.32-6.1.el8_6.86ciq_lts.aarch64",
+            "lts-8.6:libxslt-0:1.1.32-6.1.el8_6.86ciq_lts.src"
           ]
         }
       ]
