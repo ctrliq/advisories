@@ -1,0 +1,3262 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Critical"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for jasper",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the jasper SRPM in CIQ LTS 9.6. It addresses 37 CVEs: CVE-2008-3522, CVE-2016-1577, CVE-2014-9029, CVE-2016-9394, CVE-2021-3443, and 32 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2008-3522",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2008/cve-2008-3522.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-1577",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-1577.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-9029",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-9029.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9394",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9394.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3443",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3443.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2015-5221",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2015/cve-2015-5221.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-8691",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-8691.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-2089",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-2089.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-8157",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-8157.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-2116",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-2116.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2015-5203",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2015/cve-2015-5203.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-1000050",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-1000050.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9388",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9388.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9396",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9396.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9560",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9560.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-4516",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-4516.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-8690",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-8690.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9262",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9262.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3272",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3272.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9393",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9393.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-8693",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-8693.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9395",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9395.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-51257",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-51257.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9557",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9557.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-8692",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-8692.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-8158",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-8158.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2008-3520",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2008/cve-2008-3520.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9389",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9389.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9392",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9392.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-4517",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-4517.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-8654",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-8654.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-8138",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-8138.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9391",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9391.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-1867",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-1867.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2007-2721",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2007/cve-2007-2721.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-9390",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-9390.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-8137",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-8137.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1632.json"
+      }
+    ],
+    "title": "jasper security update for CIQ LTS 9.6",
+    "tracking": {
+      "current_release_date": "2026-10-11T13:47:25.549528+00:00",
+      "generator": {
+        "date": "2026-10-11T13:47:25.549528+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1632",
+      "initial_release_date": "2026-10-11T13:47:25.549528+00:00",
+      "revision_history": [
+        {
+          "date": "2026-10-11T13:47:25.549528+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 37 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS 9.6",
+                "product": {
+                  "name": "CIQ LTS 9.6",
+                  "product_id": "lts-9.6",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:lts"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                  "product_id": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/jasper-libs@2.0.28-3.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                  "product_id": "jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/jasper-utils@2.0.28-3.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                  "product_id": "jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/jasper@2.0.28-3.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                  "product_id": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/jasper-devel@2.0.28-3.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+                "product": {
+                  "name": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+                  "product_id": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/jasper-devel@2.0.28-3.1.el9_6_ciq?arch=i686"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+                "product": {
+                  "name": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+                  "product_id": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/jasper-libs@2.0.28-3.1.el9_6_ciq?arch=i686"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "i686"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                  "product_id": "jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/jasper-utils@2.0.28-3.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                  "product_id": "jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/jasper@2.0.28-3.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                  "product_id": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/jasper-devel@2.0.28-3.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                  "product_id": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/jasper-libs@2.0.28-3.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jasper-0:2.0.28-3.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686"
+        },
+        "product_reference": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686"
+        },
+        "product_reference": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jasper-0:2.0.28-3.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2008-3522",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2008-3522",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-1577",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-1577",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-9029",
+      "cwe": {
+        "id": "CWE-193",
+        "name": "Off-by-one Error"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-9029",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9394",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9394",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3443",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3443",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-5221",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2015-5221",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-8691",
+      "cwe": {
+        "id": "CWE-369",
+        "name": "Divide By Zero"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-8691",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-2089",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-2089",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-8157",
+      "cwe": {
+        "id": "CWE-193",
+        "name": "Off-by-one Error"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-8157",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-2116",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-2116",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-5203",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2015-5203",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-1000050",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-1000050",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9388",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9388",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9396",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9396",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9560",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9560",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-4516",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-4516",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-8690",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-8690",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9262",
+      "cwe": {
+        "id": "CWE-681",
+        "name": "Incorrect Conversion between Numeric Types"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9262",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3272",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3272",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9393",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9393",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-8693",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-8693",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9395",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9395",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-51257",
+      "cwe": {
+        "id": "CWE-131",
+        "name": "Incorrect Calculation of Buffer Size"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-51257",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9557",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9557",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-8692",
+      "cwe": {
+        "id": "CWE-369",
+        "name": "Divide By Zero"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-8692",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-8158",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-8158",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.1,
+            "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2008-3520",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2008-3520",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9389",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9389",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9392",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9392",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-4517",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-4517",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-8654",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-8654",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-8138",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-8138",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9391",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9391",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-1867",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-1867",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2007-2721",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2007-2721",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9390",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-9390",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-8137",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-8137",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+          "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+          "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update jasper to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.1,
+            "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.i686",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.x86_64",
+            "lts-9.6:jasper-libs-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-utils-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-0:2.0.28-3.1.el9_6_ciq.aarch64",
+            "lts-9.6:jasper-devel-0:2.0.28-3.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}
