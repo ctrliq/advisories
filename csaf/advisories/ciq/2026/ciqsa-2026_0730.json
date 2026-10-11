@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the postgresql SRPM in CIQ CentOS Bridge 7.9. It addresses 2 CVEs: CVE-2024-10979, CVE-2024-7348.",
+        "text": "This advisory aggregates security fixes for the postgresql SRPM in CIQ CentOS Bridge 7.9. It addresses 2 CVEs: CVE-2024-7348, CVE-2024-10979.",
         "title": "Description"
       },
       {
@@ -43,13 +43,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-10979",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-10979.json"
+        "summary": "VEX document for CVE-2024-7348",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-7348.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-7348",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-7348.json"
+        "summary": "VEX document for CVE-2024-10979",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-10979.json"
       },
       {
         "category": "self",
@@ -59,12 +59,12 @@
     ],
     "title": "postgresql security update for CIQ CentOS Bridge 7.9",
     "tracking": {
-      "current_release_date": "2026-09-29T22:43:31.704128+00:00",
+      "current_release_date": "2026-10-11T13:41:09.489265+00:00",
       "generator": {
-        "date": "2026-09-29T22:43:31.704128+00:00",
+        "date": "2026-10-11T13:41:09.489265+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.2"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0730",
@@ -79,10 +79,15 @@
           "date": "2026-09-29T22:43:31.714600+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-11T13:41:09.499060+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -276,17 +281,6 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-                "product": {
-                  "name": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-                  "product_id": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/postgresql-debuginfo@9.2.24-10.el7_9.ciqcbr?arch=x86_64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
                 "name": "postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
                 "product": {
                   "name": "postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
@@ -416,6 +410,17 @@
                     "purl": "pkg:rpm/ciq/postgresql-test@9.2.24-10.el7_9.ciqcbr?arch=x86_64"
                   }
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+                  "product_id": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/postgresql-debuginfo@9.2.24-10.el7_9.ciqcbr?arch=x86_64"
+                  }
+                }
               }
             ],
             "category": "architecture",
@@ -427,24 +432,6 @@
       }
     ],
     "relationships": [
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686 as a component of CIQ CentOS Bridge 7.9",
-          "product_id": "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686"
-        },
-        "product_reference": "postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
-        "relates_to_product_reference": "cbr-7.9-bridge"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
-          "product_id": "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64"
-        },
-        "product_reference": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-        "relates_to_product_reference": "cbr-7.9-bridge"
-      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -479,6 +466,15 @@
           "product_id": "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.src"
         },
         "product_reference": "postgresql-0:9.2.24-10.el7_9.ciqcbr.src",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686"
+        },
+        "product_reference": "postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
         "relates_to_product_reference": "cbr-7.9-bridge"
       },
       {
@@ -669,138 +665,19 @@
         },
         "product_reference": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686",
         "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
       }
     ]
   },
   "vulnerabilities": [
-    {
-      "cve": "CVE-2024-10979",
-      "cwe": {
-        "id": "CWE-15",
-        "name": "External Control of System or Configuration Setting"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-10979",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.src",
-          "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-          "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update postgresql to the latest version from CIQ repositories",
-          "product_ids": [
-            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.src",
-            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 8.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.src",
-            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.x86_64",
-            "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686"
-          ]
-        }
-      ]
-    },
     {
       "cve": "CVE-2024-7348",
       "cwe": {
@@ -816,12 +693,11 @@
       ],
       "product_status": {
         "fixed": [
-          "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
           "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
           "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.x86_64",
           "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
           "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.src",
+          "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
           "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.x86_64",
           "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.x86_64",
           "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.x86_64",
@@ -842,7 +718,8 @@
           "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.i686",
           "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.i686",
           "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.i686",
-          "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686"
+          "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64"
         ]
       },
       "remediations": [
@@ -850,12 +727,11 @@
           "category": "vendor_fix",
           "details": "Update postgresql to the latest version from CIQ repositories",
           "product_ids": [
-            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.src",
+            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
             "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.x86_64",
@@ -876,7 +752,8 @@
             "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.i686",
             "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.i686",
             "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686"
+            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -898,12 +775,11 @@
             "version": "3.1"
           },
           "products": [
-            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.src",
+            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
             "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.x86_64",
             "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.x86_64",
@@ -924,7 +800,136 @@
             "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.i686",
             "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.i686",
             "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.i686",
-            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686"
+            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-10979",
+      "cwe": {
+        "id": "CWE-15",
+        "name": "External Control of System or Configuration Setting"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-10979",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.src",
+          "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update postgresql to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.src",
+            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.src",
+            "cbr-7.9-bridge:postgresql-server-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-docs-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:postgresql-libs-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-contrib-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-devel-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-static-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-upgrade-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-plperl-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-plpython-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-pltcl-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-test-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:postgresql-debuginfo-0:9.2.24-10.el7_9.ciqcbr.x86_64"
           ]
         }
       ]
