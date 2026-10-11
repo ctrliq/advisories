@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the sqlite SRPM in CIQ LTS 9.6. It addresses 8 CVEs: CVE-2023-7104, CVE-2025-6965, CVE-2022-35737, CVE-2026-11822, CVE-2026-11824, and 3 more.",
+        "text": "This advisory aggregates security fixes for the sqlite SRPM in CIQ LTS 9.6. It addresses 8 CVEs: CVE-2022-35737, CVE-2026-11824, CVE-2026-11822, CVE-2025-6965, CVE-2023-7104, and 3 more.",
         "title": "Description"
       },
       {
@@ -43,18 +43,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2023-7104",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-7104.json"
-      },
-      {
-        "category": "external",
-        "summary": "VEX document for CVE-2025-6965",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-6965.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2022-35737",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-35737.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-11824",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-11824.json"
       },
       {
         "category": "external",
@@ -63,8 +58,18 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2026-11824",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-11824.json"
+        "summary": "VEX document for CVE-2025-6965",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-6965.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-7104",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-7104.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-19926",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-19926.json"
       },
       {
         "category": "external",
@@ -77,11 +82,6 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-8740.json"
       },
       {
-        "category": "external",
-        "summary": "VEX document for CVE-2019-19926",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-19926.json"
-      },
-      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1537.json"
@@ -89,12 +89,12 @@
     ],
     "title": "sqlite security update for CIQ LTS 9.6",
     "tracking": {
-      "current_release_date": "2026-09-18T07:04:12.613571+00:00",
+      "current_release_date": "2026-10-11T13:44:48.542714+00:00",
       "generator": {
-        "date": "2026-09-18T07:04:12.613571+00:00",
+        "date": "2026-10-11T13:44:48.542714+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1537",
@@ -104,10 +104,15 @@
           "date": "2026-09-18T07:04:12.613571+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 8 CVEs fixed"
+        },
+        {
+          "date": "2026-10-11T13:44:48.552513+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -123,7 +128,7 @@
                   "name": "CIQ LTS 9.6",
                   "product_id": "lts-9.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -339,154 +344,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-7104",
-      "cwe": {
-        "id": "CWE-122",
-        "name": "Heap-based Buffer Overflow"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-7104",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
-          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
-          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
-          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
-          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
-          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
-          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
-          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
-          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update sqlite to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "LOW",
-            "baseScore": 7.3,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "LOW",
-            "integrityImpact": "LOW",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2025-6965",
-      "cwe": {
-        "id": "CWE-197",
-        "name": "Numeric Truncation Error"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2025-6965",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
-          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
-          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
-          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
-          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
-          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
-          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
-          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
-          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update sqlite to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "LOW",
-            "baseScore": 7.7,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "LOW",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "CHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:H/A:L",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2022-35737",
       "cwe": {
         "id": "CWE-129",
@@ -544,6 +401,80 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-11824",
+      "cwe": {
+        "id": "CWE-191",
+        "name": "Integer Underflow (Wrap or Wraparound)"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-11824",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
+          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
+          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
+          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
+          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
+          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
+          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
+          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
+          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update sqlite to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -635,15 +566,89 @@
       ]
     },
     {
-      "cve": "CVE-2026-11824",
+      "cve": "CVE-2025-6965",
       "cwe": {
-        "id": "CWE-191",
-        "name": "Integer Underflow (Wrap or Wraparound)"
+        "id": "CWE-197",
+        "name": "Numeric Truncation Error"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2026-11824",
+          "text": "Security vulnerability CVE-2025-6965",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
+          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
+          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
+          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
+          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
+          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
+          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
+          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
+          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update sqlite to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 7.7,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-7104",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-7104",
           "title": "Vulnerability Description"
         }
       ],
@@ -682,16 +687,90 @@
         {
           "cvss_v3": {
             "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 7.3,
             "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
             "privilegesRequired": "NONE",
             "scope": "UNCHANGED",
-            "userInteraction": "REQUIRED",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-19926",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-19926",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
+          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
+          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
+          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
+          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
+          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
+          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
+          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
+          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update sqlite to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
+            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
+            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -841,80 +920,6 @@
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
             "version": "3.0"
-          },
-          "products": [
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2019-19926",
-      "cwe": {
-        "id": "CWE-476",
-        "name": "NULL Pointer Dereference"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2019-19926",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
-          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
-          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
-          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
-          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
-          "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
-          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
-          "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
-          "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update sqlite to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.aarch64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.x86_64",
-            "lts-9.6:sqlite-libs-0:3.34.1-8.1.el9_6_ciq.i686",
-            "lts-9.6:sqlite-0:3.34.1-8.1.el9_6_ciq.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
           },
           "products": [
             "lts-9.6:sqlite-devel-0:3.34.1-8.1.el9_6_ciq.aarch64",
