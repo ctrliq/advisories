@@ -3,7 +3,7 @@
     "aggregate_severity": {
       "text": "Critical"
     },
-    "category": "csaf_security_advisory",
+    "category": "csaf_informational_advisory",
     "csaf_version": "2.0",
     "distribution": {
       "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
@@ -15,13 +15,13 @@
     "notes": [
       {
         "category": "summary",
-        "text": "CIQ security update for nss",
-        "title": "Summary"
+        "text": "This advisory has been retracted. It was generated in error: packages from the nss-3.90.0-7.el9_2.ciqfips.0.1.src build were attributed to a source package that does not exist (nss-4.35.0-7.el9_2.ciqfips.0.1.src). Those packages and their fixes are covered by CIQSA-2026:0623. This advisory makes no fix claims.",
+        "title": "Retracted"
       },
       {
-        "category": "description",
-        "text": "This advisory aggregates security fixes for the nss SRPM in CIQ FIPS 9.2 Compliant. It addresses 2 CVEs: CVE-2021-43527, CVE-2023-0767.",
-        "title": "Description"
+        "category": "general",
+        "text": "Earlier revisions of this advisory listed: CVE-2021-43527, CVE-2023-0767.",
+        "title": "Previously listed vulnerabilities"
       },
       {
         "category": "legal_disclaimer",
@@ -55,13 +55,18 @@
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1225.json"
+      },
+      {
+        "category": "external",
+        "summary": "Replacement advisory CIQSA-2026:0623",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0623.json"
       }
     ],
-    "title": "nss security update for CIQ FIPS 9.2 Compliant",
+    "title": "RETRACTED: nss security update for CIQ FIPS 9.2 Compliant",
     "tracking": {
-      "current_release_date": "2026-10-11T13:43:48.154953+00:00",
+      "current_release_date": "2026-10-20T00:02:17.599190+00:00",
       "generator": {
-        "date": "2026-10-11T13:43:48.154953+00:00",
+        "date": "2026-10-20T00:02:17.599190+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.3"
@@ -79,10 +84,15 @@
           "date": "2026-10-11T13:43:48.159503+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-20T00:02:17.599190+00:00",
+          "number": "2.0.0",
+          "summary": "Retracted: generated in error from a misidentified source package (nss-4.35.0-7.el9_2.ciqfips.0.1.src); all fix information removed. See CIQSA-2026:0623."
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "2.0.0"
     }
   },
   "product_tree": {
@@ -139,107 +149,5 @@
         "relates_to_product_reference": "fips-9.2-compliant"
       }
     ]
-  },
-  "vulnerabilities": [
-    {
-      "cve": "CVE-2021-43527",
-      "cwe": {
-        "id": "CWE-120",
-        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2021-43527",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "fips-9.2-compliant:nspr-debuginfo-0:4.35.0-7.el9_2.ciqfips.0.1.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update nss to the latest version from CIQ repositories",
-          "product_ids": [
-            "fips-9.2-compliant:nspr-debuginfo-0:4.35.0-7.el9_2.ciqfips.0.1.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 9.8,
-            "baseSeverity": "CRITICAL",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "fips-9.2-compliant:nspr-debuginfo-0:4.35.0-7.el9_2.ciqfips.0.1.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-0767",
-      "cwe": {
-        "id": "CWE-119",
-        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-0767",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "fips-9.2-compliant:nspr-debuginfo-0:4.35.0-7.el9_2.ciqfips.0.1.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update nss to the latest version from CIQ repositories",
-          "product_ids": [
-            "fips-9.2-compliant:nspr-debuginfo-0:4.35.0-7.el9_2.ciqfips.0.1.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 8.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "REQUIRED",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "fips-9.2-compliant:nspr-debuginfo-0:4.35.0-7.el9_2.ciqfips.0.1.x86_64"
-          ]
-        }
-      ]
-    }
-  ]
+  }
 }
