@@ -3,7 +3,7 @@
     "aggregate_severity": {
       "text": "High"
     },
-    "category": "csaf_security_advisory",
+    "category": "csaf_informational_advisory",
     "csaf_version": "2.0",
     "distribution": {
       "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
@@ -15,13 +15,13 @@
     "notes": [
       {
         "category": "summary",
-        "text": "CIQ security update for kernel",
-        "title": "Summary"
+        "text": "This advisory has been retracted. It was generated in error: packages from the kernel-5.14.0-284.30.1.el9_2.92ciq_lts.5.2.src build were attributed to a source package that does not exist (kernel-7.0.0-284.30.1.el9_2.92ciq_lts.5.2.src). Those packages and their fixes are covered by CIQSA-2026:0992. This advisory makes no fix claims.",
+        "title": "Retracted"
       },
       {
-        "category": "description",
-        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ LTS 9.2. It addresses 7 CVEs: CVE-2024-36971, CVE-2024-41091, CVE-2023-52922, CVE-2024-53122, CVE-2024-57882, and 2 more.",
-        "title": "Description"
+        "category": "general",
+        "text": "Earlier revisions of this advisory listed: CVE-2024-36971, CVE-2024-41091, CVE-2023-52922, CVE-2024-53122, CVE-2024-57882, CVE-2023-4208, CVE-2023-4207.",
+        "title": "Previously listed vulnerabilities"
       },
       {
         "category": "legal_disclaimer",
@@ -80,13 +80,18 @@
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1261.json"
+      },
+      {
+        "category": "external",
+        "summary": "Replacement advisory CIQSA-2026:0992",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0992.json"
       }
     ],
-    "title": "kernel security update for CIQ LTS 9.2",
+    "title": "RETRACTED: kernel security update for CIQ LTS 9.2",
     "tracking": {
-      "current_release_date": "2026-10-01T07:01:29.965103+00:00",
+      "current_release_date": "2026-10-20T00:02:17.599190+00:00",
       "generator": {
-        "date": "2026-10-01T07:01:29.965103+00:00",
+        "date": "2026-10-20T00:02:17.599190+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.2"
@@ -104,10 +109,15 @@
           "date": "2026-10-01T07:01:29.968683+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-20T00:02:17.599190+00:00",
+          "number": "2.0.0",
+          "summary": "Retracted: generated in error from a misidentified source package (kernel-7.0.0-284.30.1.el9_2.92ciq_lts.5.2.src); all fix information removed. See CIQSA-2026:0992."
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "2.0.0"
     }
   },
   "product_tree": {
@@ -230,416 +240,5 @@
         "relates_to_product_reference": "lts-9.2"
       }
     ]
-  },
-  "vulnerabilities": [
-    {
-      "cve": "CVE-2024-36971",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-36971",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-41091",
-      "cwe": {
-        "id": "CWE-20",
-        "name": "Improper Input Validation"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-41091",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.1,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "CHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-52922",
-      "cwe": {
-        "id": "CWE-416",
-        "name": "Use After Free"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-52922",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-53122",
-      "cwe": {
-        "id": "CWE-369",
-        "name": "Divide By Zero"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-53122",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 5.9,
-            "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-57882",
-      "cwe": {
-        "id": "CWE-476",
-        "name": "NULL Pointer Dereference"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-57882",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-4208",
-      "cwe": {
-        "id": "CWE-416",
-        "name": "Use After Free"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-4208",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-4207",
-      "cwe": {
-        "id": "CWE-416",
-        "name": "Use After Free"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-4207",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-          "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update kernel to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-debuginfo-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.aarch64",
-            "lts-9.2:bpftool-0:7.0.0-284.30.1.el9_2.92ciq_lts.5.2.x86_64"
-          ]
-        }
-      ]
-    }
-  ]
+  }
 }
