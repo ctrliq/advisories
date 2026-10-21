@@ -1,0 +1,1636 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Critical"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for libpng",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the libpng SRPM in CIQ LTS 8.6. It addresses 20 CVEs: CVE-2026-22801, CVE-2007-2445, CVE-2007-5269, CVE-2008-1382, CVE-2008-3964, and 15 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-22801",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-22801.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2007-2445",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2007/cve-2007-2445.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2007-5269",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2007/cve-2007-5269.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2008-1382",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2008/cve-2008-1382.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2008-3964",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2008/cve-2008-3964.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2009-0040",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2009/cve-2009-0040.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2009-2042",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2009/cve-2009-2042.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2010-0205",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2010/cve-2010-0205.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2010-1205",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2010/cve-2010-1205.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2010-2249",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2010/cve-2010-2249.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-2501",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-2501.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-2690",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-2690.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-2691",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-2691.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-2692",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-2692.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-3026",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-3026.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-3045",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-3045.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-3048",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-3048.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2011-3464",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-3464.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2015-8126",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2015/cve-2015-8126.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-13785",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-13785.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1653.json"
+      }
+    ],
+    "title": "libpng security update for CIQ LTS 8.6",
+    "tracking": {
+      "current_release_date": "2026-10-21T07:03:09.444058+00:00",
+      "generator": {
+        "date": "2026-10-21T07:03:09.444058+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1653",
+      "initial_release_date": "2026-10-21T07:03:09.444058+00:00",
+      "revision_history": [
+        {
+          "date": "2026-10-21T07:03:09.444058+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 20 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS 8.6",
+                "product": {
+                  "name": "CIQ LTS 8.6",
+                  "product_id": "lts-8.6",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:8.6:*:*:*:*:*:*:lts"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+                "product": {
+                  "name": "libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+                  "product_id": "libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libpng@1.6.34-5.1.el8_6_ciq?arch=aarch64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+                "product": {
+                  "name": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+                  "product_id": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libpng-devel@1.6.34-5.1.el8_6_ciq?arch=aarch64&epoch=2"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+                "product": {
+                  "name": "libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+                  "product_id": "libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libpng@1.6.34-5.1.el8_6_ciq?arch=i686&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686",
+                "product": {
+                  "name": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686",
+                  "product_id": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libpng-devel@1.6.34-5.1.el8_6_ciq?arch=i686&epoch=2"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "i686"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+                "product": {
+                  "name": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+                  "product_id": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libpng-devel@1.6.34-5.1.el8_6_ciq?arch=x86_64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+                "product": {
+                  "name": "libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+                  "product_id": "libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libpng@1.6.34-5.1.el8_6_ciq?arch=x86_64&epoch=2"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64"
+        },
+        "product_reference": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libpng-2:1.6.34-5.1.el8_6_ciq.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64"
+        },
+        "product_reference": "libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64"
+        },
+        "product_reference": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libpng-2:1.6.34-5.1.el8_6_ciq.x86_64 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64"
+        },
+        "product_reference": "libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libpng-2:1.6.34-5.1.el8_6_ciq.i686 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686"
+        },
+        "product_reference": "libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+        "relates_to_product_reference": "lts-8.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686 as a component of CIQ LTS 8.6",
+          "product_id": "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        },
+        "product_reference": "libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686",
+        "relates_to_product_reference": "lts-8.6"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-22801",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-22801",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.6,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2007-2445",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2007-2445",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.0,
+            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2007-5269",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2007-5269",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.0,
+            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2008-1382",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2008-1382",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 7.5,
+            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2008-3964",
+      "cwe": {
+        "id": "CWE-193",
+        "name": "Off-by-one Error"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2008-3964",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2009-0040",
+      "cwe": {
+        "id": "CWE-824",
+        "name": "Access of Uninitialized Pointer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2009-0040",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2009-2042",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2009-2042",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 2.6,
+            "vectorString": "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2010-0205",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2010-0205",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2010-1205",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2010-1205",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2010-2249",
+      "cwe": {
+        "id": "CWE-401",
+        "name": "Missing Release of Memory after Effective Lifetime"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2010-2249",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-2501",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-2501",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.0,
+            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-2690",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-2690",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.1,
+            "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-2691",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-2691",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-2692",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-2692",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-3026",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-3026",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-3045",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-3045",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.1,
+            "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-3048",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-3048",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.1,
+            "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-3464",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2011-3464",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-8126",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2015-8126",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.1,
+            "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-13785",
+      "cwe": {
+        "id": "CWE-369",
+        "name": "Divide By Zero"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-13785",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+          "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+          "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libpng to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.aarch64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.x86_64",
+            "lts-8.6:libpng-2:1.6.34-5.1.el8_6_ciq.i686",
+            "lts-8.6:libpng-devel-2:1.6.34-5.1.el8_6_ciq.i686"
+          ]
+        }
+      ]
+    }
+  ]
+}
