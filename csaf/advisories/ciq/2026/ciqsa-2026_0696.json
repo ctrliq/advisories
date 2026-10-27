@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the libevent SRPM in CIQ CentOS Bridge 7.9. It addresses 3 CVEs: CVE-2016-10195, CVE-2016-10196, CVE-2016-10197.",
+        "text": "This advisory aggregates security fixes for the libevent SRPM in CIQ CentOS Bridge 7.9. It addresses 3 CVEs: CVE-2016-10197, CVE-2016-10195, CVE-2016-10196.",
         "title": "Description"
       },
       {
@@ -43,6 +43,11 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2016-10197",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-10197.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2016-10195",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-10195.json"
       },
@@ -52,11 +57,6 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-10196.json"
       },
       {
-        "category": "external",
-        "summary": "VEX document for CVE-2016-10197",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-10197.json"
-      },
-      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0696.json"
@@ -64,12 +64,12 @@
     ],
     "title": "libevent security update for CIQ CentOS Bridge 7.9",
     "tracking": {
-      "current_release_date": "2026-09-29T22:42:29.853407+00:00",
+      "current_release_date": "2026-10-27T07:01:01.664437+00:00",
       "generator": {
-        "date": "2026-09-29T22:42:29.853407+00:00",
+        "date": "2026-10-27T07:01:01.664437+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.2"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0696",
@@ -84,10 +84,15 @@
           "date": "2026-09-29T22:42:29.859385+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-10-27T07:01:01.668416+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -285,6 +290,74 @@
   },
   "vulnerabilities": [
     {
+      "cve": "CVE-2016-10197",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-10197",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.src",
+          "cbr-7.9-bridge:libevent-debuginfo-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
+          "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
+          "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
+          "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
+          "cbr-7.9-bridge:libevent-doc-0:2.0.21-6.1.el7_9.ciqcbr.0.1.noarch",
+          "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update libevent to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.src",
+            "cbr-7.9-bridge:libevent-debuginfo-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
+            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
+            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
+            "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
+            "cbr-7.9-bridge:libevent-doc-0:2.0.21-6.1.el7_9.ciqcbr.0.1.noarch",
+            "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.src",
+            "cbr-7.9-bridge:libevent-debuginfo-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
+            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
+            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
+            "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
+            "cbr-7.9-bridge:libevent-doc-0:2.0.21-6.1.el7_9.ciqcbr.0.1.noarch",
+            "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2016-10195",
       "cwe": {
         "id": "CWE-125",
@@ -362,74 +435,6 @@
         {
           "category": "description",
           "text": "Security vulnerability CVE-2016-10196",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.src",
-          "cbr-7.9-bridge:libevent-debuginfo-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
-          "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
-          "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
-          "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
-          "cbr-7.9-bridge:libevent-doc-0:2.0.21-6.1.el7_9.ciqcbr.0.1.noarch",
-          "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update libevent to the latest version from CIQ repositories",
-          "product_ids": [
-            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.src",
-            "cbr-7.9-bridge:libevent-debuginfo-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
-            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
-            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
-            "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
-            "cbr-7.9-bridge:libevent-doc-0:2.0.21-6.1.el7_9.ciqcbr.0.1.noarch",
-            "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.0"
-          },
-          "products": [
-            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.src",
-            "cbr-7.9-bridge:libevent-debuginfo-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
-            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686",
-            "cbr-7.9-bridge:libevent-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
-            "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.x86_64",
-            "cbr-7.9-bridge:libevent-doc-0:2.0.21-6.1.el7_9.ciqcbr.0.1.noarch",
-            "cbr-7.9-bridge:libevent-devel-0:2.0.21-6.1.el7_9.ciqcbr.0.1.i686"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2016-10197",
-      "cwe": {
-        "id": "CWE-125",
-        "name": "Out-of-bounds Read"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2016-10197",
           "title": "Vulnerability Description"
         }
       ],
