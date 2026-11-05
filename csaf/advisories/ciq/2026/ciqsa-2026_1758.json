@@ -1,0 +1,986 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Critical"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for dovecot",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the dovecot SRPM in CIQ CentOS Bridge 7.9. It addresses 11 CVEs: CVE-2019-11500, CVE-2026-27858, CVE-2019-7524, CVE-2019-3814, CVE-2006-5973, and 6 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-11500",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-11500.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-27858",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-27858.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-7524",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-7524.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-3814",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-3814.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2006-5973",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2006/cve-2006-5973.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2008-4578",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2008/cve-2008-4578.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2008-4577",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2008/cve-2008-4577.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-12674",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-12674.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-12673",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-12673.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-3430",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-3430.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-12100",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-12100.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1758.json"
+      }
+    ],
+    "title": "dovecot security update for CIQ CentOS Bridge 7.9",
+    "tracking": {
+      "current_release_date": "2026-11-05T07:01:48.715111+00:00",
+      "generator": {
+        "date": "2026-11-05T07:01:48.715111+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1758",
+      "initial_release_date": "2026-11-05T07:01:48.715111+00:00",
+      "revision_history": [
+        {
+          "date": "2026-11-05T07:01:48.715111+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 11 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ CentOS Bridge 7.9",
+                "product": {
+                  "name": "CIQ CentOS Bridge 7.9",
+                  "product_id": "cbr-7.9-bridge",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:centos_linux_bridge:7.9:*:*:*:*:*:*:bridge"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ Bridge"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686",
+                "product": {
+                  "name": "dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686",
+                  "product_id": "dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/dovecot@2.2.36-8.1.el7_9.ciqcbr?arch=i686&epoch=1"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "i686"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/dovecot-pigeonhole@2.2.36-8.1.el7_9.ciqcbr?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/dovecot@2.2.36-8.1.el7_9.ciqcbr?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/dovecot-pgsql@2.2.36-8.1.el7_9.ciqcbr?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/dovecot-devel@2.2.36-8.1.el7_9.ciqcbr?arch=x86_64&epoch=1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/dovecot-mysql@2.2.36-8.1.el7_9.ciqcbr?arch=x86_64&epoch=1"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        },
+        "product_reference": "dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2019-11500",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-11500",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27858",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-27858",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-7524",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-7524",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-3814",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-3814",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.7,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:N",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2006-5973",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2006-5973",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.0,
+            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2008-4578",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2008-4578",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 3.5,
+            "vectorString": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2008-4577",
+      "cwe": {
+        "id": "CWE-863",
+        "name": "Incorrect Authorization"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2008-4577",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 3.6,
+            "vectorString": "AV:N/AC:H/Au:S/C:P/I:P/A:N",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-12674",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-12674",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-12673",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-12673",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-3430",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-3430",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.0,
+            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-12100",
+      "cwe": {
+        "id": "CWE-674",
+        "name": "Uncontrolled Recursion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-12100",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update dovecot to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:dovecot-pigeonhole-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-pgsql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-devel-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-mysql-1:2.2.36-8.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:dovecot-1:2.2.36-8.1.el7_9.ciqcbr.i686"
+          ]
+        }
+      ]
+    }
+  ]
+}
