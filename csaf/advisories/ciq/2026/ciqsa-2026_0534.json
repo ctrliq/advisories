@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the gstreamer1-plugins-base SRPM in CIQ LTS 9.4. It addresses 3 CVEs: CVE-2024-47615, CVE-2024-47538, CVE-2024-47607.",
+        "text": "This advisory aggregates security fixes for the gstreamer1-plugins-base SRPM in CIQ LTS 9.4. It addresses 3 CVEs: CVE-2024-47607, CVE-2024-47615, CVE-2024-47538.",
         "title": "Description"
       },
       {
@@ -43,6 +43,11 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2024-47607",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-47607.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2024-47615",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-47615.json"
       },
@@ -52,11 +57,6 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-47538.json"
       },
       {
-        "category": "external",
-        "summary": "VEX document for CVE-2024-47607",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-47607.json"
-      },
-      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0534.json"
@@ -64,12 +64,12 @@
     ],
     "title": "gstreamer1-plugins-base security update for CIQ LTS 9.4",
     "tracking": {
-      "current_release_date": "2026-09-01T23:56:55.778800+00:00",
+      "current_release_date": "2026-11-05T07:01:45.282160+00:00",
       "generator": {
-        "date": "2026-09-01T23:56:55.778800+00:00",
+        "date": "2026-11-05T07:01:45.282160+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:0534",
@@ -79,10 +79,15 @@
           "date": "2026-09-01T23:56:55.778800+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 3 CVEs fixed"
+        },
+        {
+          "date": "2026-11-05T07:01:45.291428+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -98,7 +103,7 @@
                   "name": "CIQ LTS 9.4",
                   "product_id": "lts-9.4",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.4:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.4:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -348,15 +353,6 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src as a component of CIQ LTS 9.4",
-          "product_id": "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
-        },
-        "product_reference": "gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
-        "relates_to_product_reference": "lts-9.4"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64 as a component of CIQ LTS 9.4",
           "product_id": "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64"
         },
@@ -515,26 +511,34 @@
         },
         "product_reference": "gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
         "relates_to_product_reference": "lts-9.4"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src as a component of CIQ LTS 9.4",
+          "product_id": "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
+        },
+        "product_reference": "gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
+        "relates_to_product_reference": "lts-9.4"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2024-47615",
+      "cve": "CVE-2024-47607",
       "cwe": {
-        "id": "CWE-787",
-        "name": "Out-of-bounds Write"
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2024-47615",
+          "text": "Security vulnerability CVE-2024-47607",
           "title": "Vulnerability Description"
         }
       ],
       "product_status": {
         "fixed": [
-          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
           "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
           "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
           "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
@@ -552,7 +556,8 @@
           "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
           "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
           "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-          "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64"
+          "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
         ]
       },
       "remediations": [
@@ -560,7 +565,6 @@
           "category": "vendor_fix",
           "details": "Update gstreamer1-plugins-base to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
             "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
             "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
             "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
@@ -578,7 +582,8 @@
             "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
             "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
             "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64"
+            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -600,7 +605,6 @@
             "version": "3.1"
           },
           "products": [
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
             "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
             "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
             "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
@@ -618,7 +622,112 @@
             "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
             "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
             "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64"
+            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-47615",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-47615",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+          "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+          "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
+          "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.i686",
+          "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.i686",
+          "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
+          "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+          "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+          "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+          "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.i686",
+          "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.i686",
+          "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+          "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+          "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+          "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update gstreamer1-plugins-base to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.i686",
+            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
+            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
           ]
         }
       ]
@@ -638,7 +747,6 @@
       ],
       "product_status": {
         "fixed": [
-          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
           "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
           "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
           "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
@@ -656,7 +764,8 @@
           "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
           "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
           "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-          "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64"
+          "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
         ]
       },
       "remediations": [
@@ -664,7 +773,6 @@
           "category": "vendor_fix",
           "details": "Update gstreamer1-plugins-base to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
             "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
             "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
             "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
@@ -682,7 +790,8 @@
             "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
             "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
             "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64"
+            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -704,7 +813,6 @@
             "version": "3.1"
           },
           "products": [
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
             "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
             "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
             "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
@@ -722,111 +830,8 @@
             "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
             "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
             "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2024-47607",
-      "cwe": {
-        "id": "CWE-121",
-        "name": "Stack-based Buffer Overflow"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-47607",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
-          "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-          "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-          "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
-          "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.i686",
-          "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.i686",
-          "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
-          "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-          "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-          "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-          "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-          "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.i686",
-          "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.i686",
-          "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-          "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-          "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-          "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update gstreamer1-plugins-base to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
-            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 9.8,
-            "baseSeverity": "CRITICAL",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src",
-            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-            "lts-9.4:gstreamer1-plugins-base-tools-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
-            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-devel-0:1.22.1-3.el9_4.94ciq_lts.i686",
-            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-debugsource-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-tools-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.aarch64",
-            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64"
+            "lts-9.4:gstreamer1-plugins-base-debuginfo-0:1.22.1-3.el9_4.94ciq_lts.x86_64",
+            "lts-9.4:gstreamer1-plugins-base-0:1.22.1-3.el9_4.94ciq_lts.src"
           ]
         }
       ]
