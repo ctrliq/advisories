@@ -1,7 +1,7 @@
 {
   "document": {
     "aggregate_severity": {
-      "text": "High"
+      "text": "Medium"
     },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the squashfs-tools SRPM in CIQ LTS 9.2. It addresses 3 CVEs: CVE-2021-41072, CVE-2012-4024, CVE-2012-4025.",
+        "text": "This advisory aggregates security fixes for the squashfs-tools SRPM in CIQ LTS 9.2. It addresses 2 CVEs: CVE-2012-4024, CVE-2012-4025.",
         "title": "Description"
       },
       {
@@ -43,11 +43,6 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2021-41072",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-41072.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2012-4024",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2012/cve-2012-4024.json"
       },
@@ -64,9 +59,9 @@
     ],
     "title": "squashfs-tools security update for CIQ LTS 9.2",
     "tracking": {
-      "current_release_date": "2026-10-11T13:39:25.302459+00:00",
+      "current_release_date": "2026-11-06T07:01:05.362223+00:00",
       "generator": {
-        "date": "2026-10-11T13:39:25.302459+00:00",
+        "date": "2026-11-06T07:01:05.362223+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.3"
@@ -84,10 +79,15 @@
           "date": "2026-10-11T13:39:25.307174+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-11-06T07:01:05.366014+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -154,77 +154,24 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src as a component of CIQ LTS 9.2",
-          "product_id": "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src"
-        },
-        "product_reference": "squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
-        "relates_to_product_reference": "lts-9.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64 as a component of CIQ LTS 9.2",
           "product_id": "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64"
         },
         "product_reference": "squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64",
         "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src"
+        },
+        "product_reference": "squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
+        "relates_to_product_reference": "lts-9.2"
       }
     ]
   },
   "vulnerabilities": [
-    {
-      "cve": "CVE-2021-41072",
-      "cwe": {
-        "id": "CWE-59",
-        "name": "Improper Link Resolution Before File Access ('Link Following')"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2021-41072",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
-          "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update squashfs-tools to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 8.1,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "REQUIRED",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64"
-          ]
-        }
-      ]
-    },
     {
       "cve": "CVE-2012-4024",
       "cwe": {
@@ -240,8 +187,8 @@
       ],
       "product_status": {
         "fixed": [
-          "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
-          "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64"
+          "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64",
+          "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src"
         ]
       },
       "remediations": [
@@ -249,8 +196,8 @@
           "category": "vendor_fix",
           "details": "Update squashfs-tools to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64"
+            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64",
+            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -263,8 +210,8 @@
             "version": "2.0"
           },
           "products": [
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64"
+            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64",
+            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src"
           ]
         }
       ]
@@ -284,8 +231,8 @@
       ],
       "product_status": {
         "fixed": [
-          "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
-          "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64"
+          "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64",
+          "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src"
         ]
       },
       "remediations": [
@@ -293,8 +240,8 @@
           "category": "vendor_fix",
           "details": "Update squashfs-tools to the latest version from CIQ repositories",
           "product_ids": [
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64"
+            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64",
+            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src"
           ],
           "url": "https://github.com/ctrliq/advisories"
         }
@@ -307,8 +254,8 @@
             "version": "2.0"
           },
           "products": [
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src",
-            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64"
+            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.x86_64",
+            "lts-9.2:squashfs-tools-0:4.4-9.git1.el9_2.92ciq_lts.src"
           ]
         }
       ]
