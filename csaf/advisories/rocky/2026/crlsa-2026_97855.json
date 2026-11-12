@@ -1,0 +1,2642 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Unknown"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for nodejs-nodemon, nodejs-packaging, module.nodejs-nodemon, module.nodejs-packaging.\nThis update affects Rocky Linux 9.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "Node.js is a software development platform for building fast and scalable network applications in the JavaScript programming language. \n\nSecurity Fix(es):\n\n* nodejs: Node.js: Permission Model bypass via `process.report.writeReport()` path misvalidation (CVE-2026-48617)\n\n* nodejs: Node.js HTTP Agent: Information disclosure due to premature response acceptance (CVE-2026-48931)\n\n* nodejs: Node.js: Denial of Service via unlimited HTTP/2 ORIGIN frames (CVE-2026-48619)\n\n* nodejs: Node.js: Silent authority rebinding due to embedded-nul hostnames in TLS handling (CVE-2026-48930)\n\n* nodejs: Node.js: Unauthorized file metadata modification (CVE-2026-48935)\n\n* nodejs: Node.js WebCrypto: Denial of Service via large input to subtle.encrypt() (CVE-2026-48933)\n\n* nodejs: Node.js: Certification validation bypass in TLS host verification (CVE-2026-48934)\n\n* Node.js: Node.js: Trust-policy bypass due to hostname matching inconsistency (CVE-2026-48928)\n\n* nodejs: Node.js: Information disclosure of proxy credentials via proxy tunnel error handling (CVE-2026-48615)\n\n* nodejs: Node.js: Local server can be started without network permission via Permission API flaw (CVE-2026-48936)\n\n* nodejs: Node.js: Authentication bypass due to TLS hostname handling and unicode dot separator mismatch (CVE-2026-48618)\n\n* undici: undici: Information disclosure and Denial of Service via malformed Cache-Control directives (CVE-2026-13697)\n\n* nodejs: Node.js: Unauthorized filesystem access due to Permission Model enforcement flaw (CVE-2026-58043)\n\n* nodejs: HTTPS Agent TLS session reuse skips hostname verification (CVE-2026-58040)\n\n* nodejs: Node.js: Permission Model flaw allows trace logs to bypass filesystem write restrictions (CVE-2026-56847)\n\n* nodejs: Node.js: mTLS client identities can be reused due to HTTPS Agent connection flaw (CVE-2026-56850)\n\n* nodejs: Information disclosure due to improper permission enforcement (CVE-2026-58039)\n\n* nodejs: Node.js: Request smuggling via HTTP client header truncation (CVE-2026-58044)\n\n* nodejs: Node.js: Denial of Service via DNS responses with excessive A records (CVE-2026-58042)\n\n* nodejs: Node.js: Remote memory exhaustion via HTTP/2 retained header blocks (CVE-2026-56846)\n\n* nodejs: Node.js: Denial of Service vulnerability (CVE-2026-58045)\n\n* nodejs: Node.js node:sqlite: Unintended data modification due to stale statement iterator (CVE-2026-58041)\n\n* nodejs: Node.js: Heap-use-after-free in HTTP/2 handling can lead to denial of service (CVE-2026-56848)\n\n* undici: undici: Authentication bypass via cross-origin cache poisoning due to missing origin isolation (CVE-2026-85152)\n\n* undici: undici: TLS certificate validation bypass in BalancedPool via dropped connect options (CVE-2026-84961)\n\n* undici: undici: Denial of Service via unrequested WebSocket subprotocol (CVE-2026-19534)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2490521",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2490521"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2491494",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2491494"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2493325",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2493325"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2493326",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2493326"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2493329",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2493329"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2493331",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2493331"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2493332",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2493332"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2493333",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2493333"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2493335",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2493335"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2493336",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2493336"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2493337",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2493337"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2508485",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2508485"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2509171",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2509171"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2509175",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2509175"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2509178",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2509178"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2509179",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2509179"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2509653",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2509653"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2510853",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2510853"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2510854",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2510854"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2510856",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2510856"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2510857",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2510857"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2510858",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2510858"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2511089",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2511089"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2528717",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2528717"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2528735",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2528735"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2528759",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2528759"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:97855",
+        "url": "https://errata.build.resf.org/RLSA-2026:97855"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:97855",
+        "url": "https://access.redhat.com/errata/RHSA-2026:97855"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2026:97855",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2026_97855.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2026:97855",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/rocky/2026/crlsa-2026_97855.json"
+      }
+    ],
+    "title": "Important: nodejs:26 security update",
+    "tracking": {
+      "current_release_date": "2026-11-12T07:01:25.421351+00:00",
+      "generator": {
+        "date": "2026-11-12T07:01:25.421351+00:00",
+        "engine": {
+          "name": "CIQ Rocky Clone Generator",
+          "version": "1.0.4"
+        }
+      },
+      "id": "CRLSA-2026:97855",
+      "initial_release_date": "2026-11-11T12:04:11.284864+00:00",
+      "revision_history": [
+        {
+          "date": "2026-11-11T12:04:11.284864+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Rocky Linux from CIQ 9 AppStream",
+                "product": {
+                  "name": "Rocky Linux from CIQ 9 AppStream",
+                  "product_id": "rocky-9-appstream",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9:*:*:*:*:*:*:appstream"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ Repositories"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+                "product": {
+                  "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+                  "product_id": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging@2021.06-6.module+el9.7.0+40052+e32ea525?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+                "product": {
+                  "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+                  "product_id": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging-bundler@2021.06-6.module+el9.7.0+40052+e32ea525?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+                "product": {
+                  "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+                  "product_id": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging@2021.06-6.module+el9.7.0+40153+4d595597?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+                "product": {
+                  "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+                  "product_id": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging-bundler@2021.06-6.module+el9.7.0+40153+4d595597?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+                "product": {
+                  "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+                  "product_id": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging@2021.06-6.module+el9.7.0+40165+d075e3f2?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+                "product": {
+                  "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+                  "product_id": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging-bundler@2021.06-6.module+el9.7.0+40165+d075e3f2?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+                "product": {
+                  "name": "nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+                  "product_id": "nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging@2021.06-6.module+el9.8.0+40164+8921ab53?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+                "product": {
+                  "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+                  "product_id": "nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging-bundler@2021.06-6.module+el9.8.0+40164+8921ab53?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+                "product": {
+                  "name": "nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+                  "product_id": "nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-nodemon@3.1.14-1.module+el9.8.0+40263+faa47049?arch=noarch"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+                "product": {
+                  "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+                  "product_id": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging@2021.06-6.module+el9.7.0+40052+e32ea525?arch=src"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+                "product": {
+                  "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+                  "product_id": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging@2021.06-6.module+el9.7.0+40153+4d595597?arch=src"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+                "product": {
+                  "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+                  "product_id": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging@2021.06-6.module+el9.7.0+40165+d075e3f2?arch=src"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+                "product": {
+                  "name": "nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+                  "product_id": "nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-packaging@2021.06-6.module+el9.8.0+40164+8921ab53?arch=src"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src",
+                "product": {
+                  "name": "nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src",
+                  "product_id": "nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/nodejs-nodemon@3.1.14-1.module+el9.8.0+40263+faa47049?arch=src"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch"
+        },
+        "product_reference": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src"
+        },
+        "product_reference": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch"
+        },
+        "product_reference": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch"
+        },
+        "product_reference": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src"
+        },
+        "product_reference": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch"
+        },
+        "product_reference": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch"
+        },
+        "product_reference": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src"
+        },
+        "product_reference": "nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch"
+        },
+        "product_reference": "nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch"
+        },
+        "product_reference": "nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src"
+        },
+        "product_reference": "nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch"
+        },
+        "product_reference": "nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch"
+        },
+        "product_reference": "nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+        "relates_to_product_reference": "rocky-9-appstream"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src as a component of Rocky Linux from CIQ 9 AppStream",
+          "product_id": "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        },
+        "product_reference": "nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src",
+        "relates_to_product_reference": "rocky-9-appstream"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-48615",
+      "cwe": {
+        "id": "CWE-209",
+        "name": "Generation of Error Message Containing Sensitive Information"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48615",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.0"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48618",
+      "cwe": {
+        "id": "CWE-289",
+        "name": "Authentication Bypass by Alternate Name"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48618",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.7,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.0"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48619",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48619",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48928",
+      "cwe": {
+        "id": "CWE-289",
+        "name": "Authentication Bypass by Alternate Name"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48928",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48930",
+      "cwe": {
+        "id": "CWE-170",
+        "name": "Improper Null Termination"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48930",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48933",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48933",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48934",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48934",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.0"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48935",
+      "cwe": {
+        "id": "CWE-279",
+        "name": "Incorrect Execution-Assigned Permissions"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48935",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56846",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56846",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56848",
+      "cwe": {
+        "id": "CWE-825",
+        "name": "Expired Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56848",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-58043",
+      "cwe": {
+        "id": "CWE-551",
+        "name": "Incorrect Behavior Order: Authorization Before Parsing and Canonicalization"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-58043",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48936",
+      "cwe": {
+        "id": "CWE-648",
+        "name": "Incorrect Use of Privileged APIs"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48936",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-19534",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-19534",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-84961",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-84961",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-85152",
+      "cwe": {
+        "id": "CWE-346",
+        "name": "Origin Validation Error"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-85152",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-13697",
+      "cwe": {
+        "id": "CWE-524",
+        "name": "Use of Cache Containing Sensitive Information"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-13697",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48617",
+      "cwe": {
+        "id": "CWE-73",
+        "name": "External Control of File Name or Path"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48617",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 2.9,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48931",
+      "cwe": {
+        "id": "CWE-367",
+        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-48931",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56847",
+      "cwe": {
+        "id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56847",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56850",
+      "cwe": {
+        "id": "CWE-303",
+        "name": "Incorrect Implementation of Authentication Algorithm"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56850",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-58039",
+      "cwe": {
+        "id": "CWE-73",
+        "name": "External Control of File Name or Path"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-58039",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-58040",
+      "cwe": {
+        "id": "CWE-322",
+        "name": "Key Exchange without Entity Authentication"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-58040",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-58041",
+      "cwe": {
+        "id": "CWE-367",
+        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-58041",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-58042",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-58042",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-58044",
+      "cwe": {
+        "id": "CWE-444",
+        "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-58044",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-58045",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-58045",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+          "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+          "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch, nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch and 6 more packages",
+          "product_ids": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40052+e32ea525.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40052+e32ea525.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40153+4d595597.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40153+4d595597.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.7.0+40165+d075e3f2.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.7.0+40165+d075e3f2.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-packaging-0:2021.06-6.module+el9.8.0+40164+8921ab53.src",
+            "rocky-9-appstream:nodejs-packaging-bundler-0:2021.06-6.module+el9.8.0+40164+8921ab53.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.noarch",
+            "rocky-9-appstream:nodejs-nodemon-0:3.1.14-1.module+el9.8.0+40263+faa47049.src"
+          ]
+        }
+      ]
+    }
+  ]
+}
