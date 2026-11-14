@@ -1,0 +1,3316 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "High"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for freerdp",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the freerdp SRPM in CIQ LTS 9.2. It addresses 31 CVEs: CVE-2022-39319, CVE-2022-41877, CVE-2022-39317, CVE-2026-22859, CVE-2026-26986, and 26 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-39319",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-39319.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-41877",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-41877.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-39317",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-39317.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-22859",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-22859.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-26986",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-26986.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-39347",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-39347.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-22852",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-22852.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-23532",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-23532.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-39282",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-39282.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-39283",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-39283.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-39316",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-39316.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-22858",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-22858.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-26955",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-26955.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-24491",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-24491.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-31806",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-31806.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-68580",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-68580.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-27951",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-27951.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-33983",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-33983.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-64624",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-64624.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-25942",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-25942.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-22854",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-22854.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-1000852",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-1000852.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-29775",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-29775.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-67299",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-67299.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-67288",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-67288.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-41160",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-41160.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-22855",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-22855.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-39318",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-39318.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-39320",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-39320.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-41159",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-41159.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-23948",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-23948.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1819.json"
+      }
+    ],
+    "title": "freerdp security update for CIQ LTS 9.2",
+    "tracking": {
+      "current_release_date": "2026-11-14T07:12:21.459556+00:00",
+      "generator": {
+        "date": "2026-11-14T07:12:21.459556+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1819",
+      "initial_release_date": "2026-11-14T07:12:21.459556+00:00",
+      "revision_history": [
+        {
+          "date": "2026-11-14T07:12:21.459556+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 31 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS 9.2",
+                "product": {
+                  "name": "CIQ LTS 9.2",
+                  "product_id": "lts-9.2",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:*:lts"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                "product": {
+                  "name": "libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                  "product_id": "libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libwinpr@2.4.1-5.1.el9_2_ciq?arch=aarch64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                "product": {
+                  "name": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                  "product_id": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libwinpr-devel@2.4.1-5.1.el9_2_ciq?arch=aarch64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                "product": {
+                  "name": "freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                  "product_id": "freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/freerdp@2.4.1-5.1.el9_2_ciq?arch=aarch64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                "product": {
+                  "name": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                  "product_id": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/freerdp-devel@2.4.1-5.1.el9_2_ciq?arch=aarch64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                "product": {
+                  "name": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                  "product_id": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/freerdp-libs@2.4.1-5.1.el9_2_ciq?arch=aarch64&epoch=2"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+                "product": {
+                  "name": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+                  "product_id": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/freerdp-devel@2.4.1-5.1.el9_2_ciq?arch=i686&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+                "product": {
+                  "name": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+                  "product_id": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/freerdp-libs@2.4.1-5.1.el9_2_ciq?arch=i686&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+                "product": {
+                  "name": "libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+                  "product_id": "libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libwinpr@2.4.1-5.1.el9_2_ciq?arch=i686&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+                "product": {
+                  "name": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+                  "product_id": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libwinpr-devel@2.4.1-5.1.el9_2_ciq?arch=i686&epoch=2"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "i686"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                "product": {
+                  "name": "freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                  "product_id": "freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/freerdp@2.4.1-5.1.el9_2_ciq?arch=x86_64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                "product": {
+                  "name": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                  "product_id": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/freerdp-devel@2.4.1-5.1.el9_2_ciq?arch=x86_64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                "product": {
+                  "name": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                  "product_id": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/freerdp-libs@2.4.1-5.1.el9_2_ciq?arch=x86_64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                "product": {
+                  "name": "libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                  "product_id": "libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libwinpr@2.4.1-5.1.el9_2_ciq?arch=x86_64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                "product": {
+                  "name": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                  "product_id": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libwinpr-devel@2.4.1-5.1.el9_2_ciq?arch=x86_64&epoch=2"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64"
+        },
+        "product_reference": "freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686"
+        },
+        "product_reference": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64"
+        },
+        "product_reference": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686"
+        },
+        "product_reference": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64"
+        },
+        "product_reference": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libwinpr-2:2.4.1-5.1.el9_2_ciq.i686 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686"
+        },
+        "product_reference": "libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        },
+        "product_reference": "libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        },
+        "product_reference": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64"
+        },
+        "product_reference": "libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686"
+        },
+        "product_reference": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64"
+        },
+        "product_reference": "libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        },
+        "product_reference": "freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        },
+        "product_reference": "freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        },
+        "product_reference": "freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-39319",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-39319",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-41877",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-41877",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-39317",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-39317",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-22859",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-22859",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-26986",
+      "cwe": {
+        "id": "CWE-825",
+        "name": "Expired Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-26986",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-39347",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-39347",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 4.8,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-22852",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-22852",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-23532",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-23532",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.6,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-39282",
+      "cwe": {
+        "id": "CWE-908",
+        "name": "Use of Uninitialized Resource"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-39282",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-39283",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-39283",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-39316",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-39316",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 4.8,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-22858",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-22858",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-26955",
+      "cwe": {
+        "id": "CWE-805",
+        "name": "Buffer Access with Incorrect Length Value"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-26955",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-24491",
+      "cwe": {
+        "id": "CWE-825",
+        "name": "Expired Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-24491",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-31806",
+      "cwe": {
+        "id": "CWE-131",
+        "name": "Incorrect Calculation of Buffer Size"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-31806",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-68580",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-68580",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27951",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-27951",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-33983",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-33983",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-64624",
+      "cwe": {
+        "id": "CWE-88",
+        "name": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-64624",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-25942",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-25942",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-22854",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-22854",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-1000852",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-1000852",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-29775",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-29775",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-67299",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-67299",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-67288",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-67288",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-41160",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-41160",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-22855",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-22855",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-39318",
+      "cwe": {
+        "id": "CWE-369",
+        "name": "Divide By Zero"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-39318",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 4.8,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-39320",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-39320",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-41159",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-41159",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-23948",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-23948",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+          "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+          "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+          "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update freerdp to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:libwinpr-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.i686",
+            "lts-9.2:libwinpr-devel-2:2.4.1-5.1.el9_2_ciq.x86_64",
+            "lts-9.2:freerdp-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-devel-2:2.4.1-5.1.el9_2_ciq.aarch64",
+            "lts-9.2:freerdp-libs-2:2.4.1-5.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}
