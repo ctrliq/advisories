@@ -1,0 +1,1389 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Unknown"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "An update is available for libsoup3.\nThis update affects Rocky Linux 10.\nA Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE list",
+        "title": "Topic"
+      },
+      {
+        "category": "description",
+        "text": "Libsoup is an HTTP library implementation in C. It was originally part of a SOAP (Simple Object Access Protocol) implementation called Soup, but the SOAP and non-SOAP parts have now been split into separate packages.  libsoup uses the Glib main loop and is designed to work well with GTK applications. This enables GNOME applications to access HTTP servers on the network in a completely asynchronous fashion, very similar to the Gtk+ programming model (a synchronous operation mode is also supported for those who want it), but the SOAP parts were removed long ago.\n\nSecurity Fix(es):\n\n* SoupWebsocketExtensionDeflate: libsoup: libsoup: WebSocket permessage-deflate Unbounded Decompression Remote Denial of Service (CVE-2026-15709)\n\n* libsoup: SoupWebsocketConnection: libsoup: WebSocket remote denial of service via oversized control frame protocol violation (CVE-2026-15711)\n\n* libsoup: libsoup: Heap use-after-free in libsoup HTTP/2 client on_data_read() via GOAWAY during body upload (CVE-2026-85197)\n\n* libsoup: libsoup: Heap buffer overflow via uninitialized length in data-URI base64 decoding (CVE-2026-102555)\n\n* libsoup: libsoup: Heap buffer overflow from WebSocket Pong signal type confusion (CVE-2026-102556)\n\n* libsoup: libsoup: Heap buffer overflow during WebSocket message reassembly (CVE-2026-102557)\n\n* libsoup: libsoup: Heap buffer overflow during WebSocket receive-buffer growth (CVE-2026-102558)\n\n* libsoup: libsoup: Heap buffer overflow during WebSocket client-frame masking (CVE-2026-102559)\n\n* libsoup: libsoup: Heap buffer overflow during outgoing permessage-deflate buffer growth (CVE-2026-102560)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nThis advisory is provided by Ctrl IQ, Inc for Rocky Linux systems. For more information about CIQ security practices, visit https://ciq.com/security.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Bug fix 2499924",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2499924"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2499922",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2499922"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2528425",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2528425"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2543285",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2543285"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2543296",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2543296"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2543229",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2543229"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2543274",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2543274"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2543224",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2543224"
+      },
+      {
+        "category": "external",
+        "summary": "Bug fix 2543231",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2543231"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:98560",
+        "url": "https://errata.build.resf.org/RLSA-2026:98560"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:98560",
+        "url": "https://access.redhat.com/errata/RHSA-2026:98560"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat CSAF document for RHSA-2026:98560",
+        "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2026_98560.json"
+      },
+      {
+        "category": "self",
+        "summary": "CIQ Security Advisory CRLSA-2026:98560",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/rocky/2026/crlsa-2026_98560.json"
+      }
+    ],
+    "title": "Important: libsoup3 security update",
+    "tracking": {
+      "current_release_date": "2026-11-14T07:01:23.708639+00:00",
+      "generator": {
+        "date": "2026-11-14T07:01:23.708639+00:00",
+        "engine": {
+          "name": "CIQ Rocky Clone Generator",
+          "version": "1.0.4"
+        }
+      },
+      "id": "CRLSA-2026:98560",
+      "initial_release_date": "2026-11-13T12:06:37.188502+00:00",
+      "revision_history": [
+        {
+          "date": "2026-11-13T12:06:37.188502+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Rocky Linux 10.3 from CIQ",
+                "product": {
+                  "name": "Rocky Linux 10.3 from CIQ",
+                  "product_id": "rlc-10.3"
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Rocky Linux from CIQ"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+                "product": {
+                  "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+                  "product_id": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-debuginfo@3.6.6-1.el10_3.9?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+                "product": {
+                  "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+                  "product_id": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-debugsource@3.6.6-1.el10_3.9?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+                "product": {
+                  "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+                  "product_id": "libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-devel@3.6.6-1.el10_3.9?arch=aarch64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+                "product": {
+                  "name": "libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+                  "product_id": "libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3@3.6.6-1.el10_3.9?arch=aarch64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libsoup3-doc-0:3.6.6-1.el10_3.9.noarch",
+                "product": {
+                  "name": "libsoup3-doc-0:3.6.6-1.el10_3.9.noarch",
+                  "product_id": "libsoup3-doc-0:3.6.6-1.el10_3.9.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-doc@3.6.6-1.el10_3.9?arch=noarch"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+                "product": {
+                  "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+                  "product_id": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-debugsource@3.6.6-1.el10_3.9?arch=ppc64le"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+                "product": {
+                  "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+                  "product_id": "libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-devel@3.6.6-1.el10_3.9?arch=ppc64le"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+                "product": {
+                  "name": "libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+                  "product_id": "libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3@3.6.6-1.el10_3.9?arch=ppc64le"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+                "product": {
+                  "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+                  "product_id": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-debuginfo@3.6.6-1.el10_3.9?arch=ppc64le"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "ppc64le"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+                "product": {
+                  "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+                  "product_id": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-debugsource@3.6.6-1.el10_3.9?arch=s390x"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+                "product": {
+                  "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+                  "product_id": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-debuginfo@3.6.6-1.el10_3.9?arch=s390x"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+                "product": {
+                  "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+                  "product_id": "libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-devel@3.6.6-1.el10_3.9?arch=s390x"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-0:3.6.6-1.el10_3.9.s390x",
+                "product": {
+                  "name": "libsoup3-0:3.6.6-1.el10_3.9.s390x",
+                  "product_id": "libsoup3-0:3.6.6-1.el10_3.9.s390x",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3@3.6.6-1.el10_3.9?arch=s390x"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "s390x"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libsoup3-0:3.6.6-1.el10_3.9.src",
+                "product": {
+                  "name": "libsoup3-0:3.6.6-1.el10_3.9.src",
+                  "product_id": "libsoup3-0:3.6.6-1.el10_3.9.src",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3@3.6.6-1.el10_3.9?arch=src"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "src"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+                "product": {
+                  "name": "libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+                  "product_id": "libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3@3.6.6-1.el10_3.9?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+                "product": {
+                  "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+                  "product_id": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-debugsource@3.6.6-1.el10_3.9?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+                "product": {
+                  "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+                  "product_id": "libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-devel@3.6.6-1.el10_3.9?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+                "product": {
+                  "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+                  "product_id": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/libsoup3-debuginfo@3.6.6-1.el10_3.9?arch=x86_64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-0:3.6.6-1.el10_3.9.src as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src"
+        },
+        "product_reference": "libsoup3-0:3.6.6-1.el10_3.9.src",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64 as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64"
+        },
+        "product_reference": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64 as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64"
+        },
+        "product_reference": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x"
+        },
+        "product_reference": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-0:3.6.6-1.el10_3.9.x86_64 as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64"
+        },
+        "product_reference": "libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le"
+        },
+        "product_reference": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64 as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64"
+        },
+        "product_reference": "libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64 as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64"
+        },
+        "product_reference": "libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x"
+        },
+        "product_reference": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.s390x as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x"
+        },
+        "product_reference": "libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64 as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64"
+        },
+        "product_reference": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64 as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64"
+        },
+        "product_reference": "libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-0:3.6.6-1.el10_3.9.aarch64 as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64"
+        },
+        "product_reference": "libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le"
+        },
+        "product_reference": "libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-0:3.6.6-1.el10_3.9.s390x as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x"
+        },
+        "product_reference": "libsoup3-0:3.6.6-1.el10_3.9.s390x",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-0:3.6.6-1.el10_3.9.ppc64le as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le"
+        },
+        "product_reference": "libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le"
+        },
+        "product_reference": "libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+        "relates_to_product_reference": "rlc-10.3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "libsoup3-doc-0:3.6.6-1.el10_3.9.noarch as a component of Rocky Linux 10.3 from CIQ",
+          "product_id": "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+        },
+        "product_reference": "libsoup3-doc-0:3.6.6-1.el10_3.9.noarch",
+        "relates_to_product_reference": "rlc-10.3"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-15711",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-15711",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to libsoup3-0:3.6.6-1.el10_3.9.aarch64, libsoup3-0:3.6.6-1.el10_3.9.ppc64le, libsoup3-0:3.6.6-1.el10_3.9.s390x and 6 more packages",
+          "product_ids": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-15709",
+      "cwe": {
+        "id": "CWE-409",
+        "name": "Improper Handling of Highly Compressed Data (Data Amplification)"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-15709",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to libsoup3-0:3.6.6-1.el10_3.9.aarch64, libsoup3-0:3.6.6-1.el10_3.9.ppc64le, libsoup3-0:3.6.6-1.el10_3.9.s390x and 6 more packages",
+          "product_ids": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-102555",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-102555",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to libsoup3-0:3.6.6-1.el10_3.9.aarch64, libsoup3-0:3.6.6-1.el10_3.9.ppc64le, libsoup3-0:3.6.6-1.el10_3.9.s390x and 6 more packages",
+          "product_ids": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-102556",
+      "cwe": {
+        "id": "CWE-843",
+        "name": "Access of Resource Using Incompatible Type ('Type Confusion')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-102556",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to libsoup3-0:3.6.6-1.el10_3.9.aarch64, libsoup3-0:3.6.6-1.el10_3.9.ppc64le, libsoup3-0:3.6.6-1.el10_3.9.s390x and 6 more packages",
+          "product_ids": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-102557",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-102557",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to libsoup3-0:3.6.6-1.el10_3.9.aarch64, libsoup3-0:3.6.6-1.el10_3.9.ppc64le, libsoup3-0:3.6.6-1.el10_3.9.s390x and 6 more packages",
+          "product_ids": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-102558",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-102558",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to libsoup3-0:3.6.6-1.el10_3.9.aarch64, libsoup3-0:3.6.6-1.el10_3.9.ppc64le, libsoup3-0:3.6.6-1.el10_3.9.s390x and 6 more packages",
+          "product_ids": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-102559",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-102559",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to libsoup3-0:3.6.6-1.el10_3.9.aarch64, libsoup3-0:3.6.6-1.el10_3.9.ppc64le, libsoup3-0:3.6.6-1.el10_3.9.s390x and 6 more packages",
+          "product_ids": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-102560",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-102560",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to libsoup3-0:3.6.6-1.el10_3.9.aarch64, libsoup3-0:3.6.6-1.el10_3.9.ppc64le, libsoup3-0:3.6.6-1.el10_3.9.s390x and 6 more packages",
+          "product_ids": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-85197",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-85197",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+          "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+          "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+          "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to libsoup3-0:3.6.6-1.el10_3.9.aarch64, libsoup3-0:3.6.6-1.el10_3.9.ppc64le, libsoup3-0:3.6.6-1.el10_3.9.s390x and 6 more packages",
+          "product_ids": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.src",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debugsource-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.x86_64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.aarch64",
+            "rlc-10.3:libsoup3-devel-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.s390x",
+            "rlc-10.3:libsoup3-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-debuginfo-0:3.6.6-1.el10_3.9.ppc64le",
+            "rlc-10.3:libsoup3-doc-0:3.6.6-1.el10_3.9.noarch"
+          ]
+        }
+      ]
+    }
+  ]
+}
