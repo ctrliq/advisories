@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the curl SRPM in CIQ LTS 9.6. It addresses 2 CVEs: CVE-2026-19931, CVE-2026-18924.",
+        "text": "This advisory aggregates security fixes for the curl SRPM in CIQ LTS 9.6. It addresses 5 CVEs: CVE-2026-9547, CVE-2026-9545, CVE-2026-8286, CVE-2026-19931, CVE-2026-18924.",
         "title": "Description"
       },
       {
@@ -43,6 +43,21 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2026-9547",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-9547.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-9545",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-9545.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-8286",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-8286.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2026-19931",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-19931.json"
       },
@@ -59,9 +74,9 @@
     ],
     "title": "curl security update for CIQ LTS 9.6",
     "tracking": {
-      "current_release_date": "2026-11-14T07:12:18.551785+00:00",
+      "current_release_date": "2026-11-15T07:01:42.353149+00:00",
       "generator": {
-        "date": "2026-11-14T07:12:18.551785+00:00",
+        "date": "2026-11-15T07:01:42.353149+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.3"
@@ -74,10 +89,15 @@
           "date": "2026-11-14T07:12:18.551785+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 2 CVEs fixed"
+        },
+        {
+          "date": "2026-11-15T07:01:42.357659+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -289,19 +309,19 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64 as a component of CIQ LTS 9.6",
-          "product_id": "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64"
+          "name": "libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686"
         },
-        "product_reference": "libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+        "product_reference": "libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
         "relates_to_product_reference": "lts-9.6"
       },
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686 as a component of CIQ LTS 9.6",
-          "product_id": "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686"
+          "name": "libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64"
         },
-        "product_reference": "libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+        "product_reference": "libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
         "relates_to_product_reference": "lts-9.6"
       },
       {
@@ -389,15 +409,15 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2026-19931",
+      "cve": "CVE-2026-9547",
       "cwe": {
-        "id": "CWE-488",
-        "name": "Exposure of Data Element to Wrong Session"
+        "id": "CWE-347",
+        "name": "Improper Verification of Cryptographic Signature"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2026-19931",
+          "text": "Security vulnerability CVE-2026-9547",
           "title": "Vulnerability Description"
         }
       ],
@@ -405,8 +425,8 @@
         "fixed": [
           "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
           "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
-          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
           "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
           "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
           "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
           "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
@@ -425,8 +445,266 @@
           "product_ids": [
             "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
-            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-9545",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-9545",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-8286",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-8286",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+            "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-19931",
+      "cwe": {
+        "id": "CWE-488",
+        "name": "Exposure of Data Element to Wrong Session"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-19931",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+          "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.aarch64",
+          "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update curl to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
             "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
@@ -459,8 +737,8 @@
           "products": [
             "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
-            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
             "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
@@ -491,8 +769,8 @@
         "fixed": [
           "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
           "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
-          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
           "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+          "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
           "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
           "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
           "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
@@ -511,8 +789,8 @@
           "product_ids": [
             "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
-            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
             "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
@@ -545,8 +823,8 @@
           "products": [
             "lts-9.6:curl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:curl-minimal-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
-            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.i686",
+            "lts-9.6:libcurl-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.x86_64",
             "lts-9.6:libcurl-devel-0:8.23.0-1.1.el9_6_ciq.1.i686",
             "lts-9.6:libcurl-minimal-0:8.23.0-1.1.el9_6_ciq.1.i686",
