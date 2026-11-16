@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the rsyslog SRPM in CIQ LTS 9.2. It addresses 4 CVEs: CVE-2022-24903, CVE-2011-3200, CVE-2014-3634, CVE-2026-78002.",
+        "text": "This advisory aggregates security fixes for the rsyslog SRPM in CIQ LTS 9.2. It addresses 4 CVEs: CVE-2022-24903, CVE-2026-78002, CVE-2014-3634, CVE-2011-3200.",
         "title": "Description"
       },
       {
@@ -48,8 +48,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2011-3200",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-3200.json"
+        "summary": "VEX document for CVE-2026-78002",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-78002.json"
       },
       {
         "category": "external",
@@ -58,8 +58,8 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2026-78002",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-78002.json"
+        "summary": "VEX document for CVE-2011-3200",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2011/cve-2011-3200.json"
       },
       {
         "category": "self",
@@ -69,12 +69,12 @@
     ],
     "title": "rsyslog security update for CIQ LTS 9.2",
     "tracking": {
-      "current_release_date": "2026-09-03T07:01:59.541932+00:00",
+      "current_release_date": "2026-11-16T07:02:40.590797+00:00",
       "generator": {
-        "date": "2026-09-03T07:01:59.541932+00:00",
+        "date": "2026-11-16T07:02:40.590797+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1503",
@@ -84,10 +84,15 @@
           "date": "2026-09-03T07:01:59.541932+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 4 CVEs fixed"
+        },
+        {
+          "date": "2026-11-16T07:02:40.612695+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -103,7 +108,7 @@
                   "name": "CIQ LTS 9.2",
                   "product_id": "lts-9.2",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -1129,11 +1134,15 @@
       ]
     },
     {
-      "cve": "CVE-2011-3200",
+      "cve": "CVE-2026-78002",
+      "cwe": {
+        "id": "CWE-131",
+        "name": "Incorrect Calculation of Buffer Size"
+      },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2011-3200",
+          "text": "Security vulnerability CVE-2026-78002",
           "title": "Vulnerability Description"
         }
       ],
@@ -1234,10 +1243,19 @@
       ],
       "scores": [
         {
-          "cvss_v2": {
-            "baseScore": 2.9,
-            "vectorString": "AV:A/AC:M/Au:N/C:N/I:N/A:P",
-            "version": "2.0"
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
           },
           "products": [
             "lts-9.2:rsyslog-mmkubernetes-0:8.2102.0-113.1.el9_2_ciq.1.x86_64",
@@ -1447,15 +1465,11 @@
       ]
     },
     {
-      "cve": "CVE-2026-78002",
-      "cwe": {
-        "id": "CWE-131",
-        "name": "Incorrect Calculation of Buffer Size"
-      },
+      "cve": "CVE-2011-3200",
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2026-78002",
+          "text": "Security vulnerability CVE-2011-3200",
           "title": "Vulnerability Description"
         }
       ],
@@ -1556,19 +1570,10 @@
       ],
       "scores": [
         {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
+          "cvss_v2": {
+            "baseScore": 2.9,
+            "vectorString": "AV:A/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
           },
           "products": [
             "lts-9.2:rsyslog-mmkubernetes-0:8.2102.0-113.1.el9_2_ciq.1.x86_64",
