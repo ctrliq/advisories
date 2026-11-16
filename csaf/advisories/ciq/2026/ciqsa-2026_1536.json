@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the bind SRPM in CIQ LTS 9.6. It addresses 5 CVEs: CVE-2026-11721, CVE-2026-13204, CVE-2026-13321, CVE-2026-11331, CVE-2026-11622.",
+        "text": "This advisory aggregates security fixes for the bind SRPM in CIQ LTS 9.6. It addresses 5 CVEs: CVE-2026-11721, CVE-2026-11622, CVE-2026-13204, CVE-2026-13321, CVE-2026-11331.",
         "title": "Description"
       },
       {
@@ -48,6 +48,11 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2026-11622",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-11622.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2026-13204",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-13204.json"
       },
@@ -62,11 +67,6 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-11331.json"
       },
       {
-        "category": "external",
-        "summary": "VEX document for CVE-2026-11622",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-11622.json"
-      },
-      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1536.json"
@@ -74,9 +74,9 @@
     ],
     "title": "bind security update for CIQ LTS 9.6",
     "tracking": {
-      "current_release_date": "2026-10-11T13:44:48.393230+00:00",
+      "current_release_date": "2026-11-16T07:02:43.337734+00:00",
       "generator": {
-        "date": "2026-10-11T13:44:48.393230+00:00",
+        "date": "2026-11-16T07:02:43.337734+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.3"
@@ -94,10 +94,15 @@
           "date": "2026-10-11T13:44:48.411614+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-11-16T07:02:43.346594+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -616,6 +621,107 @@
       ]
     },
     {
+      "cve": "CVE-2026-11622",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-11622",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.i686",
+          "lts-9.6:bind-dnssec-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+          "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:bind-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+          "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.i686",
+          "lts-9.6:bind-license-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+          "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:python3-bind-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+          "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update bind to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.i686",
+            "lts-9.6:bind-dnssec-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+            "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:bind-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.i686",
+            "lts-9.6:bind-license-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+            "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-bind-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+            "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.i686",
+            "lts-9.6:bind-dnssec-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+            "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:bind-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.i686",
+            "lts-9.6:bind-license-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+            "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-bind-32:9.16.23-31.2.el9_6_ciq.3.noarch",
+            "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-13204",
       "cwe": {
         "id": "CWE-617",
@@ -893,107 +999,6 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.i686",
-            "lts-9.6:bind-dnssec-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-            "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:bind-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.i686",
-            "lts-9.6:bind-license-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-            "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-bind-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-            "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2026-11622",
-      "cwe": {
-        "id": "CWE-400",
-        "name": "Uncontrolled Resource Consumption"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2026-11622",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.i686",
-          "lts-9.6:bind-dnssec-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-          "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:bind-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-          "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.i686",
-          "lts-9.6:bind-license-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-          "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:python3-bind-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-          "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update bind to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.i686",
-            "lts-9.6:bind-dnssec-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-            "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:bind-doc-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.i686",
-            "lts-9.6:bind-license-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-            "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-bind-32:9.16.23-31.2.el9_6_ciq.3.noarch",
-            "lts-9.6:bind-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:bind-chroot-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:bind-devel-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:bind-dnssec-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:bind-libs-32:9.16.23-31.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:bind-utils-32:9.16.23-31.2.el9_6_ciq.3.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
