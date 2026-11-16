@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the python3.9 SRPM in CIQ LTS 9.6. It addresses 2 CVEs: CVE-2026-4786, CVE-2026-6100.",
+        "text": "This advisory aggregates security fixes for the python3.9 SRPM in CIQ LTS 9.6. It addresses 2 CVEs: CVE-2026-6100, CVE-2026-4786.",
         "title": "Description"
       },
       {
@@ -43,13 +43,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2026-4786",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-4786.json"
+        "summary": "VEX document for CVE-2026-6100",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-6100.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2026-6100",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-6100.json"
+        "summary": "VEX document for CVE-2026-4786",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-4786.json"
       },
       {
         "category": "self",
@@ -59,12 +59,12 @@
     ],
     "title": "python3.9 security update for CIQ LTS 9.6",
     "tracking": {
-      "current_release_date": "2026-09-02T00:01:56.643374+00:00",
+      "current_release_date": "2026-11-16T07:02:36.863686+00:00",
       "generator": {
-        "date": "2026-09-02T00:01:56.643374+00:00",
+        "date": "2026-11-16T07:02:36.863686+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
-          "version": "2.0.1"
+          "version": "2.0.3"
         }
       },
       "id": "CIQSA-2026:1431",
@@ -74,10 +74,15 @@
           "date": "2026-09-02T00:01:56.643374+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 2 CVEs fixed"
+        },
+        {
+          "date": "2026-11-16T07:02:36.871908+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -93,7 +98,7 @@
                   "name": "CIQ LTS 9.6",
                   "product_id": "lts-9.6",
                   "product_identification_helper": {
-                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:aarch64:lts"
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:lts"
                   }
                 }
               }
@@ -575,119 +580,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2026-4786",
-      "cwe": {
-        "id": "CWE-88",
-        "name": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2026-4786",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.i686",
-          "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.i686",
-          "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.i686",
-          "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.i686",
-          "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.i686",
-          "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.i686",
-          "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-          "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.i686",
-          "lts-9.6:python-unversioned-command-0:3.9.21-2.2.el9_6_ciq.3.noarch",
-          "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-          "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.aarch64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update python3.9 to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python-unversioned-command-0:3.9.21-2.2.el9_6_ciq.3.noarch",
-            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.aarch64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "LOW",
-            "baseScore": 7.1,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "REQUIRED",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:L",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
-            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.i686",
-            "lts-9.6:python-unversioned-command-0:3.9.21-2.2.el9_6_ciq.3.noarch",
-            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
-            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.aarch64"
-          ]
-        }
-      ]
-    },
-    {
       "cve": "CVE-2026-6100",
       "cwe": {
         "id": "CWE-825",
@@ -771,6 +663,119 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python-unversioned-command-0:3.9.21-2.2.el9_6_ciq.3.noarch",
+            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-4786",
+      "cwe": {
+        "id": "CWE-88",
+        "name": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-4786",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.i686",
+          "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.i686",
+          "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.i686",
+          "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.i686",
+          "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.i686",
+          "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.i686",
+          "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+          "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.i686",
+          "lts-9.6:python-unversioned-command-0:3.9.21-2.2.el9_6_ciq.3.noarch",
+          "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+          "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update python3.9 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.x86_64",
+            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.i686",
+            "lts-9.6:python-unversioned-command-0:3.9.21-2.2.el9_6_ciq.3.noarch",
+            "lts-9.6:python3-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-debug-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-devel-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-idle-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-libs-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-test-0:3.9.21-2.2.el9_6_ciq.3.aarch64",
+            "lts-9.6:python3-tkinter-0:3.9.21-2.2.el9_6_ciq.3.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:L",
             "version": "3.1"
           },
           "products": [
