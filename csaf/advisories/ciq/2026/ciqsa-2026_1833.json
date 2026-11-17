@@ -1,0 +1,3219 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Critical"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for expat",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the expat SRPM in CIQ CentOS Bridge 7.9. It addresses 42 CVEs: CVE-2026-76957, CVE-2022-43680, CVE-2026-56131, CVE-2026-45186, CVE-2024-8176, and 37 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-76957",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-76957.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-43680",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-43680.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-56131",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-56131.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-45186",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-45186.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-8176",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-8176.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-25314",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-25314.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-45491",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-45491.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-9233",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-9233.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-25313",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-25313.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-45490",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-45490.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-93990",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-93990.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-56403",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-56403.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-56412",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-56412.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-25236",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-25236.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-32776",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-32776.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-66046",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-66046.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-52425",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-52425.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2013-0340",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2013/cve-2013-0340.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-41080",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-41080.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-0718",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-0718.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-22822",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-22822.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-4472",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-4472.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-118370",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-118370.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-45492",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-45492.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-24515",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-24515.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-50219",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-50219.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-56407",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-56407.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-102633",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-102633.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-77214",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-77214.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-59375",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-59375.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-117610",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-117610.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-56132",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-56132.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-50602",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-50602.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-32778",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-32778.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-32777",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-32777.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-76641",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-76641.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-56405",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-56405.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-56404",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-56404.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-25235",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-25235.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2012-6702",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2012/cve-2012-6702.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2016-5300",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2016/cve-2016-5300.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-28757",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-28757.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1833.json"
+      }
+    ],
+    "title": "expat security update for CIQ CentOS Bridge 7.9",
+    "tracking": {
+      "current_release_date": "2026-11-17T07:02:27.935049+00:00",
+      "generator": {
+        "date": "2026-11-17T07:02:27.935049+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1833",
+      "initial_release_date": "2026-11-17T07:02:27.935049+00:00",
+      "revision_history": [
+        {
+          "date": "2026-11-17T07:02:27.935049+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 42 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ CentOS Bridge 7.9",
+                "product": {
+                  "name": "CIQ CentOS Bridge 7.9",
+                  "product_id": "cbr-7.9-bridge",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:centos_linux_bridge:7.9:*:*:*:*:*:*:bridge"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ Bridge"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+                "product": {
+                  "name": "expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+                  "product_id": "expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/expat@2.5.0-6.1.el7_9.ciqcbr?arch=i686"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+                "product": {
+                  "name": "expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+                  "product_id": "expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/expat-devel@2.5.0-6.1.el7_9.ciqcbr?arch=i686"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+                "product": {
+                  "name": "expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+                  "product_id": "expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/expat-static@2.5.0-6.1.el7_9.ciqcbr?arch=i686"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "i686"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/expat@2.5.0-6.1.el7_9.ciqcbr?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/expat-devel@2.5.0-6.1.el7_9.ciqcbr?arch=x86_64"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+                  "product_id": "expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/expat-static@2.5.0-6.1.el7_9.ciqcbr?arch=x86_64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "expat-0:2.5.0-6.1.el7_9.ciqcbr.i686 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686"
+        },
+        "product_reference": "expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686"
+        },
+        "product_reference": "expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686"
+        },
+        "product_reference": "expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-76957",
+      "cwe": {
+        "id": "CWE-825",
+        "name": "Expired Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-76957",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-43680",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-43680",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56131",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56131",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 4.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-45186",
+      "cwe": {
+        "id": "CWE-407",
+        "name": "Inefficient Algorithmic Complexity"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-45186",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-8176",
+      "cwe": {
+        "id": "CWE-674",
+        "name": "Uncontrolled Recursion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-8176",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-25314",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-25314",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-45491",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-45491",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-9233",
+      "cwe": {
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-9233",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-25313",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-25313",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-45490",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-45490",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-93990",
+      "cwe": {
+        "id": "CWE-176",
+        "name": "Improper Handling of Unicode Encoding"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-93990",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56403",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56403",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 6.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56412",
+      "cwe": {
+        "id": "CWE-825",
+        "name": "Expired Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56412",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-25236",
+      "cwe": {
+        "id": "CWE-179",
+        "name": "Incorrect Behavior Order: Early Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-25236",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-32776",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-32776",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.2,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-66046",
+      "cwe": {
+        "id": "CWE-407",
+        "name": "Inefficient Algorithmic Complexity"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-66046",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-52425",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-52425",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2013-0340",
+      "cwe": {
+        "id": "CWE-611",
+        "name": "Improper Restriction of XML External Entity Reference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2013-0340",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-41080",
+      "cwe": {
+        "id": "CWE-331",
+        "name": "Insufficient Entropy"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-41080",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-0718",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-0718",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-22822",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-22822",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-4472",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-4472",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 5.1,
+            "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-118370",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-118370",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-45492",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-45492",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.2,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-24515",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-24515",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 2.9,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-50219",
+      "cwe": {
+        "id": "CWE-911",
+        "name": "Improper Update of Reference Count"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-50219",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56407",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56407",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 6.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-102633",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-102633",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-77214",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-77214",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-59375",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-59375",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-117610",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-117610",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56132",
+      "cwe": {
+        "id": "CWE-131",
+        "name": "Incorrect Calculation of Buffer Size"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56132",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 6.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-50602",
+      "cwe": {
+        "id": "CWE-754",
+        "name": "Improper Check for Unusual or Exceptional Conditions"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-50602",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-32778",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-32778",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.1,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-32777",
+      "cwe": {
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-32777",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 4.0,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-76641",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-76641",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56405",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56405",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56404",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-56404",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 6.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-25235",
+      "cwe": {
+        "id": "CWE-838",
+        "name": "Inappropriate Encoding for Output Context"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-25235",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2012-6702",
+      "cwe": {
+        "id": "CWE-330",
+        "name": "Use of Insufficiently Random Values"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2012-6702",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-5300",
+      "cwe": {
+        "id": "CWE-331",
+        "name": "Insufficient Entropy"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2016-5300",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 4.3,
+            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-28757",
+      "cwe": {
+        "id": "CWE-776",
+        "name": "Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-28757",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+          "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update expat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:expat-devel-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.i686",
+            "cbr-7.9-bridge:expat-static-0:2.5.0-6.1.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    }
+  ]
+}
