@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the tomcat SRPM in CIQ LTS 9.2. It addresses 5 CVEs: CVE-2024-23672, CVE-2024-24549, CVE-2024-38286, CVE-2024-34750, CVE-2023-46589.",
+        "text": "This advisory aggregates security fixes for the tomcat SRPM in CIQ LTS 9.2. It addresses 5 CVEs: CVE-2024-23672, CVE-2024-24549, CVE-2023-46589, CVE-2024-38286, CVE-2024-34750.",
         "title": "Description"
       },
       {
@@ -53,6 +53,11 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2023-46589",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-46589.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2024-38286",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-38286.json"
       },
@@ -62,11 +67,6 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-34750.json"
       },
       {
-        "category": "external",
-        "summary": "VEX document for CVE-2023-46589",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-46589.json"
-      },
-      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1020.json"
@@ -74,9 +74,9 @@
     ],
     "title": "tomcat security update for CIQ LTS 9.2",
     "tracking": {
-      "current_release_date": "2026-11-16T07:02:22.994816+00:00",
+      "current_release_date": "2026-11-17T07:02:10.772871+00:00",
       "generator": {
-        "date": "2026-11-16T07:02:22.994816+00:00",
+        "date": "2026-11-17T07:02:10.772871+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.3"
@@ -104,10 +104,15 @@
           "date": "2026-11-16T07:02:23.002428+00:00",
           "number": "1.0.3",
           "summary": "Update"
+        },
+        {
+          "date": "2026-11-17T07:02:10.780403+00:00",
+          "number": "1.0.4",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.3"
+      "version": "1.0.4"
     }
   },
   "product_tree": {
@@ -481,6 +486,80 @@
       ]
     },
     {
+      "cve": "CVE-2023-46589",
+      "cwe": {
+        "id": "CWE-444",
+        "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-46589",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.src",
+          "lts-9.2:tomcat-jsp-2.3-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+          "lts-9.2:tomcat-lib-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+          "lts-9.2:tomcat-servlet-4.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+          "lts-9.2:tomcat-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+          "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+          "lts-9.2:tomcat-admin-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+          "lts-9.2:tomcat-docs-webapp-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+          "lts-9.2:tomcat-el-3.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.src",
+            "lts-9.2:tomcat-jsp-2.3-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-lib-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-servlet-4.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-admin-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-docs-webapp-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-el-3.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.src",
+            "lts-9.2:tomcat-jsp-2.3-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-lib-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-servlet-4.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-admin-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-docs-webapp-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
+            "lts-9.2:tomcat-el-3.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2024-38286",
       "cwe": {
         "id": "CWE-400",
@@ -612,80 +691,6 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.src",
-            "lts-9.2:tomcat-jsp-2.3-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-lib-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-servlet-4.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-admin-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-docs-webapp-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-el-3.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2023-46589",
-      "cwe": {
-        "id": "CWE-444",
-        "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2023-46589",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.src",
-          "lts-9.2:tomcat-jsp-2.3-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-          "lts-9.2:tomcat-lib-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-          "lts-9.2:tomcat-servlet-4.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-          "lts-9.2:tomcat-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-          "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-          "lts-9.2:tomcat-admin-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-          "lts-9.2:tomcat-docs-webapp-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-          "lts-9.2:tomcat-el-3.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update tomcat to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.src",
-            "lts-9.2:tomcat-jsp-2.3-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-lib-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-servlet-4.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-admin-webapps-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-docs-webapp-1:9.0.87-1.el9_2.92ciq_lts.2.noarch",
-            "lts-9.2:tomcat-el-3.0-api-1:9.0.87-1.el9_2.92ciq_lts.2.noarch"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "NONE",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
