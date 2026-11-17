@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the tomcat SRPM in CIQ LTS 9.6. It addresses 4 CVEs: CVE-2025-31651, CVE-2025-55752, CVE-2026-34486, CVE-2026-29146.",
+        "text": "This advisory aggregates security fixes for the tomcat SRPM in CIQ LTS 9.6. It addresses 5 CVEs: CVE-2025-31651, CVE-2022-45143, CVE-2025-55752, CVE-2026-34486, CVE-2026-29146.",
         "title": "Description"
       },
       {
@@ -48,6 +48,11 @@
       },
       {
         "category": "external",
+        "summary": "VEX document for CVE-2022-45143",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-45143.json"
+      },
+      {
+        "category": "external",
         "summary": "VEX document for CVE-2025-55752",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-55752.json"
       },
@@ -69,9 +74,9 @@
     ],
     "title": "tomcat security update for CIQ LTS 9.6",
     "tracking": {
-      "current_release_date": "2026-11-16T07:02:55.500805+00:00",
+      "current_release_date": "2026-11-17T07:02:27.548287+00:00",
       "generator": {
-        "date": "2026-11-16T07:02:55.500805+00:00",
+        "date": "2026-11-17T07:02:27.548287+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.3"
@@ -84,10 +89,15 @@
           "date": "2026-11-16T07:02:55.500805+00:00",
           "number": "1.0.0",
           "summary": "Initial release - 4 CVEs fixed"
+        },
+        {
+          "date": "2026-11-17T07:02:27.555903+00:00",
+          "number": "1.0.1",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -342,6 +352,77 @@
             "scope": "UNCHANGED",
             "userInteraction": "NONE",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:tomcat-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-admin-webapps-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-docs-webapp-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-el-3.0-api-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-jsp-2.3-api-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-lib-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-servlet-4.0-api-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-webapps-1:9.0.87-6.1.el9_6_ciq.1.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-45143",
+      "cwe": {
+        "id": "CWE-74",
+        "name": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-45143",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:tomcat-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+          "lts-9.6:tomcat-admin-webapps-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+          "lts-9.6:tomcat-docs-webapp-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+          "lts-9.6:tomcat-el-3.0-api-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+          "lts-9.6:tomcat-jsp-2.3-api-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+          "lts-9.6:tomcat-lib-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+          "lts-9.6:tomcat-servlet-4.0-api-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+          "lts-9.6:tomcat-webapps-1:9.0.87-6.1.el9_6_ciq.1.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:tomcat-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-admin-webapps-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-docs-webapp-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-el-3.0-api-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-jsp-2.3-api-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-lib-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-servlet-4.0-api-1:9.0.87-6.1.el9_6_ciq.1.noarch",
+            "lts-9.6:tomcat-webapps-1:9.0.87-6.1.el9_6_ciq.1.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
