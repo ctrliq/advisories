@@ -1,0 +1,2934 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Critical"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for tomcat",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the tomcat SRPM in CIQ CentOS Bridge 7.9. It addresses 32 CVEs: CVE-2024-23672, CVE-2026-73180, CVE-2026-24880, CVE-2026-43514, CVE-2025-48976, and 27 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-23672",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-23672.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-73180",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-73180.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-24880",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-24880.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-43514",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-43514.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-48976",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-48976.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-24733",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-24733.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-65182",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-65182.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-65905",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-65905.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-43512",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-43512.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-79677",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-79677.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-55956",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-55956.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-87022",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-87022.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-101296",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-101296.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-48988",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-48988.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-28708",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-28708.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-46701",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-46701.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-76183",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-76183.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-50229",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-50229.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-74049",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-74049.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-43513",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-43513.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-42795",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-42795.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-68569",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-68569.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-1935",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-1935.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-55276",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-55276.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-0221",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-0221.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-78383",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-78383.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-43515",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-43515.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-41284",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-41284.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-55754",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-55754.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-41080",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-41080.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-52520",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-52520.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-61795",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-61795.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1853.json"
+      }
+    ],
+    "title": "tomcat security update for CIQ CentOS Bridge 7.9",
+    "tracking": {
+      "current_release_date": "2026-11-18T07:01:15.825076+00:00",
+      "generator": {
+        "date": "2026-11-18T07:01:15.825076+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1853",
+      "initial_release_date": "2026-11-18T07:01:15.825076+00:00",
+      "revision_history": [
+        {
+          "date": "2026-11-18T07:01:15.825076+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 32 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ CentOS Bridge 7.9",
+                "product": {
+                  "name": "CIQ CentOS Bridge 7.9",
+                  "product_id": "cbr-7.9-bridge",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:centos_linux_bridge:7.9:*:*:*:*:*:*:bridge"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ Bridge"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_id": "tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tomcat-lib@7.0.76-17.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_id": "tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tomcat-servlet-3.0-api@7.0.76-17.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_id": "tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tomcat-webapps@7.0.76-17.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_id": "tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tomcat@7.0.76-17.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_id": "tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tomcat-admin-webapps@7.0.76-17.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_id": "tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tomcat-docs-webapp@7.0.76-17.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_id": "tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tomcat-el-2.2-api@7.0.76-17.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_id": "tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tomcat-javadoc@7.0.76-17.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_id": "tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tomcat-jsp-2.2-api@7.0.76-17.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                "product": {
+                  "name": "tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_id": "tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tomcat-jsvc@7.0.76-17.1.el7_9.ciqcbr?arch=noarch"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        },
+        "product_reference": "tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-23672",
+      "cwe": {
+        "id": "CWE-459",
+        "name": "Incomplete Cleanup"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-23672",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-73180",
+      "cwe": {
+        "id": "CWE-613",
+        "name": "Insufficient Session Expiration"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-73180",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-24880",
+      "cwe": {
+        "id": "CWE-444",
+        "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-24880",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-43514",
+      "cwe": {
+        "id": "CWE-208",
+        "name": "Observable Timing Discrepancy"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-43514",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-48976",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-48976",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-24733",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-24733",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-65182",
+      "cwe": {
+        "id": "CWE-551",
+        "name": "Incorrect Behavior Order: Authorization Before Parsing and Canonicalization"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-65182",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-65905",
+      "cwe": {
+        "id": "CWE-294",
+        "name": "Authentication Bypass by Capture-replay"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-65905",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 4.8,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-43512",
+      "cwe": {
+        "id": "CWE-303",
+        "name": "Incorrect Implementation of Authentication Algorithm"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-43512",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-79677",
+      "cwe": {
+        "id": "CWE-772",
+        "name": "Missing Release of Resource after Effective Lifetime"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-79677",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-55956",
+      "cwe": {
+        "id": "CWE-551",
+        "name": "Incorrect Behavior Order: Authorization Before Parsing and Canonicalization"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-55956",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-87022",
+      "cwe": {
+        "id": "CWE-130",
+        "name": "Improper Handling of Length Parameter Inconsistency"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-87022",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-101296",
+      "cwe": {
+        "id": "CWE-303",
+        "name": "Incorrect Implementation of Authentication Algorithm"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-101296",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-48988",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-48988",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-28708",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-28708",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-46701",
+      "cwe": {
+        "id": "CWE-178",
+        "name": "Improper Handling of Case Sensitivity"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-46701",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-76183",
+      "cwe": {
+        "id": "CWE-289",
+        "name": "Authentication Bypass by Alternate Name"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-76183",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-50229",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-50229",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-74049",
+      "cwe": {
+        "id": "CWE-698",
+        "name": "Execution After Redirect (EAR)"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-74049",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-43513",
+      "cwe": {
+        "id": "CWE-178",
+        "name": "Improper Handling of Case Sensitivity"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-43513",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-42795",
+      "cwe": {
+        "id": "CWE-459",
+        "name": "Incomplete Cleanup"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-42795",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-68569",
+      "cwe": {
+        "id": "CWE-305",
+        "name": "Authentication Bypass by Primary Weakness"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-68569",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-1935",
+      "cwe": {
+        "id": "CWE-444",
+        "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-1935",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-55276",
+      "cwe": {
+        "id": "CWE-778",
+        "name": "Insufficient Logging"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-55276",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "NONE",
+            "baseScore": 2.3,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-0221",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-0221",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.0,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-78383",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-78383",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-43515",
+      "cwe": {
+        "id": "CWE-551",
+        "name": "Incorrect Behavior Order: Authorization Before Parsing and Canonicalization"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-43515",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-41284",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-41284",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-55754",
+      "cwe": {
+        "id": "CWE-150",
+        "name": "Improper Neutralization of Escape, Meta, or Control Sequences"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-55754",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 3.5,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-41080",
+      "cwe": {
+        "id": "CWE-601",
+        "name": "URL Redirection to Untrusted Site ('Open Redirect')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-41080",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.1,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-52520",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-52520",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-61795",
+      "cwe": {
+        "id": "CWE-404",
+        "name": "Improper Resource Shutdown or Release"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-61795",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+          "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tomcat to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:tomcat-lib-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-servlet-3.0-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-admin-webapps-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-docs-webapp-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-el-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-javadoc-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsp-2.2-api-0:7.0.76-17.1.el7_9.ciqcbr.noarch",
+            "cbr-7.9-bridge:tomcat-jsvc-0:7.0.76-17.1.el7_9.ciqcbr.noarch"
+          ]
+        }
+      ]
+    }
+  ]
+}
