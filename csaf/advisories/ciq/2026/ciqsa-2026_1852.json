@@ -1,0 +1,2429 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Critical"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for edk2",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the edk2 SRPM in CIQ LTS 9.6. It addresses 33 CVEs: CVE-2024-0727, CVE-2023-6237, CVE-2024-6119, CVE-2022-36763, CVE-2022-36764, and 28 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-0727",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-0727.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-6237",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-6237.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-6119",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-6119.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-36763",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-36763.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-36764",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-36764.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-6129",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-6129.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-4304",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-4304.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-4450",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-4450.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-0215",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-0215.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-0286",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-0286.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-38796",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-38796.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-45233",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45233.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-45235",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45235.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-45229",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45229.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-45232",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45232.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-45230",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45230.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-45234",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45234.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-45231",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45231.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2025-2296",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-2296.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-28390",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-28390.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-38578",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-38578.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-14563",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-14563.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-28389",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-28389.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-84782",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-84782.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-5731",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-5731.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-5732",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-5732.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-5733",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-5733.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-5734",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-5734.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-5735",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-5735.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-3613",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-3613.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-14553",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-14553.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4523",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4523.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2026-97631",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2026/cve-2026-97631.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1852.json"
+      }
+    ],
+    "title": "edk2 security update for CIQ LTS 9.6",
+    "tracking": {
+      "current_release_date": "2026-11-18T07:01:15.590718+00:00",
+      "generator": {
+        "date": "2026-11-18T07:01:15.590718+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1852",
+      "initial_release_date": "2026-11-18T07:01:15.590718+00:00",
+      "revision_history": [
+        {
+          "date": "2026-11-18T07:01:15.590718+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 33 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS 9.6",
+                "product": {
+                  "name": "CIQ LTS 9.6",
+                  "product_id": "lts-9.6",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.6:*:*:*:*:*:*:lts"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64",
+                "product": {
+                  "name": "edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64",
+                  "product_id": "edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/edk2-tools@20241117-2.1.el9_6_ciq?arch=aarch64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+                "product": {
+                  "name": "edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+                  "product_id": "edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/edk2-aarch64@20241117-2.1.el9_6_ciq?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+                "product": {
+                  "name": "edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+                  "product_id": "edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/edk2-ovmf@20241117-2.1.el9_6_ciq?arch=noarch"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+                "product": {
+                  "name": "edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+                  "product_id": "edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/edk2-tools-doc@20241117-2.1.el9_6_ciq?arch=noarch"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "noarch"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+                "product": {
+                  "name": "edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+                  "product_id": "edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/edk2-tools@20241117-2.1.el9_6_ciq?arch=x86_64"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch"
+        },
+        "product_reference": "edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch"
+        },
+        "product_reference": "edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64"
+        },
+        "product_reference": "edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch"
+        },
+        "product_reference": "edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+        "relates_to_product_reference": "lts-9.6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64 as a component of CIQ LTS 9.6",
+          "product_id": "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        },
+        "product_reference": "edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.6"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-0727",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-0727",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-6237",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-6237",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-6119",
+      "cwe": {
+        "id": "CWE-843",
+        "name": "Access of Resource Using Incompatible Type ('Type Confusion')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-6119",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-36763",
+      "cwe": {
+        "id": "CWE-680",
+        "name": "Integer Overflow to Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-36763",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-36764",
+      "cwe": {
+        "id": "CWE-680",
+        "name": "Integer Overflow to Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-36764",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-6129",
+      "cwe": {
+        "id": "CWE-328",
+        "name": "Use of Weak Hash"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-6129",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-4304",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-4304",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-4450",
+      "cwe": {
+        "id": "CWE-415",
+        "name": "Double Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-4450",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0215",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-0215",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0286",
+      "cwe": {
+        "id": "CWE-704",
+        "name": "Incorrect Type Conversion or Cast"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-0286",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-38796",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-38796",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "ADJACENT_NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-45233",
+      "cwe": {
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-45233",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-45235",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-45235",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "ADJACENT_NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-45229",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-45229",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "ADJACENT_NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-45232",
+      "cwe": {
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-45232",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-45230",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-45230",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "ADJACENT_NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-45234",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-45234",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "ADJACENT_NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-45231",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-45231",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "ADJACENT_NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-2296",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2025-2296",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-28390",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-28390",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-38578",
+      "cwe": {
+        "id": "CWE-124",
+        "name": "Buffer Underwrite ('Buffer Underflow')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-38578",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-14563",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-14563",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:C/C:N/I:H/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-28389",
+      "cwe": {
+        "id": "CWE-166",
+        "name": "Improper Handling of Missing Special Element"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-28389",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-84782",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-84782",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-5731",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-5731",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-5732",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-5732",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-5733",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-5733",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-5734",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-5734",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-5735",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-5735",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-3613",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-3613",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-14553",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-14553",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4523",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4523",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 9.4,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-97631",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2026-97631",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+          "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+          "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update edk2 to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "ADJACENT_NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.6:edk2-aarch64-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-ovmf-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.x86_64",
+            "lts-9.6:edk2-tools-doc-0:20241117-2.1.el9_6_ciq.noarch",
+            "lts-9.6:edk2-tools-0:20241117-2.1.el9_6_ciq.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}
