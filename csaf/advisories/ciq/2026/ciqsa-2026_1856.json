@@ -1,0 +1,2213 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Critical"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for tcpdump",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the tcpdump SRPM in CIQ LTS 9.2. It addresses 37 CVEs: CVE-2017-16808, CVE-2018-10103, CVE-2018-10105, CVE-2018-14461, CVE-2018-14462, and 32 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2017-16808",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2017/cve-2017-16808.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-10103",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-10103.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-10105",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-10105.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14461",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14461.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14462",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14462.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14463",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14463.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14464",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14464.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14465",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14465.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14466",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14466.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14467",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14467.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14468",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14468.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14469",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14469.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14470",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14470.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14880",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14880.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14881",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14881.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-14882",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-14882.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-16227",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-16227.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-16228",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-16228.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-16229",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-16229.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-16230",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-16230.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-16300",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-16300.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-16301",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-16301.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-16451",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-16451.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2018-16452",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2018/cve-2018-16452.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-15166",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-15166.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2019-15167",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2019/cve-2019-15167.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2020-8037",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2020/cve-2020-8037.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-41043",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-41043.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-8767",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-8767.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-8769",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-8769.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-9140",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-9140.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2007-1218",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2007/cve-2007-1218.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2014-8768",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2014/cve-2014-8768.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2015-0261",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2015/cve-2015-0261.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2015-2153",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2015/cve-2015-2153.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2015-2154",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2015/cve-2015-2154.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2015-2155",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2015/cve-2015-2155.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1856.json"
+      }
+    ],
+    "title": "tcpdump security update for CIQ LTS 9.2",
+    "tracking": {
+      "current_release_date": "2026-11-19T07:01:49.612764+00:00",
+      "generator": {
+        "date": "2026-11-19T07:01:49.612764+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1856",
+      "initial_release_date": "2026-11-19T07:01:49.612764+00:00",
+      "revision_history": [
+        {
+          "date": "2026-11-19T07:01:49.612764+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 37 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ LTS 9.2",
+                "product": {
+                  "name": "CIQ LTS 9.2",
+                  "product_id": "lts-9.2",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:rocky_linux_from_ciq:9.2:*:*:*:*:*:*:lts"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ LTS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64",
+                "product": {
+                  "name": "tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64",
+                  "product_id": "tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tcpdump@4.99.0-6.1.el9_2_ciq?arch=aarch64&epoch=14"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "aarch64"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+                "product": {
+                  "name": "tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+                  "product_id": "tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/tcpdump@4.99.0-6.1.el9_2_ciq?arch=x86_64&epoch=14"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64"
+        },
+        "product_reference": "tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+        "relates_to_product_reference": "lts-9.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64 as a component of CIQ LTS 9.2",
+          "product_id": "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        },
+        "product_reference": "tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64",
+        "relates_to_product_reference": "lts-9.2"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2017-16808",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2017-16808",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-10103",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-10103",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-10105",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-10105",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14461",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14461",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14462",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14462",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14463",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14463",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14464",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14464",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14465",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14465",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14466",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14466",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14467",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14467",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14468",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14468",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14469",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14469",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14470",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14470",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14880",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14880",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14881",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14881",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-14882",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-14882",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-16227",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-16227",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-16228",
+      "cwe": {
+        "id": "CWE-665",
+        "name": "Improper Initialization"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-16228",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-16229",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-16229",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-16230",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-16230",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-16300",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-16300",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-16301",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-16301",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+            "version": "3.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-16451",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-16451",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2018-16452",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2018-16452",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-15166",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-15166",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2019-15167",
+      "cwe": {
+        "id": "CWE-126",
+        "name": "Buffer Over-read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2019-15167",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2020-8037",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2020-8037",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-41043",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-41043",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-8767",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-8767",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 2.9,
+            "vectorString": "AV:A/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-8769",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-8769",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 2.9,
+            "vectorString": "AV:A/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-9140",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-9140",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2007-1218",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2007-1218",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2014-8768",
+      "cwe": {
+        "id": "CWE-805",
+        "name": "Buffer Access with Incorrect Length Value"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2014-8768",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 2.9,
+            "vectorString": "AV:A/AC:M/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-0261",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2015-0261",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-2153",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2015-2153",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-2154",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2015-2154",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-2155",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2015-2155",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+          "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update tcpdump to the latest version from CIQ repositories",
+          "product_ids": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "baseScore": 6.8,
+            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "products": [
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.x86_64",
+            "lts-9.2:tcpdump-14:4.99.0-6.1.el9_2_ciq.aarch64"
+          ]
+        }
+      ]
+    }
+  ]
+}
