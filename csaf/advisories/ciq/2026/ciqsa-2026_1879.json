@@ -1,0 +1,2488 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "Critical"
+    },
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Copyright (c) CIQ, Inc. Advisory content is derived from Red Hat advisories (https://access.redhat.com/errata/), (C) Red Hat, Inc., used under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); modified by CIQ.",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "CIQ security update for vim",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "This advisory aggregates security fixes for the vim SRPM in CIQ CentOS Bridge 7.9. It addresses 34 CVEs: CVE-2022-1785, CVE-2022-1629, CVE-2022-0359, CVE-2021-3984, CVE-2021-4019, and 29 more.",
+        "title": "Description"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to the original copyright holder(s) and provide a link to the original.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "issuing_authority": "Ctrl IQ, Inc Security Team",
+      "name": "Ctrl IQ, Inc",
+      "namespace": "https://www.ciq.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CIQ Security Advisories",
+        "url": "https://github.com/ctrliq/advisories"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-1785",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-1785.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-1629",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-1629.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-0359",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-0359.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3984",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3984.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-4019",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-4019.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3796",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3796.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3778",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3778.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2206",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2206.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-1619",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-1619.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2124",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2124.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2125",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2125.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2129",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2129.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2207",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2207.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-3256",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-3256.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2210",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2210.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2284",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2284.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2285",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2285.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2286",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2286.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2344",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2344.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2345",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2345.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-3234",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-3234.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-3235",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-3235.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4750",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4750.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4751",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4751.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-4781",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-4781.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-0288",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-0288.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-0433",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-0433.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2021-3927",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2021/cve-2021-3927.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-0049",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-0049.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2023-0054",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-0054.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2571",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2571.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-2581",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-2581.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-3520",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-3520.json"
+      },
+      {
+        "category": "external",
+        "summary": "VEX document for CVE-2022-3591",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2022/cve-2022-3591.json"
+      },
+      {
+        "category": "self",
+        "summary": "Canonical URL for this CSAF document",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_1879.json"
+      }
+    ],
+    "title": "vim security update for CIQ CentOS Bridge 7.9",
+    "tracking": {
+      "current_release_date": "2026-11-21T07:01:15.370941+00:00",
+      "generator": {
+        "date": "2026-11-21T07:01:15.370941+00:00",
+        "engine": {
+          "name": "CIQ Errata Management CSAF Generator",
+          "version": "2.0.3"
+        }
+      },
+      "id": "CIQSA-2026:1879",
+      "initial_release_date": "2026-11-21T07:01:15.370941+00:00",
+      "revision_history": [
+        {
+          "date": "2026-11-21T07:01:15.370941+00:00",
+          "number": "1.0.0",
+          "summary": "Initial release - 34 CVEs fixed"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CIQ CentOS Bridge 7.9",
+                "product": {
+                  "name": "CIQ CentOS Bridge 7.9",
+                  "product_id": "cbr-7.9-bridge",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:o:ciq:centos_linux_bridge:7.9:*:*:*:*:*:*:bridge"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "CIQ Bridge"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                  "product_id": "vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/vim-X11@7.4.629-9.3.el7_9.ciqcbr?arch=x86_64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                  "product_id": "vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/vim-common@7.4.629-9.3.el7_9.ciqcbr?arch=x86_64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                  "product_id": "vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/vim-enhanced@7.4.629-9.3.el7_9.ciqcbr?arch=x86_64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                  "product_id": "vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/vim-filesystem@7.4.629-9.3.el7_9.ciqcbr?arch=x86_64&epoch=2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                "product": {
+                  "name": "vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                  "product_id": "vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/vim-minimal@7.4.629-9.3.el7_9.ciqcbr?arch=x86_64&epoch=2"
+                  }
+                }
+              }
+            ],
+            "category": "architecture",
+            "name": "x86_64"
+          }
+        ],
+        "category": "vendor",
+        "name": "CIQ"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64 as a component of CIQ CentOS Bridge 7.9",
+          "product_id": "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        },
+        "product_reference": "vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+        "relates_to_product_reference": "cbr-7.9-bridge"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-1785",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-1785",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-1629",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-1629",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-0359",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-0359",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3984",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3984",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-4019",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-4019",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3796",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3796",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3778",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3778",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2206",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2206",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-1619",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-1619",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2124",
+      "cwe": {
+        "id": "CWE-126",
+        "name": "Buffer Over-read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2124",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2125",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2125",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2129",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2129",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2207",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2207",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-3256",
+      "cwe": {
+        "id": "CWE-825",
+        "name": "Expired Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-3256",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2210",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2210",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2284",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2284",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2285",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2285",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2286",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2286",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2344",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2344",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2345",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2345",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-3234",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-3234",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-3235",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-3235",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4750",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4750",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.0,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4751",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4751",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-4781",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-4781",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0288",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-0288",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0433",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-0433",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-3927",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2021-3927",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0049",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-0049",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-0054",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2023-0054",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2571",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2571",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-2581",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-2581",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-3520",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-3520",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2022-3591",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2022-3591",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+          "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update vim to the latest version from CIQ repositories",
+          "product_ids": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "cbr-7.9-bridge:vim-X11-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-common-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-enhanced-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-filesystem-2:7.4.629-9.3.el7_9.ciqcbr.x86_64",
+            "cbr-7.9-bridge:vim-minimal-2:7.4.629-9.3.el7_9.ciqcbr.x86_64"
+          ]
+        }
+      ]
+    }
+  ]
+}
