@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the golang SRPM in CIQ LTS 8.8. It addresses 5 CVEs: CVE-2024-34155, CVE-2024-24791, CVE-2024-34158, CVE-2024-34156, CVE-2023-45285.",
+        "text": "This advisory aggregates security fixes for the golang SRPM in CIQ LTS 8.8. It addresses 5 CVEs: CVE-2024-24791, CVE-2024-34158, CVE-2024-34156, CVE-2023-45285, CVE-2024-34155.",
         "title": "Description"
       },
       {
@@ -43,11 +43,6 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2024-34155",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-34155.json"
-      },
-      {
-        "category": "external",
         "summary": "VEX document for CVE-2024-24791",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-24791.json"
       },
@@ -67,6 +62,11 @@
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2023/cve-2023-45285.json"
       },
       {
+        "category": "external",
+        "summary": "VEX document for CVE-2024-34155",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2024/cve-2024-34155.json"
+      },
+      {
         "category": "self",
         "summary": "Canonical URL for this CSAF document",
         "url": "https://github.com/ctrliq/advisories/blob/main/csaf/advisories/ciq/2026/ciqsa-2026_0324.json"
@@ -74,9 +74,9 @@
     ],
     "title": "golang security update for CIQ LTS 8.8",
     "tracking": {
-      "current_release_date": "2026-10-11T13:37:25.073475+00:00",
+      "current_release_date": "2026-11-26T07:01:41.437237+00:00",
       "generator": {
-        "date": "2026-10-11T13:37:25.073475+00:00",
+        "date": "2026-11-26T07:01:41.437237+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.3"
@@ -94,10 +94,15 @@
           "date": "2026-10-11T13:37:25.082818+00:00",
           "number": "1.0.1",
           "summary": "Update"
+        },
+        {
+          "date": "2026-11-26T07:01:41.443999+00:00",
+          "number": "1.0.2",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   },
   "product_tree": {
@@ -253,6 +258,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src as a component of CIQ LTS 8.8",
+          "product_id": "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src"
+        },
+        "product_reference": "golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
+        "relates_to_product_reference": "lts-8.8"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch as a component of CIQ LTS 8.8",
           "product_id": "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch"
         },
@@ -316,15 +330,6 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src as a component of CIQ LTS 8.8",
-          "product_id": "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src"
-        },
-        "product_reference": "golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
-        "relates_to_product_reference": "lts-8.8"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64 as a component of CIQ LTS 8.8",
           "product_id": "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
         },
@@ -334,80 +339,6 @@
     ]
   },
   "vulnerabilities": [
-    {
-      "cve": "CVE-2024-34155",
-      "cwe": {
-        "id": "CWE-674",
-        "name": "Uncontrolled Recursion"
-      },
-      "notes": [
-        {
-          "category": "description",
-          "text": "Security vulnerability CVE-2024-34155",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "product_status": {
-        "fixed": [
-          "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
-          "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
-          "lts-8.8:golang-docs-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-          "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-          "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
-          "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update golang to the latest version from CIQ repositories",
-          "product_ids": [
-            "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
-            "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
-            "lts-8.8:golang-docs-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-            "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-            "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
-            "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
-          ],
-          "url": "https://github.com/ctrliq/advisories"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "HIGH",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 5.9,
-            "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
-            "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
-            "lts-8.8:golang-docs-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-            "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-            "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
-            "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
-          ]
-        }
-      ]
-    },
     {
       "cve": "CVE-2024-24791",
       "cwe": {
@@ -423,6 +354,7 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
           "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
           "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -430,7 +362,6 @@
           "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
           "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
         ]
       },
@@ -439,6 +370,7 @@
           "category": "vendor_fix",
           "details": "Update golang to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -446,7 +378,6 @@
             "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
@@ -469,6 +400,7 @@
             "version": "3.1"
           },
           "products": [
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -476,7 +408,6 @@
             "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
           ]
         }
@@ -497,6 +428,7 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
           "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
           "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -504,7 +436,6 @@
           "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
           "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
         ]
       },
@@ -513,6 +444,7 @@
           "category": "vendor_fix",
           "details": "Update golang to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -520,7 +452,6 @@
             "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
@@ -543,6 +474,7 @@
             "version": "3.1"
           },
           "products": [
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -550,7 +482,6 @@
             "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
           ]
         }
@@ -571,6 +502,7 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
           "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
           "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -578,7 +510,6 @@
           "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
           "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
         ]
       },
@@ -587,6 +518,7 @@
           "category": "vendor_fix",
           "details": "Update golang to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -594,7 +526,6 @@
             "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
@@ -617,6 +548,7 @@
             "version": "3.1"
           },
           "products": [
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -624,7 +556,6 @@
             "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
           ]
         }
@@ -645,6 +576,7 @@
       ],
       "product_status": {
         "fixed": [
+          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
           "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
           "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -652,7 +584,6 @@
           "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
           "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
           "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
         ]
       },
@@ -661,6 +592,7 @@
           "category": "vendor_fix",
           "details": "Update golang to the latest version from CIQ repositories",
           "product_ids": [
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -668,7 +600,6 @@
             "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
-            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
           ],
           "url": "https://github.com/ctrliq/advisories"
@@ -691,6 +622,7 @@
             "version": "3.1"
           },
           "products": [
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
             "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
@@ -698,7 +630,80 @@
             "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
+            "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2024-34155",
+      "cwe": {
+        "id": "CWE-674",
+        "name": "Uncontrolled Recursion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Security vulnerability CVE-2024-34155",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
+          "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
+          "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
+          "lts-8.8:golang-docs-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+          "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+          "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+          "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
+          "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update golang to the latest version from CIQ repositories",
+          "product_ids": [
             "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
+            "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
+            "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
+            "lts-8.8:golang-docs-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+            "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+            "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
+            "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
+          ],
+          "url": "https://github.com/ctrliq/advisories"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.src",
+            "lts-8.8:golang-src-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
+            "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.aarch64",
+            "lts-8.8:golang-docs-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+            "lts-8.8:golang-misc-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+            "lts-8.8:golang-tests-0:1.21.13-3.module+el8.8.0+4898+47c96048.noarch",
+            "lts-8.8:golang-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64",
             "lts-8.8:golang-bin-0:1.21.13-3.module+el8.8.0+4898+47c96048.x86_64"
           ]
         }
