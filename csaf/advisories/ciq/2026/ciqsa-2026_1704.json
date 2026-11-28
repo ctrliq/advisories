@@ -20,7 +20,7 @@
       },
       {
         "category": "description",
-        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ Core 10.2. It addresses 3 CVEs: CVE-2025-38735, CVE-2025-71156, CVE-2026-23386.",
+        "text": "This advisory aggregates security fixes for the kernel SRPM in CIQ Core 10.2. It addresses 3 CVEs: CVE-2025-71156, CVE-2025-38735, CVE-2026-23386.",
         "title": "Description"
       },
       {
@@ -43,13 +43,13 @@
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2025-38735",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-38735.json"
+        "summary": "VEX document for CVE-2025-71156",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-71156.json"
       },
       {
         "category": "external",
-        "summary": "VEX document for CVE-2025-71156",
-        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-71156.json"
+        "summary": "VEX document for CVE-2025-38735",
+        "url": "https://github.com/ctrliq/advisories/blob/main/csaf/vex/cve/2025/cve-2025-38735.json"
       },
       {
         "category": "external",
@@ -64,9 +64,9 @@
     ],
     "title": "kernel security update for CIQ Core 10.2",
     "tracking": {
-      "current_release_date": "2026-11-24T07:04:25.677095+00:00",
+      "current_release_date": "2026-11-28T07:04:23.123448+00:00",
       "generator": {
-        "date": "2026-11-24T07:04:25.677095+00:00",
+        "date": "2026-11-28T07:04:23.123448+00:00",
         "engine": {
           "name": "CIQ Errata Management CSAF Generator",
           "version": "2.0.3"
@@ -89,10 +89,15 @@
           "date": "2026-11-24T07:04:25.726458+00:00",
           "number": "1.0.2",
           "summary": "Update"
+        },
+        {
+          "date": "2026-11-28T07:04:23.181515+00:00",
+          "number": "1.0.3",
+          "summary": "Update"
         }
       ],
       "status": "final",
-      "version": "1.0.2"
+      "version": "1.0.3"
     }
   },
   "product_tree": {
@@ -135,6 +140,17 @@
           },
           {
             "branches": [
+              {
+                "category": "product_version",
+                "name": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
+                "product": {
+                  "name": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
+                  "product_id": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
+                  "product_identification_helper": {
+                    "purl": "pkg:rpm/ciq/kernel@6.12.0-211.47.1+2.1.el10_2_ciq?arch=aarch64"
+                  }
+                }
+              },
               {
                 "category": "product_version",
                 "name": "kernel-rt-modules-extra-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -264,17 +280,6 @@
                   "product_id": "perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
                   "product_identification_helper": {
                     "purl": "pkg:rpm/ciq/perf@6.12.0-211.47.1+2.1.el10_2_ciq?arch=aarch64"
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-                "product": {
-                  "name": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-                  "product_id": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-                  "product_identification_helper": {
-                    "purl": "pkg:rpm/ciq/kernel@6.12.0-211.47.1+2.1.el10_2_ciq?arch=aarch64"
                   }
                 }
               },
@@ -1788,6 +1793,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64 as a component of CIQ Core 10.2",
+          "product_id": "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64"
+        },
+        "product_reference": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
+        "relates_to_product_reference": "core-10.2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch as a component of CIQ Core 10.2",
           "product_id": "core-10.2:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch"
         },
@@ -1972,15 +1986,6 @@
           "product_id": "core-10.2:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64"
         },
         "product_reference": "perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-        "relates_to_product_reference": "core-10.2"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64 as a component of CIQ Core 10.2",
-          "product_id": "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64"
-        },
-        "product_reference": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
         "relates_to_product_reference": "core-10.2"
       },
       {
@@ -3120,6 +3125,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64 as a component of CIQ SIG/Cloud Next 10",
+          "product_id": "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64"
+        },
+        "product_reference": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
+        "relates_to_product_reference": "scn-10-free"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch as a component of CIQ SIG/Cloud Next 10",
           "product_id": "scn-10-free:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch"
         },
@@ -3304,15 +3318,6 @@
           "product_id": "scn-10-free:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64"
         },
         "product_reference": "perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-        "relates_to_product_reference": "scn-10-free"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64 as a component of CIQ SIG/Cloud Next 10",
-          "product_id": "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64"
-        },
-        "product_reference": "kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
         "relates_to_product_reference": "scn-10-free"
       },
       {
@@ -4453,20 +4458,21 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-38735",
+      "cve": "CVE-2025-71156",
       "cwe": {
-        "id": "CWE-664",
-        "name": "Improper Control of a Resource Through its Lifetime"
+        "id": "CWE-909",
+        "name": "Missing Initialization of Resource"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2025-38735",
+          "text": "Security vulnerability CVE-2025-71156",
           "title": "Vulnerability Description"
         }
       ],
       "product_status": {
         "fixed": [
+          "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
           "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "core-10.2:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -4488,7 +4494,6 @@
           "core-10.2:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-          "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -4615,6 +4620,7 @@
           "core-10.2:python3-perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "core-10.2:rtla-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "core-10.2:rv-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
+          "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
           "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "scn-10-free:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -4636,7 +4642,6 @@
           "scn-10-free:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-          "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -4770,6 +4775,7 @@
           "category": "vendor_fix",
           "details": "Update kernel to the latest version from CIQ repositories",
           "product_ids": [
+            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -4791,7 +4797,6 @@
             "core-10.2:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -4918,6 +4923,7 @@
             "core-10.2:python3-perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rtla-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rv-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
+            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "scn-10-free:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -4939,7 +4945,6 @@
             "scn-10-free:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -5087,6 +5092,7 @@
             "version": "3.1"
           },
           "products": [
+            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -5108,7 +5114,6 @@
             "core-10.2:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -5235,6 +5240,7 @@
             "core-10.2:python3-perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rtla-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rv-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
+            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "scn-10-free:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -5256,7 +5262,6 @@
             "scn-10-free:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -5388,20 +5393,21 @@
       ]
     },
     {
-      "cve": "CVE-2025-71156",
+      "cve": "CVE-2025-38735",
       "cwe": {
-        "id": "CWE-909",
-        "name": "Missing Initialization of Resource"
+        "id": "CWE-664",
+        "name": "Improper Control of a Resource Through its Lifetime"
       },
       "notes": [
         {
           "category": "description",
-          "text": "Security vulnerability CVE-2025-71156",
+          "text": "Security vulnerability CVE-2025-38735",
           "title": "Vulnerability Description"
         }
       ],
       "product_status": {
         "fixed": [
+          "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
           "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "core-10.2:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -5423,7 +5429,6 @@
           "core-10.2:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-          "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -5550,6 +5555,7 @@
           "core-10.2:python3-perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "core-10.2:rtla-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "core-10.2:rv-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
+          "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
           "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "scn-10-free:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -5571,7 +5577,6 @@
           "scn-10-free:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-          "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -5705,6 +5710,7 @@
           "category": "vendor_fix",
           "details": "Update kernel to the latest version from CIQ repositories",
           "product_ids": [
+            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -5726,7 +5732,6 @@
             "core-10.2:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -5853,6 +5858,7 @@
             "core-10.2:python3-perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rtla-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rv-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
+            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "scn-10-free:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -5874,7 +5880,6 @@
             "scn-10-free:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -6022,6 +6027,7 @@
             "version": "3.1"
           },
           "products": [
+            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -6043,7 +6049,6 @@
             "core-10.2:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -6170,6 +6175,7 @@
             "core-10.2:python3-perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rtla-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rv-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
+            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "scn-10-free:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -6191,7 +6197,6 @@
             "scn-10-free:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -6337,6 +6342,7 @@
       ],
       "product_status": {
         "fixed": [
+          "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
           "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "core-10.2:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -6358,7 +6364,6 @@
           "core-10.2:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-          "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "core-10.2:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -6485,6 +6490,7 @@
           "core-10.2:python3-perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "core-10.2:rtla-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "core-10.2:rv-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
+          "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
           "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
           "scn-10-free:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -6506,7 +6512,6 @@
           "scn-10-free:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-          "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
           "scn-10-free:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -6640,6 +6645,7 @@
           "category": "vendor_fix",
           "details": "Update kernel to the latest version from CIQ repositories",
           "product_ids": [
+            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -6661,7 +6667,6 @@
             "core-10.2:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -6788,6 +6793,7 @@
             "core-10.2:python3-perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rtla-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rv-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
+            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "scn-10-free:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -6809,7 +6815,6 @@
             "scn-10-free:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -6957,6 +6962,7 @@
             "version": "3.1"
           },
           "products": [
+            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -6978,7 +6984,6 @@
             "core-10.2:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "core-10.2:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "core-10.2:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
@@ -7105,6 +7110,7 @@
             "core-10.2:python3-perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rtla-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "core-10.2:rv-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
+            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-abi-stablelists-0:6.12.0-211.47.1+2.1.el10_2_ciq.noarch",
             "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
             "scn-10-free:kernel-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.x86_64",
@@ -7126,7 +7132,6 @@
             "scn-10-free:libperf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:libperf-devel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:perf-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
-            "scn-10-free:kernel-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-core-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
             "scn-10-free:kernel-64k-debug-0:6.12.0-211.47.1+2.1.el10_2_ciq.aarch64",
